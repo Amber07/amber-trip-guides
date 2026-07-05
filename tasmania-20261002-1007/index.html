@@ -44,12 +44,37 @@
       align-items: end;
       padding: 32px;
       color: #fff;
-      background:
-        linear-gradient(180deg, rgba(12, 21, 17, .12), rgba(12, 21, 17, .76)),
-        url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Wineglass_Bay_from_Lookout.jpg/1920px-Wineglass_Bay_from_Lookout.jpg") center / cover;
+      overflow: hidden;
+      background: #0c1511;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(180deg, rgba(12, 21, 17, .12), rgba(12, 21, 17, .76));
+      pointer-events: none;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-media img,
+    .hero-media video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
     }
 
     .hero-inner {
+      position: relative;
+      z-index: 1;
       width: min(1120px, 100%);
       margin: 0 auto;
     }
@@ -272,9 +297,86 @@
       display: none;
     }
 
+    .panel-img-wrap {
+      position: relative;
+      min-height: 210px;
+      background: #d8d2c8;
+      overflow: hidden;
+    }
+
     .panel-img {
       min-height: 210px;
       background: #d8d2c8 center / cover;
+    }
+
+    .panel-img,
+    .rating-image {
+      cursor: zoom-in;
+    }
+
+    .panel-img:focus-visible,
+    .rating-image:focus-visible {
+      outline: 3px solid rgba(30, 106, 140, .55);
+      outline-offset: -3px;
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      z-index: 4;
+      display: none;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255, 255, 255, .48);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .9);
+      color: var(--ink);
+      box-shadow: 0 8px 20px rgba(41, 54, 48, .18);
+      transform: translateY(-50%);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .carousel-button.prev {
+      left: 10px;
+    }
+
+    .carousel-button.next {
+      right: 10px;
+    }
+
+    .panel-img-wrap.has-multiple .carousel-button {
+      display: grid;
+    }
+
+    .carousel-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      z-index: 4;
+      display: none;
+      gap: 6px;
+      transform: translateX(-50%);
+    }
+
+    .panel-img-wrap.has-multiple .carousel-dots {
+      display: flex;
+    }
+
+    .carousel-dot {
+      width: 7px;
+      height: 7px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .62);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+      padding: 0;
+    }
+
+    .carousel-dot.active {
+      background: #fff;
+      transform: scale(1.18);
     }
 
     .panel-body {
@@ -754,6 +856,58 @@
       font-size: 13px;
     }
 
+    .image-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(12, 21, 17, .88);
+      backdrop-filter: blur(12px);
+    }
+
+    .image-lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-image {
+      max-width: min(1120px, 100%);
+      max-height: min(82vh, 780px);
+      border-radius: var(--radius);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
+      object-fit: contain;
+      background: #111;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: max(18px, env(safe-area-inset-top, 0px));
+      right: max(18px, env(safe-area-inset-right, 0px));
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .94);
+      color: var(--ink);
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .lightbox-caption {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: max(18px, env(safe-area-inset-bottom, 0px));
+      color: rgba(255, 255, 255, .86);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
     @media (max-width: 980px) {
       .map-grid, .two-col { grid-template-columns: 1fr; }
       .side-stack { position: static; }
@@ -1088,6 +1242,9 @@
 </head>
 <body>
   <header class="hero">
+    <div class="hero-media" aria-hidden="true">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Wineglass_Bay_from_Lookout.jpg/1920px-Wineglass_Bay_from_Lookout.jpg" alt="">
+    </div>
     <div class="hero-inner">
       <p class="eyebrow">Tasmania East Coast · 2026.10.02-10.07</p>
       <h1>塔州东海岸 6 日游</h1>
@@ -1122,7 +1279,12 @@
           </div>
           <aside class="spot-panel" aria-live="polite">
             <button class="sheet-close" type="button" aria-label="关闭景点详情" onclick="closeSpotSheet()">×</button>
-            <div class="panel-img" id="panelImage"></div>
+            <div class="panel-img-wrap" id="panelImageWrap">
+              <button class="carousel-button prev" type="button" aria-label="上一张图片" onclick="shiftSpotImage(-1)">‹</button>
+              <div class="panel-img" id="panelImage"></div>
+              <button class="carousel-button next" type="button" aria-label="下一张图片" onclick="shiftSpotImage(1)">›</button>
+              <div class="carousel-dots" id="panelImageDots" aria-label="景点图片分页"></div>
+            </div>
             <div class="panel-body" id="panelBody"></div>
           </aside>
         </div>
@@ -1170,6 +1332,12 @@
       </div>
     </section>
   </main>
+
+  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="图片预览" onclick="closeImageLightbox(event)">
+    <button class="lightbox-close" type="button" aria-label="关闭图片预览" onclick="closeImageLightbox(event)">×</button>
+    <img class="lightbox-image" id="lightboxImage" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
 
   <footer>塔斯马尼亚东海岸旅行攻略 · 2026.10.02-10.07</footer>
 
@@ -1906,6 +2074,8 @@
     const allPlaces = [...spots, ...hotels];
     let map;
     let selectedId = "bayoffires";
+    let selectedImageIndex = 0;
+    let touchStartX = 0;
     const routeTracker = { pending: 0, failed: 0 };
 
     function displayName(item) {
@@ -2056,6 +2226,91 @@
 
     window.closeSpotSheet = closeSpotSheet;
 
+    function openImageLightbox(src, caption = "") {
+      if (!src) return;
+      const lightbox = document.getElementById("imageLightbox");
+      const image = document.getElementById("lightboxImage");
+      const captionEl = document.getElementById("lightboxCaption");
+      image.src = src;
+      image.alt = caption || "景点图片";
+      captionEl.textContent = caption;
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeImageLightbox(event) {
+      if (event && event.target.closest(".lightbox-image")) return;
+      const lightbox = document.getElementById("imageLightbox");
+      const image = document.getElementById("lightboxImage");
+      lightbox.classList.remove("open");
+      image.removeAttribute("src");
+      document.body.style.overflow = "";
+    }
+
+    window.openImageLightbox = openImageLightbox;
+    window.closeImageLightbox = closeImageLightbox;
+
+    function getSpotImages(spot) {
+      const raw = Array.isArray(spot.images) && spot.images.length ? spot.images : [spot.image];
+      return raw.map((item) => typeof item === "string" ? { src: item } : item).filter((item) => item?.src);
+    }
+
+    function currentSpot() {
+      return spots.find((item) => item.id === selectedId) || spots[0];
+    }
+
+    function renderSpotImageCarousel() {
+      const spot = currentSpot();
+      const images = getSpotImages(spot);
+      const image = images[selectedImageIndex] || images[0];
+      const wrap = document.getElementById("panelImageWrap");
+      const panelImage = document.getElementById("panelImage");
+      const dots = document.getElementById("panelImageDots");
+      if (!image) return;
+      selectedImageIndex = Math.max(0, Math.min(selectedImageIndex, images.length - 1));
+      wrap.classList.toggle("has-multiple", images.length > 1);
+      panelImage.style.backgroundImage = `url("${image.src}")`;
+      panelImage.setAttribute("role", "button");
+      panelImage.setAttribute("tabindex", "0");
+      panelImage.setAttribute("aria-label", `放大查看${displayName(spot)}图片`);
+      panelImage.onclick = () => openImageLightbox(image.src, image.caption || displayName(spot));
+      panelImage.onkeydown = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openImageLightbox(image.src, image.caption || displayName(spot));
+        }
+        if (event.key === "ArrowLeft") shiftSpotImage(-1);
+        if (event.key === "ArrowRight") shiftSpotImage(1);
+      };
+      panelImage.ontouchstart = (event) => {
+        touchStartX = event.touches[0].clientX;
+      };
+      panelImage.ontouchend = (event) => {
+        const delta = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(delta) > 42) shiftSpotImage(delta < 0 ? 1 : -1);
+      };
+      dots.innerHTML = images.map((_, index) => `
+        <button class="carousel-dot${index === selectedImageIndex ? " active" : ""}" type="button" aria-label="查看第 ${index + 1} 张图片" onclick="setSpotImage(${index})"></button>
+      `).join("");
+    }
+
+    function setSpotImage(index) {
+      selectedImageIndex = index;
+      renderSpotImageCarousel();
+      renderRating();
+    }
+
+    function shiftSpotImage(delta) {
+      const images = getSpotImages(currentSpot());
+      if (images.length <= 1) return;
+      selectedImageIndex = (selectedImageIndex + delta + images.length) % images.length;
+      renderSpotImageCarousel();
+      renderRating();
+    }
+
+    window.setSpotImage = setSpotImage;
+    window.shiftSpotImage = shiftSpotImage;
+
     async function drawRoute() {
       routeTracker.pending = routeSegments.filter((segment) => segment.mode === "drive").length;
       routeTracker.failed = 0;
@@ -2155,7 +2410,8 @@
     function selectSpot(id, openSheet = true) {
       const spot = spots.find((item) => item.id === id) || spots[0];
       selectedId = spot.id;
-      document.getElementById("panelImage").style.backgroundImage = `url("${spot.image}")`;
+      selectedImageIndex = 0;
+      renderSpotImageCarousel();
       document.getElementById("panelBody").innerHTML = `
         <div class="tag-row">
         <span class="tag main">Day ${spot.day}</span>
@@ -2309,15 +2565,25 @@
 
     function renderRating() {
       const spot = spots.find((item) => item.id === selectedId) || spots[0];
+      const image = getSpotImages(spot)[selectedImageIndex] || getSpotImages(spot)[0] || { src: spot.image };
       const { score } = ratingModel(spot);
-      document.getElementById("ratingPanel").innerHTML = `
-        <div class="rating-image" style="background-image:url('${spot.image}')"></div>
+      const ratingPanel = document.getElementById("ratingPanel");
+      ratingPanel.innerHTML = `
+        <div class="rating-image" role="button" tabindex="0" aria-label="放大查看${displayName(spot)}图片" style="background-image:url('${image.src}')"></div>
         <h3>${displayName(spot)}</h3>
         <p>${spot.intro}</p>
         <div class="tag-row">${spot.features.slice(0, 3).map((item) => `<span class="tag">${item}</span>`).join("")}</div>
         <p>综合评分：${score} / 10</p>
         ${renderRatingBars(spot)}
       `;
+      const ratingImage = ratingPanel.querySelector(".rating-image");
+      ratingImage.onclick = () => openImageLightbox(image.src, image.caption || displayName(spot));
+      ratingImage.onkeydown = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openImageLightbox(image.src, image.caption || displayName(spot));
+        }
+      };
     }
 
     function haversine(a, b) {
@@ -2360,6 +2626,9 @@
           map.invalidateSize();
           fitMapToAllPlaces();
         }, 180);
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeImageLightbox();
       });
     });
   </script>

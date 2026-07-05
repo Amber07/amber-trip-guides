@@ -1,0 +1,1754 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>澳洲&amp;新西兰14日游</title>
+  <meta name="description" content="澳洲&新西兰14日游攻略，覆盖墨尔本、新西兰南岛、奥克兰、陶波与悉尼。">
+  <style>
+    :root {
+      --bg: #f5f2ec;
+      --paper: #fffaf2;
+      --ink: #18211d;
+      --muted: #687069;
+      --line: #ded4c5;
+      --green: #275745;
+      --blue: #1e6a8c;
+      --orange: #bc6339;
+      --gold: #c29334;
+      --shadow: 0 14px 36px rgba(42, 34, 20, .12);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.58;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    button, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .hero {
+      position: relative;
+      min-height: 68vh;
+      display: grid;
+      align-items: end;
+      padding: 32px;
+      overflow: hidden;
+      color: #fff;
+      background: #26362f;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(12, 21, 17, .12), rgba(12, 21, 17, .76));
+      pointer-events: none;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-media.is-video {
+      background: #26362f;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: rgba(255,255,255,.82);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 920px;
+      margin: 0;
+      font-size: clamp(38px, 7vw, 88px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 820px;
+      margin: 18px 0 0;
+      color: rgba(255,255,255,.88);
+      font-size: clamp(17px, 2vw, 23px);
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .hero-stat {
+      min-width: 145px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 22px;
+    }
+
+    .hero-stat span {
+      color: rgba(255,255,255,.8);
+      font-size: 13px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 500;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 14px;
+      overflow-x: auto;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,250,242,.9);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav a {
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav a:hover {
+      background: #eadfce;
+      text-decoration: none;
+    }
+
+    .nav a::before {
+      content: attr(data-icon);
+      display: none;
+    }
+
+    section { padding: 54px 24px; }
+
+    .inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 820px;
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .notice {
+      margin: 18px 0 0;
+      padding: 14px 16px;
+      border: 1px solid #e0bf82;
+      border-radius: var(--radius);
+      background: #fff4d8;
+      color: #6a4b14;
+      font-weight: 700;
+    }
+
+    .map-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 380px;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .map-wrap {
+      position: relative;
+      min-height: 640px;
+    }
+
+    #map {
+      height: 100%;
+      min-height: 640px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    #map.map-fallback {
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      background: #e9dfd0;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .route-status {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      z-index: 460;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      max-width: calc(100% - 28px);
+      padding: 10px 12px;
+      border: 1px solid rgba(222, 212, 197, .9);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 242, .94);
+      color: var(--muted);
+      box-shadow: 0 10px 28px rgba(41, 54, 48, .16);
+      backdrop-filter: blur(14px);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .route-status.show {
+      display: flex;
+    }
+
+    .route-status.warning {
+      border-color: #e0bf82;
+      background: rgba(255, 244, 216, .96);
+      color: #6a4b14;
+    }
+
+    .route-status::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .route-status.warning::before {
+      background: var(--orange);
+    }
+
+    .spot-panel, .card, .food-card, .prep-card, .transport-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .spot-panel {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      position: relative;
+    }
+
+    .sheet-close {
+      display: none;
+    }
+
+    .panel-img {
+      min-height: 210px;
+      background: #d8d2c8 center / cover;
+    }
+
+    .panel-img,
+    .rating-image {
+      cursor: zoom-in;
+    }
+
+    .panel-img:focus-visible,
+    .rating-image:focus-visible {
+      outline: 3px solid rgba(30, 106, 140, .55);
+      outline-offset: -3px;
+    }
+
+    .panel-body {
+      padding: 16px;
+      overflow: auto;
+    }
+
+    .panel-body h3 {
+      margin: 0 0 7px;
+      font-size: 23px;
+      line-height: 1.14;
+    }
+
+    .panel-intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .tag.main {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+    }
+
+    .detail-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin: 12px 0 0;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 0;
+    }
+
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .action-link.primary {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+    }
+
+    .action-link:hover {
+      text-decoration: none;
+      filter: brightness(.98);
+    }
+
+    .mini-card {
+      min-width: 0;
+      padding: 11px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fffdf8;
+    }
+
+    .mini-card.context {
+      background: #f4f8f3;
+    }
+
+    .mini-card h4 {
+      margin: 0 0 5px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.48;
+    }
+
+    .route-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .day-list-wrap {
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .day-jump {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+      margin-top: 18px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 242, .92);
+      box-shadow: 0 10px 26px rgba(42, 34, 20, .08);
+      backdrop-filter: blur(12px);
+    }
+
+    .day-jump button {
+      display: grid;
+      place-items: center;
+      min-height: 42px;
+      padding: 5px 4px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      background: transparent;
+      color: var(--muted);
+      line-height: 1.1;
+    }
+
+    .day-jump button:hover,
+    .day-jump button.active {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .day-jump strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .day-jump span {
+      display: block;
+      margin-top: 2px;
+      font-size: 10px;
+      font-weight: 800;
+      opacity: .78;
+    }
+
+    .card {
+      padding: 18px;
+      box-shadow: none;
+    }
+
+    .day-card {
+      scroll-margin-top: 84px;
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .card-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .card p {
+      margin: 4px 0 0;
+      color: var(--muted);
+    }
+
+    .date-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border: 1px solid #d8e2d9;
+      border-radius: 999px;
+      background: #f2f7f0;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .day-toggle {
+      display: none;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline li {
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      gap: 10px;
+      padding: 10px;
+      border-radius: var(--radius);
+      background: #f8efe2;
+    }
+
+    .timeline strong {
+      color: var(--green);
+    }
+
+    .timeline button {
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: rgba(30, 106, 140, .35);
+      text-underline-offset: 3px;
+    }
+
+    .day-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .day-meta div {
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fffdf8;
+    }
+
+    .day-meta strong {
+      display: block;
+      color: var(--ink);
+    }
+
+    .alert-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 12px 0 0;
+    }
+
+    .alert-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 9px;
+      border: 1px solid #e0bf82;
+      border-radius: 999px;
+      background: #fff4d8;
+      color: #6a4b14;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .side-stack {
+      position: sticky;
+      top: 68px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .transport-card, .rating-card {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+
+    .rating-card {
+      max-height: calc(100vh - 96px);
+      overflow: auto;
+    }
+
+    .transport-card h3, .rating-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .rating-image {
+      width: 100%;
+      aspect-ratio: 16 / 8.6;
+      margin: 0 0 10px;
+      border-radius: var(--radius);
+      background: #d8d2c8 center / cover;
+    }
+
+    .rating-card h3 {
+      line-height: 1.22;
+    }
+
+    .rating-card p {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .rating-card .tag-row {
+      margin: 7px 0 8px;
+    }
+
+    .rating-card .tag {
+      min-height: 24px;
+      padding: 2px 7px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    select {
+      width: 100%;
+      min-height: 42px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .estimate {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .estimate div {
+      min-width: 0;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .estimate strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr) 30px;
+      gap: 8px;
+      align-items: center;
+      margin: 6px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .bar {
+      height: 8px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #e7ddce;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: var(--orange);
+    }
+
+    .panel-rating {
+      display: none;
+    }
+
+    .food-grid, .prep-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .food-card, .prep-card {
+      padding: 16px;
+      box-shadow: none;
+    }
+
+    .food-card h3, .prep-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .food-card p, .prep-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .prep-card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .marker-pin {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border: 2px solid #fff;
+      border-radius: 50% 50% 50% 4px;
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 7px 18px rgba(0,0,0,.25);
+      transform: rotate(-45deg);
+      font-weight: 900;
+    }
+
+    .marker-pin span {
+      transform: rotate(45deg);
+      font-size: 12px;
+    }
+
+    .marker-pin.hotel { background: var(--gold); }
+    .marker-pin.airport { background: var(--green); }
+
+    footer {
+      padding: 22px 24px 44px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .image-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(12, 21, 17, .88);
+      backdrop-filter: blur(12px);
+    }
+
+    .image-lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-image {
+      max-width: min(1120px, 100%);
+      max-height: min(82vh, 780px);
+      border-radius: var(--radius);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
+      object-fit: contain;
+      background: #111;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: max(18px, env(safe-area-inset-top, 0px));
+      right: max(18px, env(safe-area-inset-right, 0px));
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .94);
+      color: var(--ink);
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .lightbox-caption {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: max(18px, env(safe-area-inset-bottom, 0px));
+      color: rgba(255, 255, 255, .86);
+      text-align: center;
+      font-weight: 700;
+    }
+
+    @media (max-width: 980px) {
+      .map-grid, .two-col { grid-template-columns: 1fr; }
+      .side-stack { position: static; }
+      .map-wrap, #map { min-height: 520px; }
+      .food-grid, .prep-grid { grid-template-columns: repeat(2, 1fr); }
+      .day-list-wrap {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .day-jump {
+        z-index: 20;
+        display: flex;
+        gap: 6px;
+        margin: 14px 0 0;
+        padding: 7px;
+        overflow-x: auto;
+      }
+
+      .day-jump button {
+        flex: 0 0 54px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      body {
+        padding-bottom: calc(82px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 26px 18px 28px;
+      }
+
+      .hero-inner {
+        margin-top: 28px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero-copy {
+        font-size: 17px;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .hero-stat {
+        min-width: 0;
+        padding: 9px 10px;
+      }
+
+      .hero-stat strong {
+        font-size: 17px;
+        line-height: 1.15;
+      }
+
+      .hero-stat span {
+        font-size: 11px;
+        line-height: 1.25;
+      }
+
+      .notice {
+        font-size: 14px;
+      }
+
+      .nav {
+        position: fixed;
+        inset: auto 10px calc(10px + env(safe-area-inset-bottom, 0px)) 10px;
+        z-index: 1200;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4px;
+        padding: 8px;
+        border: 1px solid rgba(41, 54, 48, .14);
+        border-radius: 18px;
+        background: rgba(255, 250, 242, .94);
+        box-shadow: 0 18px 44px rgba(41, 54, 48, .18);
+      }
+
+      .nav a {
+        display: grid;
+        place-items: center;
+        gap: 2px;
+        min-height: 52px;
+        padding: 4px 2px;
+        border-radius: 12px;
+        font-size: 12px;
+        line-height: 1.2;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .nav a::before {
+        display: block;
+        font-size: 17px;
+        line-height: 1;
+      }
+
+      section {
+        padding: 44px 16px;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .map-grid {
+        display: block;
+      }
+
+      .map-wrap {
+        height: 62vh;
+        min-height: 440px;
+      }
+
+      #map {
+        height: 100%;
+        min-height: 0;
+        border-radius: 12px;
+      }
+
+      .route-status {
+        bottom: 12px;
+        font-size: 12px;
+      }
+
+      .spot-panel {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1300;
+        max-height: min(78vh, 640px);
+        border-radius: 18px 18px 0 0;
+        transform: translateY(106%);
+        transition: transform .28s ease;
+        box-shadow: 0 -18px 48px rgba(41, 54, 48, .24);
+      }
+
+      .spot-panel.open {
+        transform: translateY(0);
+      }
+
+      .spot-panel::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        width: 44px;
+        height: 5px;
+        border-radius: 999px;
+        background: rgba(41, 54, 48, .22);
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+
+      .sheet-close {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        z-index: 3;
+        width: 34px;
+        height: 34px;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .92);
+        color: var(--ink);
+        font-size: 24px;
+        line-height: 1;
+        box-shadow: 0 8px 20px rgba(41, 54, 48, .16);
+      }
+
+      .panel-img {
+        min-height: 170px;
+      }
+
+      .panel-body {
+        max-height: calc(78vh - 170px);
+        padding: 16px 16px calc(18px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .panel-body h3 {
+        font-size: 21px;
+      }
+
+      .panel-intro {
+        font-size: 14px;
+      }
+
+      .detail-list {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .mini-card {
+        padding: 10px;
+      }
+
+      .panel-rating {
+        display: block;
+        margin-top: 12px;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fffdf8;
+      }
+
+      .panel-rating h4 {
+        margin: 0 0 6px;
+        font-size: 16px;
+      }
+
+      .panel-rating p {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .route-list {
+        margin-top: 12px;
+      }
+
+      .day-jump {
+        top: 10px;
+        border-radius: 999px;
+      }
+
+      .day-card {
+        padding: 14px;
+        scroll-margin-top: 80px;
+      }
+
+      .card-head {
+        align-items: flex-start;
+        margin-bottom: 0;
+      }
+
+      .card h3 {
+        font-size: 19px;
+      }
+
+      .card-title-row {
+        gap: 6px;
+      }
+
+      .date-pill {
+        min-height: 24px;
+        padding: 2px 8px;
+        font-size: 11px;
+      }
+
+      .day-card:not(.expanded) .timeline,
+      .day-card:not(.expanded) .day-meta,
+      .day-card:not(.expanded) .alert-strip {
+        display: none;
+      }
+
+      .day-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        padding: 7px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fffdf8;
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .side-stack {
+        gap: 10px;
+      }
+
+      .transport-card,
+      .rating-card {
+        padding: 14px;
+      }
+
+      .estimate {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .estimate div {
+        padding: 9px;
+      }
+
+      .estimate strong {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .map-wrap {
+        height: 58vh;
+        min-height: 390px;
+      }
+      .food-grid, .prep-grid, .day-meta { grid-template-columns: 1fr; }
+      .timeline li { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .estimate {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div id="heroMediaSlot" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">Australia &amp; New Zealand · 2026.04.23-05.06</p>
+      <h1>澳洲&amp;新西兰14日游</h1>
+      <p class="hero-copy">从墨尔本的拱廊和海风开始，再把旅行交给皇后镇的秋色、米尔福德的水雾、库克山的雪线、Tekapo 的清晨和奥克兰的日落。</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>14 天</strong><span>04/23-05/06</span></div>
+        <div class="hero-stat"><strong>跨国长线</strong><span>中国 / 澳洲 / 新西兰</span></div>
+        <div class="hero-stat"><strong>南北岛</strong><span>Queenstown → Auckland</span></div>
+        <div class="hero-stat"><strong>多段飞行</strong><span>城市过境 + 南岛自驾</span></div>
+      </div>
+      <div class="notice">注意事项：跳伞、峡湾游船和北岛一日游都受天气影响较大；Tekapo 满月前后不适合强求银河，必要时改看日出或湖边散步。</div>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="页面导航">
+    <a href="#map-section" data-icon="图">路线地图</a>
+    <a href="#itinerary-section" data-icon="日">每日行程</a>
+    <a href="#food-section" data-icon="食">餐饮补给</a>
+    <a href="#prep-section" data-icon="备">提前准备</a>
+  </nav>
+
+  <main>
+    <section id="map-section">
+      <div class="inner">
+        <p class="kicker">Route Map</p>
+        <h2>澳洲与新西兰路线地图</h2>
+        <p class="lead">点击地图标记可查看城市、景点、玩法和注意事项；地图线路用于理解跨国飞行与新西兰自驾的整体顺序。</p>
+        <div class="map-grid">
+          <div class="map-wrap">
+            <div id="map" role="application" aria-label="澳洲&新西兰14日游路线地图"></div>
+            <div class="route-status show" id="routeStatus" role="status">正在加载路线地图</div>
+          </div>
+          <aside class="spot-panel" aria-live="polite">
+            <button class="sheet-close" type="button" aria-label="关闭景点详情" onclick="closeSpotSheet()">×</button>
+            <div class="panel-img" id="panelImage"></div>
+            <div class="panel-body" id="panelBody"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="itinerary-section">
+      <div class="inner">
+        <p class="kicker">Daily Plan</p>
+        <h2>每日行程安排</h2>
+        <p class="lead">沿用塔州和珀斯页面的分天结构：左侧 D1-D14 快速跳转，景点名可联动右侧详情和地图位置。</p>
+        <div class="two-col">
+          <div class="day-list-wrap">
+            <nav class="day-jump" id="dayJump" aria-label="分天导览"></nav>
+            <div class="route-list" id="dayList"></div>
+          </div>
+          <aside class="side-stack">
+            <div class="transport-card">
+              <h3>点到点交通时间</h3>
+              <label>起点<select id="fromSelect"></select></label>
+              <label>终点<select id="toSelect"></select></label>
+              <div class="estimate" id="estimateBox"></div>
+            </div>
+            <div class="rating-card" id="ratingPanel"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="food-section">
+      <div class="inner">
+        <p class="kicker">Food</p>
+        <h2>沿线餐饮与补给</h2>
+        <p class="lead">只保留对路线有帮助的餐饮和补给点，不把页面写成流水账。</p>
+        <div class="food-grid" id="foodGrid"></div>
+      </div>
+    </section>
+
+    <section id="prep-section">
+      <div class="inner">
+        <p class="kicker">Before Departure</p>
+        <h2>需要提前预定和准备的东西</h2>
+        <p class="lead">从 Excel 准备清单里整理影响出行体验的事项，方便临行前快速核对。</p>
+        <div class="prep-grid" id="prepGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="图片预览" onclick="closeImageLightbox(event)">
+    <button class="lightbox-close" type="button" aria-label="关闭图片预览" onclick="closeImageLightbox(event)">×</button>
+    <img class="lightbox-image" id="lightboxImage" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <footer>澳洲&新西兰14日游 · 2026.04.23-05.06</footer>
+
+  <script>
+    const heroMedia = {
+      src: "assets/hero-australia-newzealand.MOV",
+      poster: "assets/row51_img39.jpg",
+      alt: "澳洲与新西兰14日游头图"
+    };
+
+    function isVideoMedia(src) {
+      return /\.(mp4|webm|mov|m4v)(\?.*)?$/i.test(src || "");
+    }
+
+    function renderHeroMedia() {
+      const slot = document.getElementById("heroMediaSlot");
+      if (!slot || !heroMedia.src) return;
+      if (isVideoMedia(heroMedia.src)) {
+        slot.innerHTML = `<video class="hero-media is-video" autoplay muted loop playsinline preload="metadata" poster="${heroMedia.poster || ""}"><source src="${heroMedia.src}"></video>`;
+        return;
+      }
+      slot.innerHTML = `<img class="hero-media" src="${heroMedia.src}" alt="${heroMedia.alt || ""}">`;
+    }
+
+    const spots = [
+      { id:"xiaoyang", name:"Xianyang", zh:"咸阳半日游", type:"spot", day:2, time:"04/24 上午", lat:34.329, lng:108.708, stay:"半日", image:"assets/row03_img01.jpg", features:["古渡", "秦汉城市", "过境停靠"], intro:"咸阳是秦汉历史气息很重的过境城市，清渭楼、古渡和老街适合用半天串成一条轻松路线。", play:"清渭楼、古渡博物馆、老街、咸阳博物院、古渡廊桥、统一广场顺路走。", note:"晚间还有长途国际航班，半日游不要拖到太晚。", ratings:{nature:4,culture:8,weather:4,stamina:4} },
+      { id:"melbourne", name:"Melbourne CBD", zh:"墨尔本 Citywalk", type:"spot", day:3, time:"04/25", lat:-37.817, lng:144.967, stay:"1 天", image:"assets/row17_img08.jpg", features:["皇家拱廊", "涂鸦街", "福林德街车站"], intro:"墨尔本这天是从机场过渡到新西兰前的城市漫游，历史建筑、街头艺术和美术馆都集中在市中心。", play:"SkyBus 到南十字星车站后，串联皇家拱廊、圣保罗教堂、联邦广场、福林德街车站和 NGV。", note:"涂鸦街偏网红打卡，路过即可；Point Ormond 看天气决定。", ratings:{nature:4,culture:8,weather:4,stamina:6} },
+      { id:"royal_arcade", name:"Royal Arcade", zh:"皇家拱廊", type:"spot", day:3, time:"04/25 中午", lat:-37.8144, lng:144.9647, stay:"30 分钟", image:"assets/melbourne-royal-arcade.png", features:["维多利亚建筑", "拱廊商店", "棋盘地砖"], intro:"皇家拱廊建于 19 世纪，是墨尔本仍在营业的古老购物拱廊之一，玻璃屋顶、铸铁装饰和黑白地砖保留了维多利亚时代的城市气质。", play:"从 Bourke Street 一侧进入，慢慢看穹顶、店招和老式钟表，适合作为 Citywalk 的第一站。", note:"通道不长，人多时拍照稍等空档即可，不必停留太久。", ratings:{nature:2,culture:8,weather:2,stamina:2} },
+      { id:"graffiti_lane", name:"Hosier Lane", zh:"涂鸦街", type:"spot", day:3, time:"04/25 中午", lat:-37.8163, lng:144.9691, stay:"20 分钟", image:"assets/melbourne-graffiti-lane.JPG", features:["街头艺术", "城市涂鸦", "快速打卡"], intro:"Hosier Lane 是墨尔本最有代表性的街头艺术巷道之一，墙面作品会不断更新，能看到这座城市更自由、更即兴的一面。", play:"从联邦广场步行过去最顺，沿巷道走一圈即可；如果人多，取局部墙面和街角更容易出片。", note:"巷子窄且游客多，注意随身物品和车辆进出。", ratings:{nature:1,culture:7,weather:3,stamina:2} },
+      { id:"st_pauls_cathedral", name:"St Paul's Cathedral", zh:"圣保罗教堂", type:"spot", day:3, time:"04/25 中午", lat:-37.8169, lng:144.9675, stay:"30 分钟", image:"assets/melbourne-st-pauls-cathedral.png", features:["哥特复兴", "教堂尖塔", "城市地标"], intro:"圣保罗教堂位于墨尔本最繁忙的路口旁，哥特复兴式尖塔与现代建筑同框，是市中心历史层次最清晰的地标之一。", play:"外观从 Flinders Street 一侧看最完整；若开放，可短暂入内看彩窗和木质穹顶。", note:"入内参观保持安静，遇到礼拜或活动时以外观为主。", ratings:{nature:1,culture:8,weather:2,stamina:2} },
+      { id:"federation_square", name:"Federation Square", zh:"联邦广场", type:"spot", day:3, time:"04/25 中午", lat:-37.8178, lng:144.9695, stay:"30 分钟", image:"assets/melbourne-federation-square.png", features:["公共广场", "现代建筑", "城市交汇"], intro:"联邦广场是墨尔本 21 世纪初建成的公共空间，建筑立面棱角鲜明，和对面的圣保罗教堂、福林德街车站形成强烈的新旧对照。", play:"适合在这里短暂停留、补水、看街头活动，也能把圣保罗教堂和涂鸦街顺路串起来。", note:"广场无遮挡，晴天注意防晒，风大时体感会偏冷。", ratings:{nature:2,culture:6,weather:4,stamina:2} },
+      { id:"flinders_station", name:"Flinders Street Station", zh:"福林德街火车站", type:"spot", day:3, time:"04/25 下午", lat:-37.8183, lng:144.9671, stay:"20 分钟", image:"assets/melbourne-flinders-street-station.png", features:["车站钟楼", "穹顶立面", "墨尔本名片"], intro:"福林德街火车站是墨尔本最容易被记住的城市门面，黄色立面、拱形入口和屋顶钟表让它成为市中心最经典的集合点。", play:"从圣保罗教堂对面或 Princes Bridge 方向看外观更完整，拍完即可继续往河边或 NGV 走。", note:"路口车流和电车多，拍照过马路要等信号灯。", ratings:{nature:1,culture:7,weather:2,stamina:2} },
+      { id:"ngv", name:"National Gallery of Victoria", zh:"NGV 国家美术馆", type:"spot", day:3, time:"04/25 下午", lat:-37.8226, lng:144.9689, stay:"1.5 小时", image:"assets/melbourne-ngv.png", features:["艺术馆", "免费展厅", "城市雨备"], intro:"维多利亚国家美术馆是澳大利亚重要的公共美术馆之一，馆藏横跨欧洲、亚洲、澳洲本土与当代艺术，适合给 Citywalk 加一点安静的室内时间。", play:"优先看常设展和中庭空间，遇到天气不好也可以把这里作为主要停留点。", note:"热门特展可能需要预约或购票，常设展通常更适合短暂停留。", ratings:{nature:1,culture:9,weather:1,stamina:3} },
+      { id:"shrine_of_remembrance", name:"Shrine of Remembrance", zh:"战争纪念馆", type:"spot", day:3, time:"04/25 下午", lat:-37.8305, lng:144.9734, stay:"45 分钟", image:"assets/melbourne-shrine-of-remembrance.png", features:["纪念建筑", "城市眺望", "历史展陈"], intro:"战争纪念馆为纪念澳大利亚参战者而建，庄重的古典建筑、地下展陈和台阶视野，让它成为墨尔本南侧很有分量的历史地标。", play:"从 NGV 继续向南步行可达，登上台阶回望城市天际线，时间充裕再进馆参观。", note:"纪念空间氛围肃静，室内展区注意放低音量。", ratings:{nature:4,culture:8,weather:3,stamina:4} },
+      { id:"royal_botanic_gardens_mel", name:"Royal Botanic Gardens Victoria", zh:"皇家植物园", type:"spot", day:3, time:"04/25 下午", lat:-37.8304, lng:144.9796, stay:"1 小时", image:"assets/melbourne-royal-botanic-gardens.png", features:["城市绿地", "湖畔散步", "休息调整"], intro:"墨尔本皇家植物园靠近雅拉河南岸，是从城市建筑切换到树影和草地的好地方，适合在长途飞行后慢慢恢复节奏。", play:"从战争纪念馆附近进入，挑湖边和草坪轻松散步即可，不需要完整绕园。", note:"傍晚温度下降较快，别为了走完全园消耗太多体力。", ratings:{nature:7,culture:4,weather:5,stamina:3} },
+      { id:"point_ormond", name:"Point Ormond", zh:"海边日落点", type:"spot", day:3, time:"04/25 傍晚", lat:-37.8845, lng:144.9777, stay:"45 分钟", image:"assets/melbourne-point-ormond.jpeg", features:["海边日落", "草坡", "城市远景"], intro:"Point Ormond 位于 Elwood 海岸边，草坡、海面和墨尔本天际线连在一起，是这天从市中心走到海风里的收尾。", play:"天气好时傍晚过去看日落，坐在草坡上等光线变暖；如果云层太厚，就把它当作轻松散步点。", note:"海边风会明显更冷，日落后不要停留太久。", ratings:{nature:8,culture:3,weather:7,stamina:3} },
+      { id:"queen_victoria_market", name:"Queen Victoria Market", zh:"维多利亚女王市场", type:"spot", day:4, time:"04/26 09:00", lat:-37.8076, lng:144.9568, stay:"1 小时", image:"assets/melbourne-queen-victoria-market.png", features:["老市场", "早餐", "本地烟火"], intro:"维多利亚女王市场自 19 世纪延续至今，是墨尔本最有生活气的早晨之一，熟食、鲜花、水果和小店铺都很适合作为离开前的轻量收尾。", play:"早上先买咖啡或早餐，顺手逛 Publicity、花摊和水果摊，不需要完整扫完所有棚区。", note:"当天要飞皇后镇，市场停留控制在一小时内更稳。", ratings:{nature:2,culture:7,weather:2,stamina:3} },
+      { id:"carlton_gardens", name:"Carlton Gardens", zh:"卡尔顿花园", type:"spot", day:4, time:"04/26 10:00", lat:-37.8063, lng:144.9717, stay:"40 分钟", image:"assets/melbourne-carlton-gardens.JPG", features:["世界遗产", "皇家展览馆", "喷泉花园"], intro:"卡尔顿花园与皇家展览馆共同列入世界遗产，喷泉、花圃和白色展馆构成了墨尔本少见的典雅城市景观。", play:"从喷泉正面看展馆最完整，拍完后沿花园慢慢走到州立图书馆方向即可。", note:"这天上午时间有限，以外观和花园散步为主。", ratings:{nature:6,culture:8,weather:4,stamina:3} },
+      { id:"carlton_library", name:"State Library Victoria", zh:"维多利亚州立图书馆", type:"spot", day:4, time:"04/26 10:30", lat:-37.8098, lng:144.9652, stay:"35 分钟", image:"assets/row24_img15.jpg", features:["图书馆", "穹顶阅览室", "城市收尾"], intro:"维多利亚州立图书馆是墨尔本重要的公共文化地标，圆形穹顶阅览室和开放空间适合在飞行前做一个安静的城市收尾。", play:"优先看 La Trobe Reading Room，时间不够就只逛主入口和阅览室。", note:"14:50 飞皇后镇，市区行程必须轻量。", ratings:{nature:1,culture:8,weather:1,stamina:2} },
+      { id:"queenstown", name:"Queenstown", zh:"皇后镇", type:"spot", day:4, time:"04/26 晚", lat:-45.031, lng:168.663, stay:"3 晚", image:"assets/queenstown-arrival-fergburger.JPG", features:["湖山小镇", "Fergburger", "南岛开场"], intro:"皇后镇是南岛行程的情绪中心，落地后的夜色、湖边小镇和热闹的 Fergburger，把长途飞行后的疲惫慢慢接住。", play:"落地后办 Bee Card 坐公交进镇，入住后轻松吃饭和补给，后续再安排箭镇、快艇、Queenstown Hill 或天空缆车。", note:"抵达较晚，不要把第一晚排得太满，吃饭后早点休息。", ratings:{nature:9,culture:5,weather:6,stamina:5} },
+      { id:"arrowtown", name:"Arrowtown", zh:"箭镇", type:"spot", day:5, time:"04/27", lat:-44.941, lng:168.835, stay:"半日", image:"assets/arrowtown-autumn-group.JPG", features:["秋色", "淘金小镇", "轻徒步"], intro:"箭镇因 19 世纪淘金潮兴起，秋天的金黄树色是南岛最温柔的开场之一。", play:"睡个懒觉后坐 2 路或 4 路公交前往，先在镇中心和河边散步，再去 Feehly Hill Scenic Reserve 看小镇与山谷。", note:"这天不用赶，重点是感受南岛秋天。", ratings:{nature:8,culture:6,weather:5,stamina:4} },
+      { id:"feehly_hill", name:"Feehly Hill Scenic Reserve", zh:"费希利山观景步道", type:"spot", day:5, time:"04/27 中午", lat:-44.946, lng:168.831, stay:"1 小时", image:"assets/feehly-hill-scenic-reserve.jpeg", features:["箭镇俯瞰", "秋色", "短徒步"], intro:"Feehly Hill Scenic Reserve 在箭镇边缘，爬升不算长，却能看到小镇屋顶、山坡和秋色层层铺开。", play:"从箭镇中心步行上坡，按体力走到视野开阔处即可，不需要把整条步道走满。", note:"坡度比镇上散步更明显，穿舒服的鞋，风大时注意保暖。", ratings:{nature:8,culture:4,weather:5,stamina:5} },
+      { id:"queenstown_sunrise", name:"Queenstown Sunrise", zh:"皇后镇日出", type:"spot", day:6, time:"04/28 早晨", lat:-45.032, lng:168.661, stay:"30 分钟", image:"assets/queenstown-sunrise.JPG", features:["湖边日出", "晨光", "轻松开场"], intro:"皇后镇的清晨适合慢一点开始，湖面和码头在晨光里变亮，比赶项目更能让人进入南岛节奏。", play:"早起到湖边或码头附近看光线变化，拍完回镇上吃早餐，再决定当天项目。", note:"清晨体感偏冷，带外套；如果天气不好就睡晚一点。", ratings:{nature:8,culture:3,weather:6,stamina:2} },
+      { id:"queenstown_jet_town", name:"Shotover Jet / Queenstown Town", zh:"喷射快艇 / 镇上闲逛", type:"spot", day:6, time:"04/28 上午", lat:-45.03, lng:168.661, stay:"半日", image:"assets/queenstown-town-aerial.JPG", features:["喷射快艇", "湖边小镇", "机动安排"], intro:"这半天适合在刺激项目和镇上闲逛之间灵活选择：天气和体力都好就去快艇，想轻松一点就在湖边、码头和店铺之间慢慢走。", play:"快艇提前看班次和天气；不做项目时，就把皇后镇中心、湖边和咖啡店串起来。", note:"极限项目受天气影响明显，别把后续行程压得太紧。", ratings:{nature:7,culture:4,weather:7,stamina:5} },
+      { id:"queenstown_hill", name:"Queenstown Hill", zh:"皇后镇山徒步", type:"spot", day:6, time:"04/28 下午", lat:-45.021, lng:168.675, stay:"2-3 小时", image:"assets/queenstown-hill-view.JPG", features:["湖景俯瞰", "徒步", "山谷视野"], intro:"Queenstown Hill 是皇后镇最经典的短徒步之一，爬升后能看到瓦卡蒂普湖、镇区和远山，视野开阔得很有奖励感。", play:"从镇上步行到步道入口，按体力走到 Basket of Dreams 或继续登顶，下午光线更适合看湖面层次。", note:"有持续爬升，带水和防风外套；雨后路面可能湿滑。", ratings:{nature:9,culture:3,weather:6,stamina:7} },
+      { id:"patagonia_chocolates", name:"Patagonia Chocolates", zh:"冰淇淋", type:"spot", day:5, time:"04/27 下午", lat:-45.0324, lng:168.6616, stay:"30 分钟", image:"assets/patagonia-chocolates-icecream.JPG", features:["冰淇淋", "甜品", "皇后镇补给"], intro:"Patagonia Chocolates 是皇后镇和箭镇都很容易顺路安排的甜品店，冰淇淋适合给轻松的一天收个小尾巴。", play:"箭镇回到皇后镇后买一支冰淇淋，边走边逛湖边或小镇中心。", note:"热门时段可能排队，不必为它牺牲主要景点时间。", ratings:{nature:2,culture:4,weather:1,stamina:1} },
+      { id:"queenstown_gondola_luge", name:"Skyline Queenstown Gondola & Luge", zh:"天空缆车与滑板车", type:"spot", day:6, time:"04/28 傍晚", lat:-45.0319, lng:168.6538, stay:"2 小时", image:"assets/queenstown-gondola-luge.png", features:["缆车", "滑板车", "湖景"], intro:"天空缆车把皇后镇、瓦卡蒂普湖和远山一下子拉到视野里，滑板车则是轻松又有点兴奋感的收尾项目。", play:"傍晚上山看光线，体力够就玩几圈 Luge；如果当天已经徒步很累，只坐缆车看景也足够。", note:"风大或雨天体验会打折，滑板车注意控制速度。", ratings:{nature:8,culture:3,weather:6,stamina:4} },
+      { id:"lake_gunn", name:"Lake Gunn", zh:"甘恩湖", type:"spot", day:7, time:"04/29 中午", lat:-44.887, lng:168.085, stay:"20 分钟", image:"assets/lake-gunn.png", features:["镜面湖水", "山谷倒影", "途中停靠"], intro:"Lake Gunn 是 Milford Road 上很适合停靠的湖泊，平静时能看到山影和云层倒映在水面上。", play:"靠近湖边短暂停留拍照即可，不需要长时间徒步。", note:"停车点有限，注意来车和路边安全。", ratings:{nature:9,culture:2,weather:5,stamina:2} },
+      { id:"gertrude_valley", name:"Gertrude Valley", zh:"格特鲁德山谷", type:"spot", day:7, time:"04/29 中午", lat:-44.759, lng:168.012, stay:"20 分钟", image:"assets/gertrude-valley.png", features:["U 型山谷", "高山公路", "峡谷视野"], intro:"Gertrude Valley 两侧山壁陡峭，公路从峡谷里穿过，是 Milford Road 上最有压迫感的山谷视角之一。", play:"找安全停车点看山谷线条和公路弯道，天气好时层次非常清楚。", note:"山谷天气变化快，不建议临时走高风险长线徒步。", ratings:{nature:9,culture:2,weather:6,stamina:3} },
+      { id:"hollyford_valley", name:"Hollyford Valley Lookout", zh:"霍利福德山谷观景点", type:"spot", day:7, time:"04/29 中午", lat:-44.759, lng:168.057, stay:"15 分钟", image:"assets/hollyford-valley-lookout.png", features:["山谷眺望", "雪山", "公路风景"], intro:"Hollyford Valley Lookout 是 Milford Road 上看山谷和雪峰的快速停靠点，视野开阔，适合在长路中间换一口气。", play:"下车看一眼山谷和远处雪峰即可，重点是保持行程节奏。", note:"观景点停留短，注意车辆和集合时间。", ratings:{nature:8,culture:2,weather:5,stamina:1} },
+      { id:"monkey_creek", name:"Monkey Creek", zh:"猴溪", type:"spot", day:7, time:"04/29 中午", lat:-44.776, lng:167.966, stay:"20 分钟", image:"assets/monkey-creek.png", features:["清澈溪流", "雪山", "峡谷停靠"], intro:"Monkey Creek 是进入米尔福德前很经典的溪流停靠点，雪山、溪水和山壁在这里压得很近。", play:"在溪边短暂停留，拍完继续赶往游船码头。", note:"石头湿滑，别为了取景走到危险边缘。", ratings:{nature:9,culture:2,weather:5,stamina:2} },
+      { id:"milford", name:"Milford Sound", zh:"米尔福德峡湾", type:"spot", day:7, time:"04/29", lat:-44.671, lng:167.925, stay:"1 天", image:"assets/milford-sound-waterfall.jpeg", features:["峡湾", "瀑布", "游船"], intro:"米尔福德峡湾由冰川切割形成，雨天瀑布暴增时反而更能看到峡湾气势。夕光落在山壁和水面上时，峡湾会显得非常不真实。", play:"从 Te Anau 出发，沿途 Lake Gunn、Gertrude Valley、Hollyford Valley Lookout、Monkey Creek，下午坐 Mitre Peak 游船。", note:"回程可能天黑，宁可慢一点，不要夜间山路冒险超车。", ratings:{nature:10,culture:3,weather:8,stamina:7} },
+      { id:"wanaka", name:"Wanaka", zh:"瓦纳卡", type:"spot", day:8, time:"04/30", lat:-44.696, lng:169.132, stay:"1 天", image:"assets/row42_img31.jpg", features:["孤独的树", "湖边", "跳伞备选"], intro:"Wanaka 的美不只是一棵树，而是湖面、雪山和小镇节奏一起慢下来的感觉。", play:"孤独的树、湖边皮划艇、Mount Iron 或湖边散步；跳伞天气调整时这里可作为备选。", note:"太阳强时皮划艇会很晒，体力不足就湖边散步。", ratings:{nature:9,culture:4,weather:6,stamina:5} },
+      { id:"twizel", name:"Twizel", zh:"特威泽尔", type:"hotel", day:8, time:"04/30 晚", lat:-44.259, lng:170.099, stay:"2 晚", image:"assets/row47_img35.jpg", features:["住宿基地", "观星", "补给"], intro:"Twizel 是库克山和 Tekapo 之间的实用基地，小镇超市适合补牛羊肉和早餐食材。", play:"晚上看天气和月相决定是否观星，白天从这里去库克山和冰川区域。", note:"夜间温差大，观星注意保暖。", ratings:{nature:7,culture:2,weather:7,stamina:3} },
+      { id:"mount_cook", name:"Aoraki / Mount Cook", zh:"库克山 Hooker Valley", type:"spot", day:9, time:"05/01", lat:-43.735, lng:170.096, stay:"半日", image:"assets/row49_img37.jpg", features:["雪山", "Hooker Valley", "高山湖"], intro:"Hooker Valley Track 是新西兰最经典且门槛友好的徒步之一，吊桥、冰川湖和库克山雪线一路展开。", play:"White Horse Hill 出发，经 Hooker Valley Track、Mueller Lake、Mount Sefton Lookout，按天气决定走多远。", note:"停车场可能收费，带水、零食和防风外套。", ratings:{nature:10,culture:3,weather:7,stamina:7} },
+      { id:"tekapo", name:"Lake Tekapo", zh:"Tekapo 湖", type:"spot", day:10, time:"05/02", lat:-44.004, lng:170.477, stay:"1 晚", image:"assets/row51_img39.jpg", features:["湖景", "星空", "Mt John"], intro:"Tekapo 的湖、教堂与星空很出名，但月相会决定银河体验，满月前后不适合强求。", play:"Mt John Summit Circuit Track 难度不高，湖景和雪山层次很好；湖边炸鱼薯条可作为轻松收尾。", note:"农历十六附近月亮太亮，看日出比看银河更稳。", ratings:{nature:10,culture:5,weather:7,stamina:5} },
+      { id:"christchurch", name:"Christchurch", zh:"基督城", type:"spot", day:11, time:"05/03", lat:-43.532, lng:172.636, stay:"1 晚", image:"assets/row58_img45.jpg", features:["艺术中心", "市场", "机场过渡"], intro:"基督城曾经历地震后长期重建，艺术中心、市集和城市空间能看到修复后的层次。", play:"BNZ Centre 吃饭、艺术中心、Riverside Market，时间不多时购物比硬逛更多回报。", note:"城市整体冷清，不建议留太多时间。", ratings:{nature:4,culture:6,weather:4,stamina:4} },
+      { id:"auckland", name:"Auckland", zh:"奥克兰", type:"spot", day:12, time:"05/04", lat:-36.848, lng:174.763, stay:"2 晚", image:"assets/row68_img53.jpg", features:["伊甸山", "美术馆", "城市休整"], intro:"奥克兰适合作为北岛过渡和购物休整，伊甸山日落是这两天最值得保留的城市高光。", play:"皇后街、圣马修大教堂、奥克兰美术馆、阿尔伯特公园，傍晚优先伊甸山。", note:"奥莱 18:00 关门，有购物打算别压太晚。", ratings:{nature:7,culture:6,weather:5,stamina:5} },
+      { id:"huka", name:"Huka Falls & Taupo", zh:"胡卡瀑布与陶波", type:"spot", day:13, time:"05/05", lat:-38.649, lng:176.09, stay:"1 天", image:"assets/row72_img56.jpg", features:["蓝泉", "地热", "瀑布"], intro:"北岛一日游很吃天气；蓝泉和地热公园阴天打折，但胡卡瀑布的冰川蓝水色相对稳定。", play:"蓝泉、地热公园、胡卡瀑布、陶波飞机麦当劳串联，按天气和体力删减。", note:"天气不好建议改成奥克兰购物休整，不要硬跑长距离。", ratings:{nature:8,culture:4,weather:8,stamina:8} },
+      { id:"sydney", name:"Sydney", zh:"悉尼短暂停靠", type:"spot", day:14, time:"05/06", lat:-33.869, lng:151.209, stay:"半日", image:"assets/row76_img58.jpg", features:["歌剧院", "海港", "返程"], intro:"悉尼是回程前的短暂停靠，歌剧院和海港足够撑起半天的城市记忆。", play:"公交到 Circular Quay，串联歌剧院、皇家植物园、美术馆和圣母玛丽教堂。", note:"14:10 悉尼 T1 飞杭州，必须给回机场和安检留足时间。", ratings:{nature:6,culture:8,weather:5,stamina:7} },
+      { id:"hangzhou", name:"Hangzhou", zh:"杭州萧山机场", type:"airport", day:1, time:"04/23 出发 / 05/06 抵达", lat:30.236, lng:120.433, stay:"出发与返程", image:"assets/row76_img58.jpg", features:["出发", "回程", "航班衔接"], intro:"整段行程从杭州萧山机场出发，经咸阳、墨尔本进入新西兰，最后从悉尼返回杭州。", play:"04/23 从杭州 T3 飞西安 T5；05/06 悉尼 T1 飞杭州 T4，返程抵达后以休息为主。", note:"首尾两段都是长线行程衔接，机场交通和安检时间都要留足。", ratings:{nature:1,culture:1,weather:1,stamina:6} }
+    ];
+
+    const hotels = [
+      { id:"hotel_mel", name:"Great Southern Hotel Melbourne", zh:"墨尔本南方大酒店", type:"hotel", day:3, lat:-37.819, lng:144.954 },
+      { id:"hotel_qtn", name:"Koura Apartments Central Queenstown", zh:"皇后镇 Koura Apartments", type:"hotel", day:4, lat:-45.027, lng:168.663 },
+      { id:"hotel_teanau", name:"Te Anau Airbnb", zh:"Te Anau 中央车站", type:"hotel", day:7, lat:-45.414, lng:167.718 },
+      { id:"hotel_twizel", name:"Twizel Airbnb", zh:"Twizel 民居", type:"hotel", day:8, lat:-44.259, lng:170.099 },
+      { id:"hotel_tekapo", name:"Scott Street Apartment", zh:"Tekapo 斯科特街公寓", type:"hotel", day:10, lat:-44.005, lng:170.484 },
+      { id:"hotel_chc", name:"Airport Gateway Hotel", zh:"基督城机场酒店", type:"hotel", day:11, lat:-43.49, lng:172.548 },
+      { id:"hotel_akl", name:"Oakwood Manor Motor Lodge", zh:"奥克伍德庄园汽车旅馆", type:"hotel", day:12, lat:-36.965, lng:174.793 }
+    ];
+
+    const days = [
+      { day:1, date:"2026-04-23", title:"杭州出发，夜抵咸阳", transport:"杭州 T3 → 西安 T5，22:00-00:25(+1)", base:"咸阳机场附近", sunrise:"-", sunset:"-", alerts:["晚到不折腾"], timeline:[["22:00","杭州 T3 出发"],["00:25(+1)","抵达西安 T5"],["夜间","入住机场附近酒店"]] },
+      { day:2, date:"2026-04-24", title:"咸阳半日游，夜飞墨尔本", transport:"咸阳半日游；西安 T5 → 墨尔本 T2，17:30-10:00(+1)", base:"机上", sunrise:"-", sunset:"-", alerts:["长航段前留体力"], timeline:[["上午","咸阳半日游","xiaoyang"],["下午","返回西安 T5"],["17:30","西安飞墨尔本"]] },
+      { day:3, date:"2026-04-25", title:"墨尔本 Citywalk", transport:"SkyBus 到南十字星车站，市中心步行串联", base:"墨尔本南方大酒店", sunrise:"-", sunset:"17:40", alerts:["公共交通免费期", "Point Ormond 看天气"], timeline:[["上午","机场大巴到市区"],["中午","皇家拱廊","royal_arcade"],["中午","涂鸦街","graffiti_lane"],["中午","圣保罗教堂","st_pauls_cathedral"],["中午","联邦广场","federation_square"],["下午","福林德街火车站","flinders_station"],["下午","NGV 国家美术馆","ngv"],["下午","战争纪念馆","shrine_of_remembrance"],["下午","皇家植物园","royal_botanic_gardens_mel"],["傍晚","海边日落点","point_ormond"]] },
+      { day:4, date:"2026-04-26", title:"墨尔本早晨，飞向皇后镇", transport:"墨尔本 T2 → 皇后镇 I，14:50-20:00", base:"Koura Apartments Central Queenstown", sunrise:"-", sunset:"-", alerts:["机场巴士提前出发", "Bee Card 进镇"], timeline:[["09:00","维多利亚女王市场","queen_victoria_market"],["10:00","卡尔顿花园","carlton_gardens"],["10:30","维多利亚州立图书馆","carlton_library"],["14:50","飞往皇后镇"],["20:00","抵达皇后镇","queenstown"]] },
+      { day:5, date:"2026-04-27", title:"箭镇，感受南岛的秋天", transport:"皇后镇 ↔ 箭镇，公交可达", base:"皇后镇", sunrise:"07:34", sunset:"17:50", alerts:["轻松开场"], timeline:[["上午","睡到自然醒，brunch 后出发"],["中午","箭镇","arrowtown"],["中午","Feehly Hill Scenic Reserve","feehly_hill"],["下午","Patagonia Chocolates 冰淇淋","patagonia_chocolates"],["傍晚","皇后镇亚洲超市补给"]] },
+      { day:6, date:"2026-04-28", title:"皇后镇自由活动与徒步", transport:"镇上活动；视天气决定快艇、闲逛或徒步", base:"皇后镇", sunrise:"07:35", sunset:"17:49", alerts:["项目受天气影响大"], timeline:[["早晨","皇后镇日出","queenstown_sunrise"],["上午","喷射快艇/镇上闲逛","queenstown_jet_town"],["下午","Queenstown Hill 徒步","queenstown_hill"],["傍晚","天空缆车与滑板车","queenstown_gondola_luge"]] },
+      { day:7, date:"2026-04-29", title:"Te Anau 与 Milford Sound", transport:"皇后镇 → Te Anau → Milford Sound → Te Anau", base:"Te Anau Airbnb", sunrise:"-", sunset:"-", alerts:["峡湾回程可能夜路", "雨天坐船更壮观"], timeline:[["上午","皇后镇到 Te Anau"],["中午","Lake Gunn","lake_gunn"],["中午","Gertrude Valley","gertrude_valley"],["中午","Hollyford Valley Lookout","hollyford_valley"],["中午","Monkey Creek","monkey_creek"],["15:55","Milford Sound 游船","milford"],["夜间","返回 Te Anau，关注极光预报"]] },
+      { day:8, date:"2026-04-30", title:"Wanaka 一日，夜抵 Twizel", transport:"Te Anau → Wanaka → Twizel", base:"Twizel 民居", sunrise:"-", sunset:"17:47", alerts:["出发前加满油"], timeline:[["上午","Te Anau 到 Wanaka"],["中午","孤独的树","wanaka"],["中午","Wanaka 湖边","wanaka"],["下午","皮划艇 Kayaking","wanaka"],["下午","Mount Iron Track","wanaka"],["下午","Wanaka 跳伞调整","wanaka"],["夜间","抵达 Twizel","twizel"]] },
+      { day:9, date:"2026-05-01", title:"库克山与 Hooker Valley", transport:"Twizel ↔ Aoraki / Mount Cook", base:"Twizel 民居", sunrise:"07:36", sunset:"17:43", alerts:["带防风外套"], timeline:[["上午","普卡基湖"],["上午","高山三文鱼"],["中午","Hooker Valley Track","mount_cook"],["下午","Mueller Lake","mount_cook"],["下午","Mount Sefton Lookout","mount_cook"]] },
+      { day:10, date:"2026-05-02", title:"冰川与 Tekapo 湖", transport:"Twizel → Tasman Glacier / Mt John → Tekapo", base:"斯科特街公寓", sunrise:"07:38", sunset:"17:38", alerts:["月亮太亮不强求银河"], timeline:[["上午","Tasman Glacier","tekapo"],["上午","Mt John Summit Circuit Track","tekapo"],["下午","Lake Tekapo 湖边","tekapo"],["傍晚","湖边炸鱼薯条","tekapo"],["傍晚","Tekapo 日记本","tekapo"],["清晨","如月光太强，改看日出"]] },
+      { day:11, date:"2026-05-03", title:"Tekapo 到 Christchurch", transport:"Tekapo → Christchurch，约 3 小时", base:"Airport Gateway Hotel", sunrise:"-", sunset:"-", alerts:["第二天早班机"], timeline:[["上午","Tekapo 出发"],["中午","BNZ Centre 吃饭","christchurch"],["下午","基督城艺术中心","christchurch"],["下午","Riverside Market","christchurch"],["傍晚","机场附近入住"]] },
+      { day:12, date:"2026-05-04", title:"奥克兰 Citywalk 与伊甸山日落", transport:"基督城 → 奥克兰，09:40-11:00", base:"奥克伍德庄园汽车旅馆", sunrise:"-", sunset:"17:32", alerts:["奥莱 18:00 关门"], timeline:[["09:40","基督城飞奥克兰"],["下午","Queen Street","auckland"],["下午","圣马修大教堂","auckland"],["下午","奥克兰美术馆","auckland"],["下午","Albert Park","auckland"],["傍晚","伊甸山看日落","auckland"]] },
+      { day:13, date:"2026-05-05", title:"北岛一日：蓝泉、地热与胡卡瀑布", transport:"奥克兰往返 Rotorua / Taupo 方向", base:"奥克伍德庄园汽车旅馆", sunrise:"-", sunset:"-", alerts:["天气差就取消", "长距离往返"], timeline:[["上午","机场取车"],["上午","蓝泉","huka"],["中午","地热公园","huka"],["下午","胡卡瀑布","huka"],["下午","陶波飞机麦当劳","huka"],["夜间","返回奥克兰"]] },
+      { day:14, date:"2026-05-06", title:"悉尼短暂停靠，回到温暖的家", transport:"奥克兰 → 悉尼 → 杭州", base:"回程", sunrise:"-", sunset:"-", alerts:["悉尼转机留足时间"], timeline:[["06:15","奥克兰飞悉尼"],["上午","Circular Quay","sydney"],["上午","悉尼歌剧院","sydney"],["中午","皇家植物园","sydney"],["中午","美术馆","sydney"],["中午","圣母玛丽教堂","sydney"],["14:10","悉尼 T1 飞杭州"]] }
+    ];
+
+    const foods = [
+      { title:"墨尔本", text:"SkyBus 进城后以市中心顺路餐饮为主，Queen Victoria Market 更适合感受菜场氛围，不必为吃饭绕路。" },
+      { title:"皇后镇 / 箭镇", text:"Patagonia Chocolates 适合冰淇淋；皇后镇亚洲超市可补调料、火锅和后续自驾食材。" },
+      { title:"Twizel / Tekapo", text:"Twizel 超市适合买牛羊肉；普卡基湖附近可吃高山三文鱼；Tekapo 湖边炸鱼薯条选炸鸡口味更稳。" },
+      { title:"Christchurch", text:"Riverside Market 比硬逛景点更实用，Bacon Brothers 和 Rollickin Gelato 适合快速解决一餐。" },
+      { title:"Auckland", text:"有购物打算可直奔主题店铺或奥莱，奥莱关门早；别把晚饭和购物都压到傍晚之后。" },
+      { title:"Taupo", text:"飞机麦当劳是打卡点，陶波小镇店铺关得早，别指望太丰富的晚餐选择。" }
+    ];
+
+    const prep = [
+      { title:"证件与签证", text:"澳洲签证、NZeTA、往返机票打印件、驾照原件和翻译件。多段航班和租车衔接，证件建议单独收纳。" },
+      { title:"支付与通讯", text:"Visa / Master 卡、少量现金、澳新通用手机卡或国际漫游。公交、租车押金、镇上补给都需要稳定支付方式。" },
+      { title:"户外装备", text:"插排、热水壶、无人机、Pocket 3、防水手机袋。峡湾、皮划艇、冰川和观星段建议防水与保暖都准备。" }
+    ];
+
+    const routeSegments = [
+      { mode:"flight", ids:["hangzhou","xiaoyang"] },
+      { mode:"flight", ids:["xiaoyang","melbourne"] },
+      { mode:"flight", ids:["melbourne","queenstown"] },
+      { mode:"drive", ids:["queenstown","arrowtown"] },
+      { mode:"drive", ids:["arrowtown","milford"] },
+      { mode:"drive", ids:["milford","wanaka"] },
+      { mode:"drive", ids:["wanaka","twizel"] },
+      { mode:"drive", ids:["twizel","mount_cook"] },
+      { mode:"drive", ids:["mount_cook","tekapo"] },
+      { mode:"drive", ids:["tekapo","christchurch"] },
+      { mode:"flight", ids:["christchurch","auckland"] },
+      { mode:"drive", ids:["auckland","huka"] },
+      { mode:"flight", ids:["huka","sydney"] },
+      { mode:"flight", ids:["sydney","hangzhou"] }
+    ];
+
+    const cachedRoadRoutes = {"queenstown__arrowtown":[[-45.03093,168.6629],[-45.03398,168.66683],[-45.03378,168.68064],[-45.02813,168.68787],[-45.02179,168.70188],[-45.01664,168.71876],[-45.01525,168.73367],[-45.00165,168.75678],[-45.00079,168.76981],[-44.99401,168.7969],[-44.99517,168.80433],[-44.98771,168.81472],[-44.98081,168.81772],[-44.95563,168.81775],[-44.94064,168.82886],[-44.93948,168.83264],[-44.94107,168.8349]],"arrowtown__milford":[[-44.94107,168.8349],[-44.93948,168.83264],[-44.94064,168.82886],[-44.95591,168.81761],[-44.98064,168.81776],[-44.98766,168.815],[-44.99542,168.8037],[-44.99401,168.7969],[-45.00031,168.77307],[-45.00183,168.75623],[-45.01178,168.74176],[-45.01578,168.73168],[-45.02159,168.73431],[-45.0299,168.73365],[-45.03261,168.73992],[-45.03874,168.74434],[-45.03832,168.75261],[-45.05861,168.75431],[-45.07108,168.76042],[-45.09135,168.75538],[-45.10389,168.75679],[-45.11245,168.76245],[-45.11812,168.76224],[-45.12928,168.75765],[-45.13945,168.76064],[-45.14146,168.75786],[-45.15905,168.75132],[-45.1692,168.75112],[-45.19472,168.74199],[-45.21074,168.74322],[-45.22722,168.73919],[-45.24009,168.74308],[-45.24554,168.74291],[-45.24913,168.74991],[-45.2571,168.75328],[-45.2656,168.76015],[-45.27092,168.75981],[-45.28683,168.76527],[-45.29317,168.76258],[-45.29576,168.75939],[-45.31582,168.75214],[-45.3193,168.74708],[-45.32758,168.74261],[-45.33238,168.73031],[-45.34289,168.71797],[-45.39579,168.6702],[-45.41977,168.67523],[-45.42106,168.69088],[-45.42532,168.70044],[-45.42913,168.70324],[-45.43573,168.70257],[-45.45949,168.69282],[-45.46518,168.6841],[-45.49393,168.66465],[-45.51791,168.62174],[-45.51206,168.59737],[-45.51265,168.58824],[-45.50855,168.56602],[-45.50934,168.55564],[-45.53514,168.54818],[-45.5436,168.53374],[-45.54422,168.52657],[-45.54991,168.51373],[-45.55632,168.50668],[-45.57144,168.50363],[-45.57617,168.49178],[-45.58946,168.47989],[-45.62357,168.45865],[-45.6173,168.43609],[-45.61209,168.433],[-45.61205,168.42248],[-45.62171,168.39019],[-45.62736,168.35497],[-45.63744,168.34198],[-45.65672,168.26431],[-45.65565,168.25278],[-45.67057,168.24107],[-45.66419,168.2252],[-45.65946,168.21905],[-45.66071,168.20646],[-45.65511,168.19741],[-45.6436,168.1888],[-45.63733,168.17598],[-45.62688,168.16303],[-45.61957,168.15542],[-45.61347,168.15234],[-45.6048,168.13593],[-45.59571,168.12815],[-45.58532,168.12284],[-45.57364,168.10938],[-45.56652,168.09378],[-45.56329,168.08208],[-45.56678,168.06724],[-45.56079,168.04644],[-45.55962,168.02066],[-45.55196,168.01089],[-45.53903,167.96924],[-45.5394,167.95774],[-45.54546,167.93531],[-45.54542,167.89276],[-45.53986,167.88389],[-45.5307,167.85181],[-45.52218,167.8329],[-45.52437,167.81073],[-45.52135,167.79082],[-45.51366,167.78156],[-45.5034,167.7808],[-45.48261,167.79143],[-45.46509,167.79312],[-45.45837,167.78572],[-45.44983,167.78091],[-45.43905,167.78036],[-45.43424,167.77578],[-45.43182,167.77011],[-45.42287,167.73101],[-45.41069,167.73473],[-45.40957,167.74173],[-45.40269,167.74922],[-45.39784,167.75887],[-45.38792,167.76013],[-45.38388,167.76271],[-45.37005,167.75617],[-45.3608,167.75859],[-45.35319,167.76943],[-45.3431,167.77346],[-45.33516,167.77287],[-45.31432,167.77943],[-45.30197,167.79034],[-45.29768,167.79019],[-45.29064,167.79436],[-45.28007,167.79251],[-45.27359,167.79606],[-45.26104,167.79699],[-45.23927,167.80915],[-45.23596,167.81307],[-45.23221,167.8124],[-45.22451,167.81606],[-45.2169,167.82273],[-45.20934,167.8208],[-45.19962,167.82232],[-45.1929,167.82925],[-45.19566,167.83613],[-45.19412,167.84489],[-45.19873,167.85397],[-45.19901,167.85856],[-45.18827,167.86825],[-45.18398,167.88251],[-45.17467,167.88643],[-45.16198,167.89517],[-45.15551,167.89385],[-45.14353,167.90215],[-45.13963,167.91183],[-45.13885,167.92731],[-45.13592,167.92837],[-45.13714,167.93319],[-45.13432,167.94624],[-45.12594,167.94534],[-45.11707,167.95646],[-45.10995,167.96231],[-45.10289,167.96448],[-45.10085,167.96875],[-45.08148,167.98509],[-45.07247,167.98763],[-45.07038,167.99104],[-45.06412,167.99229],[-45.05398,168.00432],[-45.0509,168.01129],[-45.04447,168.00739],[-45.02969,168.01171],[-45.00613,168.00786],[-44.99844,168.01396],[-44.97394,168.01692],[-44.96855,168.01484],[-44.95786,168.01832],[-44.94676,168.01634],[-44.94077,168.02243],[-44.93073,168.02704],[-44.92043,168.04335],[-44.91314,168.0448],[-44.90897,168.04805],[-44.90645,168.05429],[-44.90645,168.06832],[-44.89991,168.07989],[-44.89281,168.08491],[-44.88882,168.09031],[-44.88204,168.09616],[-44.87683,168.09802],[-44.8669,168.09775],[-44.86092,168.10203],[-44.85299,168.10236],[-44.84587,168.10673],[-44.84431,168.11026],[-44.83349,168.11514],[-44.83051,168.11453],[-44.82435,168.11739],[-44.81573,168.11555],[-44.80991,168.11038],[-44.80922,168.10515],[-44.81304,168.09803],[-44.81376,168.09087],[-44.81699,168.08864],[-44.81812,168.07365],[-44.81215,168.0406],[-44.80163,168.02187],[-44.79002,168.02053],[-44.78201,168.01477],[-44.77767,168.00856],[-44.77113,168.00659],[-44.76558,167.99889],[-44.76354,167.97367],[-44.76054,167.97154],[-44.76328,167.96997],[-44.76002,167.96891],[-44.75979,167.96212],[-44.7575,167.96373],[-44.75525,167.95955],[-44.74226,167.95474],[-44.73772,167.94774],[-44.73769,167.94318],[-44.73534,167.9416],[-44.72395,167.94802],[-44.70985,167.96245],[-44.70446,167.97059],[-44.6986,167.96744],[-44.69463,167.96925],[-44.68536,167.96273],[-44.67879,167.96403],[-44.6773,167.96201],[-44.67881,167.94932],[-44.67635,167.93428],[-44.67399,167.92639],[-44.67162,167.92529]],"milford__wanaka":[[-44.67162,167.92529],[-44.67399,167.92639],[-44.67635,167.93428],[-44.67881,167.94932],[-44.6773,167.96201],[-44.67879,167.96403],[-44.68536,167.96273],[-44.69463,167.96925],[-44.6986,167.96744],[-44.70446,167.97059],[-44.70985,167.96245],[-44.72395,167.94802],[-44.73534,167.9416],[-44.73769,167.94318],[-44.73772,167.94774],[-44.74226,167.95474],[-44.75525,167.95955],[-44.7575,167.96373],[-44.75979,167.96212],[-44.76002,167.96891],[-44.76328,167.96997],[-44.76054,167.97154],[-44.76354,167.97367],[-44.76558,167.99889],[-44.77113,168.00659],[-44.77767,168.00856],[-44.78201,168.01477],[-44.79002,168.02053],[-44.80163,168.02187],[-44.81215,168.0406],[-44.81812,168.07365],[-44.81699,168.08864],[-44.81376,168.09087],[-44.81304,168.09803],[-44.80922,168.10515],[-44.80991,168.11038],[-44.81573,168.11555],[-44.82435,168.11739],[-44.83051,168.11453],[-44.83349,168.11514],[-44.84431,168.11026],[-44.84587,168.10673],[-44.85299,168.10236],[-44.86092,168.10203],[-44.8669,168.09775],[-44.87683,168.09802],[-44.88204,168.09616],[-44.88882,168.09031],[-44.89281,168.08491],[-44.89991,168.07989],[-44.90645,168.06832],[-44.90645,168.05429],[-44.90897,168.04805],[-44.91314,168.0448],[-44.92043,168.04335],[-44.93073,168.02704],[-44.94077,168.02243],[-44.94676,168.01634],[-44.95786,168.01832],[-44.96855,168.01484],[-44.97394,168.01692],[-44.99844,168.01396],[-45.00613,168.00786],[-45.02969,168.01171],[-45.04447,168.00739],[-45.0509,168.01129],[-45.05398,168.00432],[-45.06412,167.99229],[-45.07038,167.99104],[-45.07247,167.98763],[-45.08148,167.98509],[-45.10085,167.96875],[-45.10289,167.96448],[-45.10995,167.96231],[-45.11707,167.95646],[-45.12594,167.94534],[-45.13432,167.94624],[-45.13714,167.93319],[-45.13592,167.92837],[-45.13885,167.92731],[-45.13963,167.91183],[-45.14353,167.90215],[-45.15551,167.89385],[-45.16198,167.89517],[-45.17467,167.88643],[-45.18398,167.88251],[-45.18827,167.86825],[-45.19901,167.85856],[-45.19873,167.85397],[-45.19412,167.84489],[-45.19566,167.83613],[-45.1929,167.82925],[-45.19962,167.82232],[-45.20934,167.8208],[-45.2169,167.82273],[-45.22451,167.81606],[-45.23221,167.8124],[-45.23596,167.81307],[-45.23927,167.80915],[-45.26104,167.79699],[-45.27359,167.79606],[-45.28007,167.79251],[-45.29064,167.79436],[-45.29768,167.79019],[-45.30197,167.79034],[-45.31432,167.77943],[-45.33516,167.77287],[-45.3431,167.77346],[-45.35319,167.76943],[-45.3608,167.75859],[-45.37005,167.75617],[-45.38388,167.76271],[-45.38792,167.76013],[-45.39784,167.75887],[-45.40269,167.74922],[-45.40957,167.74173],[-45.41069,167.73473],[-45.42287,167.73101],[-45.43182,167.77011],[-45.43424,167.77578],[-45.43905,167.78036],[-45.44983,167.78091],[-45.45837,167.78572],[-45.46509,167.79312],[-45.48261,167.79143],[-45.50365,167.78079],[-45.51366,167.78156],[-45.52141,167.79094],[-45.52437,167.81073],[-45.52218,167.8329],[-45.5307,167.85181],[-45.53986,167.88389],[-45.54542,167.89276],[-45.54546,167.93531],[-45.5394,167.95774],[-45.53903,167.96924],[-45.55196,168.01089],[-45.55962,168.02066],[-45.56079,168.04644],[-45.56678,168.06724],[-45.56329,168.08208],[-45.56652,168.09378],[-45.57364,168.10938],[-45.58532,168.12284],[-45.59571,168.12815],[-45.6048,168.13593],[-45.61347,168.15234],[-45.61957,168.15542],[-45.62667,168.1628],[-45.63733,168.17598],[-45.64374,168.18897],[-45.65841,168.2011],[-45.66103,168.2082],[-45.65946,168.21905],[-45.66419,168.2252],[-45.67057,168.24107],[-45.65565,168.25278],[-45.65672,168.26431],[-45.63744,168.34198],[-45.62736,168.35497],[-45.62171,168.39019],[-45.61208,168.42231],[-45.61209,168.433],[-45.6173,168.43609],[-45.62357,168.45865],[-45.58946,168.47989],[-45.57617,168.49178],[-45.57144,168.50363],[-45.55632,168.50668],[-45.54991,168.51373],[-45.54422,168.52657],[-45.5436,168.53374],[-45.53514,168.54818],[-45.50934,168.55564],[-45.50855,168.56602],[-45.51265,168.58824],[-45.51206,168.59737],[-45.51791,168.62174],[-45.49393,168.66465],[-45.46518,168.6841],[-45.45949,168.69282],[-45.43573,168.70257],[-45.42913,168.70324],[-45.42532,168.70044],[-45.42106,168.69088],[-45.41977,168.67523],[-45.39579,168.6702],[-45.34289,168.71797],[-45.33238,168.73031],[-45.32758,168.74261],[-45.3193,168.74708],[-45.31582,168.75214],[-45.29576,168.75939],[-45.29317,168.76258],[-45.28683,168.76527],[-45.27092,168.75981],[-45.2656,168.76015],[-45.2571,168.75328],[-45.24913,168.74991],[-45.24554,168.74291],[-45.24009,168.74308],[-45.22722,168.73919],[-45.21074,168.74322],[-45.19472,168.74199],[-45.1692,168.75112],[-45.15905,168.75132],[-45.14146,168.75786],[-45.13945,168.76064],[-45.12928,168.75765],[-45.11812,168.76224],[-45.11245,168.76245],[-45.10389,168.75679],[-45.09135,168.75538],[-45.07108,168.76042],[-45.05861,168.75431],[-45.03832,168.75261],[-45.03874,168.74434],[-45.03261,168.73992],[-45.0299,168.73365],[-45.02206,168.73422],[-45.01564,168.7314],[-45.01176,168.74121],[-45.00165,168.75678],[-45.00079,168.76981],[-44.99401,168.7969],[-44.99542,168.8037],[-44.97964,168.82601],[-44.97915,168.83291],[-44.982,168.83773],[-44.9772,168.85067],[-44.97812,168.85373],[-44.9818,168.85526],[-44.97527,168.86057],[-44.9776,168.86081],[-44.97418,168.86196],[-44.97707,168.86351],[-44.97322,168.86461],[-44.97538,168.86541],[-44.97798,168.87237],[-44.97362,168.88483],[-44.97868,168.89773],[-44.98788,168.90479],[-44.99102,168.90517],[-44.99294,168.90962],[-44.99207,168.9181],[-44.99472,168.91822],[-44.99586,168.92566],[-44.99192,168.93913],[-44.98054,168.94244],[-44.97654,168.94585],[-44.97322,168.95304],[-44.96614,168.95884],[-44.95443,168.95669],[-44.9515,168.95979],[-44.94244,168.96337],[-44.93762,168.96871],[-44.91537,168.97317],[-44.90845,168.98059],[-44.8958,168.98902],[-44.88949,168.99849],[-44.87733,169.00556],[-44.87101,169.01455],[-44.86379,169.01806],[-44.84947,169.0418],[-44.83072,169.05982],[-44.81822,169.0628],[-44.79724,169.07275],[-44.78414,169.08438],[-44.75964,169.09987],[-44.74384,169.12997],[-44.73434,169.13599],[-44.72946,169.1369],[-44.70606,169.13589],[-44.69883,169.12737],[-44.69634,169.13238]],"wanaka__twizel":[[-44.69634,169.13238],[-44.6939,169.13634],[-44.69246,169.14821],[-44.69664,169.16279],[-44.69614,169.17107],[-44.70065,169.18019],[-44.70088,169.19223],[-44.7169,169.21598],[-44.72714,169.25025],[-44.73386,169.25925],[-44.73374,169.27872],[-44.72837,169.28364],[-44.73326,169.28767],[-44.73344,169.31389],[-44.74409,169.33969],[-44.74983,169.34601],[-44.77007,169.34966],[-44.79019,169.35608],[-44.80874,169.35545],[-44.82297,169.352],[-44.82637,169.3641],[-44.84278,169.4002],[-44.83753,169.40844],[-44.83557,169.42667],[-44.82307,169.43082],[-44.82233,169.43666],[-44.80716,169.45053],[-44.80191,169.47353],[-44.80905,169.48914],[-44.81152,169.50335],[-44.8066,169.50516],[-44.80387,169.5087],[-44.79897,169.5065],[-44.79635,169.50935],[-44.79291,169.50378],[-44.77513,169.50862],[-44.75517,169.50765],[-44.74148,169.50991],[-44.7357,169.50673],[-44.73245,169.50907],[-44.72876,169.50645],[-44.71935,169.50629],[-44.71545,169.50346],[-44.70432,169.50256],[-44.69633,169.49489],[-44.69499,169.48459],[-44.68818,169.48791],[-44.67537,169.47824],[-44.64701,169.4986],[-44.62333,169.52565],[-44.6115,169.53042],[-44.60947,169.54369],[-44.60324,169.54841],[-44.60014,169.55452],[-44.60066,169.56575],[-44.59817,169.57431],[-44.59565,169.57795],[-44.58731,169.58169],[-44.58507,169.58515],[-44.57696,169.61961],[-44.57876,169.63001],[-44.58823,169.6419],[-44.58762,169.64733],[-44.58395,169.65141],[-44.56521,169.66104],[-44.55991,169.676],[-44.56187,169.6899],[-44.55621,169.69106],[-44.52931,169.7137],[-44.52226,169.72591],[-44.51521,169.72927],[-44.49783,169.75642],[-44.5052,169.78083],[-44.51347,169.79761],[-44.51459,169.82812],[-44.48898,169.95194],[-44.48933,169.95956],[-44.47903,169.98264],[-44.47293,169.98721],[-44.46709,169.98821],[-44.45956,169.9764],[-44.45674,169.97501],[-44.44748,169.98172],[-44.44039,169.97998],[-44.43177,169.98514],[-44.41459,169.99082],[-44.36214,170.00293],[-44.34356,170.01602],[-44.28875,170.08592],[-44.28242,170.0899],[-44.27512,170.09838],[-44.26039,170.1052],[-44.25769,170.10001],[-44.25891,170.09882]],"twizel__mount_cook":[[-44.25891,170.09882],[-44.25769,170.10001],[-44.26,170.10524],[-44.25121,170.1163],[-44.21701,170.11655],[-44.19057,170.12218],[-44.18768,170.12464],[-44.186,170.12049],[-44.17867,170.11354],[-44.16499,170.10863],[-44.14922,170.10893],[-44.12304,170.12859],[-44.10277,170.13402],[-44.08232,170.13536],[-44.07446,170.13208],[-44.03979,170.13447],[-44.03072,170.12984],[-44.02266,170.12877],[-44.01461,170.12894],[-44.0077,170.13206],[-43.98752,170.12862],[-43.98173,170.13063],[-43.972,170.13059],[-43.96315,170.12767],[-43.94698,170.13152],[-43.92609,170.12557],[-43.9195,170.11903],[-43.91784,170.11367],[-43.91529,170.11426],[-43.90823,170.12483],[-43.90475,170.12596],[-43.89582,170.11746],[-43.8727,170.11977],[-43.86349,170.10343],[-43.86158,170.10274],[-43.85551,170.11054],[-43.83807,170.1099],[-43.8322,170.10804],[-43.82123,170.10924],[-43.79853,170.11442],[-43.7902,170.11944],[-43.78637,170.11972],[-43.78254,170.12375],[-43.767,170.1233],[-43.76133,170.12167],[-43.75681,170.11754],[-43.75117,170.11781],[-43.74018,170.11099],[-43.73571,170.10264],[-43.73779,170.09781],[-43.735,170.09603]],"mount_cook__tekapo":[[-43.735,170.09603],[-43.73779,170.09781],[-43.73571,170.10264],[-43.74018,170.11099],[-43.75117,170.11781],[-43.75681,170.11754],[-43.76133,170.12167],[-43.76761,170.12334],[-43.78254,170.12375],[-43.78637,170.11972],[-43.7902,170.11944],[-43.79853,170.11442],[-43.82123,170.10924],[-43.8322,170.10804],[-43.83807,170.1099],[-43.85551,170.11054],[-43.86158,170.10274],[-43.86349,170.10343],[-43.87314,170.11999],[-43.89556,170.11741],[-43.90218,170.12478],[-43.90588,170.12594],[-43.90917,170.12382],[-43.91529,170.11426],[-43.91792,170.11368],[-43.9195,170.11903],[-43.92609,170.12557],[-43.94726,170.13154],[-43.96386,170.12766],[-43.9715,170.13054],[-43.98173,170.13063],[-43.98752,170.12862],[-44.0077,170.13206],[-44.01461,170.12894],[-44.02266,170.12877],[-44.03072,170.12984],[-44.03979,170.13447],[-44.07446,170.13208],[-44.08232,170.13536],[-44.10242,170.13406],[-44.12391,170.12823],[-44.148,170.10943],[-44.15617,170.10822],[-44.1657,170.10876],[-44.17867,170.11354],[-44.18619,170.12073],[-44.18768,170.12464],[-44.18662,170.13105],[-44.19073,170.14333],[-44.18254,170.15661],[-44.17619,170.15741],[-44.17463,170.1719],[-44.17578,170.17782],[-44.1827,170.18747],[-44.18317,170.19105],[-44.17821,170.19817],[-44.17688,170.20405],[-44.17019,170.20718],[-44.16843,170.21247],[-44.16989,170.21516],[-44.1763,170.21767],[-44.18138,170.22959],[-44.19982,170.24953],[-44.20368,170.26402],[-44.19989,170.27844],[-44.19462,170.28436],[-44.18065,170.31784],[-44.17597,170.32104],[-44.16931,170.33261],[-44.15623,170.33585],[-44.13336,170.34929],[-44.10048,170.35422],[-44.08864,170.34905],[-44.08535,170.34943],[-44.03854,170.38309],[-44.02436,170.40097],[-44.00494,170.40712],[-43.99848,170.41433],[-43.99743,170.4183],[-44.00294,170.44961],[-44.0008,170.46033],[-44.00408,170.47712]],"tekapo__christchurch":[[-44.00408,170.47712],[-44.00768,170.4839],[-44.00733,170.49296],[-44.01254,170.50114],[-44.02964,170.50021],[-44.03844,170.50422],[-44.04211,170.50808],[-44.05637,170.50199],[-44.06563,170.5057],[-44.08414,170.53895],[-44.0964,170.5662],[-44.09311,170.57317],[-44.08959,170.59344],[-44.09183,170.62215],[-44.08905,170.63786],[-44.08951,170.65239],[-44.07998,170.66362],[-44.07151,170.66684],[-44.0678,170.671],[-44.05571,170.67614],[-44.03825,170.68787],[-44.03569,170.6913],[-44.02933,170.71662],[-44.03262,170.74],[-44.03581,170.74837],[-44.04727,170.75949],[-44.09771,170.82887],[-44.09169,170.8466],[-44.09359,170.85129],[-44.08492,170.86687],[-44.08231,170.8684],[-44.06842,170.86813],[-44.06578,170.87262],[-44.06443,170.88567],[-44.06215,170.88852],[-44.05802,170.88838],[-44.05572,170.8932],[-44.04778,170.89858],[-44.04973,170.90389],[-44.04868,170.90726],[-44.05607,170.93022],[-44.06618,170.94485],[-44.07065,170.94777],[-44.07621,170.9474],[-44.08074,170.94964],[-44.08903,170.9591],[-44.08768,170.96631],[-44.08415,170.96964],[-44.0802,170.97929],[-44.08369,170.98014],[-44.09707,171.00091],[-44.10321,171.00367],[-44.10912,171.01039],[-44.11908,171.02532],[-44.1226,171.04],[-44.11993,171.06387],[-44.12445,171.07612],[-44.12393,171.08291],[-44.12921,171.08896],[-44.12119,171.11263],[-44.11765,171.13186],[-44.1114,171.13715],[-44.11253,171.16884],[-44.1178,171.17794],[-44.12096,171.19257],[-44.11238,171.22405],[-44.12583,171.25006],[-44.12701,171.2894],[-44.13737,171.29807],[-44.13451,171.29966],[-44.12494,171.31431],[-44.11398,171.31106],[-44.09645,171.32191],[-44.06683,171.37077],[-44.04496,171.41969],[-44.01061,171.55453],[-43.90823,171.74187],[-43.83868,171.84748],[-43.76495,172.01925],[-43.75223,172.02792],[-43.69911,172.09059],[-43.58597,172.3914],[-43.58136,172.41111],[-43.56606,172.44715],[-43.56746,172.46797],[-43.5626,172.49132],[-43.56524,172.5141],[-43.5636,172.5303],[-43.56429,172.55272],[-43.56117,172.56141],[-43.55125,172.57236],[-43.54619,172.58421],[-43.54746,172.63063],[-43.53204,172.63061],[-43.53203,172.636]],"auckland__huka":[[-36.84793,174.76274],[-36.84641,174.76238],[-36.85713,174.75626],[-36.85907,174.75689],[-36.86051,174.76262],[-36.86768,174.76862],[-36.87519,174.7802],[-36.8843,174.78906],[-36.89471,174.80594],[-36.90329,174.81137],[-36.90744,174.81911],[-36.91395,174.82458],[-36.91762,174.83714],[-36.92324,174.84745],[-36.94439,174.85486],[-36.95996,174.86312],[-36.97269,174.87905],[-36.99755,174.89076],[-37.00582,174.89723],[-37.01067,174.90408],[-37.0195,174.90943],[-37.04089,174.91064],[-37.06064,174.9238],[-37.07885,174.93139],[-37.09397,174.94345],[-37.11475,174.94873],[-37.12098,174.95649],[-37.16549,174.98384],[-37.17116,174.98465],[-37.18232,174.98049],[-37.1931,174.983],[-37.20754,174.99535],[-37.22017,175.0021],[-37.23233,175.01881],[-37.23937,175.02116],[-37.25124,175.02969],[-37.25496,175.03786],[-37.26026,175.04008],[-37.26432,175.04453],[-37.28014,175.04808],[-37.2914,175.05877],[-37.30063,175.061],[-37.30921,175.06744],[-37.32596,175.06619],[-37.33282,175.06261],[-37.3383,175.06279],[-37.34493,175.06913],[-37.34997,175.07874],[-37.36574,175.09197],[-37.37246,175.09397],[-37.38096,175.10234],[-37.39168,175.10809],[-37.40426,175.12101],[-37.41366,175.12646],[-37.42748,175.12646],[-37.43186,175.13258],[-37.43418,175.14204],[-37.44409,175.15122],[-37.46938,175.15869],[-37.4894,175.16074],[-37.50808,175.16622],[-37.52235,175.17424],[-37.52757,175.18679],[-37.5327,175.1908],[-37.53995,175.19178],[-37.54956,175.18872],[-37.56976,175.18958],[-37.57913,175.18562],[-37.5833,175.18814],[-37.58931,175.19912],[-37.59891,175.20603],[-37.6101,175.20478],[-37.63482,175.20688],[-37.65834,175.20585],[-37.67253,175.2084],[-37.67857,175.21135],[-37.68951,175.22214],[-37.69825,175.24349],[-37.71186,175.25929],[-37.72251,175.28752],[-37.72635,175.29323],[-37.75479,175.3122],[-37.7693,175.32949],[-37.78627,175.33755],[-37.79776,175.34907],[-37.80423,175.3494],[-37.81258,175.34241],[-37.81763,175.34358],[-37.84011,175.36963],[-37.85529,175.39332],[-37.86673,175.40501],[-37.8685,175.41097],[-37.86851,175.46619],[-37.87031,175.47517],[-37.89205,175.50037],[-37.90572,175.52325],[-37.91291,175.54025],[-37.91639,175.55438],[-37.92759,175.56966],[-37.93905,175.57719],[-37.94567,175.58849],[-37.94782,175.61271],[-37.9521,175.62711],[-37.94683,175.64451],[-37.94708,175.65507],[-37.94347,175.65958],[-37.94182,175.66774],[-37.94424,175.67065],[-37.95035,175.67455],[-37.95273,175.66611],[-37.96408,175.66137],[-37.97523,175.66036],[-38.00504,175.66106],[-38.01272,175.65883],[-38.03538,175.6592],[-38.0582,175.66384],[-38.06246,175.67632],[-38.07093,175.68973],[-38.08144,175.69577],[-38.08353,175.70459],[-38.08603,175.70807],[-38.09098,175.70895],[-38.09474,175.71325],[-38.09884,175.72346],[-38.11031,175.73175],[-38.11458,175.73061],[-38.1164,175.73375],[-38.13137,175.7444],[-38.13949,175.74752],[-38.14384,175.74673],[-38.14669,175.74993],[-38.15293,175.7499],[-38.15689,175.7538],[-38.16232,175.76641],[-38.16974,175.76927],[-38.17865,175.77861],[-38.18577,175.7888],[-38.18705,175.79506],[-38.20407,175.81299],[-38.2065,175.82111],[-38.21611,175.82943],[-38.23353,175.83765],[-38.24562,175.84804],[-38.24984,175.85676],[-38.25656,175.86311],[-38.26749,175.87848],[-38.26369,175.88332],[-38.26377,175.88758],[-38.27868,175.89734],[-38.27736,175.90304],[-38.28144,175.90503],[-38.28722,175.91779],[-38.28869,175.93224],[-38.29823,175.94131],[-38.30094,175.96395],[-38.3115,175.9725],[-38.32554,175.99011],[-38.33243,176.0024],[-38.33872,176.00632],[-38.34434,176.00735],[-38.36256,176.00158],[-38.36616,176.00276],[-38.37566,176.00057],[-38.38142,176.00352],[-38.39336,176.01507],[-38.39637,176.02723],[-38.39636,176.03839],[-38.40196,176.05074],[-38.41715,176.052],[-38.43419,176.06007],[-38.43863,176.0589],[-38.44471,176.06047],[-38.45452,176.05824],[-38.47748,176.05911],[-38.4901,176.052],[-38.49605,176.0527],[-38.51645,176.04638],[-38.52387,176.04609],[-38.52763,176.0497],[-38.53423,176.05175],[-38.54513,176.04291],[-38.55165,176.04285],[-38.56906,176.04881],[-38.57377,176.05249],[-38.57806,176.05993],[-38.58346,176.06369],[-38.58951,176.05841],[-38.5919,176.0587],[-38.60335,176.07051],[-38.60847,176.09049],[-38.61611,176.09706],[-38.62353,176.09994],[-38.62522,176.09046],[-38.62918,176.08838],[-38.63474,176.08928],[-38.64269,176.08622],[-38.64747,176.08913],[-38.65044,176.08786],[-38.64944,176.08894]]};
+
+    const transportPairs = [
+      { from:"杭州", to:"西安 / 咸阳", drive:"航班", time:"2h25m", note:"22:00-00:25(+1)" },
+      { from:"西安", to:"墨尔本", drive:"航班", time:"14h30m", note:"17:30-10:00(+1)" },
+      { from:"墨尔本", to:"皇后镇", drive:"航班", time:"3h10m", note:"14:50-20:00" },
+      { from:"皇后镇", to:"Te Anau", drive:"自驾", time:"约 2h", note:"峡湾前住宿基地" },
+      { from:"Te Anau", to:"Milford Sound", drive:"自驾", time:"约 3h", note:"沿途多观景点" },
+      { from:"Wanaka", to:"Twizel", drive:"自驾", time:"约 2h", note:"夜抵注意疲劳" },
+      { from:"Tekapo", to:"Christchurch", drive:"自驾", time:"约 3h", note:"第二天早班机" },
+      { from:"Christchurch", to:"Auckland", drive:"航班", time:"1h20m", note:"09:40-11:00" },
+      { from:"Auckland", to:"Sydney", drive:"航班", time:"3h50m", note:"06:15-08:05" },
+      { from:"Sydney", to:"Hangzhou", drive:"航班", time:"11h05m", note:"14:10-23:15" }
+    ];
+
+    let map;
+    const routeTracker = { pending: 0, failed: 0 };
+    const allPlaces = [...spots, ...hotels];
+
+    function displayName(place) {
+      if (!place.zh || place.zh === place.name) return place.name;
+      return `${place.name} | ${place.zh}`;
+    }
+    function setRouteStatus(text, warning = false, show = true) {
+      const el = document.getElementById("routeStatus");
+      if (!el) return;
+      el.textContent = text;
+      el.classList.toggle("warning", warning);
+      el.classList.toggle("show", show && Boolean(text));
+    }
+    function isMobileView() { return window.matchMedia("(max-width: 760px)").matches; }
+    function openSpotSheet() { document.querySelector(".spot-panel")?.classList.add("open"); }
+    function closeSpotSheet() { document.querySelector(".spot-panel")?.classList.remove("open"); }
+    window.closeSpotSheet = closeSpotSheet;
+
+    function openImageLightbox(src, caption = "") {
+      if (!src) return;
+      const lightbox = document.getElementById("imageLightbox");
+      const image = document.getElementById("lightboxImage");
+      const captionEl = document.getElementById("lightboxCaption");
+      image.src = src;
+      image.alt = caption || "景点图片";
+      captionEl.textContent = caption;
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeImageLightbox(event) {
+      if (event && event.target.closest(".lightbox-image")) return;
+      const lightbox = document.getElementById("imageLightbox");
+      const image = document.getElementById("lightboxImage");
+      lightbox.classList.remove("open");
+      image.removeAttribute("src");
+      document.body.style.overflow = "";
+    }
+
+    window.openImageLightbox = openImageLightbox;
+    window.closeImageLightbox = closeImageLightbox;
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeImageLightbox();
+    });
+
+    function ratingModel(spot) {
+      const labels = [["自然", spot.ratings.nature], ["人文", spot.ratings.culture], ["天气敏感", spot.ratings.weather], ["体力", spot.ratings.stamina]];
+      const score = Math.round((spot.ratings.nature + spot.ratings.culture + (10 - spot.ratings.weather * .35) + (10 - spot.ratings.stamina * .35)) / 4 * 10) / 10;
+      return { labels, score };
+    }
+
+    function renderBars(spot) {
+      return ratingModel(spot).labels.map(([label, value]) => `<div class="bar-row"><span>${label}</span><div class="bar"><span style="width:${value * 10}%"></span></div><strong>${value}</strong></div>`).join("");
+    }
+
+    function renderPanelRating(spot) {
+      const { score } = ratingModel(spot);
+      return `<div class="panel-rating"><h4>综合评分：${score} / 10</h4>${renderBars(spot)}</div>`;
+    }
+
+    function selectSpot(id, openSheet = true) {
+      const spot = spots.find((item) => item.id === id) || spots[0];
+      const panelImage = document.getElementById("panelImage");
+      panelImage.style.backgroundImage = `url('${spot.image}')`;
+      panelImage.setAttribute("role", "button");
+      panelImage.setAttribute("tabindex", "0");
+      panelImage.setAttribute("aria-label", `放大查看${displayName(spot)}图片`);
+      panelImage.onclick = () => openImageLightbox(spot.image, displayName(spot));
+      panelImage.onkeydown = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openImageLightbox(spot.image, displayName(spot));
+        }
+      };
+      document.getElementById("panelBody").innerHTML = `
+        <div class="tag-row"><span class="tag main">Day ${spot.day}</span><span class="tag">${spot.time}</span><span class="tag">${spot.stay}</span></div>
+        <h3>${displayName(spot)}</h3>
+        <p class="panel-intro">${spot.intro}</p>
+        <div class="tag-row">${spot.features.map((feature) => `<span class="tag">${feature}</span>`).join("")}</div>
+        ${renderPanelRating(spot)}
+        <div class="detail-list">
+          <div class="mini-card context"><h4>景观特色</h4><p>${spot.intro}</p></div>
+          <div class="mini-card"><h4>怎么玩</h4><p>${spot.play}</p></div>
+          <div class="mini-card"><h4>注意事项</h4><p>${spot.note}</p></div>
+        </div>`;
+      renderRating(spot);
+      if (map) map.flyTo([spot.lat, spot.lng], isMobileView() ? 7 : 6, { duration: .6 });
+      if (isMobileView() && openSheet) openSpotSheet();
+    }
+    window.selectSpot = selectSpot;
+
+    function renderRating(spot = spots[0]) {
+      const { score } = ratingModel(spot);
+      const ratingPanel = document.getElementById("ratingPanel");
+      ratingPanel.innerHTML = `
+        <div class="rating-image" role="button" tabindex="0" aria-label="放大查看${displayName(spot)}图片" style="background-image:url('${spot.image}')"></div>
+        <h3>${displayName(spot)}</h3>
+        <p>${spot.intro}</p>
+        <div class="tag-row">${spot.features.map((feature) => `<span class="tag">${feature}</span>`).join("")}</div>
+        <p>综合评分：${score} / 10</p>
+        ${renderBars(spot)}`;
+      const ratingImage = ratingPanel.querySelector(".rating-image");
+      ratingImage.onclick = () => openImageLightbox(spot.image, displayName(spot));
+      ratingImage.onkeydown = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openImageLightbox(spot.image, displayName(spot));
+        }
+      };
+    }
+
+    function renderDays() {
+      document.getElementById("dayList").innerHTML = days.map((day) => `
+        <article class="card day-card${day.day === 1 ? " expanded" : ""}" id="day-${day.day}">
+          <div class="card-head">
+            <div><div class="card-title-row"><h3>Day ${day.day} · ${day.title}</h3><span class="date-pill">${day.date.slice(5)}</span></div><p>${day.transport}</p></div>
+            <button class="day-toggle" type="button" onclick="toggleDay(this)">${day.day === 1 ? "收起" : "展开"}</button>
+          </div>
+          <ul class="timeline">${day.timeline.map(renderTimelineItem).join("")}</ul>
+          ${day.alerts?.length ? `<div class="alert-strip">${day.alerts.map((alert) => `<span class="alert-chip">${alert}</span>`).join("")}</div>` : ""}
+          <div class="day-meta"><div><span>住宿</span><strong>${day.base}</strong></div><div><span>日出</span><strong>${day.sunrise}</strong></div><div><span>日落</span><strong>${day.sunset}</strong></div></div>
+        </article>`).join("");
+    }
+
+    function renderTimelineItem(item) {
+      const placeId = item[2];
+      const spot = placeId ? spots.find((item) => item.id === placeId) : null;
+      const label = spot && (item[1] === spot.name || item[1] === spot.zh) ? displayName(spot) : item[1];
+      const text = placeId ? `<button type="button" onclick="selectSpot('${placeId}')">${label}</button>` : `<span>${label}</span>`;
+      return `<li><strong>${item[0]}</strong>${text}</li>`;
+    }
+
+    function renderDayJump() {
+      const jump = document.getElementById("dayJump");
+      jump.innerHTML = days.map((day) => `<button type="button" data-day="${day.day}" onclick="jumpToDay(${day.day})"><strong>D${day.day}</strong><span>${day.date.slice(5)}</span></button>`).join("");
+      setActiveDayJump(1);
+    }
+
+    function setActiveDayJump(dayNumber) {
+      document.querySelectorAll("#dayJump button").forEach((button) => button.classList.toggle("active", Number(button.dataset.day) === dayNumber));
+    }
+    function jumpToDay(dayNumber) {
+      const card = document.getElementById(`day-${dayNumber}`);
+      if (!card) return;
+      card.classList.add("expanded");
+      const toggle = card.querySelector(".day-toggle");
+      if (toggle) toggle.textContent = "收起";
+      setActiveDayJump(dayNumber);
+      card.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    window.jumpToDay = jumpToDay;
+    function toggleDay(button) {
+      const card = button.closest(".day-card");
+      card.classList.toggle("expanded");
+      button.textContent = card.classList.contains("expanded") ? "收起" : "展开";
+    }
+    window.toggleDay = toggleDay;
+
+    function renderFood() {
+      document.getElementById("foodGrid").innerHTML = foods.map((food) => `<article class="food-card"><h3>${food.title}</h3><p>${food.text}</p></article>`).join("");
+    }
+    function renderPrep() {
+      document.getElementById("prepGrid").innerHTML = prep.map((item) => `<article class="prep-card"><h3>${item.title}</h3><p>${item.text}</p></article>`).join("");
+    }
+
+    function renderTransport() {
+      const fromSelect = document.getElementById("fromSelect");
+      const toSelect = document.getElementById("toSelect");
+      const options = allPlaces.map((place) => `<option value="${place.id}">${displayName(place)}</option>`).join("");
+      fromSelect.innerHTML = options;
+      toSelect.innerHTML = options;
+      fromSelect.value = "queenstown";
+      toSelect.value = "arrowtown";
+      fromSelect.addEventListener("change", renderEstimate);
+      toSelect.addEventListener("change", renderEstimate);
+      renderEstimate();
+    }
+
+    function renderEstimate() {
+      const from = allPlaces.find((place) => place.id === document.getElementById("fromSelect").value);
+      const to = allPlaces.find((place) => place.id === document.getElementById("toSelect").value);
+      if (!from || !to) {
+        document.getElementById("estimateBox").innerHTML = "";
+        return;
+      }
+      const km = haversine(from, to) * 1.22;
+      const walkHours = km / 4.6;
+      const modes = [
+        ["自驾", km / 62, "南岛山路和湖区路段会更慢"],
+        ["公共交通", km / 35 + 0.5, "新西兰城际班次少，需当天查"],
+        ["步行", walkHours, "30 分钟内才展示"]
+      ].filter(([label, hours]) => label !== "步行" || hours <= 0.5);
+      document.getElementById("estimateBox").innerHTML = modes.map(([label, hours, note]) => `
+        <div><span>${label}</span><strong>${formatDuration(hours)}</strong><small>${note}</small></div>
+      `).join("");
+    }
+
+    function haversine(a, b) {
+      const radius = 6371;
+      const dLat = toRad(b.lat - a.lat);
+      const dLng = toRad(b.lng - a.lng);
+      const lat1 = toRad(a.lat);
+      const lat2 = toRad(b.lat);
+      const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
+      return 2 * radius * Math.asin(Math.sqrt(h));
+    }
+
+    function toRad(value) {
+      return value * Math.PI / 180;
+    }
+
+    function formatDuration(hours) {
+      const mins = Math.max(3, Math.round(hours * 60));
+      if (mins < 60) return `${mins} 分钟`;
+      const h = Math.floor(mins / 60);
+      const m = mins % 60;
+      return m ? `约 ${h}h ${m}m` : `约 ${h}h`;
+    }
+
+    function iconFor(item, label) {
+      const iconClass = item.type === "hotel" ? "hotel" : item.type === "airport" ? "airport" : "";
+      return L.divIcon({ className:"", html:`<div class="marker-pin ${iconClass}"><span>${label}</span></div>`, iconSize:[30,30], iconAnchor:[15,30], popupAnchor:[0,-28] });
+    }
+
+    function updateRouteStatus() {
+      if (routeTracker.pending > 0) {
+        setRouteStatus(`正在加载自驾路线，还剩 ${routeTracker.pending} 段`);
+        return;
+      }
+      if (routeTracker.failed > 0) {
+        setRouteStatus(`有 ${routeTracker.failed} 段自驾路线加载失败，已用直线示意`, true);
+        return;
+      }
+      setRouteStatus("自驾路线已加载");
+      window.setTimeout(() => setRouteStatus("", false, false), 1200);
+    }
+
+    function renderMapUnavailable() {
+      const mapEl = document.getElementById("map");
+      if (mapEl) { mapEl.classList.add("map-fallback"); mapEl.textContent = "地图资源暂时没有加载成功；下方每日行程仍可正常使用。"; }
+      setRouteStatus("地图资源未加载，刷新或联网后可恢复交互地图", true);
+    }
+
+    function loadLeaflet() {
+      if (window.L) return Promise.resolve();
+      setRouteStatus("正在加载地图资源");
+      if (!document.querySelector('link[data-leaflet-css="true"]')) {
+        const css = document.createElement("link");
+        css.rel = "stylesheet";
+        css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+        css.dataset.leafletCss = "true";
+        document.head.appendChild(css);
+      }
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        const timer = window.setTimeout(() => { script.remove(); reject(new Error("leaflet load timeout")); }, 8000);
+        script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+        script.onload = () => { window.clearTimeout(timer); resolve(); };
+        script.onerror = () => { window.clearTimeout(timer); reject(new Error("leaflet load failed")); };
+        document.head.appendChild(script);
+      });
+    }
+
+    function initMap() {
+      if (typeof L === "undefined") { renderMapUnavailable(); return; }
+      map = L.map("map", { scrollWheelZoom: true });
+      const topo = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", { maxZoom:18, attribution:"Tiles &copy; Esri" });
+      const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom:18, attribution:"&copy; OpenStreetMap contributors" });
+      topo.addTo(map);
+      L.control.layers({ "地形地图": topo, "街道地图": osm }, null, { position:"topleft" }).addTo(map);
+      drawRoute();
+      spots.forEach((spot, index) => {
+        const marker = L.marker([spot.lat, spot.lng], { icon: iconFor(spot, index + 1) }).addTo(map);
+        marker.bindPopup(`<strong>${displayName(spot)}</strong><br>${spot.features.join(" · ")}`);
+        marker.on("click", () => selectSpot(spot.id));
+      });
+      hotels.forEach((hotel) => L.marker([hotel.lat, hotel.lng], { icon: iconFor(hotel, "住") }).addTo(map).bindPopup(`<strong>${displayName(hotel)}</strong><br>Day ${hotel.day} 住宿`));
+      const bounds = L.latLngBounds(allPlaces.map((place) => [place.lat, place.lng]));
+      map.fitBounds(bounds, { padding:[34,34], maxZoom:5 });
+    }
+
+    async function drawRoute() {
+      routeTracker.pending = routeSegments.filter((segment) => segment.mode === "drive").length;
+      routeTracker.failed = 0;
+      updateRouteStatus();
+      const routeTasks = routeSegments.map(async (segment) => {
+        const points = segment.ids.map((id) => spots.find((spot) => spot.id === id)).filter(Boolean);
+        if (segment.mode === "drive") {
+          const routeKey = segment.ids.join("__");
+          try {
+            const roadPath = cachedRoadRoutes[routeKey] || await fetchRoadRoute(points);
+            drawPath(roadPath, false, "drive");
+          } catch (error) {
+            routeTracker.failed += 1;
+            drawLine(points, true, "fallback");
+          } finally {
+            routeTracker.pending = Math.max(0, routeTracker.pending - 1);
+            updateRouteStatus();
+          }
+        } else {
+          drawLine(points, true, segment.mode);
+        }
+      });
+      await Promise.all(routeTasks);
+    }
+
+    async function fetchRoadRoute(points) {
+      const coords = points.map((point) => `${point.lng},${point.lat}`).join(";");
+      const url = `https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`;
+      const controller = new AbortController();
+      const timer = window.setTimeout(() => controller.abort(), 6500);
+      let response;
+      try {
+        response = await fetch(url, { signal: controller.signal });
+      } finally {
+        window.clearTimeout(timer);
+      }
+      if (!response.ok) throw new Error("route request failed");
+      const payload = await response.json();
+      const coordinates = payload.routes?.[0]?.geometry?.coordinates;
+      if (!coordinates?.length) throw new Error("route geometry missing");
+      return coordinates.map(([lng, lat]) => [lat, lng]);
+    }
+
+    function drawLine(points, dashed, mode) {
+      const path = points.filter(Boolean).map((point) => [point.lat, point.lng]);
+      if (path.length < 2) return;
+      drawPath(path, dashed, mode);
+    }
+
+    function drawPath(path, dashed, mode) {
+      const style = mode === "flight"
+        ? { color:"#1e6a8c", weight:3, opacity:.65, dashArray:"8 10" }
+        : mode === "fallback"
+          ? { color:"#bc6339", weight:3, opacity:.45, dashArray:"6 8" }
+          : { color:"#bc6339", weight:4, opacity:.82 };
+      L.polyline(path, style).addTo(map);
+    }
+
+    renderHeroMedia();
+    renderDays();
+    renderDayJump();
+    renderFood();
+    renderPrep();
+    renderTransport();
+    selectSpot("tekapo", false);
+    loadLeaflet().then(initMap).catch(renderMapUnavailable);
+  </script>
+</body>
+</html>

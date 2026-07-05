@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Amber的旅行地图</title>
-  <meta name="description" content="Amber的旅行地图，集中管理多个目的地的交互式旅行攻略、路线地图和每日行程。">
+  <title>Amber的漂流日记</title>
+  <meta name="description" content="Amber的漂流日记，集中管理多个目的地的交互式旅行攻略、路线地图和每日行程。">
   <style>
     :root {
       --bg: #f5f2ec;
@@ -58,6 +58,45 @@
       font-size: 18px;
     }
 
+    .guide-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 0 0 16px;
+    }
+
+    .sort-tabs {
+      display: inline-flex;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 250, 242, .72);
+    }
+
+    .sort-tabs button {
+      border: 0;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .sort-tabs button {
+      min-height: 32px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .sort-tabs button.active {
+      background: var(--green);
+      color: #fff;
+    }
+
     .guide-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -81,10 +120,27 @@
     }
 
     .guide-image {
+      position: relative;
+      overflow: hidden;
       min-height: 190px;
       background:
         linear-gradient(180deg, rgba(12, 21, 17, .06), rgba(12, 21, 17, .28)),
         url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Vombatus_ursinus_-Maria_Island_National_Park.jpg/1280px-Vombatus_ursinus_-Maria_Island_National_Park.jpg") center / cover;
+    }
+
+    .guide-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(12, 21, 17, .06), rgba(12, 21, 17, .28));
+      pointer-events: none;
+    }
+
+    .guide-media {
+      display: block;
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
     }
 
     .guide-body {
@@ -151,6 +207,11 @@
         line-height: 1.72;
       }
 
+      .guide-toolbar {
+        align-items: flex-start;
+        margin-bottom: 14px;
+      }
+
       .desktop-break {
         display: none;
       }
@@ -161,11 +222,34 @@
 <body>
   <main>
     <p class="kicker">Travel Atlas</p>
-    <h1>Amber的旅行地图</h1>
+    <h1>Amber的漂流日记</h1>
     <p class="lead">把想去的远方一页页展开：海风、山路、晨光、星空，<br class="desktop-break">还有那些尚未抵达，却已经在心里发亮的坐标。</p>
 
-    <div class="guide-grid">
-      <a class="guide-card" href="perth-20260925-1001/">
+    <div class="guide-toolbar" aria-label="攻略排序">
+      <div class="sort-tabs" role="group" aria-label="排序方式">
+        <button type="button" class="active" data-sort-order="asc">最近在前</button>
+        <button type="button" data-sort-order="desc">最远在前</button>
+      </div>
+    </div>
+
+    <div class="guide-grid" id="guideGrid">
+      <a class="guide-card" href="australia-newzealand-20260423-0506/" data-start="2026-04-23">
+        <div class="guide-image">
+          <video class="guide-media" autoplay muted loop playsinline preload="metadata" poster="australia-newzealand-20260423-0506/assets/row51_img39.jpg">
+            <source src="australia-newzealand-20260423-0506/assets/hero-australia-newzealand.MOV">
+          </video>
+        </div>
+        <div class="guide-body">
+          <h2>澳洲&amp;新西兰14日游</h2>
+          <p>从 Melbourne 开场，串起 Queenstown、Milford Sound、Wanaka、Aoraki / Mount Cook、Tekapo、Auckland 与 Sydney。</p>
+          <div class="tag-row">
+            <span class="tag main">2026.04.23-05.06</span>
+            <span class="tag">跨国路线</span>
+            <span class="tag">南岛 / 峡湾 / 雪山</span>
+          </div>
+        </div>
+      </a>
+      <a class="guide-card" href="perth-20260925-1001/" data-start="2026-09-25">
         <div class="guide-image" style="background-image: linear-gradient(180deg, rgba(12, 21, 17, .06), rgba(12, 21, 17, .28)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Pinnacles_gnangarra-62.jpg/1920px-Pinnacles_gnangarra-62.jpg')"></div>
         <div class="guide-body">
           <h2>珀斯北线7日游</h2>
@@ -177,7 +261,7 @@
           </div>
         </div>
       </a>
-      <a class="guide-card" href="tasmania-20261002-1007/">
+      <a class="guide-card" href="tasmania-20261002-1007/" data-start="2026-10-02">
         <div class="guide-image"></div>
         <div class="guide-body">
           <h2>塔州东海岸 6 日游</h2>
@@ -191,5 +275,36 @@
       </a>
     </div>
   </main>
+  <script>
+    (() => {
+      const sortOrderStorageKey = "amberTripGuideSortOrder";
+      const grid = document.getElementById("guideGrid");
+      const sortButtons = Array.from(document.querySelectorAll("[data-sort-order]"));
+
+      function guideCards() {
+        return Array.from(grid.querySelectorAll(".guide-card"));
+      }
+
+      function applyOrder(order) {
+        const ordered = guideCards().sort((a, b) => {
+          const comparison = a.dataset.start.localeCompare(b.dataset.start);
+          return order === "desc" ? -comparison : comparison;
+        });
+        ordered.forEach((card) => grid.appendChild(card));
+        sortButtons.forEach((button) => button.classList.toggle("active", button.dataset.sortOrder === order));
+      }
+
+      sortButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const order = button.dataset.sortOrder;
+          localStorage.setItem(sortOrderStorageKey, order);
+          applyOrder(order);
+        });
+      });
+
+      const savedOrder = localStorage.getItem(sortOrderStorageKey);
+      applyOrder(savedOrder === "desc" ? "desc" : "asc");
+    })();
+  </script>
 </body>
 </html>
