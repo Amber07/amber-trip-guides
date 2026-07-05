@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/tasmania-20261002-1007",
+      "destination": "/tasmania-20261002-1007/index.html"
+    },
+    {
+      "source": "/perth-20260925-1001",
+      "destination": "/perth-20260925-1001/index.html"
+    }
+  ]
+}

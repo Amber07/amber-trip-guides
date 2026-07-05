@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amber 的旅行地图册</title>
+  <meta name="description" content="Amber 的旅行地图册，集中管理多个目的地的交互式旅行攻略、路线地图和每日行程。">
+  <style>
+    :root {
+      --bg: #f5f2ec;
+      --paper: #fffaf2;
+      --ink: #18211d;
+      --muted: #687069;
+      --line: #ded4c5;
+      --green: #275745;
+      --orange: #bc6339;
+      --shadow: 0 14px 36px rgba(42, 34, 20, .12);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(1040px, 100%);
+      margin: 0 auto;
+      padding: 56px 22px;
+    }
+
+    .kicker {
+      margin: 0 0 10px;
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 900px;
+      margin: 18px 0 32px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .guide-card {
+      display: grid;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .guide-card:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .guide-image {
+      min-height: 190px;
+      background:
+        linear-gradient(180deg, rgba(12, 21, 17, .06), rgba(12, 21, 17, .28)),
+        url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Vombatus_ursinus_-Maria_Island_National_Park.jpg/1280px-Vombatus_ursinus_-Maria_Island_National_Park.jpg") center / cover;
+    }
+
+    .guide-body {
+      padding: 18px;
+    }
+
+    .guide-body h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .guide-body p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .tag.main {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <p class="kicker">Travel Atlas</p>
+    <h1>Amber 的旅行地图册</h1>
+    <p class="lead">把想去的远方一页页展开：海风、山路、晨光、星空，<br>还有那些尚未抵达，却已经在心里发亮的坐标。</p>
+
+    <div class="guide-grid">
+      <a class="guide-card" href="perth-20260925-1001/">
+        <div class="guide-image" style="background-image: linear-gradient(180deg, rgba(12, 21, 17, .06), rgba(12, 21, 17, .28)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Pinnacles_gnangarra-62.jpg/1920px-Pinnacles_gnangarra-62.jpg')"></div>
+        <div class="guide-body">
+          <h2>珀斯北线7日游</h2>
+          <p>Perth 慢开局，串起 Caversham、Swan Valley、Rottnest、Hutt Lagoon、Kalbarri、Cervantes 与 Pinnacles。</p>
+          <div class="tag-row">
+            <span class="tag main">2026.09.25-10.01</span>
+            <span class="tag">自驾地图</span>
+            <span class="tag">海岛 / 粉红湖 / 峡谷</span>
+          </div>
+        </div>
+      </a>
+      <a class="guide-card" href="tasmania-20261002-1007/">
+        <div class="guide-image"></div>
+        <div class="guide-body">
+          <h2>塔州东海岸 6 日游</h2>
+          <p>Launceston 北进、Hobart 南出，串起 Bay of Fires、Freycinet、Maria Island、Tasman Peninsula 与 Hobart。</p>
+          <div class="tag-row">
+            <span class="tag main">2026.10.02-10.07</span>
+            <span class="tag">自驾地图</span>
+            <span class="tag">自然 / 动物 / 海岸</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

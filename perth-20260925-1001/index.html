@@ -1,0 +1,2791 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>珀斯 / 西澳北线 2026.9.25-10.1 行程攻略</title>
+  <meta name="description" content="珀斯 / 西澳北线 2026.9.25-10.1 自驾旅行攻略，覆盖 Caversham、Swan Valley、Rottnest、Hutt Lagoon、Kalbarri、Cervantes 与 Pinnacles。">
+  <style>
+    :root {
+      --bg: #f5f2ec;
+      --paper: #fffaf2;
+      --ink: #18211d;
+      --muted: #687069;
+      --line: #ded4c5;
+      --green: #275745;
+      --blue: #1e6a8c;
+      --orange: #bc6339;
+      --gold: #c29334;
+      --shadow: 0 14px 36px rgba(42, 34, 20, .12);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.58;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    button, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .hero {
+      position: relative;
+      min-height: 68vh;
+      display: grid;
+      align-items: end;
+      padding: 32px;
+      color: #fff;
+      background:
+        linear-gradient(180deg, rgba(12, 21, 17, .12), rgba(12, 21, 17, .76)),
+        url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Pinnacles_gnangarra-62.jpg/1920px-Pinnacles_gnangarra-62.jpg") center / cover;
+    }
+
+    .hero-inner {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: rgba(255,255,255,.82);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 920px;
+      margin: 0;
+      font-size: clamp(38px, 7vw, 88px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 820px;
+      margin: 18px 0 0;
+      color: rgba(255,255,255,.88);
+      font-size: clamp(17px, 2vw, 23px);
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .hero-stat {
+      min-width: 145px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 22px;
+    }
+
+    .hero-stat span {
+      color: rgba(255,255,255,.8);
+      font-size: 13px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 500;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 14px;
+      overflow-x: auto;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,250,242,.9);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav a {
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav a:hover {
+      background: #eadfce;
+      text-decoration: none;
+    }
+
+    .nav a::before {
+      content: attr(data-icon);
+      display: none;
+    }
+
+    section { padding: 54px 24px; }
+
+    .inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 820px;
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .notice {
+      margin: 18px 0 0;
+      padding: 14px 16px;
+      border: 1px solid #e0bf82;
+      border-radius: var(--radius);
+      background: #fff4d8;
+      color: #6a4b14;
+      font-weight: 700;
+    }
+
+    .map-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 380px;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .map-wrap {
+      position: relative;
+      min-height: 640px;
+    }
+
+    #map {
+      height: 100%;
+      min-height: 640px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    #map.map-fallback {
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      background: #e9dfd0;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .route-status {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      z-index: 460;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      max-width: calc(100% - 28px);
+      padding: 10px 12px;
+      border: 1px solid rgba(222, 212, 197, .9);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 242, .94);
+      color: var(--muted);
+      box-shadow: 0 10px 28px rgba(41, 54, 48, .16);
+      backdrop-filter: blur(14px);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .route-status.show {
+      display: flex;
+    }
+
+    .route-status.warning {
+      border-color: #e0bf82;
+      background: rgba(255, 244, 216, .96);
+      color: #6a4b14;
+    }
+
+    .route-status::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .route-status.warning::before {
+      background: var(--orange);
+    }
+
+    .spot-panel, .card, .food-card, .prep-card, .transport-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .spot-panel {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      position: relative;
+    }
+
+    .sheet-close {
+      display: none;
+    }
+
+    .panel-img {
+      min-height: 210px;
+      background: #d8d2c8 center / cover;
+    }
+
+    .panel-body {
+      padding: 16px;
+      overflow: auto;
+    }
+
+    .panel-body h3 {
+      margin: 0 0 7px;
+      font-size: 23px;
+      line-height: 1.14;
+    }
+
+    .panel-intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .tag.main {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+    }
+
+    .detail-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin: 12px 0 0;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 0;
+    }
+
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .action-link.primary {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+    }
+
+    .action-link:hover {
+      text-decoration: none;
+      filter: brightness(.98);
+    }
+
+    .mini-card {
+      min-width: 0;
+      padding: 11px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fffdf8;
+    }
+
+    .mini-card.context {
+      background: #f4f8f3;
+    }
+
+    .mini-card h4 {
+      margin: 0 0 5px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.48;
+    }
+
+    .route-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .day-list-wrap {
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .day-jump {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+      margin-top: 18px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 242, .92);
+      box-shadow: 0 10px 26px rgba(42, 34, 20, .08);
+      backdrop-filter: blur(12px);
+    }
+
+    .day-jump button {
+      display: grid;
+      place-items: center;
+      min-height: 42px;
+      padding: 5px 4px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      background: transparent;
+      color: var(--muted);
+      line-height: 1.1;
+    }
+
+    .day-jump button:hover,
+    .day-jump button.active {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .day-jump strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .day-jump span {
+      display: block;
+      margin-top: 2px;
+      font-size: 10px;
+      font-weight: 800;
+      opacity: .78;
+    }
+
+    .card {
+      padding: 18px;
+      box-shadow: none;
+    }
+
+    .day-card {
+      scroll-margin-top: 84px;
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .card-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .card p {
+      margin: 4px 0 0;
+      color: var(--muted);
+    }
+
+    .date-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border: 1px solid #d8e2d9;
+      border-radius: 999px;
+      background: #f2f7f0;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .day-toggle {
+      display: none;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline li {
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      gap: 10px;
+      padding: 10px;
+      border-radius: var(--radius);
+      background: #f8efe2;
+    }
+
+    .timeline strong {
+      color: var(--green);
+    }
+
+    .timeline button {
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: rgba(30, 106, 140, .35);
+      text-underline-offset: 3px;
+    }
+
+    .day-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .day-meta div {
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fffdf8;
+    }
+
+    .day-meta strong {
+      display: block;
+      color: var(--ink);
+    }
+
+    .alert-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 12px 0 0;
+    }
+
+    .alert-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 9px;
+      border: 1px solid #e0bf82;
+      border-radius: 999px;
+      background: #fff4d8;
+      color: #6a4b14;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .side-stack {
+      position: sticky;
+      top: 68px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .transport-card, .rating-card {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+
+    .rating-card {
+      max-height: calc(100vh - 96px);
+      overflow: auto;
+    }
+
+    .transport-card h3, .rating-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .rating-image {
+      width: 100%;
+      aspect-ratio: 16 / 8.6;
+      margin: 0 0 10px;
+      border-radius: var(--radius);
+      background: #d8d2c8 center / cover;
+    }
+
+    .rating-card h3 {
+      line-height: 1.22;
+    }
+
+    .rating-card p {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .rating-card .tag-row {
+      margin: 7px 0 8px;
+    }
+
+    .rating-card .tag {
+      min-height: 24px;
+      padding: 2px 7px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    select {
+      width: 100%;
+      min-height: 42px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .estimate {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .estimate div {
+      min-width: 0;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .estimate strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr) 30px;
+      gap: 8px;
+      align-items: center;
+      margin: 6px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .bar {
+      height: 8px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #e7ddce;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: var(--orange);
+    }
+
+    .panel-rating {
+      display: none;
+    }
+
+    .food-grid, .prep-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .food-card, .prep-card {
+      padding: 16px;
+      box-shadow: none;
+    }
+
+    .food-card h3, .prep-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .food-card p, .prep-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .prep-card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .marker-pin {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border: 2px solid #fff;
+      border-radius: 50% 50% 50% 4px;
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 7px 18px rgba(0,0,0,.25);
+      transform: rotate(-45deg);
+      font-weight: 900;
+    }
+
+    .marker-pin span {
+      transform: rotate(45deg);
+      font-size: 12px;
+    }
+
+    .marker-pin.hotel { background: var(--gold); }
+    .marker-pin.airport { background: var(--green); }
+
+    footer {
+      padding: 22px 24px 44px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .map-grid, .two-col { grid-template-columns: 1fr; }
+      .side-stack { position: static; }
+      .map-wrap, #map { min-height: 520px; }
+      .food-grid, .prep-grid { grid-template-columns: repeat(2, 1fr); }
+      .day-list-wrap {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .day-jump {
+        z-index: 20;
+        display: flex;
+        gap: 6px;
+        margin: 14px 0 0;
+        padding: 7px;
+        overflow-x: auto;
+      }
+
+      .day-jump button {
+        flex: 0 0 54px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      body {
+        padding-bottom: calc(82px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 26px 18px 28px;
+      }
+
+      .hero-inner {
+        margin-top: 28px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero-copy {
+        font-size: 17px;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .hero-stat {
+        min-width: 0;
+        padding: 9px 10px;
+      }
+
+      .hero-stat strong {
+        font-size: 17px;
+        line-height: 1.15;
+      }
+
+      .hero-stat span {
+        font-size: 11px;
+        line-height: 1.25;
+      }
+
+      .notice {
+        font-size: 14px;
+      }
+
+      .nav {
+        position: fixed;
+        inset: auto 10px calc(10px + env(safe-area-inset-bottom, 0px)) 10px;
+        z-index: 1200;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4px;
+        padding: 8px;
+        border: 1px solid rgba(41, 54, 48, .14);
+        border-radius: 18px;
+        background: rgba(255, 250, 242, .94);
+        box-shadow: 0 18px 44px rgba(41, 54, 48, .18);
+      }
+
+      .nav a {
+        display: grid;
+        place-items: center;
+        gap: 2px;
+        min-height: 52px;
+        padding: 4px 2px;
+        border-radius: 12px;
+        font-size: 12px;
+        line-height: 1.2;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .nav a::before {
+        display: block;
+        font-size: 17px;
+        line-height: 1;
+      }
+
+      section {
+        padding: 44px 16px;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .map-grid {
+        display: block;
+      }
+
+      .map-wrap {
+        height: 62vh;
+        min-height: 440px;
+      }
+
+      #map {
+        height: 100%;
+        min-height: 0;
+        border-radius: 12px;
+      }
+
+      .route-status {
+        bottom: 12px;
+        font-size: 12px;
+      }
+
+      .spot-panel {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1300;
+        max-height: min(78vh, 640px);
+        border-radius: 18px 18px 0 0;
+        transform: translateY(106%);
+        transition: transform .28s ease;
+        box-shadow: 0 -18px 48px rgba(41, 54, 48, .24);
+      }
+
+      .spot-panel.open {
+        transform: translateY(0);
+      }
+
+      .spot-panel::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        width: 44px;
+        height: 5px;
+        border-radius: 999px;
+        background: rgba(41, 54, 48, .22);
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+
+      .sheet-close {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        z-index: 3;
+        width: 34px;
+        height: 34px;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .92);
+        color: var(--ink);
+        font-size: 24px;
+        line-height: 1;
+        box-shadow: 0 8px 20px rgba(41, 54, 48, .16);
+      }
+
+      .panel-img {
+        min-height: 170px;
+      }
+
+      .panel-body {
+        max-height: calc(78vh - 170px);
+        padding: 16px 16px calc(18px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .panel-body h3 {
+        font-size: 21px;
+      }
+
+      .panel-intro {
+        font-size: 14px;
+      }
+
+      .detail-list {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .mini-card {
+        padding: 10px;
+      }
+
+      .panel-rating {
+        display: block;
+        margin-top: 12px;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fffdf8;
+      }
+
+      .panel-rating h4 {
+        margin: 0 0 6px;
+        font-size: 16px;
+      }
+
+      .panel-rating p {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .route-list {
+        margin-top: 12px;
+      }
+
+      .day-jump {
+        top: 10px;
+        border-radius: 999px;
+      }
+
+      .day-card {
+        padding: 14px;
+        scroll-margin-top: 80px;
+      }
+
+      .card-head {
+        align-items: flex-start;
+        margin-bottom: 0;
+      }
+
+      .card h3 {
+        font-size: 19px;
+      }
+
+      .card-title-row {
+        gap: 6px;
+      }
+
+      .date-pill {
+        min-height: 24px;
+        padding: 2px 8px;
+        font-size: 11px;
+      }
+
+      .day-card:not(.expanded) .timeline,
+      .day-card:not(.expanded) .day-meta,
+      .day-card:not(.expanded) .alert-strip {
+        display: none;
+      }
+
+      .day-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        padding: 7px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fffdf8;
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .side-stack {
+        gap: 10px;
+      }
+
+      .transport-card,
+      .rating-card {
+        padding: 14px;
+      }
+
+      .estimate {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .estimate div {
+        padding: 9px;
+      }
+
+      .estimate strong {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .map-wrap {
+        height: 58vh;
+        min-height: 390px;
+      }
+      .food-grid, .prep-grid, .day-meta { grid-template-columns: 1fr; }
+      .timeline li { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .estimate {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Perth & Western Australia · 2026.09.25-10.01</p>
+      <h1>珀斯北线7日游</h1>
+      <p class="hero-copy">从 Perth 慢开局，串起 Caversham 动物体验、Swan Valley、Rottnest Island、Lancelin 白沙丘、Hutt Lagoon 粉红湖、Kalbarri 峡谷，最后用 Pinnacles 日落与星空收尾。</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>7 天</strong><span>9/25 抵达，10/1 离开</span></div>
+        <div class="hero-stat"><strong>北线自驾</strong><span>Perth → Geraldton → Cervantes</span></div>
+        <div class="hero-stat"><strong>两段航班</strong><span>新山进，珀斯飞墨尔本</span></div>
+        <div class="hero-stat"><strong>3 类预约</strong><span>Rottnest ferry / 动物园 / Parks Pass</span></div>
+      </div>
+      <div class="notice">重要时间提醒：9/25 为红眼航班抵达日，新山 T2 → 珀斯 01:00-08:55，当天不安排长途驾驶；10/1 珀斯 T1 → 墨尔本 T3，14:20-19:55，回机场日以还车和值机缓冲为优先。</div>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="页面导航">
+    <a href="#map-section" data-icon="图">路线地图</a>
+    <a href="#itinerary-section" data-icon="日">每日行程</a>
+    <a href="#food-section" data-icon="食">餐饮补给</a>
+    <a href="#prep-section" data-icon="备">提前准备</a>
+  </nav>
+
+  <main>
+    <section id="map-section">
+      <div class="inner">
+        <p class="kicker">Route Map</p>
+        <h2>珀斯与西澳北线路线地图</h2>
+        <p class="lead">沿着行程查看景点、住宿区域与机场位置。点击地图图标可查看景点亮点、玩法、历史背景和注意事项；自驾段为实线，Rottnest Island 渡轮段为虚线。</p>
+        <div class="map-grid">
+          <div class="map-wrap">
+            <div id="map" role="application" aria-label="珀斯和西澳北线行程地图"></div>
+            <div class="route-status show" id="routeStatus" role="status">正在加载自驾路线</div>
+          </div>
+          <aside class="spot-panel" aria-live="polite">
+            <button class="sheet-close" type="button" aria-label="关闭景点详情" onclick="closeSpotSheet()">×</button>
+            <div class="panel-img" id="panelImage"></div>
+            <div class="panel-body" id="panelBody"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="itinerary-section">
+      <div class="inner">
+        <p class="kicker">Daily Plan</p>
+        <h2>每日行程安排</h2>
+        <p class="lead">每天按时间线整理主要景点、住宿、交通和日出日落信息。点击景点名即可联动查看地图位置、景点详情和多维评分。</p>
+        <div class="two-col">
+          <div class="day-list-wrap">
+            <nav class="day-jump" id="dayJump" aria-label="分天导览"></nav>
+            <div class="route-list" id="dayList"></div>
+          </div>
+          <aside class="side-stack">
+            <div class="transport-card">
+              <h3>点到点交通时间</h3>
+              <label>起点<select id="fromSelect"></select></label>
+              <label>终点<select id="toSelect"></select></label>
+              <div class="estimate" id="estimateBox"></div>
+            </div>
+            <div class="rating-card" id="ratingPanel"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="food-section">
+      <div class="inner">
+        <p class="kicker">Food</p>
+        <h2>沿线餐饮与补给</h2>
+        <p class="lead">按当天路线整理适合吃饭和补给的区域，优先保证顺路、轻松和不耽误后续行程。</p>
+        <div class="food-grid" id="foodGrid"></div>
+      </div>
+    </section>
+
+    <section id="prep-section">
+      <div class="inner">
+        <p class="kicker">Before Departure</p>
+        <h2>需要提前预定和准备的东西</h2>
+        <p class="lead">把出发前需要预订、确认和打包的事项集中到一处，方便临行前逐项核对。</p>
+        <div class="prep-grid" id="prepGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>珀斯 / 西澳北线旅行攻略 · 2026.09.25-10.01</footer>
+
+  <script>
+    const spots = [
+          {
+                "id": "perth_airport_arrival",
+                "name": "Perth Airport",
+                "zh": "珀斯机场",
+                "type": "airport",
+                "day": 1,
+                "time": "9/25 08:55",
+                "lat": -31.9403,
+                "lng": 115.9672,
+                "stay": "抵达",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Perth_Intl_front_side_on_2015.jpg/1920px-Perth_Intl_front_side_on_2015.jpg",
+                "features": [
+                      "新山 T2 → 珀斯",
+                      "01:00-08:55",
+                      "红眼抵达"
+                ],
+                "intro": "9/25 凌晨 01:00 从新山 T2 起飞，08:55 抵达 Perth Airport。当天以恢复、寄存行李和市区慢游为主。",
+                "play": "入境、取行李和取车都不要压太紧；如果睡眠不足，先打车进城，长途自驾留到后面。",
+                "note": "航班和租车订单离线保存，抵达后确认本地时间、电话卡和导航。",
+                "ratings": {
+                      "nature": 1,
+                      "culture": 1,
+                      "weather": 1,
+                      "stamina": 2
+                }
+          },
+          {
+                "id": "kings_park",
+                "name": "Kings Park and Botanic Garden",
+                "zh": "国王公园和植物园",
+                "type": "spot",
+                "day": 1,
+                "time": "9/25 13:00-15:00",
+                "lat": -31.9609,
+                "lng": 115.832,
+                "stay": "2 小时",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Perth_CBD_skyline_from_State_War_Memorial_Lookout%2C_2023%2C_04_b.jpg/3840px-Perth_CBD_skyline_from_State_War_Memorial_Lookout%2C_2023%2C_04_b.jpg",
+                "features": [
+                      "城市天际线",
+                      "野花",
+                      "Swan River 视角"
+                ],
+                "intro": "珀斯开场最稳的城市自然点，可以从高处看 Swan River、CBD 天际线和春季野花。",
+                "play": "走 Lotterywest Federation Walkway 和 State War Memorial 一带，不做大强度步行。",
+                "note": "红眼抵达当天重点是恢复体力，控制停留节奏。",
+                "ratings": {
+                      "nature": 7,
+                      "culture": 6,
+                      "weather": 6,
+                      "stamina": 2
+                }
+          },
+          {
+                "id": "elizabeth_quay",
+                "name": "Elizabeth Quay",
+                "zh": "伊丽莎白码头",
+                "type": "spot",
+                "day": 1,
+                "time": "9/25 15:30-17:00",
+                "lat": -31.9592,
+                "lng": 115.858,
+                "stay": "1.5 小时",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Perth_%28AU%29%2C_Elizabeth_Quay_Bridge_--_2019_--_0375-9.jpg/1920px-Perth_%28AU%29%2C_Elizabeth_Quay_Bridge_--_2019_--_0375-9.jpg",
+                "features": [
+                      "河岸散步",
+                      "城市收尾",
+                      "轻松拍照"
+                ],
+                "intro": "Swan River 边的城市滨水区，适合第一天下午用非常轻松的方式收尾。",
+                "play": "沿桥和码头短走，喝咖啡或简单晚餐后早点回酒店。",
+                "note": "这天不建议临时加 Cottesloe 或长距离活动。",
+                "ratings": {
+                      "nature": 4,
+                      "culture": 5,
+                      "weather": 5,
+                      "stamina": 1
+                }
+          },
+          {
+                "id": "caversham",
+                "name": "Caversham Wildlife Park",
+                "zh": "卡弗舍姆野生动物园",
+                "type": "spot",
+                "day": 2,
+                "time": "9/26 09:30-12:00",
+                "lat": -31.8357,
+                "lng": 115.9465,
+                "stay": "2.5 小时",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Koala_in_Zoo_Duisburg.jpg/1920px-Koala_in_Zoo_Duisburg.jpg",
+                "features": [
+                      "考拉",
+                      "袋鼠",
+                      "农场秀"
+                ],
+                "intro": "珀斯近郊最适合安排澳洲动物体验的点，和 Swan Valley 可组成轻松半日线。",
+                "play": "看考拉、袋鼠区和农场秀，按当天开放时间调整顺序。",
+                "note": "与动物保持距离，遵守现场工作人员指引。",
+                "ratings": {
+                      "nature": 7,
+                      "culture": 4,
+                      "weather": 5,
+                      "stamina": 2
+                }
+          },
+          {
+                "id": "swan_valley",
+                "name": "Swan Valley",
+                "zh": "天鹅谷",
+                "type": "spot",
+                "day": 2,
+                "time": "9/26 12:15-16:00",
+                "lat": -31.8219,
+                "lng": 116.0031,
+                "stay": "3.5 小时",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/2/2b/OIC_swan_valley_vineyards.jpg",
+                "features": [
+                      "酒庄午餐",
+                      "巧克力",
+                      "手信"
+                ],
+                "intro": "Swan Valley 是珀斯周边最顺路的葡萄酒和手信区域，适合动物园后慢慢吃午餐。",
+                "play": "选一家酒庄或餐厅午餐，再短停巧克力、蜂蜜、咖啡或牛轧糖店。",
+                "note": "如果自驾，酒庄品酒要非常克制。",
+                "ratings": {
+                      "nature": 5,
+                      "culture": 6,
+                      "weather": 4,
+                      "stamina": 1
+                }
+          },
+          {
+                "id": "fremantle_terminal",
+                "name": "Fremantle B Shed Ferry Terminal",
+                "zh": "弗里曼特尔渡轮码头",
+                "type": "spot",
+                "day": 3,
+                "time": "9/27 08:30",
+                "lat": -32.0519,
+                "lng": 115.7445,
+                "stay": "登船",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/B_Shed%2C_Fremantle%2C_November_2024_01.jpg/1920px-B_Shed%2C_Fremantle%2C_November_2024_01.jpg",
+                "features": [
+                      "Rottnest 登船",
+                      "提前到达",
+                      "船票核对"
+                ],
+                "intro": "前往 Rottnest Island 的关键交通节点，建议按船票时间提前抵达。",
+                "play": "提前停车、换票、买水和简餐，避免临近开船才赶到。",
+                "note": "船班受天气和季节影响，出发前一天再确认。",
+                "ratings": {
+                      "nature": 2,
+                      "culture": 4,
+                      "weather": 5,
+                      "stamina": 1
+                }
+          },
+          {
+                "id": "rottnest",
+                "name": "Rottnest Island / Wadjemup",
+                "zh": "罗特尼斯岛 / Wadjemup",
+                "type": "spot",
+                "day": 3,
+                "time": "9/27 全天",
+                "lat": -31.995,
+                "lng": 115.54,
+                "stay": "全天",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Setonix_brachyurus_on_Rottnest_Island_2.jpg/1920px-Setonix_brachyurus_on_Rottnest_Island_2.jpg",
+                "features": [
+                      "Quokka",
+                      "白沙滩",
+                      "骑行 / 巴士"
+                ],
+                "intro": "西澳最有辨识度的海岛日，主角是 Quokka、低车流海岸和一串透明海湾。",
+                "play": "按体力选择自行车或岛上巴士，The Basin、Pinky Beach、Little Salmon Bay 选 2-3 个重点。",
+                "note": "不要投喂、触摸 Quokka；岛上风大日晒强，带水、防晒和外套。",
+                "ratings": {
+                      "nature": 10,
+                      "culture": 6,
+                      "weather": 8,
+                      "stamina": 5
+                }
+          },
+          {
+                "id": "the_basin",
+                "name": "The Basin / Pinky Beach",
+                "zh": "The Basin / Pinky Beach",
+                "type": "spot",
+                "day": 3,
+                "time": "9/27 上午",
+                "lat": -31.9881,
+                "lng": 115.5382,
+                "stay": "2 小时",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Golden_Hour_at_the_Basin_-_Rottnest_Island.jpg/1920px-Golden_Hour_at_the_Basin_-_Rottnest_Island.jpg",
+                "features": [
+                      "浅水海湾",
+                      "灯塔视角",
+                      "轻松停留"
+                ],
+                "intro": "Rottnest 北侧最容易抵达的高颜值海湾，适合上午先完成主景点。",
+                "play": "The Basin 看水色，Pinky Beach 结合灯塔一带散步。",
+                "note": "海风强时注意保暖，游泳按现场安全提示判断。",
+                "ratings": {
+                      "nature": 9,
+                      "culture": 3,
+                      "weather": 8,
+                      "stamina": 3
+                }
+          },
+          {
+                "id": "lancelin",
+                "name": "Lancelin Sand Dunes",
+                "zh": "兰斯林白沙丘",
+                "type": "spot",
+                "day": 4,
+                "time": "9/28 09:45-10:45",
+                "lat": -31.0177,
+                "lng": 115.3377,
+                "stay": "1 小时",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Lancelin_Sand_Dunes_2.jpg/1920px-Lancelin_Sand_Dunes_2.jpg",
+                "features": [
+                      "白沙丘",
+                      "滑沙",
+                      "北上第一站"
+                ],
+                "intro": "从 Perth 北上后的第一处强记忆点，白色沙丘和海风让路线一下进入西澳海岸感。",
+                "play": "拍照或短时间滑沙即可，不要把体力消耗在这里。",
+                "note": "沙子很细，手机、相机和鞋子注意防沙。",
+                "ratings": {
+                      "nature": 8,
+                      "culture": 2,
+                      "weather": 8,
+                      "stamina": 4
+                }
+          },
+          {
+                "id": "lobster_shack",
+                "name": "Lobster Shack",
+                "zh": "龙虾屋",
+                "type": "spot",
+                "day": 4,
+                "time": "9/28 12:00-13:15",
+                "lat": -30.5005,
+                "lng": 115.0746,
+                "stay": "1.25 小时",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Cervantes_shops%2C_2015_%2801%29.JPG/1920px-Cervantes_shops%2C_2015_%2801%29.JPG",
+                "features": [
+                      "龙虾午餐",
+                      "Cervantes",
+                      "顺路补给"
+                ],
+                "intro": "北上海岸线里最适合安排主题午餐的一站，把自驾中段变成轻松补给。",
+                "play": "以午餐为主，若时间合适可看看周边海边。",
+                "note": "旺季或节假日建议提前查营业时间和订位。",
+                "ratings": {
+                      "nature": 4,
+                      "culture": 5,
+                      "weather": 3,
+                      "stamina": 1
+                }
+          },
+          {
+                "id": "jurien_bay",
+                "name": "Jurien Bay",
+                "zh": "朱里恩湾",
+                "type": "spot",
+                "day": 4,
+                "time": "9/28 13:45-14:30",
+                "lat": -30.305,
+                "lng": 115.038,
+                "stay": "45 分钟",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Beach_south_of_Jurien_Bay%2C_Western_Australia%2C_September_2023_02.jpg/1920px-Beach_south_of_Jurien_Bay%2C_Western_Australia%2C_September_2023_02.jpg",
+                "features": [
+                      "海边短停",
+                      "咖啡",
+                      "蓝绿色海水"
+                ],
+                "intro": "从 Cervantes 到 Geraldton 之间很顺的海边缓冲点，适合短停和换司机。",
+                "play": "在海边走一小段，买咖啡或补给后继续北上。",
+                "note": "当天还要开到 Geraldton，别停太久。",
+                "ratings": {
+                      "nature": 7,
+                      "culture": 2,
+                      "weather": 6,
+                      "stamina": 1
+                }
+          },
+          {
+                "id": "geraldton",
+                "name": "Geraldton Foreshore",
+                "zh": "杰拉尔顿海滨",
+                "type": "spot",
+                "day": 4,
+                "time": "9/28 17:00-18:20",
+                "lat": -28.7774,
+                "lng": 114.6149,
+                "stay": "住宿基地",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Geraldton_Foreshore_October_2023_03.jpg/1920px-Geraldton_Foreshore_October_2023_03.jpg",
+                "features": [
+                      "北线基地",
+                      "海滨日落",
+                      "连住两晚"
+                ],
+                "intro": "Geraldton 是这版行程的北线基地，连住两晚可以降低 Kalbarri 往返和换酒店压力。",
+                "play": "抵达后入住，傍晚在 Foreshore 看日落或简单晚餐。",
+                "note": "9/28-9/30 的实际住宿还需要确认。",
+                "ratings": {
+                      "nature": 5,
+                      "culture": 5,
+                      "weather": 5,
+                      "stamina": 1
+                }
+          },
+          {
+                "id": "hutt_lagoon",
+                "name": "Hutt Lagoon / Pink Lake",
+                "zh": "赫特泻湖 / 粉红湖",
+                "type": "spot",
+                "day": 5,
+                "time": "9/29 08:30-09:15",
+                "lat": -28.1823,
+                "lng": 114.2494,
+                "stay": "45 分钟",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hutt_Lagoon%2C_Western_Australia.jpg/1920px-Hutt_Lagoon%2C_Western_Australia.jpg",
+                "features": [
+                      "粉红湖",
+                      "光线决定颜色",
+                      "短停"
+                ],
+                "intro": "西澳北线非常有辨识度的一站，湖色会随光线、水位和藻类状态变化。",
+                "play": "上午短停拍照即可，把主要时间留给 Kalbarri 海岸和国家公园。",
+                "note": "粉色不保证每天都强，天气阴时颜色会弱很多。",
+                "ratings": {
+                      "nature": 8,
+                      "culture": 3,
+                      "weather": 9,
+                      "stamina": 1
+                }
+          },
+          {
+                "id": "kalbarri_cliffs",
+                "name": "Kalbarri Coastal Cliffs",
+                "zh": "卡尔巴里海岸悬崖",
+                "type": "spot",
+                "day": 5,
+                "time": "9/29 10:00-11:30",
+                "lat": -27.7941,
+                "lng": 114.1382,
+                "stay": "1.5 小时",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Kalbarri_NP_Coastal.jpg/1920px-Kalbarri_NP_Coastal.jpg",
+                "features": [
+                      "Red Bluff",
+                      "Natural Bridge",
+                      "Island Rock"
+                ],
+                "intro": "Kalbarri 的海岸段以红色砂岩、浪蚀拱桥和印度洋视野见长。",
+                "play": "Red Bluff、Natural Bridge、Island Rock 选 2-3 个，不需要每个点都深走。",
+                "note": "悬崖边风大，和边缘保持安全距离。",
+                "ratings": {
+                      "nature": 9,
+                      "culture": 3,
+                      "weather": 7,
+                      "stamina": 3
+                }
+          },
+          {
+                "id": "kalbarri_np",
+                "name": "Kalbarri National Park",
+                "zh": "卡尔巴里国家公园",
+                "type": "spot",
+                "day": 5,
+                "time": "9/29 13:15-15:30",
+                "lat": -27.554,
+                "lng": 114.455,
+                "stay": "2.25 小时",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Kalbarri_NP_Coastal.jpg/1920px-Kalbarri_NP_Coastal.jpg",
+                "features": [
+                      "Nature's Window",
+                      "Skywalk",
+                      "Murchison Gorge"
+                ],
+                "intro": "行程里最壮观的内陆峡谷段，Nature's Window 和 Skywalk 是低徒步成本的核心点。",
+                "play": "下午只做 Nature's Window + Skywalk，不加 Z Bend 或 Loop Trail 长徒步。",
+                "note": "带足水、防晒和帽子；热天不要低估峡谷区域体感温度。",
+                "ratings": {
+                      "nature": 10,
+                      "culture": 4,
+                      "weather": 8,
+                      "stamina": 5
+                }
+          },
+          {
+                "id": "greenough",
+                "name": "Greenough Historic Settlement",
+                "zh": "格里诺历史村",
+                "type": "spot",
+                "day": 6,
+                "time": "9/30 09:30-10:15",
+                "lat": -28.9568,
+                "lng": 114.7314,
+                "stay": "45 分钟",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Greenough_tree.jpg/1920px-Greenough_tree.jpg",
+                "features": [
+                      "19 世纪建筑",
+                      "顺路短停",
+                      "历史村"
+                ],
+                "intro": "从 Geraldton 南下时顺路补一段西澳殖民时期乡镇历史。",
+                "play": "控制在 45 分钟左右，作为去 Cervantes 路上的人文短停。",
+                "note": "当天重点是 Pinnacles 日落，别在中途拖太久。",
+                "ratings": {
+                      "nature": 3,
+                      "culture": 8,
+                      "weather": 3,
+                      "stamina": 1
+                }
+          },
+          {
+                "id": "lake_thetis",
+                "name": "Lake Thetis",
+                "zh": "塞提斯湖",
+                "type": "spot",
+                "day": 6,
+                "time": "9/30 11:30-12:15",
+                "lat": -30.5094,
+                "lng": 115.0603,
+                "stay": "45 分钟",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Stromatolites_at_Lake_Thetis_-_Western_Australia.jpg/1920px-Stromatolites_at_Lake_Thetis_-_Western_Australia.jpg",
+                "features": [
+                      "叠层石",
+                      "古老微生物",
+                      "短环线"
+                ],
+                "intro": "Lake Thetis 以活体叠层石闻名，是一段安静但很有独特性的自然科学停留。",
+                "play": "走湖边短环线，看叠层石和浅湖环境，停留 30-45 分钟足够。",
+                "note": "不要踩踏或触碰叠层石，按栈道和指示行走。",
+                "ratings": {
+                      "nature": 7,
+                      "culture": 5,
+                      "weather": 5,
+                      "stamina": 2
+                }
+          },
+          {
+                "id": "cervantes",
+                "name": "Cervantes",
+                "zh": "塞万提斯",
+                "type": "spot",
+                "day": 6,
+                "time": "9/30 13:30",
+                "lat": -30.5,
+                "lng": 115.067,
+                "stay": "住宿",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Cervantes_shops%2C_2015_%2801%29.JPG/1920px-Cervantes_shops%2C_2015_%2801%29.JPG",
+                "features": [
+                      "Pinnacles 前夜",
+                      "海边小镇",
+                      "已确认住宿"
+                ],
+                "intro": "Cervantes 是去 Pinnacles 日落最舒服的住宿点，下午抵达后可以先休息再进国家公园。",
+                "play": "入住 Pinnacles Edge Resort，午餐、加油和休息后，16:45 左右出发去 Pinnacles。",
+                "note": "住宿已确认：Pinnacles Edge Resort，7 Aragon Street, Cervantes WA 6511。",
+                "ratings": {
+                      "nature": 5,
+                      "culture": 3,
+                      "weather": 4,
+                      "stamina": 1
+                }
+          },
+          {
+                "id": "pinnacles",
+                "name": "The Pinnacles / Nambung National Park",
+                "zh": "尖峰石阵 / 南邦国家公园",
+                "type": "spot",
+                "day": 6,
+                "time": "9/30 16:45-18:30",
+                "lat": -30.6022,
+                "lng": 115.1655,
+                "stay": "日落",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Pinnacles_gnangarra-62.jpg/1920px-Pinnacles_gnangarra-62.jpg",
+                "features": [
+                      "石灰岩尖柱",
+                      "日落",
+                      "星空可选"
+                ],
+                "intro": "西澳北线的压轴景观，沙地里密集的石灰岩尖柱在日落前后最有层次。",
+                "play": "先走 Desert View Trail 或自驾环线，日落前找好构图点；天气好再二刷星空。",
+                "note": "晚上风冷且袋鼠活动增加，夜间行车慢一点。",
+                "ratings": {
+                      "nature": 10,
+                      "culture": 5,
+                      "weather": 9,
+                      "stamina": 2
+                }
+          },
+          {
+                "id": "perth_airport_departure",
+                "name": "Perth Airport T1",
+                "zh": "珀斯机场 T1",
+                "type": "airport",
+                "day": 7,
+                "time": "10/1 14:20-19:55",
+                "lat": -31.9403,
+                "lng": 115.9672,
+                "stay": "离境",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Perth_Intl_front_side_on_2015.jpg/1920px-Perth_Intl_front_side_on_2015.jpg",
+                "features": [
+                      "珀斯 T1 → 墨尔本 T3",
+                      "14:20-19:55",
+                      "还车缓冲"
+                ],
+                "intro": "10/1 从 Cervantes 早起回 Perth Airport，14:20 从 T1 起飞，19:55 抵达墨尔本 T3。",
+                "play": "10:00-10:30 抵达机场附近，预留还车、托运、午餐和候机时间。",
+                "note": "不要在离境日再安排新景点；若想看 Pinnacles 日出，必须严格控制时间。",
+                "ratings": {
+                      "nature": 1,
+                      "culture": 1,
+                      "weather": 1,
+                      "stamina": 2
+                }
+          }
+    ];
+
+    const hotels = [
+          {
+                "id": "hotel_perth",
+                "name": "Nightcap at Belgian Beer",
+                "zh": "比利时啤酒咖啡馆睡帽酒店",
+                "type": "hotel",
+                "lat": -31.9539,
+                "lng": 115.8573,
+                "day": "9/25-9/28",
+                "intro": "珀斯市区 3 晚基地，方便第一天慢游、第二天 Swan Valley 和第三天 Rottnest。",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Perth_CBD_skyline_from_State_War_Memorial_Lookout%2C_2023%2C_04_b.jpg/3840px-Perth_CBD_skyline_from_State_War_Memorial_Lookout%2C_2023%2C_04_b.jpg"
+          },
+          {
+                "id": "hotel_geraldton",
+                "name": "Geraldton Stay",
+                "zh": "杰拉尔顿住宿待确认",
+                "type": "hotel",
+                "lat": -28.7774,
+                "lng": 114.6149,
+                "day": "9/28-9/30",
+                "intro": "建议住海边或市中心，优先停车方便、晚餐步行可达的位置。",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Geraldton_Foreshore_October_2023_03.jpg/1920px-Geraldton_Foreshore_October_2023_03.jpg"
+          },
+          {
+                "id": "hotel_cervantes",
+                "name": "Pinnacles Edge Resort",
+                "zh": "尖峰石阵边缘度假村",
+                "type": "hotel",
+                "lat": -30.4981,
+                "lng": 115.0665,
+                "day": "9/30-10/1",
+                "intro": "已确认住宿：7 Aragon Street, Cervantes WA 6511。",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Cervantes_shops%2C_2015_%2801%29.JPG/1920px-Cervantes_shops%2C_2015_%2801%29.JPG"
+          }
+    ];
+
+    const route = [
+          "perth_airport_arrival",
+          "hotel_perth",
+          "kings_park",
+          "elizabeth_quay",
+          "caversham",
+          "swan_valley",
+          "fremantle_terminal",
+          "rottnest",
+          "the_basin",
+          "fremantle_terminal",
+          "lancelin",
+          "lobster_shack",
+          "jurien_bay",
+          "geraldton",
+          "hutt_lagoon",
+          "kalbarri_cliffs",
+          "kalbarri_np",
+          "geraldton",
+          "greenough",
+          "lake_thetis",
+          "cervantes",
+          "pinnacles",
+          "perth_airport_departure"
+    ];
+
+    const routeSegments = [
+          {
+                "mode": "drive",
+                "ids": [
+                      "perth_airport_arrival",
+                      "hotel_perth",
+                      "kings_park",
+                      "elizabeth_quay"
+                ]
+          },
+          {
+                "mode": "drive",
+                "ids": [
+                      "hotel_perth",
+                      "caversham",
+                      "swan_valley",
+                      "hotel_perth"
+                ]
+          },
+          {
+                "mode": "drive",
+                "ids": [
+                      "hotel_perth",
+                      "fremantle_terminal"
+                ]
+          },
+          {
+                "mode": "ferry",
+                "ids": [
+                      "fremantle_terminal",
+                      "rottnest",
+                      "the_basin",
+                      "rottnest",
+                      "fremantle_terminal"
+                ]
+          },
+          {
+                "mode": "drive",
+                "ids": [
+                      "hotel_perth",
+                      "lancelin",
+                      "lobster_shack",
+                      "jurien_bay",
+                      "geraldton"
+                ]
+          },
+          {
+                "mode": "drive",
+                "ids": [
+                      "geraldton",
+                      "hutt_lagoon",
+                      "kalbarri_cliffs",
+                      "kalbarri_np",
+                      "geraldton"
+                ]
+          },
+          {
+                "mode": "drive",
+                "ids": [
+                      "geraldton",
+                      "greenough",
+                      "lake_thetis",
+                      "cervantes",
+                      "pinnacles",
+                      "perth_airport_departure"
+                ]
+          }
+    ];
+
+    const spotInsights = {
+          "perth_airport_arrival": {
+                "unique": "把第一天设计成恢复日，能避免红眼航班后直接长途自驾的风险。",
+                "history": "Perth Airport 是西澳主要航空门户，连接澳洲国内城市与东南亚航线。"
+          },
+          "kings_park": {
+                "unique": "它把城市天际线、Swan River、桉树林和西澳植物园放在同一个视野里，是珀斯最适合开场的高处。",
+                "history": "Kings Park 是世界上面积很大的市中心公园之一，园内也保留了纪念空间和展示西澳本土植物的植物园。"
+          },
+          "elizabeth_quay": {
+                "unique": "这里的价值是低体力城市收尾：河岸、桥、码头和餐饮都集中在一起。",
+                "history": "Elizabeth Quay 是珀斯近年的滨水更新项目，意在重新连接 CBD 与 Swan River。"
+          },
+          "caversham": {
+                "unique": "短时间内能集中完成考拉、袋鼠和农场动物体验，不需要离开珀斯太远。",
+                "history": "Caversham 位于 Whiteman Park 一带，面向游客展示澳洲本土动物和农场文化。"
+          },
+          "swan_valley": {
+                "unique": "动物园后接天鹅谷非常顺，午餐、甜品和手信能压缩在同一片区域里。",
+                "history": "Swan Valley 是西澳历史悠久的葡萄酒产区之一，沿 Swan River 分布着酒庄、农场和手工食品店。"
+          },
+          "fremantle_terminal": {
+                "unique": "码头是 Rottnest 当天节奏的风险点，提前到达比多塞一个景点更重要。",
+                "history": "Fremantle 长期是珀斯的港口门户，保留了大量港口、殖民和移民历史痕迹。"
+          },
+          "rottnest": {
+                "unique": "岛上低车流、海湾密集、Quokka 常见，形成了西澳最鲜明的海岛体验。",
+                "history": "Rottnest 的原住民名称是 Wadjemup；岛上既有自然保护价值，也有复杂的原住民历史记忆。"
+          },
+          "the_basin": {
+                "unique": "The Basin 的浅水与礁石形成天然泳池感，Pinky Beach 则有灯塔和沙滩视角。",
+                "history": "Rottnest 周边海湾由石灰岩、珊瑚礁和海蚀环境塑造，多个海滩都适合短距离串联。"
+          },
+          "lancelin": {
+                "unique": "白色沙丘和蓝天对比强烈，是北上第一天最醒目的地貌变化。",
+                "history": "Lancelin 从渔业小镇发展成滑沙、四驱和风帆活动很有名的海边停留点。"
+          },
+          "lobster_shack": {
+                "unique": "它把 Cervantes 的龙虾产业转化成很直接的午餐体验，适合给长途自驾加一个主题。",
+                "history": "Cervantes 一带与西澳岩龙虾捕捞关系紧密，龙虾产业是当地的重要标签。"
+          },
+          "jurien_bay": {
+                "unique": "朱里恩湾适合做短暂呼吸点：海色漂亮、停车轻松，不会明显拉长路线。",
+                "history": "Jurien Bay 位于 Turquoise Coast 沿线，周边海域与海洋公园生态让它成为休闲度假小镇。"
+          },
+          "geraldton": {
+                "unique": "连住 Geraldton 可以把 Kalbarri 大日做成往返，少一次换酒店，体感轻很多。",
+                "history": "Geraldton 是西澳中西部重要港口城市，与农业、矿业、渔业和海上交通都有联系。"
+          },
+          "hutt_lagoon": {
+                "unique": "湖色来自光线、水位和含盐环境中微生物色素的共同作用，所以每次看到的粉色都可能不同。",
+                "history": "Hutt Lagoon 是澳洲知名粉红湖之一，湖中 Dunaliella salina 等盐生微藻会产生类胡萝卜素，使湖面在合适条件下呈粉红或紫粉色。"
+          },
+          "kalbarri_cliffs": {
+                "unique": "红色砂岩海崖贴着印度洋展开，海岸线的颜色和高度都很有冲击力。",
+                "history": "Kalbarri 海岸地貌由古老砂岩与长期海浪侵蚀塑造，Natural Bridge、Island Rock 等点展示了岩层被切割和残留的过程。"
+          },
+          "kalbarri_np": {
+                "unique": "Murchison River 峡谷让路线从海岸切换到内陆红岩景观，Nature's Window 是最经典的框景。",
+                "history": "Kalbarri National Park 保护 Murchison River 峡谷与周边砂岩地貌，Skywalk 是近年建设的高视角观景设施。"
+          },
+          "greenough": {
+                "unique": "这是一段小而完整的历史插曲，能在自然线中补上西澳早期聚落的空间感。",
+                "history": "Greenough 保留了 19 世纪农业聚落建筑，是理解 Geraldton 周边殖民开发历史的顺路停留。"
+          },
+          "lake_thetis": {
+                "unique": "活体叠层石让这里不像普通湖泊，更像一个能看见早期地球生命痕迹的自然课堂。",
+                "history": "Lake Thetis 以现代叠层石群闻名，叠层石由微生物群落长期沉积形成，常被用来理解地球早期生命环境。"
+          },
+          "cervantes": {
+                "unique": "住在 Cervantes 能把 Pinnacles 日落从赶路项目变成从容压轴。",
+                "history": "Cervantes 是 Turquoise Coast 上的小镇，与岩龙虾产业和 Nambung National Park 旅行线路关系紧密。"
+          },
+          "pinnacles": {
+                "unique": "沙漠中密集竖起的石灰岩尖柱极具辨识度，日落侧光会把每根石柱的轮廓拉出来。",
+                "history": "The Pinnacles 属于 Nambung National Park，石灰岩尖柱的成因通常与海洋贝壳沉积、风化、地下水和植被根系活动有关。"
+          },
+          "perth_airport_departure": {
+                "unique": "最后一天只做回机场，能给还车、托运和航班延误风险留出足够空间。",
+                "history": "Perth Airport T1 是珀斯主要航站楼之一，这段航班从珀斯 T1 到墨尔本 T3，14:20-19:55。"
+          }
+    };
+
+    const days = [
+          {
+                "day": 1,
+                "date": "2026-09-25",
+                "title": "抵达 Perth，城市慢游日",
+                "base": "Perth｜Nightcap at Belgian Beer",
+                "lat": -31.9539,
+                "lng": 115.8573,
+                "sunrise": "Perth 06:04",
+                "sunset": "Perth 18:14",
+                "alerts": [
+                      "新山 T2 → 珀斯 01:00-08:55",
+                      "红眼后不长途驾驶",
+                      "酒店寄存/停车确认"
+                ],
+                "transport": "08:55 抵达 Perth Airport；进城寄存行李后，只安排 Kings Park 与 Elizabeth Quay 两个轻松点。",
+                "timeline": [
+                      [
+                            "01:00-08:55",
+                            "新山 T2 → Perth Airport｜珀斯机场",
+                            "perth_airport_arrival"
+                      ],
+                      [
+                            "11:00",
+                            "抵达酒店寄存行李或办理入住"
+                      ],
+                      [
+                            "11:30-13:00",
+                            "午餐 + 简单休息"
+                      ],
+                      [
+                            "13:00-15:00",
+                            "Kings Park and Botanic Garden｜国王公园和植物园",
+                            "kings_park"
+                      ],
+                      [
+                            "15:30-17:00",
+                            "Elizabeth Quay｜伊丽莎白码头",
+                            "elizabeth_quay"
+                      ],
+                      [
+                            "晚上",
+                            "早点回酒店休息，给后面自驾蓄力"
+                      ]
+                ]
+          },
+          {
+                "day": 2,
+                "date": "2026-09-26",
+                "title": "Caversham + Swan Valley",
+                "base": "Perth｜Nightcap at Belgian Beer",
+                "lat": -31.9539,
+                "lng": 115.8573,
+                "sunrise": "Perth 06:03",
+                "sunset": "Perth 18:14",
+                "alerts": [
+                      "Caversham 营业时间确认",
+                      "酒庄午餐可提前订位",
+                      "自驾不贪杯"
+                ],
+                "transport": "Perth 往返 Caversham / Swan Valley，全天车程短，适合作为调整日。",
+                "timeline": [
+                      [
+                            "09:00",
+                            "从 Perth 出发"
+                      ],
+                      [
+                            "09:30-12:00",
+                            "Caversham Wildlife Park｜卡弗舍姆野生动物园",
+                            "caversham"
+                      ],
+                      [
+                            "12:15-14:00",
+                            "Swan Valley｜天鹅谷午餐",
+                            "swan_valley"
+                      ],
+                      [
+                            "14:00-16:00",
+                            "巧克力、咖啡、蜂蜜、牛轧糖等手信短停"
+                      ],
+                      [
+                            "16:30",
+                            "返回 Perth，傍晚休息或朋友聚餐"
+                      ]
+                ]
+          },
+          {
+                "day": 3,
+                "date": "2026-09-27",
+                "title": "Rottnest Island",
+                "base": "Perth｜Nightcap at Belgian Beer",
+                "lat": -31.9539,
+                "lng": 115.8573,
+                "sunrise": "Rottnest 06:03",
+                "sunset": "Rottnest 18:16",
+                "alerts": [
+                      "提前订 ferry",
+                      "不投喂 Quokka",
+                      "防晒和防风"
+                ],
+                "transport": "酒店 → Fremantle B Shed Ferry Terminal → Rottnest Island；回程可在 Fremantle 晚餐。",
+                "timeline": [
+                      [
+                            "07:30-08:00",
+                            "从酒店出发去 Fremantle B Shed Ferry Terminal",
+                            "fremantle_terminal"
+                      ],
+                      [
+                            "08:30-09:30",
+                            "ferry 上 Rottnest Island｜罗特尼斯岛",
+                            "rottnest"
+                      ],
+                      [
+                            "上午",
+                            "The Basin / Pinky Beach｜浅水海湾",
+                            "the_basin"
+                      ],
+                      [
+                            "中午",
+                            "岛上午餐或自带简餐"
+                      ],
+                      [
+                            "下午",
+                            "Little Salmon Bay / Parker Point / Wadjemup Lighthouse 选 1-2 个"
+                      ],
+                      [
+                            "16:00-17:00",
+                            "ferry 回 Fremantle，晚餐后返回 Perth"
+                      ]
+                ]
+          },
+          {
+                "day": 4,
+                "date": "2026-09-28",
+                "title": "Perth → Lancelin → Cervantes → Geraldton",
+                "base": "Geraldton｜住宿待确认",
+                "lat": -28.7774,
+                "lng": 114.6149,
+                "sunrise": "Geraldton 06:05",
+                "sunset": "Geraldton 18:20",
+                "alerts": [
+                      "当天驾驶 4.5-5 小时",
+                      "Lancelin 注意防沙",
+                      "Geraldton 住宿需确认"
+                ],
+                "transport": "Perth 退房后一路北上，白沙丘、龙虾午餐、Jurien Bay 短停，傍晚抵达 Geraldton。",
+                "timeline": [
+                      [
+                            "08:00",
+                            "从 Perth 退房出发"
+                      ],
+                      [
+                            "09:45-10:45",
+                            "Lancelin Sand Dunes｜兰斯林白沙丘",
+                            "lancelin"
+                      ],
+                      [
+                            "12:00-13:15",
+                            "Lobster Shack｜龙虾屋午餐",
+                            "lobster_shack"
+                      ],
+                      [
+                            "13:45-14:30",
+                            "Jurien Bay｜朱里恩湾海边短停",
+                            "jurien_bay"
+                      ],
+                      [
+                            "14:30-17:00",
+                            "开往 Geraldton"
+                      ],
+                      [
+                            "17:00-18:20",
+                            "Geraldton Foreshore｜入住后海滨日落",
+                            "geraldton"
+                      ]
+                ]
+          },
+          {
+                "day": 5,
+                "date": "2026-09-29",
+                "title": "Geraldton → Hutt Lagoon → Kalbarri → Geraldton",
+                "base": "Geraldton｜继续连住",
+                "lat": -28.7774,
+                "lng": 114.6149,
+                "sunrise": "Kalbarri 06:06",
+                "sunset": "Kalbarri 18:22",
+                "alerts": [
+                      "WA Parks Pass",
+                      "不加长徒步",
+                      "粉红湖颜色看天气"
+                ],
+                "transport": "Geraldton 当天往返 Kalbarri，粉红湖、海岸悬崖和峡谷核心点一日完成。",
+                "timeline": [
+                      [
+                            "07:30",
+                            "从 Geraldton 出发"
+                      ],
+                      [
+                            "08:30-09:15",
+                            "Hutt Lagoon / Pink Lake｜赫特泻湖粉红湖",
+                            "hutt_lagoon"
+                      ],
+                      [
+                            "10:00-11:30",
+                            "Kalbarri Coastal Cliffs｜Red Bluff / Natural Bridge / Island Rock",
+                            "kalbarri_cliffs"
+                      ],
+                      [
+                            "11:45-12:45",
+                            "Kalbarri 镇午餐"
+                      ],
+                      [
+                            "13:15-15:30",
+                            "Kalbarri National Park｜Nature's Window + Skywalk",
+                            "kalbarri_np"
+                      ],
+                      [
+                            "15:30-17:30",
+                            "返回 Geraldton"
+                      ]
+                ]
+          },
+          {
+                "day": 6,
+                "date": "2026-09-30",
+                "title": "Geraldton → Cervantes → Pinnacles",
+                "base": "Cervantes｜Pinnacles Edge Resort",
+                "lat": -30.4981,
+                "lng": 115.0665,
+                "sunrise": "Pinnacles 06:00",
+                "sunset": "Pinnacles 18:19",
+                "alerts": [
+                      "Cervantes 住宿已确认",
+                      "Pinnacles 日落优先",
+                      "夜间注意野生动物"
+                ],
+                "transport": "Geraldton 南下，经 Greenough 和 Lake Thetis，下午抵达 Cervantes，日落进 Pinnacles。",
+                "timeline": [
+                      [
+                            "08:30",
+                            "Geraldton 早餐、加油后出发"
+                      ],
+                      [
+                            "09:30-10:15",
+                            "Greenough Historic Settlement｜格里诺历史村",
+                            "greenough"
+                      ],
+                      [
+                            "11:30-12:15",
+                            "Lake Thetis｜塞提斯湖叠层石",
+                            "lake_thetis"
+                      ],
+                      [
+                            "13:30",
+                            "Cervantes｜入住或寄存行李，午餐休息",
+                            "cervantes"
+                      ],
+                      [
+                            "16:45-18:30",
+                            "The Pinnacles / Nambung National Park｜尖峰石阵日落",
+                            "pinnacles"
+                      ],
+                      [
+                            "晚上",
+                            "天气好可二刷星空，注意保暖和夜间驾驶安全"
+                      ]
+                ]
+          },
+          {
+                "day": 7,
+                "date": "2026-10-01",
+                "title": "Cervantes → Perth Airport → Melbourne",
+                "base": "不住宿，14:20-19:55 航班",
+                "lat": -31.9403,
+                "lng": 115.9672,
+                "sunrise": "Cervantes 06:00",
+                "sunset": "Cervantes 18:20",
+                "alerts": [
+                      "珀斯 T1 → 墨尔本 T3",
+                      "航班 14:20-19:55",
+                      "还车前加油"
+                ],
+                "transport": "07:30 前从 Cervantes 出发，10:00-10:30 抵达机场附近，预留还车和值机缓冲。",
+                "timeline": [
+                      [
+                            "07:30 前",
+                            "从 Cervantes 出发"
+                      ],
+                      [
+                            "10:00-10:30",
+                            "抵达 Perth Airport 附近"
+                      ],
+                      [
+                            "10:30-12:00",
+                            "还车、托运行李、午餐"
+                      ],
+                      [
+                            "12:00-13:30",
+                            "候机"
+                      ],
+                      [
+                            "14:20-19:55",
+                            "Perth T1 → Melbourne T3｜珀斯 T1 到墨尔本 T3",
+                            "perth_airport_departure"
+                      ]
+                ]
+          }
+    ];
+
+    const foods = [
+          {
+                "area": "Perth CBD",
+                "type": "抵达日轻食",
+                "title": "Day 1 市区恢复餐",
+                "text": "红眼抵达后以易消化、离酒店近为主；Kings Park 和 Elizabeth Quay 不要为了餐厅绕太远。",
+                "budget": "AUD 20-45"
+          },
+          {
+                "area": "Swan Valley",
+                "type": "酒庄午餐",
+                "title": "Day 2 动物园后午餐",
+                "text": "Caversham 后顺路在 Swan Valley 午餐，再买巧克力、蜂蜜、咖啡或牛轧糖手信。",
+                "budget": "AUD 25-70"
+          },
+          {
+                "area": "Rottnest Island",
+                "type": "岛上午餐",
+                "title": "Day 3 海岛补给",
+                "text": "岛上餐饮选择有限，建议提前带水和简餐；不要把午餐排得太紧影响 ferry。",
+                "budget": "AUD 20-50"
+          },
+          {
+                "area": "Cervantes",
+                "type": "龙虾午餐",
+                "title": "Day 4 Lobster Shack",
+                "text": "北上当天把 Lobster Shack 作为主题午餐，前后用 Lancelin 和 Jurien Bay 做轻停。",
+                "budget": "AUD 35-90"
+          },
+          {
+                "area": "Kalbarri / Geraldton",
+                "type": "一日往返",
+                "title": "Day 5 轻午餐 + 晚餐回基地",
+                "text": "Kalbarri 镇简单午餐即可，避免拖到下午峡谷点；晚餐回 Geraldton 更稳。",
+                "budget": "AUD 20-55"
+          },
+          {
+                "area": "Cervantes",
+                "type": "日落前补给",
+                "title": "Day 6 Pinnacles 前休息",
+                "text": "13:30 到 Cervantes 后先吃饭和休息，日落前再进 Nambung National Park。",
+                "budget": "AUD 20-55"
+          }
+    ];
+
+    const prep = [
+          {
+                "title": "重点预订",
+                "items": [
+                      "Rottnest Island ferry 往返船票",
+                      "Rottnest 岛上自行车或巴士票",
+                      "Caversham Wildlife Park 门票或营业时间确认",
+                      "Swan Valley 午餐餐厅可提前订位",
+                      "WA Parks Pass 或 Kalbarri / Nambung National Park 入园费用"
+                ]
+          },
+          {
+                "title": "住宿与租车",
+                "items": [
+                      "9/25-9/28 Perth：Nightcap at Belgian Beer",
+                      "9/28-9/30 Geraldton：建议尽快确认海边或市中心住宿",
+                      "9/30-10/1 Cervantes：Pinnacles Edge Resort，7 Aragon Street",
+                      "租车确认 Perth 取还、保险、第二驾驶人和机场还车位置"
+                ]
+          },
+          {
+                "title": "出发前确认",
+                "items": [
+                      "9/25 新山 T2 → 珀斯 01:00-08:55",
+                      "10/1 珀斯 T1 → 墨尔本 T3 14:20-19:55",
+                      "Rottnest ferry 是否受天气影响",
+                      "Kalbarri 国家公园道路、温度和开放状态",
+                      "Hutt Lagoon 当天天气和光线",
+                      "Pinnacles 日落和星空云量"
+                ]
+          },
+          {
+                "title": "证件与行程",
+                "items": [
+                      "护照、澳洲签证",
+                      "驾照原件、驾照翻译件或国际驾照认证件",
+                      "机票、租车、住宿、ferry、门票订单离线保存",
+                      "Google Maps 离线地图：Perth、Rottnest、Geraldton、Kalbarri、Cervantes"
+                ]
+          },
+          {
+                "title": "衣物装备",
+                "items": [
+                      "防风外套或薄抓绒",
+                      "帽子、墨镜、防晒霜",
+                      "舒适防滑鞋",
+                      "补水瓶和路上零食",
+                      "沙丘防沙袋或密封袋"
+                ]
+          },
+          {
+                "title": "安全提醒",
+                "items": [
+                      "红眼抵达当天不要长途驾驶",
+                      "不要投喂或触摸 Quokka",
+                      "Kalbarri 热天避免长徒步",
+                      "Pinnacles 夜间注意低温、黑暗和野生动物",
+                      "离境日不要临时加新景点"
+                ]
+          }
+    ];
+
+    const allPlaces = [...spots, ...hotels];
+    let map;
+    let selectedId = "pinnacles";
+    const routeTracker = { pending: 0, failed: 0 };
+
+    function displayName(item) {
+      return item.zh ? `${item.name}｜${item.zh}` : item.name;
+    }
+
+    function googleMapsUrl(item) {
+      return `https://www.google.com/maps/dir/?api=1&destination=${item.lat},${item.lng}&travelmode=driving`;
+    }
+
+    function appleMapsUrl(item) {
+      return `https://maps.apple.com/?daddr=${item.lat},${item.lng}&q=${encodeURIComponent(displayName(item))}`;
+    }
+
+    function setRouteStatus(message, warning = false, visible = true) {
+      const status = document.getElementById("routeStatus");
+      if (!status) return;
+      status.textContent = message;
+      status.classList.toggle("warning", warning);
+      status.classList.toggle("show", visible);
+    }
+
+    function updateRouteStatus() {
+      if (routeTracker.pending > 0) {
+        setRouteStatus(`正在加载自驾路线，还剩 ${routeTracker.pending} 段`);
+        return;
+      }
+      if (routeTracker.failed > 0) {
+        setRouteStatus(`有 ${routeTracker.failed} 段自驾路线加载失败，已用直线示意`, true);
+        return;
+      }
+      setRouteStatus("自驾路线已加载");
+      window.setTimeout(() => setRouteStatus("", false, false), 1200);
+    }
+
+    function iconFor(item, label) {
+      const iconClass = item.type === "hotel" ? "hotel" : item.type === "airport" ? "airport" : "";
+      return L.divIcon({
+        className: "",
+        html: `<div class="marker-pin ${iconClass}"><span>${label}</span></div>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30],
+        popupAnchor: [0, -28]
+      });
+    }
+
+    function initMap() {
+      if (typeof L === "undefined") {
+        renderMapUnavailable();
+        return;
+      }
+      map = L.map("map", { scrollWheelZoom: true });
+      const topo = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", {
+        maxZoom: 18,
+        attribution: "Tiles &copy; Esri"
+      });
+      const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: "&copy; OpenStreetMap contributors"
+      });
+      topo.addTo(map);
+      L.control.layers({ "地形地图": topo, "街道地图": osm }, null, { position: "topleft" }).addTo(map);
+
+      drawRoute();
+
+      spots.forEach((spot, index) => {
+        const marker = L.marker([spot.lat, spot.lng], { icon: iconFor(spot, index + 1) }).addTo(map);
+        marker.bindPopup(`<strong>${displayName(spot)}</strong><br>${spot.features.join(" · ")}`);
+        marker.on("click", () => selectSpot(spot.id));
+      });
+
+      hotels.forEach((hotel) => {
+        const marker = L.marker([hotel.lat, hotel.lng], { icon: iconFor(hotel, "住") }).addTo(map);
+        marker.bindPopup(`<strong>${displayName(hotel)}</strong><br>Day ${hotel.day} 住宿区域`);
+      });
+
+      fitMapToAllPlaces();
+      requestAnimationFrame(() => {
+        map.invalidateSize();
+        fitMapToAllPlaces();
+      });
+      setTimeout(() => {
+        map.invalidateSize();
+        fitMapToAllPlaces();
+      }, 350);
+    }
+
+    function renderMapUnavailable() {
+      const mapEl = document.getElementById("map");
+      if (mapEl) {
+        mapEl.classList.add("map-fallback");
+        mapEl.textContent = "地图资源暂时没有加载成功；下方每日行程、导航入口和准备清单仍可正常使用。";
+      }
+      setRouteStatus("地图资源未加载，刷新或联网后可恢复交互地图", true);
+    }
+
+    function loadLeaflet() {
+      if (window.L) return Promise.resolve();
+      setRouteStatus("正在加载地图资源");
+      if (!document.querySelector('link[data-leaflet-css="true"]')) {
+        const css = document.createElement("link");
+        css.rel = "stylesheet";
+        css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+        css.dataset.leafletCss = "true";
+        document.head.appendChild(css);
+      }
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        const timer = window.setTimeout(() => {
+          script.remove();
+          reject(new Error("leaflet load timeout"));
+        }, 8000);
+        script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+        script.onload = () => {
+          window.clearTimeout(timer);
+          resolve();
+        };
+        script.onerror = () => {
+          window.clearTimeout(timer);
+          reject(new Error("leaflet load failed"));
+        };
+        document.head.appendChild(script);
+      });
+    }
+
+    function fitMapToAllPlaces() {
+      const bounds = L.latLngBounds(allPlaces.map((place) => [place.lat, place.lng]));
+      const wide = window.matchMedia("(min-width: 981px)").matches;
+      const mobile = isMobileView();
+      map.fitBounds(bounds, {
+        paddingTopLeft: wide ? [56, 56] : [30, 34],
+        paddingBottomRight: wide ? [72, 56] : mobile ? [30, 118] : [30, 44],
+        maxZoom: 7
+      });
+    }
+
+    function isMobileView() {
+      return window.matchMedia("(max-width: 760px)").matches;
+    }
+
+    function openSpotSheet() {
+      document.querySelector(".spot-panel")?.classList.add("open");
+    }
+
+    function closeSpotSheet() {
+      document.querySelector(".spot-panel")?.classList.remove("open");
+    }
+
+    window.closeSpotSheet = closeSpotSheet;
+
+    async function drawRoute() {
+      routeTracker.pending = routeSegments.filter((segment) => segment.mode === "drive").length;
+      routeTracker.failed = 0;
+      updateRouteStatus();
+      const routeTasks = routeSegments.map(async (segment) => {
+        const points = segment.ids.map((id) => spots.find((spot) => spot.id === id)).filter(Boolean);
+        if (segment.mode === "drive") {
+          try {
+            const roadPath = await fetchRoadRoute(points);
+            drawPath(roadPath, false, "drive");
+          } catch (error) {
+            routeTracker.failed += 1;
+            drawLine(points, true, "fallback");
+          } finally {
+            routeTracker.pending = Math.max(0, routeTracker.pending - 1);
+            updateRouteStatus();
+          }
+        } else {
+          drawLine(points, true, segment.mode);
+        }
+      });
+      await Promise.all(routeTasks);
+    }
+
+    async function fetchRoadRoute(points) {
+      const coords = points.map((point) => `${point.lng},${point.lat}`).join(";");
+      const url = `https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`;
+      const controller = new AbortController();
+      const timer = window.setTimeout(() => controller.abort(), 6500);
+      let response;
+      try {
+        response = await fetch(url, { signal: controller.signal });
+      } finally {
+        window.clearTimeout(timer);
+      }
+      if (!response.ok) throw new Error("route request failed");
+      const payload = await response.json();
+      const coordinates = payload.routes?.[0]?.geometry?.coordinates;
+      if (!coordinates?.length) throw new Error("route geometry missing");
+      return coordinates.map(([lng, lat]) => [lat, lng]);
+    }
+
+    function drawLine(points, dashed, mode) {
+      const path = points.filter(Boolean).map((point) => [point.lat, point.lng]);
+      if (path.length < 2) return;
+      drawPath(path, dashed, mode);
+    }
+
+    function drawPath(path, dashed, mode) {
+      const color = mode === "ferry" ? "#1e6a8c" : mode === "fallback" ? "#6b7280" : "#bc6339";
+      L.polyline(path, { color: "#fff", weight: dashed ? 7 : 8, opacity: .9 }).addTo(map);
+      L.polyline(path, {
+        color,
+        weight: dashed ? 3 : 4,
+        opacity: .88,
+        dashArray: dashed ? "7 8" : null
+      }).addTo(map);
+    }
+
+    function ratingModel(spot) {
+      const labels = { nature: "自然", culture: "人文", weather: "天气", stamina: "体力" };
+      const score = Math.round((spot.ratings.nature + spot.ratings.culture + (10 - spot.ratings.weather * .35) + (10 - spot.ratings.stamina * .35)) / 4 * 10) / 10;
+      return { labels, score };
+    }
+
+    function renderRatingBars(spot) {
+      const { labels } = ratingModel(spot);
+      return Object.entries(spot.ratings).map(([key, value]) => `
+        <div class="bar-row">
+          <span>${labels[key]}</span>
+          <div class="bar"><span style="width:${value * 10}%"></span></div>
+          <strong>${value}</strong>
+        </div>
+      `).join("");
+    }
+
+    function renderPanelRating(spot) {
+      const { score } = ratingModel(spot);
+      return `
+        <div class="panel-rating">
+          <h4>综合评分：${score} / 10</h4>
+          <p>自然、人文、天气、体力四个维度的即时参考。</p>
+          ${renderRatingBars(spot)}
+        </div>
+      `;
+    }
+
+    function renderSpotInsights(spot) {
+      const insight = spotInsights[spot.id];
+      if (!insight) return "";
+      return `
+        <div class="mini-card context"><h4>景观特色</h4><p>${insight.unique}</p></div>
+        <div class="mini-card context"><h4>背景 / 历史</h4><p>${insight.history}</p></div>
+      `;
+    }
+
+    function selectSpot(id, openSheet = true) {
+      const spot = spots.find((item) => item.id === id) || spots[0];
+      selectedId = spot.id;
+      document.getElementById("panelImage").style.backgroundImage = `url("${spot.image}")`;
+      document.getElementById("panelBody").innerHTML = `
+        <div class="tag-row">
+        <span class="tag main">Day ${spot.day}</span>
+        <span class="tag">${spot.time}</span>
+        <span class="tag">建议 ${spot.stay}</span>
+        </div>
+        <h3>${displayName(spot)}</h3>
+        <p class="panel-intro">${spot.intro}</p>
+        <div class="tag-row">${spot.features.map((item) => `<span class="tag">${item}</span>`).join("")}</div>
+        <div class="action-row">
+          <a class="action-link primary" href="${googleMapsUrl(spot)}" target="_blank" rel="noopener">Google 导航</a>
+          <a class="action-link" href="${appleMapsUrl(spot)}" target="_blank" rel="noopener">Apple 地图</a>
+        </div>
+        ${renderPanelRating(spot)}
+        <div class="detail-list">
+          ${renderSpotInsights(spot)}
+          <div class="mini-card"><h4>怎么玩</h4><p>${spot.play}</p></div>
+          <div class="mini-card"><h4>注意事项</h4><p>${spot.note}</p></div>
+        </div>
+      `;
+      renderRating();
+      if (isMobileView() && openSheet) openSpotSheet();
+      if (map && openSheet) map.flyTo([spot.lat, spot.lng], isMobileView() ? 9 : 10, { duration: .6 });
+    }
+
+    window.selectSpot = selectSpot;
+
+    function renderDays() {
+      document.getElementById("dayList").innerHTML = days.map((day) => `
+        <article class="card day-card${day.day === 1 ? " expanded" : ""}" id="day-${day.day}">
+          <div class="card-head">
+            <div>
+              <div class="card-title-row">
+                <h3>Day ${day.day} · ${day.title}</h3>
+                <span class="date-pill">${day.date.slice(5)}</span>
+              </div>
+              <p>${day.transport}</p>
+            </div>
+            <button class="day-toggle" type="button" onclick="toggleDay(this)">${day.day === 1 ? "收起" : "展开"}</button>
+          </div>
+          <ul class="timeline">
+            ${day.timeline.map((item) => renderTimelineItem(item)).join("")}
+          </ul>
+          ${renderDayAlerts(day)}
+          <div class="day-meta">
+            <div><span>住宿</span><strong>${day.base}</strong></div>
+            <div><span>日出</span><strong>${day.sunrise}</strong></div>
+            <div><span>日落</span><strong>${day.sunset}</strong></div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderDayJump() {
+      const jump = document.getElementById("dayJump");
+      if (!jump) return;
+      jump.innerHTML = days.map((day) => `
+        <button type="button" data-day="${day.day}" onclick="jumpToDay(${day.day})" aria-label="跳转到 Day ${day.day}">
+          <strong>D${day.day}</strong>
+          <span>${day.date.slice(5)}</span>
+        </button>
+      `).join("");
+      setActiveDayJump(days.find((day) => day.day === 1)?.day ?? days[0]?.day);
+    }
+
+    function setActiveDayJump(dayNumber) {
+      document.querySelectorAll("#dayJump button").forEach((button) => {
+        button.classList.toggle("active", Number(button.dataset.day) === dayNumber);
+      });
+    }
+
+    function jumpToDay(dayNumber) {
+      const card = document.getElementById(`day-${dayNumber}`);
+      if (!card) return;
+      card.classList.add("expanded");
+      const toggle = card.querySelector(".day-toggle");
+      if (toggle) toggle.textContent = "收起";
+      setActiveDayJump(dayNumber);
+      card.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    window.jumpToDay = jumpToDay;
+
+    function toggleDay(button) {
+      const card = button.closest(".day-card");
+      if (!card) return;
+      card.classList.toggle("expanded");
+      button.textContent = card.classList.contains("expanded") ? "收起" : "展开";
+    }
+
+    window.toggleDay = toggleDay;
+
+    function renderDayAlerts(day) {
+      if (!day.alerts?.length) return "";
+      return `<div class="alert-strip">${day.alerts.map((alert) => `<span class="alert-chip">${alert}</span>`).join("")}</div>`;
+    }
+
+    function renderTimelineItem(item) {
+      const placeId = item[2];
+      const text = placeId
+        ? `<button type="button" onclick="selectSpot('${placeId}')">${item[1]}</button>`
+        : `<span>${item[1]}</span>`;
+      return `<li><strong>${item[0]}</strong>${text}</li>`;
+    }
+
+    function renderFood() {
+      document.getElementById("foodGrid").innerHTML = foods.map((food) => `
+        <article class="food-card">
+          <span class="tag">${food.area}</span>
+          <h3>${food.title}</h3>
+          <p>${food.text}</p>
+          <div class="tag-row"><span class="tag">${food.type}</span><span class="tag">${food.budget}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderPrep() {
+      document.getElementById("prepGrid").innerHTML = prep.map((group) => `
+        <article class="prep-card">
+          <h3>${group.title}</h3>
+          <ul>${group.items.map((item) => `<li>${item}</li>`).join("")}</ul>
+        </article>
+      `).join("");
+    }
+
+    function populateTransport() {
+      const options = allPlaces.map((place) => `<option value="${place.id}">${displayName(place)}</option>`).join("");
+      document.getElementById("fromSelect").innerHTML = options;
+      document.getElementById("toSelect").innerHTML = options;
+      document.getElementById("fromSelect").value = "cataract";
+      document.getElementById("toSelect").value = "bayoffires";
+      document.getElementById("fromSelect").addEventListener("change", renderEstimate);
+      document.getElementById("toSelect").addEventListener("change", renderEstimate);
+      renderEstimate();
+    }
+
+    function renderEstimate() {
+      const from = allPlaces.find((place) => place.id === document.getElementById("fromSelect").value);
+      const to = allPlaces.find((place) => place.id === document.getElementById("toSelect").value);
+      const km = haversine(from, to) * 1.22;
+      const walkHours = km / 4.6;
+      const modes = [
+        ["自驾", km / 62, "山区和海岸路会更慢"],
+        ["公共交通", km / 35 + 0.5, "西澳城际公共交通选择有限，需当天查"],
+        ["步行", walkHours, "30 分钟内才展示"]
+      ].filter(([label, hours]) => label !== "步行" || hours <= 0.5);
+      document.getElementById("estimateBox").innerHTML = modes.map(([label, hours, note]) => `
+        <div><span>${label}</span><strong>${formatDuration(hours)}</strong><small>${note}</small></div>
+      `).join("");
+    }
+
+    function renderRating() {
+      const spot = spots.find((item) => item.id === selectedId) || spots[0];
+      const { score } = ratingModel(spot);
+      document.getElementById("ratingPanel").innerHTML = `
+        <div class="rating-image" style="background-image:url('${spot.image}')"></div>
+        <h3>${displayName(spot)}</h3>
+        <p>${spot.intro}</p>
+        <div class="tag-row">${spot.features.slice(0, 3).map((item) => `<span class="tag">${item}</span>`).join("")}</div>
+        <p>综合评分：${score} / 10</p>
+        ${renderRatingBars(spot)}
+      `;
+    }
+
+    function haversine(a, b) {
+      const radius = 6371;
+      const dLat = toRad(b.lat - a.lat);
+      const dLng = toRad(b.lng - a.lng);
+      const lat1 = toRad(a.lat);
+      const lat2 = toRad(b.lat);
+      const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
+      return 2 * radius * Math.asin(Math.sqrt(h));
+    }
+
+    function toRad(value) {
+      return value * Math.PI / 180;
+    }
+
+    function formatDuration(hours) {
+      const mins = Math.max(3, Math.round(hours * 60));
+      const h = Math.floor(mins / 60);
+      const m = mins % 60;
+      return h ? `${h}h ${m}m` : `${m}m`;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderDays();
+      renderDayJump();
+      renderFood();
+      renderPrep();
+      populateTransport();
+      selectSpot(selectedId, false);
+      loadLeaflet().then(initMap).catch(renderMapUnavailable);
+      document.querySelectorAll(".nav a").forEach((link) => {
+        link.addEventListener("click", closeSpotSheet);
+      });
+      window.addEventListener("resize", () => {
+        closeSpotSheet();
+        if (!map) return;
+        window.clearTimeout(window.__mapResizeTimer);
+        window.__mapResizeTimer = window.setTimeout(() => {
+          map.invalidateSize();
+          fitMapToAllPlaces();
+        }, 180);
+      });
+    });
+  </script>
+</body>
+</html>
