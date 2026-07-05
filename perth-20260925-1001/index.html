@@ -2709,8 +2709,8 @@
       const options = allPlaces.map((place) => `<option value="${place.id}">${displayName(place)}</option>`).join("");
       document.getElementById("fromSelect").innerHTML = options;
       document.getElementById("toSelect").innerHTML = options;
-      document.getElementById("fromSelect").value = "cataract";
-      document.getElementById("toSelect").value = "bayoffires";
+      document.getElementById("fromSelect").value = "perth_airport_arrival";
+      document.getElementById("toSelect").value = "kings_park";
       document.getElementById("fromSelect").addEventListener("change", renderEstimate);
       document.getElementById("toSelect").addEventListener("change", renderEstimate);
       renderEstimate();
@@ -2719,6 +2719,10 @@
     function renderEstimate() {
       const from = allPlaces.find((place) => place.id === document.getElementById("fromSelect").value);
       const to = allPlaces.find((place) => place.id === document.getElementById("toSelect").value);
+      if (!from || !to) {
+        document.getElementById("estimateBox").innerHTML = "";
+        return;
+      }
       const km = haversine(from, to) * 1.22;
       const walkHours = km / 4.6;
       const modes = [
