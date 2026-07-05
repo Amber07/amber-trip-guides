@@ -128,13 +128,49 @@
       color: #fff;
     }
 
+    .mobile-break {
+      display: none;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 28px 20px 40px;
+      }
+
+      .kicker {
+        margin-bottom: 12px;
+        font-size: 13px;
+      }
+
+      h1 {
+        max-width: 330px;
+        font-size: 46px;
+        line-height: 1.06;
+      }
+
+      .lead {
+        max-width: 330px;
+        margin: 28px 0 30px;
+        font-size: 22px;
+        line-height: 1.62;
+      }
+
+      .desktop-break {
+        display: none;
+      }
+
+      .mobile-break {
+        display: block;
+      }
+    }
+
   </style>
 </head>
 <body>
   <main>
     <p class="kicker">Travel Atlas</p>
     <h1>Amber 的旅行地图册</h1>
-    <p class="lead">把想去的远方一页页展开：海风、山路、晨光、星空，<br>还有那些尚未抵达，却已经在心里发亮的坐标。</p>
+    <p class="lead">把想去的远方一页页展开：<br class="mobile-break">海风、山路、晨光、星空，<br class="desktop-break">还有那些尚未抵达，<br class="mobile-break">却已经在心里发亮的坐标。</p>
 
     <div class="guide-grid">
       <a class="guide-card" href="perth-20260925-1001/">
