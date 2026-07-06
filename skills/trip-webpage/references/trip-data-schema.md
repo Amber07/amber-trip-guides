@@ -12,6 +12,8 @@ Create one UTF-8 JSON file with this shape:
     "heroTitle": "塔州东海岸 6 日游",
     "heroCopy": "一段 50-120 字的路线概述",
     "heroImage": "assets/hero.jpg",
+    "heroPoster": "assets/hero-poster.jpg",
+    "heroAlt": "头图替代文本",
     "notice": "重要提醒，可为空",
     "footer": "塔斯马尼亚东海岸旅行攻略 · 2026.10.02-10.07",
     "mapKicker": "Route Map",
@@ -54,6 +56,12 @@ Create one UTF-8 JSON file with this shape:
           "caption": "Wineglass Bay Lookout｜酒杯湾观景台",
           "photoSource": "https://...",
           "photoCredit": "作者 · 授权"
+        },
+        {
+          "src": "assets/wineglass_clip.mp4",
+          "type": "video",
+          "poster": "assets/wineglass_1.jpg",
+          "caption": "Wineglass Bay Lookout｜酒杯湾视频"
         }
       ],
       "imageSourceType": "document|web|wikipedia|local|fallback",
@@ -134,7 +142,7 @@ Validation expectations:
 - Set `page.timeZone` to an IANA timezone such as `Australia/Perth`, `Australia/Hobart`, `Pacific/Auckland`, or `Europe/Paris` when sunrise/sunset may need automatic lookup.
 - Each `days[]` item must have `date`, `lat`, and `lng` for sunrise/sunset enrichment. Optional `sunLabel` controls the prefix in rendered fields, for example `Rottnest 06:03`.
 - If the itinerary document does not include sunrise/sunset times, run `scripts/enrich_sun_times.py trip-data.json --tzid <timezone>` before rendering. The script fills only missing values unless `--overwrite` is passed.
-- `page.heroImage` accepts images and videos. Image paths render as the default full-bleed hero image; `.mp4`, `.webm`, and `.mov` paths render as muted autoplay looping hero video. Keep the path local under `assets/` by final render when possible.
+- `page.heroImage` accepts images and videos. Image paths render as the default full-bleed hero image; `.mp4`, `.webm`, `.mov`, and `.m4v` paths render as muted autoplay looping hero video. Optional `page.heroPoster` is used as the video poster frame, and optional `page.heroAlt` becomes the image alt text. Keep media paths local under `assets/` by final render when possible.
 - For foreign attractions and hotels, `name` is the English official/common name and `zh` is the Chinese name. The template displays them as `name｜zh`, for example `Wineglass Bay Lookout｜酒杯湾观景台`.
 - Timeline rows that reference foreign spots should use the same `English｜中文` display style, for example `["09:00-11:00", "Wineglass Bay Lookout｜酒杯湾观景台", "wineglass"]`.
 - For domestic Chinese attractions, use Chinese in `name`; omit `zh` unless a bilingual display is desired.
@@ -143,6 +151,6 @@ Validation expectations:
 - Timeline item arrays must have 2 or 3 values.
 - A timeline row should contain only one scenic spot reference. Split multi-spot strings into multiple rows when those spots each deserve map/detail interaction.
 - `routeSegments[].mode` can be `drive`, `ferry`, `walk`, or `flight`.
-- `spot.image` should point to a local `assets/...` file by final render and remains the primary/fallback image. During drafting it may temporarily be an extracted document image path or a remote URL, but run `localize_trip_images.py` before publishing.
-- `spot.images` is optional and enables the detail-panel carousel. Use it when a spot has multiple useful images; strings are accepted, and object entries may include `src`, `caption`, `photoSource`, and `photoCredit`. Put the primary image first and keep `spot.image` equal to that first `src` for compatibility.
+- `spot.image` should point to a local `assets/...` image by final render and remains the primary/fallback cover image. During drafting it may temporarily be an extracted document image path or a remote URL, but run `localize_trip_images.py` before publishing.
+- `spot.images` is optional and enables the detail-panel media carousel. Use it when a spot has multiple useful images or videos; strings are accepted for images, and object entries may include `src`, `type`, `poster`, `caption`, `photoSource`, and `photoCredit`. Set `type: "video"` for video entries, or use `.mp4`, `.webm`, or `.mov` paths for automatic detection. Put a still image first when possible and keep `spot.image` equal to the first cover image for compatibility.
 - Use `imageSourceType: "document"` when the image came from the provided itinerary document. Use `"web"` or `"wikipedia"` when it was found online and downloaded locally.

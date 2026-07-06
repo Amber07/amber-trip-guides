@@ -13,7 +13,7 @@ from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_TEMPLATE = ROOT / "assets" / "tasmania-template.html"
+DEFAULT_TEMPLATE = ROOT / "assets" / "trip-template.html"
 
 
 def js(value: Any) -> str:
@@ -40,7 +40,7 @@ def replace_text_tag(text: str, selector: str, value: str) -> str:
 
 def is_video_media(src: str) -> bool:
     suffix = Path(urlparse(src).path).suffix.lower()
-    return suffix in {".mp4", ".webm", ".mov"}
+    return suffix in {".mp4", ".webm", ".mov", ".m4v"}
 
 
 def video_type(src: str) -> str:
@@ -49,6 +49,8 @@ def video_type(src: str) -> str:
         return "video/webm"
     if suffix == ".mov":
         return "video/quicktime"
+    if suffix == ".m4v":
+        return "video/x-m4v"
     return "video/mp4"
 
 
@@ -77,12 +79,14 @@ def patch_page_copy(html: str, data: dict[str, Any]) -> str:
         count=1,
     )
     if page.get("heroImage"):
-        html = re.sub(
-            r'    <div class="hero-media" aria-hidden="true">\n.*?    </div>',
-            hero_media_html(str(page["heroImage"])),
+        html = replace_const(
             html,
-            count=1,
-            flags=re.S,
+            "heroMedia",
+            {
+                "src": str(page["heroImage"]),
+                "poster": str(page.get("heroPoster", "")),
+                "alt": str(page.get("heroAlt") or page.get("heroTitle") or page["title"]),
+            },
         )
 
     replacements = {

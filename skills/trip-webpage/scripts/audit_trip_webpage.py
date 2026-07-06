@@ -11,8 +11,9 @@ FEATURES = {
     "hero_media_layer": [
         "hero-media",
         ".hero::after",
-        ".hero-media img",
-        ".hero-media video",
+        "heroMediaSlot",
+        "renderHeroMedia",
+        "const heroMedia",
     ],
     "image_lightbox": [
         "imageLightbox",
@@ -20,12 +21,26 @@ FEATURES = {
         "closeImageLightbox",
         "cursor: zoom-in",
     ],
+    "lightbox_carousel": [
+        "lightbox-nav",
+        "lightboxDots",
+        "renderLightboxImage",
+        "shiftLightboxImage",
+        "setLightboxImage",
+    ],
     "image_carousel": [
         "panelImageWrap",
         "getSpotImages",
         "shiftSpotImage",
         "setSpotImage",
         "carousel-dot",
+    ],
+    "mixed_media_carousel": [
+        "panel-video",
+        "lightboxVideo",
+        "isVideoItem",
+        "coverImageFor",
+        "show-video",
     ],
     "bilingual_display_name": [
         "function displayName",

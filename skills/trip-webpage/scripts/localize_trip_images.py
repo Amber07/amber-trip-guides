@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""下载 trip-data.json 中的外部图片，并把图片路径改成本地 assets。"""
+"""下载 trip-data.json 中的外部媒体，并把媒体路径改成本地 assets。"""
 
 from __future__ import annotations
 
@@ -21,7 +21,7 @@ def slug(value: str) -> str:
     return value or "image"
 
 
-SUPPORTED_MEDIA_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".mp4", ".webm", ".mov"}
+SUPPORTED_MEDIA_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".mp4", ".webm", ".mov", ".m4v"}
 
 
 def extension_from_response(url: str, content_type: str | None) -> str:
@@ -85,14 +85,19 @@ def localize_spot_images(spot: dict, assets_dir: Path, failures: list[str], cach
             continue
         if isinstance(item, dict):
             url = item.get("src")
-            if not isinstance(url, str) or not url.startswith(("http://", "https://")):
-                continue
-            try:
-                item["src"] = download_cached(url, label, assets_dir, cache)
-                item.setdefault("photoSource", url)
-                item.setdefault("photoCredit", spot.get("photoCredit") or "网络图片，已本地保存")
-            except (OSError, URLError, TimeoutError) as exc:
-                failures.append(f"{label}: {url} 下载失败：{exc}")
+            if isinstance(url, str) and url.startswith(("http://", "https://")):
+                try:
+                    item["src"] = download_cached(url, label, assets_dir, cache)
+                    item.setdefault("photoSource", url)
+                    item.setdefault("photoCredit", spot.get("photoCredit") or "网络图片，已本地保存")
+                except (OSError, URLError, TimeoutError) as exc:
+                    failures.append(f"{label}: {url} 下载失败：{exc}")
+            poster = item.get("poster")
+            if isinstance(poster, str) and poster.startswith(("http://", "https://")):
+                try:
+                    item["poster"] = download_cached(poster, f"{label}_poster", assets_dir, cache)
+                except (OSError, URLError, TimeoutError) as exc:
+                    failures.append(f"{label} poster: {poster} 下载失败：{exc}")
 
 
 def main() -> int:
@@ -115,6 +120,11 @@ def main() -> int:
             page["heroImage"] = download_cached(page["heroImage"], "hero", assets_dir, cache)
         except (OSError, URLError, TimeoutError) as exc:
             failures.append(f"hero: {page['heroImage']} 下载失败：{exc}")
+    if isinstance(page, dict) and isinstance(page.get("heroPoster"), str) and page["heroPoster"].startswith(("http://", "https://")):
+        try:
+            page["heroPoster"] = download_cached(page["heroPoster"], "hero_poster", assets_dir, cache)
+        except (OSError, URLError, TimeoutError) as exc:
+            failures.append(f"hero poster: {page['heroPoster']} 下载失败：{exc}")
 
     for spot in data.get("spots", []):
         if isinstance(spot, dict):

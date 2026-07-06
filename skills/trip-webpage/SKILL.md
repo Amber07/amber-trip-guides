@@ -6,7 +6,7 @@ description: >-
 
 # Trip Webpage
 
-Use this skill to convert travel itinerary materials into a standalone Chinese travel guide webpage, or to update an already-built trip webpage so missing template features become active. Keep the output visually consistent with `assets/tasmania-template.html`; the template came from the “塔州东海岸 6 日游” page and is the style source of truth.
+Use this skill to convert travel itinerary materials into a standalone Chinese travel guide webpage, or to update an already-built trip webpage so missing template features become active. Keep the output visually consistent with `assets/trip-template.html`; the template came from the “塔州东海岸 6 日游” page and is the style source of truth.
 
 ## New Page Workflow
 
@@ -28,11 +28,11 @@ Use this skill to convert travel itinerary materials into a standalone Chinese t
 3. Add coordinates and images.
    - Every map spot must have `lat` and `lng`.
    - Prefer confirmed coordinates from the source, existing knowledge, or explicit user-provided places.
-   - Image priority is strict: use images extracted from/provided by the document first; if no suitable document image exists, search the web for relevant images, download them into `<trip-folder>/assets/`, and point `spot.image` plus optional `spot.images[]` entries to local `assets/...` paths.
-   - Use `spot.image` as the primary/fallback image. When multiple good images exist for one spot, also add `spot.images` as an ordered carousel list. Each entry may be a string path or an object such as `{ "src": "assets/spot_1.jpg", "caption": "..." }`.
+   - Image priority is strict: use images extracted from/provided by the document first; if no suitable document image exists, search the web for relevant images or short local video clips, download them into `<trip-folder>/assets/`, and point `spot.image` plus optional `spot.images[]` entries to local `assets/...` paths.
+   - Use `spot.image` as the primary/fallback cover image. When multiple good images or videos exist for one spot, also add `spot.images` as an ordered media carousel list. Each entry may be a string path or an object such as `{ "src": "assets/spot_1.jpg", "caption": "..." }`; video entries may use `{ "src": "assets/spot_clip.mp4", "type": "video", "poster": "assets/spot_cover.jpg", "caption": "..." }`.
    - When using document-extracted images, put every selected image into `<trip-folder>/assets/`, set `spot.image` to the first extracted `assets/...` path, add additional extracted images to `spot.images`, set `imageSourceType` to `document`, and keep `photoCredit` as `用户提供/文档内图片` unless the document states a more specific credit.
    - If a spot intro or image is missing, use `scripts/enrich_from_wikipedia.py trip-data.json` as a first pass, then review and translate/adjust the intro for the page tone.
-   - Run `scripts/localize_trip_images.py trip-data.json --assets-dir <trip-folder>/assets` before final render so remote hero media and spot images become local files.
+   - Run `scripts/localize_trip_images.py trip-data.json --assets-dir <trip-folder>/assets` before final render so remote hero media and spot media become local files.
    - Keep image source and credit fields in every spot, especially when downloading from Wikipedia/Wikimedia or another public page.
 
 4. Render the webpage.
@@ -56,14 +56,14 @@ Use this path when the user provides an already-built trip webpage or asks to ma
    - Do not overwrite itinerary arrays, local assets, route details, or manually edited copy.
    - Run `scripts/audit_trip_webpage.py <trip-folder>/index.html` to identify missing known template features.
 
-2. Compare the target page with `assets/tasmania-template.html`.
+2. Compare the target page with `assets/trip-template.html`.
    - Copy only the CSS, HTML shell, and JS functions needed for the missing feature.
    - Keep the target page’s existing `spots`, `days`, `foods`, `prep`, `hotels`, `route`, `routeSegments`, and `spotInsights` data.
    - When a feature needs event handlers, verify both desktop and mobile paths.
 
 3. Make the feature active in the current page.
    - Patch the actual page file, not only the template, when the user asks about the current webpage.
-   - Also patch `assets/tasmania-template.html` when the feature should be available for future generated pages.
+   - Also patch `assets/trip-template.html` when the feature should be available for future generated pages.
    - For image-related features, confirm both `.panel-img` and `.rating-image` paths work.
 
 4. Verify the existing page after patching.
@@ -74,9 +74,9 @@ Use this path when the user provides an already-built trip webpage or asks to ma
 ## Style Rules
 
 - Keep the original template’s warm paper background, green/blue/orange palette, 8px radius, full-bleed hero media layer, sticky desktop nav, mobile bottom nav, map/detail split layout, and mobile bottom sheet.
-- Keep hero media driven by `page.heroImage`: image paths render as `<img>`, while `.mp4`, `.webm`, and `.mov` paths render as muted autoplay looping video.
+- Keep hero media driven by `page.heroImage`: image paths render as `<img>`, while `.mp4`, `.webm`, `.mov`, and `.m4v` paths render as muted autoplay looping video. Use `page.heroPoster` when a hero video needs a poster frame.
 - Keep the built-in image lightbox behavior: spot detail images and rating-panel images are clickable and keyboard-accessible for enlarged preview.
-- Keep the built-in spot image carousel behavior: when `spot.images` contains multiple entries, the detail panel shows left/right controls, dots, touch swipe, keyboard arrows, and lightbox preview for the active image.
+- Keep the built-in spot media carousel behavior: when `spot.images` contains multiple entries, the detail panel and enlarged lightbox both show left/right controls, dots, touch swipe, keyboard arrows, synchronized active media state, and mixed image/video playback.
 - Do not replace the template with a generic report page or landing page.
 - Do not introduce a new framework.
 - Keep cards compact and itinerary-focused.
@@ -101,11 +101,11 @@ Use this path when the user provides an already-built trip webpage or asks to ma
 
 ## Bundled Resources
 
-- `assets/tasmania-template.html`: the locked visual and interaction template.
+- `assets/trip-template.html`: the locked visual and interaction template.
 - `references/trip-data-schema.md`: JSON shape expected by the renderer.
 - `scripts/extract_trip_text.py`: extracts text and optional embedded images from itinerary source files into the trip page’s `assets/` folder.
 - `scripts/enrich_from_wikipedia.py`: fills missing spot introductions and missing image URLs from Wikipedia.
 - `scripts/enrich_sun_times.py`: fills missing `days[].sunrise` and `days[].sunset` using date, day coordinates, and an IANA timezone.
-- `scripts/localize_trip_images.py`: downloads remote hero media and spot images into local assets and rewrites JSON paths.
+- `scripts/localize_trip_images.py`: downloads remote hero media and spot media into local assets and rewrites JSON paths.
 - `scripts/render_trip_webpage.py`: injects `trip-data.json` into the template and writes `index.html`.
 - `scripts/audit_trip_webpage.py`: checks an existing HTML page for known template features that may be missing.

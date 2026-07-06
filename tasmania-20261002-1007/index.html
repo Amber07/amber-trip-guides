@@ -52,29 +52,34 @@
       content: "";
       position: absolute;
       inset: 0;
-      z-index: 0;
+      z-index: 1;
       background: linear-gradient(180deg, rgba(12, 21, 17, .12), rgba(12, 21, 17, .76));
       pointer-events: none;
     }
 
-    .hero-media {
+    #heroMediaSlot {
       position: absolute;
       inset: 0;
       z-index: 0;
       overflow: hidden;
     }
 
-    .hero-media img,
-    .hero-media video {
+    .hero-media {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       display: block;
       object-fit: cover;
     }
 
+    .hero-media.is-video {
+      background: #0c1511;
+    }
+
     .hero-inner {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       width: min(1120px, 100%);
       margin: 0 auto;
     }
@@ -309,9 +314,21 @@
       background: #d8d2c8 center / cover;
     }
 
+    .panel-video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      background: #111;
+    }
+
     .panel-img,
     .rating-image {
       cursor: zoom-in;
+    }
+
+    .panel-img.has-video {
+      cursor: default;
     }
 
     .panel-img:focus-visible,
@@ -714,6 +731,23 @@
       background: #d8d2c8 center / cover;
     }
 
+    .rating-image.has-video {
+      position: relative;
+    }
+
+    .rating-image.has-video::after {
+      content: "播放视频";
+      position: absolute;
+      left: 12px;
+      bottom: 10px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(255, 250, 242, .92);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
     .rating-card h3 {
       line-height: 1.22;
     }
@@ -879,6 +913,55 @@
       box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
       object-fit: contain;
       background: #111;
+      touch-action: pan-y;
+    }
+
+    .lightbox-video {
+      display: none;
+      max-width: min(1120px, 100%);
+      max-height: min(82vh, 780px);
+      border-radius: var(--radius);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
+      background: #111;
+      touch-action: pan-y;
+    }
+
+    .image-lightbox.show-video .lightbox-image {
+      display: none;
+    }
+
+    .image-lightbox.show-video .lightbox-video {
+      display: block;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      display: none;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255, 255, 255, .34);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .92);
+      color: var(--ink);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .24);
+      transform: translateY(-50%);
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .lightbox-nav.prev {
+      left: max(18px, env(safe-area-inset-left, 0px));
+    }
+
+    .lightbox-nav.next {
+      right: max(18px, env(safe-area-inset-right, 0px));
+    }
+
+    .image-lightbox.has-multiple .lightbox-nav {
+      display: grid;
     }
 
     .lightbox-close {
@@ -906,6 +989,35 @@
       text-align: center;
       font-size: 14px;
       font-weight: 800;
+    }
+
+    .lightbox-dots {
+      position: absolute;
+      left: 50%;
+      bottom: max(46px, calc(env(safe-area-inset-bottom, 0px) + 46px));
+      z-index: 2;
+      display: none;
+      gap: 7px;
+      transform: translateX(-50%);
+    }
+
+    .image-lightbox.has-multiple .lightbox-dots {
+      display: flex;
+    }
+
+    .lightbox-dot {
+      width: 8px;
+      height: 8px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .54);
+      box-shadow: 0 1px 6px rgba(0, 0, 0, .38);
+      padding: 0;
+    }
+
+    .lightbox-dot.active {
+      background: #fff;
+      transform: scale(1.2);
     }
 
     @media (max-width: 980px) {
@@ -1242,9 +1354,7 @@
 </head>
 <body>
   <header class="hero">
-    <div class="hero-media" aria-hidden="true">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Wineglass_Bay_from_Lookout.jpg/1920px-Wineglass_Bay_from_Lookout.jpg" alt="">
-    </div>
+    <div id="heroMediaSlot" aria-hidden="true"></div>
     <div class="hero-inner">
       <p class="eyebrow">Tasmania East Coast · 2026.10.02-10.07</p>
       <h1>塔州东海岸 6 日游</h1>
@@ -1335,13 +1445,23 @@
 
   <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="图片预览" onclick="closeImageLightbox(event)">
     <button class="lightbox-close" type="button" aria-label="关闭图片预览" onclick="closeImageLightbox(event)">×</button>
+    <button class="lightbox-nav prev" type="button" aria-label="上一张图片" onclick="shiftLightboxImage(-1, event)">‹</button>
     <img class="lightbox-image" id="lightboxImage" alt="">
+    <video class="lightbox-video" id="lightboxVideo" controls playsinline></video>
+    <button class="lightbox-nav next" type="button" aria-label="下一张图片" onclick="shiftLightboxImage(1, event)">›</button>
+    <div class="lightbox-dots" id="lightboxDots" aria-label="放大图片分页"></div>
     <div class="lightbox-caption" id="lightboxCaption"></div>
   </div>
 
   <footer>塔斯马尼亚东海岸旅行攻略 · 2026.10.02-10.07</footer>
 
   <script>
+    const heroMedia = {
+      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Wineglass_Bay_from_Lookout.jpg/1920px-Wineglass_Bay_from_Lookout.jpg",
+      poster: "",
+      alt: "塔州东海岸 6 日游头图"
+    };
+
     const spots = [
       {
         id: "launceston_airport",
@@ -1908,8 +2028,8 @@
         base: "Launceston 市区或机场附近",
         lat: -41.4332,
         lng: 147.1441,
-        sunrise: "—",
-        sunset: "—",
+        sunrise: "Launceston 05:47",
+        sunset: "Launceston 18:17",
         alerts: ["晚到不赶路", "确认租车 after-hours"],
         transport: "22:05 抵达 Launceston Airport，当晚以入住休息为主。",
         timeline: [
@@ -2076,6 +2196,7 @@
     let selectedId = "bayoffires";
     let selectedImageIndex = 0;
     let touchStartX = 0;
+    let lightboxTouchStartX = 0;
     const routeTracker = { pending: 0, failed: 0 };
 
     function displayName(item) {
@@ -2228,22 +2349,27 @@
 
     function openImageLightbox(src, caption = "") {
       if (!src) return;
+      const images = getSpotImages(currentSpot());
+      const index = images.findIndex((item) => item.src === src);
+      if (index >= 0) selectedImageIndex = index;
       const lightbox = document.getElementById("imageLightbox");
-      const image = document.getElementById("lightboxImage");
-      const captionEl = document.getElementById("lightboxCaption");
-      image.src = src;
-      image.alt = caption || "景点图片";
-      captionEl.textContent = caption;
       lightbox.classList.add("open");
       document.body.style.overflow = "hidden";
+      renderLightboxImage(caption);
     }
 
     function closeImageLightbox(event) {
-      if (event && event.target.closest(".lightbox-image")) return;
+      if (event && event.target.closest(".lightbox-image, .lightbox-video, .lightbox-nav, .lightbox-dots")) return;
       const lightbox = document.getElementById("imageLightbox");
       const image = document.getElementById("lightboxImage");
-      lightbox.classList.remove("open");
+      const video = document.getElementById("lightboxVideo");
+      lightbox.classList.remove("open", "has-multiple", "show-video");
       image.removeAttribute("src");
+      if (video) {
+        video.pause();
+        video.removeAttribute("src");
+        video.load();
+      }
       document.body.style.overflow = "";
     }
 
@@ -2255,8 +2381,78 @@
       return raw.map((item) => typeof item === "string" ? { src: item } : item).filter((item) => item?.src);
     }
 
+    function isVideoMedia(src = "") {
+      return /\.(mp4|webm|mov|m4v)(\?.*)?$/i.test(src);
+    }
+
+    function renderHeroMedia() {
+      const slot = document.getElementById("heroMediaSlot");
+      if (!slot || !heroMedia.src) return;
+      if (isVideoMedia(heroMedia.src)) {
+        slot.innerHTML = `<video class="hero-media is-video" autoplay muted loop playsinline preload="metadata" poster="${heroMedia.poster || ""}"><source src="${heroMedia.src}"></video>`;
+        return;
+      }
+      slot.innerHTML = `<img class="hero-media" src="${heroMedia.src}" alt="${heroMedia.alt || ""}">`;
+    }
+
+    function isVideoItem(item) {
+      return item?.type === "video" || isVideoMedia(item?.src);
+    }
+
+    function mediaCaption(item, spot, fallbackCaption = "") {
+      return item?.caption || fallbackCaption || displayName(spot);
+    }
+
+    function coverImageFor(spot, item) {
+      if (!isVideoItem(item)) return item?.src || spot.image;
+      return item?.poster || getSpotImages(spot).find((media) => !isVideoItem(media))?.src || spot.image;
+    }
+
     function currentSpot() {
       return spots.find((item) => item.id === selectedId) || spots[0];
+    }
+
+    function renderLightboxImage(fallbackCaption = "") {
+      const lightbox = document.getElementById("imageLightbox");
+      const imageEl = document.getElementById("lightboxImage");
+      const videoEl = document.getElementById("lightboxVideo");
+      const captionEl = document.getElementById("lightboxCaption");
+      const dots = document.getElementById("lightboxDots");
+      const spot = currentSpot();
+      const images = getSpotImages(spot);
+      const image = images[selectedImageIndex] || images[0];
+      if (!image || !lightbox || !imageEl || !videoEl || !captionEl || !dots) return;
+      selectedImageIndex = Math.max(0, Math.min(selectedImageIndex, images.length - 1));
+      const caption = mediaCaption(image, spot, fallbackCaption);
+      const videoMode = isVideoItem(image);
+      lightbox.classList.toggle("has-multiple", images.length > 1);
+      lightbox.classList.toggle("show-video", videoMode);
+      if (videoMode) {
+        imageEl.removeAttribute("src");
+        imageEl.alt = "";
+        videoEl.src = image.src;
+        videoEl.controls = true;
+        videoEl.playsInline = true;
+        videoEl.load();
+      } else {
+        videoEl.pause();
+        videoEl.removeAttribute("src");
+        videoEl.load();
+        imageEl.src = image.src;
+        imageEl.alt = caption || "景点图片";
+      }
+      captionEl.textContent = caption;
+      const touchTarget = videoMode ? videoEl : imageEl;
+      touchTarget.ontouchstart = (event) => {
+        lightboxTouchStartX = event.touches[0].clientX;
+      };
+      touchTarget.ontouchend = (event) => {
+        const delta = event.changedTouches[0].clientX - lightboxTouchStartX;
+        if (Math.abs(delta) > 42) shiftLightboxImage(delta < 0 ? 1 : -1, event);
+      };
+      dots.innerHTML = images.map((_, index) => `
+        <button class="lightbox-dot${index === selectedImageIndex ? " active" : ""}" type="button" aria-label="查看第 ${index + 1} 个放大媒体" onclick="setLightboxImage(${index}, event)"></button>
+      `).join("");
     }
 
     function renderSpotImageCarousel() {
@@ -2268,16 +2464,25 @@
       const dots = document.getElementById("panelImageDots");
       if (!image) return;
       selectedImageIndex = Math.max(0, Math.min(selectedImageIndex, images.length - 1));
+      const caption = mediaCaption(image, spot);
+      const videoMode = isVideoItem(image);
       wrap.classList.toggle("has-multiple", images.length > 1);
-      panelImage.style.backgroundImage = `url("${image.src}")`;
+      panelImage.classList.toggle("has-video", videoMode);
+      panelImage.style.backgroundImage = videoMode ? "" : `url("${image.src}")`;
+      panelImage.innerHTML = videoMode
+        ? `<video class="panel-video" src="${image.src}" muted autoplay loop playsinline controls preload="metadata" aria-label="${caption}"></video>`
+        : "";
       panelImage.setAttribute("role", "button");
       panelImage.setAttribute("tabindex", "0");
-      panelImage.setAttribute("aria-label", `放大查看${displayName(spot)}图片`);
-      panelImage.onclick = () => openImageLightbox(image.src, image.caption || displayName(spot));
+      panelImage.setAttribute("aria-label", videoMode ? `播放${displayName(spot)}视频` : `放大查看${displayName(spot)}图片`);
+      panelImage.onclick = (event) => {
+        if (videoMode && event.target.closest("video")) return;
+        openImageLightbox(image.src, caption);
+      };
       panelImage.onkeydown = (event) => {
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
-          openImageLightbox(image.src, image.caption || displayName(spot));
+          openImageLightbox(image.src, caption);
         }
         if (event.key === "ArrowLeft") shiftSpotImage(-1);
         if (event.key === "ArrowRight") shiftSpotImage(1);
@@ -2290,26 +2495,40 @@
         if (Math.abs(delta) > 42) shiftSpotImage(delta < 0 ? 1 : -1);
       };
       dots.innerHTML = images.map((_, index) => `
-        <button class="carousel-dot${index === selectedImageIndex ? " active" : ""}" type="button" aria-label="查看第 ${index + 1} 张图片" onclick="setSpotImage(${index})"></button>
+        <button class="carousel-dot${index === selectedImageIndex ? " active" : ""}" type="button" aria-label="查看第 ${index + 1} 个媒体" onclick="setSpotImage(${index})"></button>
       `).join("");
     }
 
-    function setSpotImage(index) {
+    function setSpotImage(index, event) {
+      if (event) event.stopPropagation();
       selectedImageIndex = index;
       renderSpotImageCarousel();
       renderRating();
+      if (document.getElementById("imageLightbox")?.classList.contains("open")) renderLightboxImage();
     }
 
-    function shiftSpotImage(delta) {
+    function shiftSpotImage(delta, event) {
+      if (event) event.stopPropagation();
       const images = getSpotImages(currentSpot());
       if (images.length <= 1) return;
       selectedImageIndex = (selectedImageIndex + delta + images.length) % images.length;
       renderSpotImageCarousel();
       renderRating();
+      if (document.getElementById("imageLightbox")?.classList.contains("open")) renderLightboxImage();
+    }
+
+    function setLightboxImage(index, event) {
+      setSpotImage(index, event);
+    }
+
+    function shiftLightboxImage(delta, event) {
+      shiftSpotImage(delta, event);
     }
 
     window.setSpotImage = setSpotImage;
     window.shiftSpotImage = shiftSpotImage;
+    window.setLightboxImage = setLightboxImage;
+    window.shiftLightboxImage = shiftLightboxImage;
 
     async function drawRoute() {
       routeTracker.pending = routeSegments.filter((segment) => segment.mode === "drive").length;
@@ -2434,7 +2653,7 @@
       `;
       renderRating();
       if (isMobileView() && openSheet) openSpotSheet();
-      if (map && openSheet) map.flyTo([spot.lat, spot.lng], isMobileView() ? 9 : 10, { duration: .6 });
+      if (map && openSheet) map.panTo([spot.lat, spot.lng], { animate: true, duration: .6 });
     }
 
     window.selectSpot = selectSpot;
@@ -2566,10 +2785,13 @@
     function renderRating() {
       const spot = spots.find((item) => item.id === selectedId) || spots[0];
       const image = getSpotImages(spot)[selectedImageIndex] || getSpotImages(spot)[0] || { src: spot.image };
+      const videoMode = isVideoItem(image);
+      const coverImage = coverImageFor(spot, image);
+      const caption = mediaCaption(image, spot);
       const { score } = ratingModel(spot);
       const ratingPanel = document.getElementById("ratingPanel");
       ratingPanel.innerHTML = `
-        <div class="rating-image" role="button" tabindex="0" aria-label="放大查看${displayName(spot)}图片" style="background-image:url('${image.src}')"></div>
+        <div class="rating-image${videoMode ? " has-video" : ""}" role="button" tabindex="0" aria-label="${videoMode ? `播放${displayName(spot)}视频` : `放大查看${displayName(spot)}图片`}" style="background-image:url('${coverImage}')"></div>
         <h3>${displayName(spot)}</h3>
         <p>${spot.intro}</p>
         <div class="tag-row">${spot.features.slice(0, 3).map((item) => `<span class="tag">${item}</span>`).join("")}</div>
@@ -2577,11 +2799,11 @@
         ${renderRatingBars(spot)}
       `;
       const ratingImage = ratingPanel.querySelector(".rating-image");
-      ratingImage.onclick = () => openImageLightbox(image.src, image.caption || displayName(spot));
+      ratingImage.onclick = () => openImageLightbox(image.src, caption);
       ratingImage.onkeydown = (event) => {
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
-          openImageLightbox(image.src, image.caption || displayName(spot));
+          openImageLightbox(image.src, caption);
         }
       };
     }
@@ -2608,6 +2830,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
+      renderHeroMedia();
       renderDays();
       renderDayJump();
       renderFood();
@@ -2628,7 +2851,11 @@
         }, 180);
       });
       document.addEventListener("keydown", (event) => {
+        const lightboxOpen = document.getElementById("imageLightbox")?.classList.contains("open");
         if (event.key === "Escape") closeImageLightbox();
+        if (!lightboxOpen) return;
+        if (event.key === "ArrowLeft") shiftLightboxImage(-1, event);
+        if (event.key === "ArrowRight") shiftLightboxImage(1, event);
       });
     });
   </script>

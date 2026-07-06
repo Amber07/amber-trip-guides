@@ -295,9 +295,28 @@
       display: none;
     }
 
+    .panel-img-wrap {
+      position: relative;
+      height: 210px;
+      min-height: 0;
+      background: #d8d2c8;
+      overflow: hidden;
+    }
+
     .panel-img {
-      min-height: 210px;
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      min-height: 0;
       background: #d8d2c8 center / cover;
+    }
+
+    .panel-video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      background: #111;
     }
 
     .panel-img,
@@ -305,10 +324,73 @@
       cursor: zoom-in;
     }
 
+    .panel-img.has-video {
+      cursor: default;
+    }
+
     .panel-img:focus-visible,
     .rating-image:focus-visible {
       outline: 3px solid rgba(30, 106, 140, .55);
       outline-offset: -3px;
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      z-index: 4;
+      display: none;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255, 255, 255, .48);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .9);
+      color: var(--ink);
+      box-shadow: 0 8px 20px rgba(41, 54, 48, .18);
+      transform: translateY(-50%);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .carousel-button.prev {
+      left: 10px;
+    }
+
+    .carousel-button.next {
+      right: 10px;
+    }
+
+    .panel-img-wrap.has-multiple .carousel-button {
+      display: grid;
+    }
+
+    .carousel-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      z-index: 4;
+      display: none;
+      gap: 6px;
+      transform: translateX(-50%);
+    }
+
+    .panel-img-wrap.has-multiple .carousel-dots {
+      display: flex;
+    }
+
+    .carousel-dot {
+      width: 7px;
+      height: 7px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .62);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+      padding: 0;
+    }
+
+    .carousel-dot.active {
+      background: #fff;
+      transform: scale(1.18);
     }
 
     .panel-body {
@@ -646,6 +728,24 @@
       background: #d8d2c8 center / cover;
     }
 
+    .rating-image.has-video {
+      position: relative;
+    }
+
+    .rating-image.has-video::after {
+      content: "播放视频";
+      position: absolute;
+      left: 12px;
+      bottom: 10px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(255, 250, 242, .92);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+      box-shadow: 0 8px 20px rgba(41, 54, 48, .18);
+    }
+
     .rating-card h3 {
       line-height: 1.22;
     }
@@ -811,6 +911,54 @@
       box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
       object-fit: contain;
       background: #111;
+      touch-action: pan-y;
+    }
+
+    .lightbox-video {
+      display: none;
+      max-width: min(1120px, 100%);
+      max-height: min(82vh, 780px);
+      border-radius: var(--radius);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
+      background: #111;
+    }
+
+    .image-lightbox.show-video .lightbox-image {
+      display: none;
+    }
+
+    .image-lightbox.show-video .lightbox-video {
+      display: block;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      display: none;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255, 255, 255, .34);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .92);
+      color: var(--ink);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .24);
+      transform: translateY(-50%);
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .lightbox-nav.prev {
+      left: max(18px, env(safe-area-inset-left, 0px));
+    }
+
+    .lightbox-nav.next {
+      right: max(18px, env(safe-area-inset-right, 0px));
+    }
+
+    .image-lightbox.has-multiple .lightbox-nav {
+      display: grid;
     }
 
     .lightbox-close {
@@ -837,6 +985,35 @@
       color: rgba(255, 255, 255, .86);
       text-align: center;
       font-weight: 700;
+    }
+
+    .lightbox-dots {
+      position: absolute;
+      left: 50%;
+      bottom: max(46px, calc(env(safe-area-inset-bottom, 0px) + 46px));
+      z-index: 2;
+      display: none;
+      gap: 7px;
+      transform: translateX(-50%);
+    }
+
+    .image-lightbox.has-multiple .lightbox-dots {
+      display: flex;
+    }
+
+    .lightbox-dot {
+      width: 8px;
+      height: 8px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .54);
+      box-shadow: 0 1px 6px rgba(0, 0, 0, .38);
+      padding: 0;
+    }
+
+    .lightbox-dot.active {
+      background: #fff;
+      transform: scale(1.2);
     }
 
     @media (max-width: 980px) {
@@ -1025,7 +1202,11 @@
       }
 
       .panel-img {
-        min-height: 170px;
+        min-height: 0;
+      }
+
+      .panel-img-wrap {
+        height: 170px;
       }
 
       .panel-body {
@@ -1208,7 +1389,12 @@
           </div>
           <aside class="spot-panel" aria-live="polite">
             <button class="sheet-close" type="button" aria-label="关闭景点详情" onclick="closeSpotSheet()">×</button>
-            <div class="panel-img" id="panelImage"></div>
+            <div class="panel-img-wrap" id="panelImageWrap">
+              <button class="carousel-button prev" type="button" aria-label="上一张图片" onclick="shiftSpotImage(-1)">‹</button>
+              <div class="panel-img" id="panelImage"></div>
+              <button class="carousel-button next" type="button" aria-label="下一张图片" onclick="shiftSpotImage(1)">›</button>
+              <div class="carousel-dots" id="panelImageDots" aria-label="景点图片分页"></div>
+            </div>
             <div class="panel-body" id="panelBody"></div>
           </aside>
         </div>
@@ -1259,7 +1445,11 @@
 
   <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="图片预览" onclick="closeImageLightbox(event)">
     <button class="lightbox-close" type="button" aria-label="关闭图片预览" onclick="closeImageLightbox(event)">×</button>
+    <button class="lightbox-nav prev" type="button" aria-label="上一张图片" onclick="shiftLightboxImage(-1, event)">‹</button>
     <img class="lightbox-image" id="lightboxImage" alt="">
+    <video class="lightbox-video" id="lightboxVideo" controls playsinline></video>
+    <button class="lightbox-nav next" type="button" aria-label="下一张图片" onclick="shiftLightboxImage(1, event)">›</button>
+    <div class="lightbox-dots" id="lightboxDots" aria-label="放大图片分页"></div>
     <div class="lightbox-caption" id="lightboxCaption"></div>
   </div>
 
@@ -1287,7 +1477,7 @@
     }
 
     const spots = [
-      { id:"xiaoyang", name:"Xianyang", zh:"咸阳半日游", type:"spot", day:2, time:"04/24 上午", lat:34.329, lng:108.708, stay:"半日", image:"assets/row03_img01.jpg", features:["古渡", "秦汉城市", "过境停靠"], intro:"咸阳是秦汉历史气息很重的过境城市，清渭楼、古渡和老街适合用半天串成一条轻松路线。", play:"清渭楼、古渡博物馆、老街、咸阳博物院、古渡廊桥、统一广场顺路走。", note:"晚间还有长途国际航班，半日游不要拖到太晚。", ratings:{nature:4,culture:8,weather:4,stamina:4} },
+      { id:"xiaoyang", name:"咸阳半日游", zh:"", type:"spot", day:2, time:"04/24 上午", lat:34.329, lng:108.708, stay:"半日", image:"assets/row03_img01.jpg", features:["古渡", "秦汉城市", "过境停靠"], intro:"咸阳是秦汉历史气息很重的过境城市，清渭楼、古渡和老街适合用半天串成一条轻松路线。", play:"清渭楼、古渡博物馆、老街、咸阳博物院、古渡廊桥、统一广场顺路走。", note:"晚间还有长途国际航班，半日游不要拖到太晚。", ratings:{nature:4,culture:8,weather:4,stamina:4} },
       { id:"melbourne", name:"Melbourne CBD", zh:"墨尔本 Citywalk", type:"spot", day:3, time:"04/25", lat:-37.817, lng:144.967, stay:"1 天", image:"assets/row17_img08.jpg", features:["皇家拱廊", "涂鸦街", "福林德街车站"], intro:"墨尔本这天是从机场过渡到新西兰前的城市漫游，历史建筑、街头艺术和美术馆都集中在市中心。", play:"SkyBus 到南十字星车站后，串联皇家拱廊、圣保罗教堂、联邦广场、福林德街车站和 NGV。", note:"涂鸦街偏网红打卡，路过即可；Point Ormond 看天气决定。", ratings:{nature:4,culture:8,weather:4,stamina:6} },
       { id:"royal_arcade", name:"Royal Arcade", zh:"皇家拱廊", type:"spot", day:3, time:"04/25 中午", lat:-37.8144, lng:144.9647, stay:"30 分钟", image:"assets/melbourne-royal-arcade.png", features:["维多利亚建筑", "拱廊商店", "棋盘地砖"], intro:"皇家拱廊建于 19 世纪，是墨尔本仍在营业的古老购物拱廊之一，玻璃屋顶、铸铁装饰和黑白地砖保留了维多利亚时代的城市气质。", play:"从 Bourke Street 一侧进入，慢慢看穹顶、店招和老式钟表，适合作为 Citywalk 的第一站。", note:"通道不长，人多时拍照稍等空档即可，不必停留太久。", ratings:{nature:2,culture:8,weather:2,stamina:2} },
       { id:"graffiti_lane", name:"Hosier Lane", zh:"涂鸦街", type:"spot", day:3, time:"04/25 中午", lat:-37.8163, lng:144.9691, stay:"20 分钟", image:"assets/melbourne-graffiti-lane.JPG", features:["街头艺术", "城市涂鸦", "快速打卡"], intro:"Hosier Lane 是墨尔本最有代表性的街头艺术巷道之一，墙面作品会不断更新，能看到这座城市更自由、更即兴的一面。", play:"从联邦广场步行过去最顺，沿巷道走一圈即可；如果人多，取局部墙面和街角更容易出片。", note:"巷子窄且游客多，注意随身物品和车辆进出。", ratings:{nature:1,culture:7,weather:3,stamina:2} },
@@ -1297,32 +1487,58 @@
       { id:"ngv", name:"National Gallery of Victoria", zh:"NGV 国家美术馆", type:"spot", day:3, time:"04/25 下午", lat:-37.8226, lng:144.9689, stay:"1.5 小时", image:"assets/melbourne-ngv.png", features:["艺术馆", "免费展厅", "城市雨备"], intro:"维多利亚国家美术馆是澳大利亚重要的公共美术馆之一，馆藏横跨欧洲、亚洲、澳洲本土与当代艺术，适合给 Citywalk 加一点安静的室内时间。", play:"优先看常设展和中庭空间，遇到天气不好也可以把这里作为主要停留点。", note:"热门特展可能需要预约或购票，常设展通常更适合短暂停留。", ratings:{nature:1,culture:9,weather:1,stamina:3} },
       { id:"shrine_of_remembrance", name:"Shrine of Remembrance", zh:"战争纪念馆", type:"spot", day:3, time:"04/25 下午", lat:-37.8305, lng:144.9734, stay:"45 分钟", image:"assets/melbourne-shrine-of-remembrance.png", features:["纪念建筑", "城市眺望", "历史展陈"], intro:"战争纪念馆为纪念澳大利亚参战者而建，庄重的古典建筑、地下展陈和台阶视野，让它成为墨尔本南侧很有分量的历史地标。", play:"从 NGV 继续向南步行可达，登上台阶回望城市天际线，时间充裕再进馆参观。", note:"纪念空间氛围肃静，室内展区注意放低音量。", ratings:{nature:4,culture:8,weather:3,stamina:4} },
       { id:"royal_botanic_gardens_mel", name:"Royal Botanic Gardens Victoria", zh:"皇家植物园", type:"spot", day:3, time:"04/25 下午", lat:-37.8304, lng:144.9796, stay:"1 小时", image:"assets/melbourne-royal-botanic-gardens.png", features:["城市绿地", "湖畔散步", "休息调整"], intro:"墨尔本皇家植物园靠近雅拉河南岸，是从城市建筑切换到树影和草地的好地方，适合在长途飞行后慢慢恢复节奏。", play:"从战争纪念馆附近进入，挑湖边和草坪轻松散步即可，不需要完整绕园。", note:"傍晚温度下降较快，别为了走完全园消耗太多体力。", ratings:{nature:7,culture:4,weather:5,stamina:3} },
-      { id:"point_ormond", name:"Point Ormond", zh:"海边日落点", type:"spot", day:3, time:"04/25 傍晚", lat:-37.8845, lng:144.9777, stay:"45 分钟", image:"assets/melbourne-point-ormond.jpeg", features:["海边日落", "草坡", "城市远景"], intro:"Point Ormond 位于 Elwood 海岸边，草坡、海面和墨尔本天际线连在一起，是这天从市中心走到海风里的收尾。", play:"天气好时傍晚过去看日落，坐在草坡上等光线变暖；如果云层太厚，就把它当作轻松散步点。", note:"海边风会明显更冷，日落后不要停留太久。", ratings:{nature:8,culture:3,weather:7,stamina:3} },
+      { id:"point_ormond", name:"Point Ormond", zh:"海边日落点", type:"spot", day:3, time:"04/25 傍晚", lat:-37.8845, lng:144.9777, stay:"45 分钟", image:"assets/melbourne-point-ormond.jpeg", images:[{src:"assets/melbourne-point-ormond.jpeg", caption:"Point Ormond | 海边日落点"}, {src:"assets/point-ormond-polaroid.JPG", caption:"Point Ormond | 海边拍立得"}, {src:"assets/point-ormond-sunset.MOV", type:"video", caption:"Point Ormond | 海边日落视频"}], features:["海边日落", "草坡", "城市远景"], intro:"Point Ormond 位于 Elwood 海岸边，草坡、海面和墨尔本天际线连在一起，是这天从市中心走到海风里的收尾。", play:"天气好时傍晚过去看日落，坐在草坡上等光线变暖；如果云层太厚，就把它当作轻松散步点。", note:"海边风会明显更冷，日落后不要停留太久。", ratings:{nature:8,culture:3,weather:7,stamina:3} },
       { id:"queen_victoria_market", name:"Queen Victoria Market", zh:"维多利亚女王市场", type:"spot", day:4, time:"04/26 09:00", lat:-37.8076, lng:144.9568, stay:"1 小时", image:"assets/melbourne-queen-victoria-market.png", features:["老市场", "早餐", "本地烟火"], intro:"维多利亚女王市场自 19 世纪延续至今，是墨尔本最有生活气的早晨之一，熟食、鲜花、水果和小店铺都很适合作为离开前的轻量收尾。", play:"早上先买咖啡或早餐，顺手逛 Publicity、花摊和水果摊，不需要完整扫完所有棚区。", note:"当天要飞皇后镇，市场停留控制在一小时内更稳。", ratings:{nature:2,culture:7,weather:2,stamina:3} },
       { id:"carlton_gardens", name:"Carlton Gardens", zh:"卡尔顿花园", type:"spot", day:4, time:"04/26 10:00", lat:-37.8063, lng:144.9717, stay:"40 分钟", image:"assets/melbourne-carlton-gardens.JPG", features:["世界遗产", "皇家展览馆", "喷泉花园"], intro:"卡尔顿花园与皇家展览馆共同列入世界遗产，喷泉、花圃和白色展馆构成了墨尔本少见的典雅城市景观。", play:"从喷泉正面看展馆最完整，拍完后沿花园慢慢走到州立图书馆方向即可。", note:"这天上午时间有限，以外观和花园散步为主。", ratings:{nature:6,culture:8,weather:4,stamina:3} },
-      { id:"carlton_library", name:"State Library Victoria", zh:"维多利亚州立图书馆", type:"spot", day:4, time:"04/26 10:30", lat:-37.8098, lng:144.9652, stay:"35 分钟", image:"assets/row24_img15.jpg", features:["图书馆", "穹顶阅览室", "城市收尾"], intro:"维多利亚州立图书馆是墨尔本重要的公共文化地标，圆形穹顶阅览室和开放空间适合在飞行前做一个安静的城市收尾。", play:"优先看 La Trobe Reading Room，时间不够就只逛主入口和阅览室。", note:"14:50 飞皇后镇，市区行程必须轻量。", ratings:{nature:1,culture:8,weather:1,stamina:2} },
-      { id:"queenstown", name:"Queenstown", zh:"皇后镇", type:"spot", day:4, time:"04/26 晚", lat:-45.031, lng:168.663, stay:"3 晚", image:"assets/queenstown-arrival-fergburger.JPG", features:["湖山小镇", "Fergburger", "南岛开场"], intro:"皇后镇是南岛行程的情绪中心，落地后的夜色、湖边小镇和热闹的 Fergburger，把长途飞行后的疲惫慢慢接住。", play:"落地后办 Bee Card 坐公交进镇，入住后轻松吃饭和补给，后续再安排箭镇、快艇、Queenstown Hill 或天空缆车。", note:"抵达较晚，不要把第一晚排得太满，吃饭后早点休息。", ratings:{nature:9,culture:5,weather:6,stamina:5} },
-      { id:"arrowtown", name:"Arrowtown", zh:"箭镇", type:"spot", day:5, time:"04/27", lat:-44.941, lng:168.835, stay:"半日", image:"assets/arrowtown-autumn-group.JPG", features:["秋色", "淘金小镇", "轻徒步"], intro:"箭镇因 19 世纪淘金潮兴起，秋天的金黄树色是南岛最温柔的开场之一。", play:"睡个懒觉后坐 2 路或 4 路公交前往，先在镇中心和河边散步，再去 Feehly Hill Scenic Reserve 看小镇与山谷。", note:"这天不用赶，重点是感受南岛秋天。", ratings:{nature:8,culture:6,weather:5,stamina:4} },
-      { id:"feehly_hill", name:"Feehly Hill Scenic Reserve", zh:"费希利山观景步道", type:"spot", day:5, time:"04/27 中午", lat:-44.946, lng:168.831, stay:"1 小时", image:"assets/feehly-hill-scenic-reserve.jpeg", features:["箭镇俯瞰", "秋色", "短徒步"], intro:"Feehly Hill Scenic Reserve 在箭镇边缘，爬升不算长，却能看到小镇屋顶、山坡和秋色层层铺开。", play:"从箭镇中心步行上坡，按体力走到视野开阔处即可，不需要把整条步道走满。", note:"坡度比镇上散步更明显，穿舒服的鞋，风大时注意保暖。", ratings:{nature:8,culture:4,weather:5,stamina:5} },
+      { id:"carlton_library", name:"State Library Victoria", zh:"维多利亚州立图书馆", type:"spot", day:4, time:"04/26 10:30", lat:-37.8098, lng:144.9652, stay:"35 分钟", image:"assets/row24_img15.jpg", images:[{src:"assets/row24_img15.jpg", caption:"State Library Victoria | 维多利亚州立图书馆"}, {src:"assets/state-library-chess.JPG", caption:"State Library Victoria | 街角棋局"}], features:["图书馆", "穹顶阅览室", "城市收尾"], intro:"维多利亚州立图书馆是墨尔本重要的公共文化地标，圆形穹顶阅览室和开放空间适合在飞行前做一个安静的城市收尾。", play:"优先看 La Trobe Reading Room，时间不够就只逛主入口和阅览室。", note:"14:50 飞皇后镇，市区行程必须轻量。", ratings:{nature:1,culture:8,weather:1,stamina:2} },
+      { id:"queenstown", name:"Queenstown", zh:"皇后镇", type:"spot", day:4, time:"04/26 晚", lat:-45.031, lng:168.663, stay:"3 晚", image:"assets/queenstown-arrival-fergburger.JPG", images:[{src:"assets/queenstown-arrival-fergburger.JPG", caption:"Queenstown | 皇后镇夜色"}, {src:"assets/queenstown-fergburger-table.JPG", caption:"Queenstown | Fergburger 晚餐"}], features:["湖山小镇", "Fergburger", "南岛开场"], intro:"皇后镇是南岛行程的情绪中心，落地后的夜色、湖边小镇和热闹的 Fergburger，把长途飞行后的疲惫慢慢接住。", play:"落地后办 Bee Card 坐公交进镇，入住后轻松吃饭和补给，后续再安排箭镇、快艇、Queenstown Hill 或天空缆车。", note:"抵达较晚，不要把第一晚排得太满，吃饭后早点休息。", ratings:{nature:9,culture:5,weather:6,stamina:5} },
+      { id:"arrowtown", name:"Arrowtown", zh:"箭镇", type:"spot", day:5, time:"04/27", lat:-44.941, lng:168.835, stay:"半日", image:"assets/arrowtown-autumn-group.JPG", images:[{src:"assets/arrowtown-autumn-group.JPG", caption:"Arrowtown | 箭镇秋色合影"}, {src:"assets/arrowtown-autumn-street.jpeg", caption:"Arrowtown | 箭镇秋色街角"}], features:["秋色", "淘金小镇", "轻徒步"], intro:"箭镇因 19 世纪淘金潮兴起，秋天的金黄树色是南岛最温柔的开场之一。", play:"睡个懒觉后坐 2 路或 4 路公交前往，先在镇中心和河边散步，再去 Feehly Hill Scenic Reserve 看小镇与山谷。", note:"这天不用赶，重点是感受南岛秋天。", ratings:{nature:8,culture:6,weather:5,stamina:4} },
+      { id:"feehly_hill", name:"Feehly Hill Scenic Reserve", zh:"费希利山观景步道", type:"spot", day:5, time:"04/27 中午", lat:-44.946, lng:168.831, stay:"1 小时", image:"assets/feehly-hill-scenic-reserve.jpeg", images:[{src:"assets/feehly-hill-scenic-reserve.jpeg", caption:"Feehly Hill Scenic Reserve | 箭镇俯瞰"}, {src:"assets/feehly-hill-overlook.JPG", caption:"Feehly Hill Scenic Reserve | 山谷全景"}, {src:"assets/feehly-hill-dog.JPG", caption:"Feehly Hill Scenic Reserve | 山坡草地"}, {src:"assets/feehly-hill-portrait.JPG", caption:"Feehly Hill Scenic Reserve | 山顶合影"}], features:["箭镇俯瞰", "秋色", "短徒步"], intro:"Feehly Hill Scenic Reserve 在箭镇边缘，爬升不算长，却能看到小镇屋顶、山坡和秋色层层铺开。", play:"从箭镇中心步行上坡，按体力走到视野开阔处即可，不需要把整条步道走满。", note:"坡度比镇上散步更明显，穿舒服的鞋，风大时注意保暖。", ratings:{nature:8,culture:4,weather:5,stamina:5} },
       { id:"queenstown_sunrise", name:"Queenstown Sunrise", zh:"皇后镇日出", type:"spot", day:6, time:"04/28 早晨", lat:-45.032, lng:168.661, stay:"30 分钟", image:"assets/queenstown-sunrise.JPG", features:["湖边日出", "晨光", "轻松开场"], intro:"皇后镇的清晨适合慢一点开始，湖面和码头在晨光里变亮，比赶项目更能让人进入南岛节奏。", play:"早起到湖边或码头附近看光线变化，拍完回镇上吃早餐，再决定当天项目。", note:"清晨体感偏冷，带外套；如果天气不好就睡晚一点。", ratings:{nature:8,culture:3,weather:6,stamina:2} },
-      { id:"queenstown_jet_town", name:"Shotover Jet / Queenstown Town", zh:"喷射快艇 / 镇上闲逛", type:"spot", day:6, time:"04/28 上午", lat:-45.03, lng:168.661, stay:"半日", image:"assets/queenstown-town-aerial.JPG", features:["喷射快艇", "湖边小镇", "机动安排"], intro:"这半天适合在刺激项目和镇上闲逛之间灵活选择：天气和体力都好就去快艇，想轻松一点就在湖边、码头和店铺之间慢慢走。", play:"快艇提前看班次和天气；不做项目时，就把皇后镇中心、湖边和咖啡店串起来。", note:"极限项目受天气影响明显，别把后续行程压得太紧。", ratings:{nature:7,culture:4,weather:7,stamina:5} },
-      { id:"queenstown_hill", name:"Queenstown Hill", zh:"皇后镇山徒步", type:"spot", day:6, time:"04/28 下午", lat:-45.021, lng:168.675, stay:"2-3 小时", image:"assets/queenstown-hill-view.JPG", features:["湖景俯瞰", "徒步", "山谷视野"], intro:"Queenstown Hill 是皇后镇最经典的短徒步之一，爬升后能看到瓦卡蒂普湖、镇区和远山，视野开阔得很有奖励感。", play:"从镇上步行到步道入口，按体力走到 Basket of Dreams 或继续登顶，下午光线更适合看湖面层次。", note:"有持续爬升，带水和防风外套；雨后路面可能湿滑。", ratings:{nature:9,culture:3,weather:6,stamina:7} },
+      { id:"queenstown_jet_town", name:"Shotover Jet / Queenstown Town", zh:"喷射快艇 / 镇上闲逛", type:"spot", day:6, time:"04/28 上午", lat:-45.03, lng:168.661, stay:"半日", image:"assets/queenstown-town-aerial.JPG", images:[{src:"assets/queenstown-town-aerial.JPG", caption:"Queenstown Town | 皇后镇湖湾"}, {src:"assets/queenstown-town-paraglider.JPG", caption:"Queenstown Town | 镇上滑翔伞"}], features:["喷射快艇", "湖边小镇", "机动安排"], intro:"这半天适合在刺激项目和镇上闲逛之间灵活选择：天气和体力都好就去快艇，想轻松一点就在湖边、码头和店铺之间慢慢走。", play:"快艇提前看班次和天气；不做项目时，就把皇后镇中心、湖边和咖啡店串起来。", note:"极限项目受天气影响明显，别把后续行程压得太紧。", ratings:{nature:7,culture:4,weather:7,stamina:5} },
+      { id:"queenstown_hill", name:"Queenstown Hill", zh:"皇后镇山徒步", type:"spot", day:6, time:"04/28 下午", lat:-45.021, lng:168.675, stay:"2-3 小时", image:"assets/queenstown-hill-view.JPG", images:[{src:"assets/queenstown-hill-view.JPG", caption:"Queenstown Hill | 皇后镇山湖景"}, {src:"assets/queenstown-hill-rock-view.jpeg", caption:"Queenstown Hill | 山脊岩石视角"}, {src:"assets/queenstown-hill-telephoto.JPG", caption:"Queenstown Hill | 远山人像"}], features:["湖景俯瞰", "徒步", "山谷视野"], intro:"Queenstown Hill 是皇后镇最经典的短徒步之一，爬升后能看到瓦卡蒂普湖、镇区和远山，视野开阔得很有奖励感。", play:"从镇上步行到步道入口，按体力走到 Basket of Dreams 或继续登顶，下午光线更适合看湖面层次。", note:"有持续爬升，带水和防风外套；雨后路面可能湿滑。", ratings:{nature:9,culture:3,weather:6,stamina:7} },
       { id:"patagonia_chocolates", name:"Patagonia Chocolates", zh:"冰淇淋", type:"spot", day:5, time:"04/27 下午", lat:-45.0324, lng:168.6616, stay:"30 分钟", image:"assets/patagonia-chocolates-icecream.JPG", features:["冰淇淋", "甜品", "皇后镇补给"], intro:"Patagonia Chocolates 是皇后镇和箭镇都很容易顺路安排的甜品店，冰淇淋适合给轻松的一天收个小尾巴。", play:"箭镇回到皇后镇后买一支冰淇淋，边走边逛湖边或小镇中心。", note:"热门时段可能排队，不必为它牺牲主要景点时间。", ratings:{nature:2,culture:4,weather:1,stamina:1} },
       { id:"queenstown_gondola_luge", name:"Skyline Queenstown Gondola & Luge", zh:"天空缆车与滑板车", type:"spot", day:6, time:"04/28 傍晚", lat:-45.0319, lng:168.6538, stay:"2 小时", image:"assets/queenstown-gondola-luge.png", features:["缆车", "滑板车", "湖景"], intro:"天空缆车把皇后镇、瓦卡蒂普湖和远山一下子拉到视野里，滑板车则是轻松又有点兴奋感的收尾项目。", play:"傍晚上山看光线，体力够就玩几圈 Luge；如果当天已经徒步很累，只坐缆车看景也足够。", note:"风大或雨天体验会打折，滑板车注意控制速度。", ratings:{nature:8,culture:3,weather:6,stamina:4} },
       { id:"lake_gunn", name:"Lake Gunn", zh:"甘恩湖", type:"spot", day:7, time:"04/29 中午", lat:-44.887, lng:168.085, stay:"20 分钟", image:"assets/lake-gunn.png", features:["镜面湖水", "山谷倒影", "途中停靠"], intro:"Lake Gunn 是 Milford Road 上很适合停靠的湖泊，平静时能看到山影和云层倒映在水面上。", play:"靠近湖边短暂停留拍照即可，不需要长时间徒步。", note:"停车点有限，注意来车和路边安全。", ratings:{nature:9,culture:2,weather:5,stamina:2} },
       { id:"gertrude_valley", name:"Gertrude Valley", zh:"格特鲁德山谷", type:"spot", day:7, time:"04/29 中午", lat:-44.759, lng:168.012, stay:"20 分钟", image:"assets/gertrude-valley.png", features:["U 型山谷", "高山公路", "峡谷视野"], intro:"Gertrude Valley 两侧山壁陡峭，公路从峡谷里穿过，是 Milford Road 上最有压迫感的山谷视角之一。", play:"找安全停车点看山谷线条和公路弯道，天气好时层次非常清楚。", note:"山谷天气变化快，不建议临时走高风险长线徒步。", ratings:{nature:9,culture:2,weather:6,stamina:3} },
       { id:"hollyford_valley", name:"Hollyford Valley Lookout", zh:"霍利福德山谷观景点", type:"spot", day:7, time:"04/29 中午", lat:-44.759, lng:168.057, stay:"15 分钟", image:"assets/hollyford-valley-lookout.png", features:["山谷眺望", "雪山", "公路风景"], intro:"Hollyford Valley Lookout 是 Milford Road 上看山谷和雪峰的快速停靠点，视野开阔，适合在长路中间换一口气。", play:"下车看一眼山谷和远处雪峰即可，重点是保持行程节奏。", note:"观景点停留短，注意车辆和集合时间。", ratings:{nature:8,culture:2,weather:5,stamina:1} },
       { id:"monkey_creek", name:"Monkey Creek", zh:"猴溪", type:"spot", day:7, time:"04/29 中午", lat:-44.776, lng:167.966, stay:"20 分钟", image:"assets/monkey-creek.png", features:["清澈溪流", "雪山", "峡谷停靠"], intro:"Monkey Creek 是进入米尔福德前很经典的溪流停靠点，雪山、溪水和山壁在这里压得很近。", play:"在溪边短暂停留，拍完继续赶往游船码头。", note:"石头湿滑，别为了取景走到危险边缘。", ratings:{nature:9,culture:2,weather:5,stamina:2} },
-      { id:"milford", name:"Milford Sound", zh:"米尔福德峡湾", type:"spot", day:7, time:"04/29", lat:-44.671, lng:167.925, stay:"1 天", image:"assets/milford-sound-waterfall.jpeg", features:["峡湾", "瀑布", "游船"], intro:"米尔福德峡湾由冰川切割形成，雨天瀑布暴增时反而更能看到峡湾气势。夕光落在山壁和水面上时，峡湾会显得非常不真实。", play:"从 Te Anau 出发，沿途 Lake Gunn、Gertrude Valley、Hollyford Valley Lookout、Monkey Creek，下午坐 Mitre Peak 游船。", note:"回程可能天黑，宁可慢一点，不要夜间山路冒险超车。", ratings:{nature:10,culture:3,weather:8,stamina:7} },
-      { id:"wanaka", name:"Wanaka", zh:"瓦纳卡", type:"spot", day:8, time:"04/30", lat:-44.696, lng:169.132, stay:"1 天", image:"assets/row42_img31.jpg", features:["孤独的树", "湖边", "跳伞备选"], intro:"Wanaka 的美不只是一棵树，而是湖面、雪山和小镇节奏一起慢下来的感觉。", play:"孤独的树、湖边皮划艇、Mount Iron 或湖边散步；跳伞天气调整时这里可作为备选。", note:"太阳强时皮划艇会很晒，体力不足就湖边散步。", ratings:{nature:9,culture:4,weather:6,stamina:5} },
+      { id:"milford", name:"Milford Sound", zh:"米尔福德峡湾", type:"spot", day:7, time:"04/29", lat:-44.671, lng:167.925, stay:"1 天", image:"assets/milford-sound-waterfall.jpeg", images:[{src:"assets/milford-sound-waterfall.jpeg", caption:"Milford Sound | 米尔福德峡湾瀑布"}, {src:"assets/milford-sound-rainbow.JPG", caption:"Milford Sound | 峡湾彩虹"}, {src:"assets/milford-sound-sunset.JPG", caption:"Milford Sound | 峡湾夕光"}, {src:"assets/milford-sound-selfie.jpeg", caption:"Milford Sound | 夕光合影"}], features:["峡湾", "瀑布", "游船"], intro:"米尔福德峡湾由冰川切割形成，雨天瀑布暴增时反而更能看到峡湾气势。夕光落在山壁和水面上时，峡湾会显得非常不真实。", play:"从 Te Anau 出发，沿途 Lake Gunn、Gertrude Valley、Hollyford Valley Lookout、Monkey Creek，下午坐 Mitre Peak 游船。", note:"回程可能天黑，宁可慢一点，不要夜间山路冒险超车。", ratings:{nature:10,culture:3,weather:8,stamina:7} },
+      { id:"wanaka_tree", name:"That Wanaka Tree", zh:"孤独的树", type:"spot", day:8, time:"04/30 中午", lat:-44.6977, lng:169.1169, stay:"30 分钟", image:"assets/wanaka-lonely-tree.JPG", features:["湖中柳树", "瓦纳卡地标", "雪山湖景"], intro:"That Wanaka Tree 是瓦纳卡湖中最有辨识度的孤树，树影、湖面和远山连在一起，是这段南岛行程里很安静的一处标记。", play:"沿湖边步道走到观景点，停下来拍湖面、树影和远山，不需要围着景点停太久。", note:"不要踩入保护区域或涉水靠近树，风大时湖边体感会明显偏冷。", ratings:{nature:9,culture:4,weather:5,stamina:2} },
+      { id:"wanaka_lake", name:"Lake Wanaka", zh:"瓦纳卡湖", type:"spot", day:8, time:"04/30 中午", lat:-44.695, lng:169.132, stay:"1 小时", image:"assets/wanaka-lake-autumn.JPG", images:[{src:"assets/wanaka-lake-autumn.JPG", caption:"Lake Wanaka | 瓦纳卡湖秋色"}, {src:"assets/wanaka-lake-blue-plush.JPG", caption:"Lake Wanaka | 湖边树影"}], features:["湖边秋色", "散步休整", "小镇节奏"], intro:"Lake Wanaka 的节奏比皇后镇更舒展，湖边草地、树荫和远山让这天从长途转场里慢下来。", play:"沿湖边草地和树荫散步，天气好时可以把皮划艇或咖啡休息安排在这里。", note:"湖边风大且日照强，防风外套和墨镜都最好随身带。", ratings:{nature:9,culture:3,weather:5,stamina:2} },
+      { id:"wanaka_skydive", name:"Skydive Wanaka", zh:"Wanaka 跳伞", type:"spot", day:8, time:"04/30 下午", lat:-44.7226, lng:169.2456, stay:"2-3 小时", image:"assets/wanaka-skydive-door.PNG", images:[{src:"assets/wanaka-skydive-door.PNG", caption:"Skydive Wanaka | 起飞前"}, {src:"assets/wanaka-skydive-freefall.PNG", caption:"Skydive Wanaka | 高空视角"}, {src:"assets/wanaka-skydive-ready.JPG", caption:"Skydive Wanaka | 雪山机场"}, {src:"assets/wanaka-skydive-helicopter.JPG", caption:"Skydive Wanaka | 夕阳停机坪"}, {src:"assets/wanaka-skydive-sunset.JPG", caption:"Skydive Wanaka | 夕阳西下"}], features:["高空跳伞", "雪山湖景", "天气窗口"], intro:"Wanaka 跳伞把湖、雪山和农场铺在脚下，天气窗口好时是这天最有冲击力的体验。", play:"提前确认起飞时间和天气，按工作人员安排集合、穿装备、上机；不能飞时就保留为湖边或小镇休整。", note:"跳伞非常受风和云量影响，按当天安全判断执行，不要压缩后续长途驾驶休息时间。", ratings:{nature:10,culture:2,weather:9,stamina:7} },
+      { id:"wanaka", name:"Wanaka", zh:"瓦纳卡", type:"spot", day:8, time:"04/30", lat:-44.696, lng:169.132, stay:"1 天", image:"assets/wanaka-lake-autumn.JPG", images:[{src:"assets/wanaka-lake-autumn.JPG", caption:"Lake Wanaka | 瓦纳卡湖秋色"}, {src:"assets/wanaka-lake-blue-plush.JPG", caption:"Lake Wanaka | 湖边树影"}], features:["孤独的树", "湖边", "小镇休整"], intro:"Wanaka 的美不只是一棵树，而是湖面、雪山和小镇节奏一起慢下来的感觉。", play:"孤独的树、湖边皮划艇、Mount Iron 或湖边散步；跳伞单独看当天的天气窗口安排。", note:"太阳强时皮划艇会很晒，体力不足就湖边散步。", ratings:{nature:9,culture:4,weather:6,stamina:5} },
       { id:"twizel", name:"Twizel", zh:"特威泽尔", type:"hotel", day:8, time:"04/30 晚", lat:-44.259, lng:170.099, stay:"2 晚", image:"assets/row47_img35.jpg", features:["住宿基地", "观星", "补给"], intro:"Twizel 是库克山和 Tekapo 之间的实用基地，小镇超市适合补牛羊肉和早餐食材。", play:"晚上看天气和月相决定是否观星，白天从这里去库克山和冰川区域。", note:"夜间温差大，观星注意保暖。", ratings:{nature:7,culture:2,weather:7,stamina:3} },
-      { id:"mount_cook", name:"Aoraki / Mount Cook", zh:"库克山 Hooker Valley", type:"spot", day:9, time:"05/01", lat:-43.735, lng:170.096, stay:"半日", image:"assets/row49_img37.jpg", features:["雪山", "Hooker Valley", "高山湖"], intro:"Hooker Valley Track 是新西兰最经典且门槛友好的徒步之一，吊桥、冰川湖和库克山雪线一路展开。", play:"White Horse Hill 出发，经 Hooker Valley Track、Mueller Lake、Mount Sefton Lookout，按天气决定走多远。", note:"停车场可能收费，带水、零食和防风外套。", ratings:{nature:10,culture:3,weather:7,stamina:7} },
-      { id:"tekapo", name:"Lake Tekapo", zh:"Tekapo 湖", type:"spot", day:10, time:"05/02", lat:-44.004, lng:170.477, stay:"1 晚", image:"assets/row51_img39.jpg", features:["湖景", "星空", "Mt John"], intro:"Tekapo 的湖、教堂与星空很出名，但月相会决定银河体验，满月前后不适合强求。", play:"Mt John Summit Circuit Track 难度不高，湖景和雪山层次很好；湖边炸鱼薯条可作为轻松收尾。", note:"农历十六附近月亮太亮，看日出比看银河更稳。", ratings:{nature:10,culture:5,weather:7,stamina:5} },
-      { id:"christchurch", name:"Christchurch", zh:"基督城", type:"spot", day:11, time:"05/03", lat:-43.532, lng:172.636, stay:"1 晚", image:"assets/row58_img45.jpg", features:["艺术中心", "市场", "机场过渡"], intro:"基督城曾经历地震后长期重建，艺术中心、市集和城市空间能看到修复后的层次。", play:"BNZ Centre 吃饭、艺术中心、Riverside Market，时间不多时购物比硬逛更多回报。", note:"城市整体冷清，不建议留太多时间。", ratings:{nature:4,culture:6,weather:4,stamina:4} },
-      { id:"auckland", name:"Auckland", zh:"奥克兰", type:"spot", day:12, time:"05/04", lat:-36.848, lng:174.763, stay:"2 晚", image:"assets/row68_img53.jpg", features:["伊甸山", "美术馆", "城市休整"], intro:"奥克兰适合作为北岛过渡和购物休整，伊甸山日落是这两天最值得保留的城市高光。", play:"皇后街、圣马修大教堂、奥克兰美术馆、阿尔伯特公园，傍晚优先伊甸山。", note:"奥莱 18:00 关门，有购物打算别压太晚。", ratings:{nature:7,culture:6,weather:5,stamina:5} },
-      { id:"huka", name:"Huka Falls & Taupo", zh:"胡卡瀑布与陶波", type:"spot", day:13, time:"05/05", lat:-38.649, lng:176.09, stay:"1 天", image:"assets/row72_img56.jpg", features:["蓝泉", "地热", "瀑布"], intro:"北岛一日游很吃天气；蓝泉和地热公园阴天打折，但胡卡瀑布的冰川蓝水色相对稳定。", play:"蓝泉、地热公园、胡卡瀑布、陶波飞机麦当劳串联，按天气和体力删减。", note:"天气不好建议改成奥克兰购物休整，不要硬跑长距离。", ratings:{nature:8,culture:4,weather:8,stamina:8} },
-      { id:"sydney", name:"Sydney", zh:"悉尼短暂停靠", type:"spot", day:14, time:"05/06", lat:-33.869, lng:151.209, stay:"半日", image:"assets/row76_img58.jpg", features:["歌剧院", "海港", "返程"], intro:"悉尼是回程前的短暂停靠，歌剧院和海港足够撑起半天的城市记忆。", play:"公交到 Circular Quay，串联歌剧院、皇家植物园、美术馆和圣母玛丽教堂。", note:"14:10 悉尼 T1 飞杭州，必须给回机场和安检留足时间。", ratings:{nature:6,culture:8,weather:5,stamina:7} },
-      { id:"hangzhou", name:"Hangzhou", zh:"杭州萧山机场", type:"airport", day:1, time:"04/23 出发 / 05/06 抵达", lat:30.236, lng:120.433, stay:"出发与返程", image:"assets/row76_img58.jpg", features:["出发", "回程", "航班衔接"], intro:"整段行程从杭州萧山机场出发，经咸阳、墨尔本进入新西兰，最后从悉尼返回杭州。", play:"04/23 从杭州 T3 飞西安 T5；05/06 悉尼 T1 飞杭州 T4，返程抵达后以休息为主。", note:"首尾两段都是长线行程衔接，机场交通和安检时间都要留足。", ratings:{nature:1,culture:1,weather:1,stamina:6} }
+      { id:"twizel_sunrise", name:"Twizel Sunrise", zh:"Twizel 日出", type:"spot", day:10, time:"05/02 清晨", lat:-44.259, lng:170.099, stay:"20 分钟", image:"assets/twizel-sunrise.JPG", features:["清晨云霞", "小镇日出", "住宿附近"], intro:"Twizel 的清晨不需要特意走很远，粉橙色云层和安静街区就能把库克山区域的早晨打开。", play:"起床后在住宿附近看天色，如果云层和光线好，短暂停留拍照再出发去 Tekapo 方向。", note:"清晨气温低，出门看日出先套外套，不要为了赶行程压缩早餐和退房时间。", ratings:{nature:7,culture:2,weather:6,stamina:1} },
+      { id:"lake_pukaki", name:"Lake Pukaki", zh:"普卡基湖", type:"spot", day:9, time:"05/01 上午", lat:-44.176, lng:170.165, stay:"30-45 分钟", image:"assets/lake-pukaki-road.jpg", images:[{src:"assets/lake-pukaki-road.jpg", caption:"Lake Pukaki | 普卡基湖公路与雪山"}, {src:"assets/lake-pukaki-lakeside.JPG", caption:"Lake Pukaki | 湖边合影"}], features:["冰川蓝湖水", "库克山远景", "公路停靠"], intro:"普卡基湖是通往库克山路上最醒目的蓝色湖泊，冰川粉让湖水呈现明亮的蓝色，晴天时库克山和湖岸公路会一起展开。", play:"沿湖边观景点短暂停靠，拍湖水、公路和远处雪山；天气好时适合多留一点时间。", note:"湖边风大且紫外线强，停车拍照注意路边车辆。", ratings:{nature:10,culture:2,weather:6,stamina:1} },
+      { id:"alpine_salmon", name:"Mt Cook Alpine Salmon", zh:"高山三文鱼", type:"spot", day:9, time:"05/01 上午", lat:-44.185, lng:170.126, stay:"30 分钟", image:"assets/alpine-salmon.JPG", features:["湖边补给", "三文鱼", "轻食"], intro:"高山三文鱼是从 Twizel 前往库克山途中很适合顺手停靠的补给点，清亮湖色和鲜切三文鱼构成这天的轻松开场。", play:"买一份三文鱼在湖边简单吃，别安排成正式长餐，以免压缩 Hooker Valley 的天气窗口。", note:"户外用餐注意防晒和保温，垃圾随手带走。", ratings:{nature:7,culture:3,weather:3,stamina:1} },
+      { id:"lake_ruataniwha", name:"Lake Ruataniwha", zh:"鲁阿塔尼瓦湖", type:"spot", day:9, time:"05/01 下午", lat:-44.276, lng:170.079, stay:"30-45 分钟", image:"assets/lake-ruataniwha-aerial.JPG", images:[{src:"assets/lake-ruataniwha-aerial.JPG", caption:"Lake Ruataniwha | 湖面航拍"}, {src:"assets/lake-ruataniwha-island.JPG", caption:"Lake Ruataniwha | 湖心小岛"}, {src:"assets/lake-ruataniwha-morning.JPG", caption:"Lake Ruataniwha | 雪山倒影"}], features:["湖面倒影", "Twizel 周边", "航拍视角"], intro:"Lake Ruataniwha 离 Twizel 很近，湖面平静时能把雪山、树林和小岛一起收进画面，是库克山徒步后很适合放慢节奏的一站。", play:"下午或清晨沿湖边停留，看湖面倒影和远山层次；如果天气稳定，适合用航拍或长焦把湖心小岛拍出来。", note:"湖边风大，航拍注意禁飞提示和电量，日落后体感会快速变冷。", ratings:{nature:9,culture:2,weather:6,stamina:1} },
+      { id:"mount_cook", name:"Hooker Valley Track", zh:"胡克谷步道", type:"spot", day:9, time:"05/01", lat:-43.735, lng:170.096, stay:"半日", image:"assets/hooker-valley-track-sign.JPG", images:[{src:"assets/hooker-valley-track-sign.JPG", caption:"Hooker Valley Track | 步道入口"}, {src:"assets/hooker-valley-track-river.JPG", caption:"Hooker Valley Track | 雪山溪谷"}], features:["雪山", "Hooker Valley", "高山湖"], intro:"Hooker Valley Track 是新西兰最经典且门槛友好的徒步之一，吊桥、冰川湖和库克山雪线一路展开。", play:"White Horse Hill 出发，沿 Hooker Valley Track 看吊桥、溪谷和库克山雪线，按天气和体力决定走到 Hooker Lake 或提前折返。", note:"停车场可能收费，带水、零食和防风外套。", ratings:{nature:10,culture:3,weather:7,stamina:7} },
+      { id:"mt_john_track", name:"Mt John Summit Circuit Track", zh:"约翰山环线步道", type:"spot", day:10, time:"05/02 上午", lat:-43.986, lng:170.465, stay:"1.5-2 小时", image:"assets/mt-john-summit-view.JPG", images:[{src:"assets/mt-john-summit-view.JPG", caption:"Mt John Summit Circuit Track | 湖景与远山"}, {src:"assets/mt-john-walkway-sign.JPG", caption:"Mt John Summit Circuit Track | 步道入口"}], features:["湖景步道", "观景台", "Tekapo 周边"], intro:"Mt John Summit Circuit Track 是 Tekapo 旁边很适合半日安排的短徒步，登高后能看到湖面、金色草坡和远处雪山的层次。", play:"从步道入口上行，按体力选择完整环线或折返；天气好时山顶风景比在湖边停留更有展开感。", note:"山顶风大，步道无遮挡，注意防晒和防风。", ratings:{nature:9,culture:3,weather:6,stamina:5} },
+      { id:"tekapo", name:"Lake Tekapo", zh:"Tekapo 湖", type:"spot", day:10, time:"05/02 下午", lat:-44.004, lng:170.477, stay:"1 晚", image:"assets/lake-tekapo-lakeside-1.png", images:[{src:"assets/lake-tekapo-lakeside-1.png", caption:"Lake Tekapo | 湖边金色山线"}, {src:"assets/lake-tekapo-lakeside-2.png", caption:"Lake Tekapo | 黄昏湖岸"}], features:["湖景", "星空", "Mt John"], intro:"Tekapo 的湖岸在傍晚会变得很柔和，金色山线、湖水和高大的杨树把南岛的辽阔感收在一处。", play:"抵达后先沿湖边停留，看山影和树影的光线变化，再去教堂或湖边轻食。", note:"农历十六附近月亮太亮，看日出比看银河更稳。", ratings:{nature:10,culture:5,weather:7,stamina:2} },
+      { id:"tekapo_fish_chips", name:"Lake Tekapo Fish & Chips", zh:"湖边炸鱼薯条", type:"spot", day:10, time:"05/02 傍晚", lat:-44.005, lng:170.478, stay:"30 分钟", image:"assets/lake-tekapo-fish-chips.png", features:["湖边轻食", "炸鱼薯条", "休整"], intro:"在 Tekapo 湖边吃一份热的炸鱼薯条，是这天从徒步和转场里慢下来的小收尾。", play:"找湖边避风的位置简单吃完，不把晚餐安排得太重，留一点时间给教堂和湖岸黄昏。", note:"湖边风大，食物容易凉，垃圾随手带走。", ratings:{nature:6,culture:3,weather:2,stamina:1} },
+      { id:"church_good_shepherd", name:"Church of the Good Shepherd", zh:"好牧羊人教堂", type:"spot", day:10, time:"05/02 傍晚", lat:-44.0047, lng:170.483, stay:"30 分钟", image:"assets/church-good-shepherd-1.png", images:[{src:"assets/church-good-shepherd-1.png", caption:"Church of the Good Shepherd | 湖边教堂"}, {src:"assets/church-good-shepherd-2.png", caption:"Church of the Good Shepherd | 教堂远景"}, {src:"assets/church-good-shepherd-3.JPG", caption:"Church of the Good Shepherd | 日落剪影"}], features:["湖边教堂", "石砌建筑", "Tekapo 地标"], intro:"Church of the Good Shepherd 建于 1935 年，是 Mackenzie 地区最有代表性的石砌教堂；它面向 Tekapo 湖和远山，规模不大，却把湖区的宁静感留得很完整。", play:"傍晚绕教堂外侧和湖边步道慢慢看，重点是教堂、湖面和山线的关系，不必进入室内停留太久。", note:"这里游客多，拍照时注意不要挡住通行和礼拜活动。", ratings:{nature:9,culture:7,weather:6,stamina:1} },
+      { id:"tekapo_journal", name:"Tekapo Journal", zh:"Tekapo 日记本", type:"spot", day:10, time:"05/02 傍晚", lat:-44.006, lng:170.479, stay:"20 分钟", image:"assets/tekapo-journal.JPG", features:["旅行记录", "湖边停留", "慢节奏"], intro:"在 Tekapo 湖边写下当天的片段，把天气、湖色和路上的疲惫都收进一页纸里。", play:"找一处不挡风的湖边坐下，写几行路上的记忆，再慢慢等天色暗下来。", note:"傍晚降温快，写日记时注意保暖。", ratings:{nature:8,culture:4,weather:4,stamina:1} },
+      { id:"tekapo_breakfast", name:"Tekapo Airbnb Breakfast", zh:"Tekapo 民宿阳光早餐", type:"spot", day:11, time:"05/03 上午", lat:-44.005, lng:170.484, stay:"40 分钟", image:"assets/tekapo-airbnb-breakfast.JPG", features:["民宿早餐", "晨光", "出发前休整"], intro:"从 Tekapo 出发前，在民宿里用阳光早餐把前一天的湖边和清晨慢慢收住，再进入前往基督城的长车程。", play:"退房前简单吃早餐、收拾行李，确认油量和当天路况后再出发。", note:"这天要开到基督城，不建议早餐后再临时加长湖边停留。", ratings:{nature:6,culture:3,weather:3,stamina:1} },
+      { id:"bnz_centre", name:"BNZ Centre", zh:"基督城轻食", type:"spot", day:11, time:"05/03 中午", lat:-43.5326, lng:172.6367, stay:"1 小时", image:"assets/christchurch-bnz-souvlaki.JPG", images:[{src:"assets/christchurch-bnz-souvlaki.JPG", caption:"BNZ Centre | 市中心轻食"},{src:"assets/christchurch-bnz-icecream.JPG", caption:"BNZ Centre | 冰淇淋"}], features:["午餐", "甜品", "市中心补给"], intro:"BNZ Centre 位于基督城市中心，适合作为从 Tekapo 抵达后的第一处补给点：吃点轻食、买杯甜品，再决定下午是否继续城市散步。", play:"午餐和冰淇淋都放在这里解决，停留控制在一小时内，后面再去艺术中心或植物园。", note:"更像实用补给点，不需要把它当成完整景点逛。", ratings:{nature:2,culture:4,weather:1,stamina:1} },
+      { id:"christchurch_botanic_gardens", name:"Christchurch Botanic Gardens", zh:"基督城植物园", type:"spot", day:11, time:"05/03 下午", lat:-43.5309, lng:172.6216, stay:"1-1.5 小时", image:"assets/christchurch-botanic-gardens.png", features:["秋色", "Avon 河", "城市绿地"], intro:"基督城植物园创建于 1863 年，沿 Avon River 展开，温室、树影和河道让这座重建中的城市有了更柔软的一面。", play:"下午从市中心转到植物园，沿河边和树荫散步即可；天气好时这里比硬逛商场更舒服。", note:"植物园面积不小，第二天早班机前不要走到太累。", ratings:{nature:8,culture:5,weather:4,stamina:2} },
+      { id:"christchurch", name:"Christchurch Arts Centre", zh:"基督城艺术中心", type:"spot", day:11, time:"05/03 下午", lat:-43.531, lng:172.627, stay:"45 分钟", image:"assets/row58_img45.jpg", features:["哥特复兴建筑", "重建街区", "城市历史"], intro:"基督城艺术中心保留了哥特复兴式建筑群，也能看到地震后修复与重建留下的层次，是市中心最值得短暂停留的历史片区。", play:"从外部建筑和院落慢慢看，不必硬逛每一个空间；如果时间紧，就把它和植物园串成轻量下午。", note:"城市整体冷清，不建议留太多时间，重点保留顺路散步。", ratings:{nature:4,culture:7,weather:3,stamina:3} },
+      { id:"taranaki_flight", name:"Mount Taranaki From Flight", zh:"飞机上看到的塔拉纳基山", type:"spot", day:12, time:"05/04 09:40-11:00", lat:-39.2969, lng:174.0649, stay:"航段景色", image:"assets/auckland-flight-taranaki.JPG", features:["航拍视角", "雪山", "北岛火山"], intro:"从基督城飞往奥克兰的航段上，云层间露出的 Mount Taranaki 像一座独立的白色火山，把南岛到北岛的转场变成了意外的风景。", play:"尽量选靠窗座位，飞越北岛西侧时留意窗外；能看到塔拉纳基山就当作这天的空中彩蛋。", note:"飞机视野受航线、座位和云层影响很大，不必强求。", ratings:{nature:9,culture:3,weather:8,stamina:1} },
+      { id:"queen_street", name:"Queen Street", zh:"皇后街", type:"spot", day:12, time:"05/04 下午", lat:-36.8484, lng:174.7658, stay:"40 分钟", image:"assets/auckland-queen-street.JPG", features:["市中心", "购物街", "城市转场"], intro:"Queen Street 是奥克兰市中心最主要的南北向街道，商业建筑、公交、人流和坡道构成了这座海港城市最日常的一面。", play:"作为 Citywalk 的起点顺路走即可，边走边补给，不建议为了逛街停太久。", note:"街道有坡，后面还要去美术馆和伊甸山，体力留一点。", ratings:{nature:2,culture:5,weather:2,stamina:3} },
+      { id:"st_matthew_auckland", name:"St Matthew-in-the-City", zh:"圣马修大教堂", type:"spot", day:12, time:"05/04 下午", lat:-36.8498, lng:174.7602, stay:"20-30 分钟", image:"assets/auckland-st-matthew.JPG", features:["哥特复兴", "石砌教堂", "城市建筑"], intro:"St Matthew-in-the-City 是奥克兰市中心的历史教堂之一，石砌立面和尖塔在高楼之间很醒目，适合作为 Citywalk 里的短暂停留。", play:"从外部看建筑立面和街角关系，时间充裕再进室内安静看一圈。", note:"若有礼拜或活动，保持安静并避免打扰。", ratings:{nature:2,culture:7,weather:2,stamina:1} },
+      { id:"auckland_art_gallery", name:"Auckland Art Gallery Toi o Tamaki", zh:"奥克兰美术馆", type:"spot", day:12, time:"05/04 下午", lat:-36.8509, lng:174.7674, stay:"1-1.5 小时", image:"assets/auckland-art-gallery-1.png", images:[{src:"assets/auckland-art-gallery-1.png", caption:"Auckland Art Gallery | 奥克兰美术馆"}, {src:"assets/auckland-art-gallery-2.png", caption:"Auckland Art Gallery | Picasso 展品"}], features:["美术馆", "馆藏", "雨天备选"], intro:"Auckland Art Gallery Toi o Tamaki 是新西兰重要的美术馆之一，馆藏从欧洲古典绘画到新西兰本土艺术都有覆盖，适合把城市下午放慢。", play:"挑重点展厅看，不用追求全馆打卡；如果天气不好，美术馆可以替代部分户外行程。", note:"注意闭馆时间，别影响傍晚伊甸山。", ratings:{nature:2,culture:9,weather:2,stamina:3} },
+      { id:"albert_park", name:"Albert Park", zh:"阿尔伯特公园", type:"spot", day:12, time:"05/04 下午", lat:-36.8503, lng:174.7689, stay:"30 分钟", image:"assets/auckland-albert-park.png", features:["城市公园", "老树", "美术馆旁"], intro:"Albert Park 紧挨奥克兰美术馆，老树和坡地让市中心突然安静下来，是美术馆之后最顺路的散步点。", play:"从美术馆出来后绕公园走一圈，看树影和草坡，不需要单独绕远。", note:"傍晚光线变化快，后面去伊甸山要留足时间。", ratings:{nature:6,culture:5,weather:3,stamina:2} },
+      { id:"auckland", name:"Mount Eden", zh:"伊甸山", type:"spot", day:12, time:"05/04 傍晚", lat:-36.877, lng:174.764, stay:"1 小时", image:"assets/auckland-mount-eden-1.JPG", images:[{src:"assets/auckland-mount-eden-1.JPG", caption:"Mount Eden | 伊甸山火山口草坡"}, {src:"assets/auckland-mount-eden-2.JPG", caption:"Mount Eden | 伊甸山日落"}, {src:"assets/auckland-mount-eden-3.JPG", caption:"Mount Eden | 伊甸山落日"}, {src:"assets/auckland-mount-eden-4.jpeg", caption:"Mount Eden | 伊甸山城市眺望"}, {src:"assets/auckland-mount-eden-video.MOV", type:"video", caption:"Mount Eden | 伊甸山视频"}], features:["火山口", "日落", "城市眺望"], intro:"Mount Eden 是奥克兰最经典的城市观景点之一，火山口草坡和市区天际线适合把这天的 Citywalk 收在日落里。", play:"傍晚上山看城市和海港，时间紧时优先保留这里，其他市中心点可以压缩。", note:"奥莱 18:00 关门，有购物打算别压太晚。", ratings:{nature:7,culture:6,weather:5,stamina:5} },
+      { id:"blue_spring", name:"Blue Spring / Te Waihou Walkway", zh:"蓝泉", type:"spot", day:13, time:"05/05 上午", lat:-37.941, lng:175.807, stay:"1-1.5 小时", image:"assets/blue-spring-1.JPG", images:[{src:"assets/blue-spring-1.JPG", caption:"Blue Spring | 蓝泉河道与水草"}, {src:"assets/blue-spring-2.JPG", caption:"Blue Spring | 清澈泉水"}, {src:"assets/blue-spring-3.JPG", caption:"Blue Spring | 蓝泉全景"}], imageSourceType:"document", photoCredit:"用户提供/文档内图片", features:["清澈泉水", "水草", "轻步道"], intro:"蓝泉的重点是透明到发蓝的水色和顺流摆动的水草，天气好时非常出片，是北岛一日自驾里最温柔的一站。", play:"沿 Te Waihou Walkway 选择精华段轻走，优先看桥边和开阔水面，不需要把整条步道走满。", note:"水边步道湿滑，注意脚下；如果天气差或时间紧，可以缩短停留。", ratings:{nature:9,culture:2,weather:7,stamina:4} },
+      { id:"wai_o_tapu", name:"Wai-O-Tapu Thermal Wonderland", zh:"怀欧塔普地热公园", type:"spot", day:13, time:"05/05 中午", lat:-38.352, lng:176.369, stay:"1.5-2 小时", image:"assets/wai-o-tapu-1.JPG", images:[{src:"assets/wai-o-tapu-1.JPG", caption:"Wai-O-Tapu | 地热蒸汽"}, {src:"assets/wai-o-tapu-2.JPG", caption:"Wai-O-Tapu | 香槟池色带"}, {src:"assets/wai-o-tapu-3.JPG", caption:"Wai-O-Tapu | 绿色地热池"}], imageSourceType:"document", photoCredit:"用户提供/文档内图片", features:["地热蒸汽", "矿物色彩", "步道"], intro:"怀欧塔普地热公园用蒸汽、硫磺地貌和矿物色带撑起视觉记忆，阴天也有荒原感，但色彩会比晴天克制。", play:"按园区环线挑重点池区走，优先看香槟池、彩色池和蒸汽地貌，时间不够就放弃完整大环线。", note:"硫磺味明显，风大时注意保暖；地热区只能走栈道和指定路线。", ratings:{nature:8,culture:3,weather:7,stamina:5} },
+      { id:"huka", name:"Huka Falls", zh:"胡卡瀑布", type:"spot", day:13, time:"05/05 下午", lat:-38.649, lng:176.09, stay:"30-45 分钟", image:"assets/huka-falls.JPG", images:[{src:"assets/huka-falls.JPG", caption:"Huka Falls | 胡卡瀑布冰川蓝水流"}], imageSourceType:"document", photoCredit:"用户提供/文档内图片", features:["瀑布", "峡谷", "冰川蓝水"], intro:"胡卡瀑布的水量和蓝白色水流很稳定，即使天气一般也能看到强烈的峡谷冲刷感，是这条长距离往返里最稳的自然景观。", play:"从主观景桥和两侧步道看水流冲入峡谷，停留时间不用太长，把体力留给返程。", note:"游客多时桥上拍照不要久占位置，下午风会偏冷。", ratings:{nature:9,culture:2,weather:7,stamina:2} },
+      { id:"taupo_mcdonalds", name:"Taupo Plane McDonald's", zh:"陶波飞机麦当劳", type:"spot", day:13, time:"05/05 下午", lat:-38.690, lng:176.079, stay:"20-30 分钟", image:"assets/taupo-plane-mcdonalds-1.JPG", images:[{src:"assets/taupo-plane-mcdonalds-1.JPG", caption:"Taupo Plane McDonald's | 飞机麦当劳"}, {src:"assets/taupo-plane-mcdonalds-2.JPG", caption:"Taupo | 湖边打卡牌"}], imageSourceType:"document", photoCredit:"用户提供/文档内图片", features:["飞机餐厅", "Taupo 打卡", "湖边小镇"], intro:"陶波飞机麦当劳更像轻松打卡点，DC-3 飞机和湖边小镇氛围给这天的自然景观换一个有趣收尾。", play:"拍飞机外观和 McDonald's 标识，再顺路看 #LOVETAUPO 湖边牌；不把这里安排成正式长餐。", note:"陶波小镇店铺关得早，晚餐和返程时间要提前考虑。", ratings:{nature:4,culture:5,weather:3,stamina:1} },
+      { id:"sydney", name:"Circular Quay", zh:"环形码头", type:"spot", day:14, time:"05/06 上午", lat:-33.861, lng:151.211, stay:"30 分钟", image:"assets/sydney-circular-quay.png", images:[{src:"assets/sydney-circular-quay.png", caption:"Circular Quay | 环形码头与海港大桥"}], imageSourceType:"document", photoCredit:"用户提供/文档内图片", features:["海港大桥", "码头", "城市转场"], intro:"Circular Quay 是悉尼海港最方便的起点，站台、渡轮、海港大桥和水面城市线一起出现，适合作为短暂停靠的第一眼悉尼。", play:"从车站或码头平台看海港大桥，再沿海边步行去歌剧院；时间紧时这里拍完就继续往东走。", note:"返程日时间紧，别在码头停太久，优先保证歌剧院和回机场时间。", ratings:{nature:7,culture:6,weather:5,stamina:2} },
+      { id:"sydney_opera_house", name:"Sydney Opera House", zh:"悉尼歌剧院", type:"spot", day:14, time:"05/06 上午", lat:-33.8568, lng:151.2153, stay:"45 分钟", image:"assets/sydney-opera-house-1.JPG", images:[{src:"assets/sydney-opera-house-1.JPG", caption:"Sydney Opera House | 歌剧院贝壳屋顶"}, {src:"assets/sydney-opera-house-2.JPG", caption:"Sydney Harbour Bridge | 歌剧院旁看海港大桥"}], imageSourceType:"document", photoCredit:"用户提供/文档内图片", features:["世界遗产", "海港地标", "建筑线条"], intro:"悉尼歌剧院是这段短暂停靠最明确的主角，贝壳屋顶、海港水面和大桥视角让半日行程也有完整记忆点。", play:"从 Circular Quay 沿海边步行过去，先看歌剧院外观，再回望海港大桥；不安排入内参观，保证后续时间。", note:"这里游客密集，拍照和移动都要留余量，别压缩返机场时间。", ratings:{nature:7,culture:10,weather:6,stamina:3} },
+      { id:"sydney_royal_botanic_garden", name:"Royal Botanic Garden Sydney", zh:"皇家植物园", type:"spot", day:14, time:"05/06 中午", lat:-33.864, lng:151.216, stay:"30-45 分钟", image:"assets/sydney-royal-botanic-garden.png", images:[{src:"assets/sydney-royal-botanic-garden.png", caption:"Royal Botanic Garden Sydney | 海边草坪与树影"}], imageSourceType:"document", photoCredit:"用户提供/文档内图片", features:["海边草坪", "树影", "轻散步"], intro:"悉尼皇家植物园贴着海港展开，草坪、树影和水面让歌剧院之后的步行节奏变轻，很适合作为返程日前的缓冲。", play:"只走靠近海边和歌剧院一侧的精华段，看草坪、树影和海港，不把植物园走成完整徒步。", note:"中午日晒明显，时间不够就沿海边快速穿过。", ratings:{nature:8,culture:4,weather:5,stamina:2} },
+      { id:"art_gallery_nsw", name:"Art Gallery of New South Wales", zh:"新南威尔士美术馆", type:"spot", day:14, time:"05/06 中午", lat:-33.8688, lng:151.2174, stay:"30-45 分钟", image:"assets/sydney-art-gallery-nsw.JPG", images:[{src:"assets/sydney-art-gallery-nsw.JPG", caption:"Art Gallery of New South Wales | 美术馆外观"}], imageSourceType:"document", photoCredit:"用户提供/文档内图片", features:["古典立面", "美术馆", "短暂停留"], intro:"新南威尔士美术馆的砂岩立面和柱廊很有悉尼公共建筑的气质，即使不进馆，也能作为皇家植物园之后顺路的文化停靠点。", play:"以外观和门前台阶为主，时间充裕再进馆看一小段展厅，不追求完整参观。", note:"当天要赶国际返程，馆内参观只作为可选项。", ratings:{nature:3,culture:8,weather:3,stamina:2} },
+      { id:"st_marys_cathedral_sydney", name:"St Mary's Cathedral", zh:"圣母玛丽教堂", type:"spot", day:14, time:"05/06 中午", lat:-33.8711, lng:151.2134, stay:"30-40 分钟", image:"assets/sydney-st-marys-cathedral-1.JPG", images:[{src:"assets/sydney-st-marys-cathedral-1.JPG", caption:"St Mary's Cathedral | 教堂拱廊与彩窗"}, {src:"assets/sydney-st-marys-cathedral-2.JPG", caption:"St Mary's Cathedral | 教堂外观"}, {src:"assets/sydney-st-marys-cathedral-3.JPG", caption:"St Mary's Cathedral | 彩窗与祭坛"}], imageSourceType:"document", photoCredit:"用户提供/文档内图片", features:["哥特复兴", "彩窗", "教堂内景"], intro:"圣母玛丽教堂是悉尼市中心最醒目的哥特复兴建筑之一，外部尖塔和内部彩窗都很适合给半日城市线收一个安静尾声。", play:"先看外观和尖塔，再短暂入内看拱廊和彩窗；如果遇到礼拜或活动，就以安静路过为主。", note:"教堂内保持安静，拍照遵守现场提示；之后立刻回机场节奏更稳。", ratings:{nature:2,culture:8,weather:2,stamina:2} },
+      { id:"hangzhou", name:"杭州萧山机场", zh:"", type:"airport", day:1, time:"04/23 出发 / 05/06 抵达", lat:30.236, lng:120.433, stay:"出发与返程", image:"assets/row76_img58.jpg", features:["出发", "回程", "航班衔接"], intro:"整段行程从杭州萧山机场出发，经咸阳、墨尔本进入新西兰，最后从悉尼返回杭州。", play:"04/23 从杭州 T3 飞西安 T5；05/06 悉尼 T1 飞杭州 T4，返程抵达后以休息为主。", note:"首尾两段都是长线行程衔接，机场交通和安检时间都要留足。", ratings:{nature:1,culture:1,weather:1,stamina:6} }
     ];
 
     const hotels = [
@@ -1336,27 +1552,27 @@
     ];
 
     const days = [
-      { day:1, date:"2026-04-23", title:"杭州出发，夜抵咸阳", transport:"杭州 T3 → 西安 T5，22:00-00:25(+1)", base:"咸阳机场附近", sunrise:"-", sunset:"-", alerts:["晚到不折腾"], timeline:[["22:00","杭州 T3 出发"],["00:25(+1)","抵达西安 T5"],["夜间","入住机场附近酒店"]] },
-      { day:2, date:"2026-04-24", title:"咸阳半日游，夜飞墨尔本", transport:"咸阳半日游；西安 T5 → 墨尔本 T2，17:30-10:00(+1)", base:"机上", sunrise:"-", sunset:"-", alerts:["长航段前留体力"], timeline:[["上午","咸阳半日游","xiaoyang"],["下午","返回西安 T5"],["17:30","西安飞墨尔本"]] },
-      { day:3, date:"2026-04-25", title:"墨尔本 Citywalk", transport:"SkyBus 到南十字星车站，市中心步行串联", base:"墨尔本南方大酒店", sunrise:"-", sunset:"17:40", alerts:["公共交通免费期", "Point Ormond 看天气"], timeline:[["上午","机场大巴到市区"],["中午","皇家拱廊","royal_arcade"],["中午","涂鸦街","graffiti_lane"],["中午","圣保罗教堂","st_pauls_cathedral"],["中午","联邦广场","federation_square"],["下午","福林德街火车站","flinders_station"],["下午","NGV 国家美术馆","ngv"],["下午","战争纪念馆","shrine_of_remembrance"],["下午","皇家植物园","royal_botanic_gardens_mel"],["傍晚","海边日落点","point_ormond"]] },
-      { day:4, date:"2026-04-26", title:"墨尔本早晨，飞向皇后镇", transport:"墨尔本 T2 → 皇后镇 I，14:50-20:00", base:"Koura Apartments Central Queenstown", sunrise:"-", sunset:"-", alerts:["机场巴士提前出发", "Bee Card 进镇"], timeline:[["09:00","维多利亚女王市场","queen_victoria_market"],["10:00","卡尔顿花园","carlton_gardens"],["10:30","维多利亚州立图书馆","carlton_library"],["14:50","飞往皇后镇"],["20:00","抵达皇后镇","queenstown"]] },
-      { day:5, date:"2026-04-27", title:"箭镇，感受南岛的秋天", transport:"皇后镇 ↔ 箭镇，公交可达", base:"皇后镇", sunrise:"07:34", sunset:"17:50", alerts:["轻松开场"], timeline:[["上午","睡到自然醒，brunch 后出发"],["中午","箭镇","arrowtown"],["中午","Feehly Hill Scenic Reserve","feehly_hill"],["下午","Patagonia Chocolates 冰淇淋","patagonia_chocolates"],["傍晚","皇后镇亚洲超市补给"]] },
-      { day:6, date:"2026-04-28", title:"皇后镇自由活动与徒步", transport:"镇上活动；视天气决定快艇、闲逛或徒步", base:"皇后镇", sunrise:"07:35", sunset:"17:49", alerts:["项目受天气影响大"], timeline:[["早晨","皇后镇日出","queenstown_sunrise"],["上午","喷射快艇/镇上闲逛","queenstown_jet_town"],["下午","Queenstown Hill 徒步","queenstown_hill"],["傍晚","天空缆车与滑板车","queenstown_gondola_luge"]] },
-      { day:7, date:"2026-04-29", title:"Te Anau 与 Milford Sound", transport:"皇后镇 → Te Anau → Milford Sound → Te Anau", base:"Te Anau Airbnb", sunrise:"-", sunset:"-", alerts:["峡湾回程可能夜路", "雨天坐船更壮观"], timeline:[["上午","皇后镇到 Te Anau"],["中午","Lake Gunn","lake_gunn"],["中午","Gertrude Valley","gertrude_valley"],["中午","Hollyford Valley Lookout","hollyford_valley"],["中午","Monkey Creek","monkey_creek"],["15:55","Milford Sound 游船","milford"],["夜间","返回 Te Anau，关注极光预报"]] },
-      { day:8, date:"2026-04-30", title:"Wanaka 一日，夜抵 Twizel", transport:"Te Anau → Wanaka → Twizel", base:"Twizel 民居", sunrise:"-", sunset:"17:47", alerts:["出发前加满油"], timeline:[["上午","Te Anau 到 Wanaka"],["中午","孤独的树","wanaka"],["中午","Wanaka 湖边","wanaka"],["下午","皮划艇 Kayaking","wanaka"],["下午","Mount Iron Track","wanaka"],["下午","Wanaka 跳伞调整","wanaka"],["夜间","抵达 Twizel","twizel"]] },
-      { day:9, date:"2026-05-01", title:"库克山与 Hooker Valley", transport:"Twizel ↔ Aoraki / Mount Cook", base:"Twizel 民居", sunrise:"07:36", sunset:"17:43", alerts:["带防风外套"], timeline:[["上午","普卡基湖"],["上午","高山三文鱼"],["中午","Hooker Valley Track","mount_cook"],["下午","Mueller Lake","mount_cook"],["下午","Mount Sefton Lookout","mount_cook"]] },
-      { day:10, date:"2026-05-02", title:"冰川与 Tekapo 湖", transport:"Twizel → Tasman Glacier / Mt John → Tekapo", base:"斯科特街公寓", sunrise:"07:38", sunset:"17:38", alerts:["月亮太亮不强求银河"], timeline:[["上午","Tasman Glacier","tekapo"],["上午","Mt John Summit Circuit Track","tekapo"],["下午","Lake Tekapo 湖边","tekapo"],["傍晚","湖边炸鱼薯条","tekapo"],["傍晚","Tekapo 日记本","tekapo"],["清晨","如月光太强，改看日出"]] },
-      { day:11, date:"2026-05-03", title:"Tekapo 到 Christchurch", transport:"Tekapo → Christchurch，约 3 小时", base:"Airport Gateway Hotel", sunrise:"-", sunset:"-", alerts:["第二天早班机"], timeline:[["上午","Tekapo 出发"],["中午","BNZ Centre 吃饭","christchurch"],["下午","基督城艺术中心","christchurch"],["下午","Riverside Market","christchurch"],["傍晚","机场附近入住"]] },
-      { day:12, date:"2026-05-04", title:"奥克兰 Citywalk 与伊甸山日落", transport:"基督城 → 奥克兰，09:40-11:00", base:"奥克伍德庄园汽车旅馆", sunrise:"-", sunset:"17:32", alerts:["奥莱 18:00 关门"], timeline:[["09:40","基督城飞奥克兰"],["下午","Queen Street","auckland"],["下午","圣马修大教堂","auckland"],["下午","奥克兰美术馆","auckland"],["下午","Albert Park","auckland"],["傍晚","伊甸山看日落","auckland"]] },
-      { day:13, date:"2026-05-05", title:"北岛一日：蓝泉、地热与胡卡瀑布", transport:"奥克兰往返 Rotorua / Taupo 方向", base:"奥克伍德庄园汽车旅馆", sunrise:"-", sunset:"-", alerts:["天气差就取消", "长距离往返"], timeline:[["上午","机场取车"],["上午","蓝泉","huka"],["中午","地热公园","huka"],["下午","胡卡瀑布","huka"],["下午","陶波飞机麦当劳","huka"],["夜间","返回奥克兰"]] },
-      { day:14, date:"2026-05-06", title:"悉尼短暂停靠，回到温暖的家", transport:"奥克兰 → 悉尼 → 杭州", base:"回程", sunrise:"-", sunset:"-", alerts:["悉尼转机留足时间"], timeline:[["06:15","奥克兰飞悉尼"],["上午","Circular Quay","sydney"],["上午","悉尼歌剧院","sydney"],["中午","皇家植物园","sydney"],["中午","美术馆","sydney"],["中午","圣母玛丽教堂","sydney"],["14:10","悉尼 T1 飞杭州"]] }
+      { day:1, date:"2026-04-23", title:"杭州出发，夜抵咸阳", transport:"杭州 T3 → 西安 T5，22:00-00:25(+1)", base:"咸阳机场附近", sunrise:"杭州 05:23", sunset:"杭州 18:30", alerts:["晚到不折腾"], timeline:[["22:00","杭州 T3 出发"],["00:25(+1)","抵达西安 T5"],["夜间","入住机场附近酒店"]] },
+      { day:2, date:"2026-04-24", title:"咸阳半日游，夜飞墨尔本", transport:"咸阳半日游；西安 T5 → 墨尔本 T2，17:30-10:00(+1)", base:"机上", sunrise:"咸阳 06:03", sunset:"咸阳 19:23", alerts:["长航段前留体力"], timeline:[["上午","咸阳半日游","xiaoyang"],["下午","返回西安 T5"],["17:30","西安飞墨尔本"]] },
+      { day:3, date:"2026-04-25", title:"墨尔本 Citywalk", transport:"SkyBus 到南十字星车站，市中心步行串联", base:"墨尔本南方大酒店", sunrise:"墨尔本 06:55", sunset:"墨尔本 17:40", alerts:["公共交通免费期", "Point Ormond 看天气"], timeline:[["上午","机场大巴到市区"],["中午","皇家拱廊","royal_arcade"],["中午","涂鸦街","graffiti_lane"],["中午","圣保罗教堂","st_pauls_cathedral"],["中午","联邦广场","federation_square"],["下午","福林德街火车站","flinders_station"],["下午","NGV 国家美术馆","ngv"],["下午","战争纪念馆","shrine_of_remembrance"],["下午","皇家植物园","royal_botanic_gardens_mel"],["傍晚","海边日落点","point_ormond"]] },
+      { day:4, date:"2026-04-26", title:"墨尔本早晨，飞向皇后镇", transport:"墨尔本 T2 → 皇后镇 I，14:50-20:00", base:"Koura Apartments Central Queenstown", sunrise:"墨尔本 06:55", sunset:"皇后镇 17:52", alerts:["机场巴士提前出发", "Bee Card 进镇"], timeline:[["09:00","维多利亚女王市场","queen_victoria_market"],["10:00","卡尔顿花园","carlton_gardens"],["10:30","维多利亚州立图书馆","carlton_library"],["14:50","飞往皇后镇"],["20:00","抵达皇后镇","queenstown"]] },
+      { day:5, date:"2026-04-27", title:"箭镇，感受南岛的秋天", transport:"皇后镇 ↔ 箭镇，公交可达", base:"皇后镇", sunrise:"皇后镇 07:34", sunset:"皇后镇 17:51", alerts:["轻松开场"], timeline:[["上午","睡到自然醒，brunch 后出发"],["中午","箭镇","arrowtown"],["中午","Feehly Hill Scenic Reserve","feehly_hill"],["下午","Patagonia Chocolates 冰淇淋","patagonia_chocolates"],["傍晚","皇后镇亚洲超市补给"]] },
+      { day:6, date:"2026-04-28", title:"皇后镇自由活动与徒步", transport:"镇上活动；视天气决定快艇、闲逛或徒步", base:"皇后镇", sunrise:"皇后镇 07:35", sunset:"皇后镇 17:49", alerts:["项目受天气影响大"], timeline:[["早晨","皇后镇日出","queenstown_sunrise"],["上午","喷射快艇/镇上闲逛","queenstown_jet_town"],["下午","Queenstown Hill 徒步","queenstown_hill"],["傍晚","天空缆车与滑板车","queenstown_gondola_luge"]] },
+      { day:7, date:"2026-04-29", title:"Te Anau 与 Milford Sound", transport:"皇后镇 → Te Anau → Milford Sound → Te Anau", base:"Te Anau Airbnb", sunrise:"Te Anau 07:41", sunset:"Te Anau 17:51", alerts:["峡湾回程可能夜路", "雨天坐船更壮观"], timeline:[["上午","皇后镇到 Te Anau"],["中午","Lake Gunn","lake_gunn"],["中午","Gertrude Valley","gertrude_valley"],["中午","Hollyford Valley Lookout","hollyford_valley"],["中午","Monkey Creek","monkey_creek"],["15:55","Milford Sound | 米尔福德峡湾","milford"],["夜间","返回 Te Anau，关注极光预报"]] },
+      { day:8, date:"2026-04-30", title:"Wanaka 一日，夜抵 Twizel", transport:"Te Anau → Wanaka → Twizel", base:"Twizel 民居", sunrise:"Wanaka 07:35", sunset:"Wanaka 17:45", alerts:["出发前加满油"], timeline:[["上午","Te Anau 到 Wanaka"],["中午","That Wanaka Tree | 孤独的树","wanaka_tree"],["中午","Lake Wanaka | 瓦纳卡湖","wanaka_lake"],["下午","Wanaka跳伞","wanaka_skydive"],["夜间","抵达 Twizel","twizel"]] },
+      { day:9, date:"2026-05-01", title:"库克山与 Hooker Valley", transport:"Twizel ↔ Aoraki / Mount Cook", base:"Twizel 民居", sunrise:"Twizel 07:31", sunset:"Twizel 17:41", alerts:["带防风外套"], timeline:[["上午","Lake Pukaki | 普卡基湖","lake_pukaki"],["上午","Mt Cook Alpine Salmon | 高山三文鱼","alpine_salmon"],["中午","Hooker Valley Track | 胡克谷步道","mount_cook"],["下午","Lake Ruataniwha | 鲁阿塔尼瓦湖","lake_ruataniwha"]] },
+      { day:10, date:"2026-05-02", title:"Twizel 日出与 Tekapo 湖", transport:"Twizel → Mt John → Tekapo", base:"斯科特街公寓", sunrise:"Tekapo 07:30", sunset:"Tekapo 17:38", alerts:["月亮太亮不强求银河"], timeline:[["清晨","Twizel 日出","twizel_sunrise"],["上午","Mt John Summit Circuit Track | 约翰山环线步道","mt_john_track"],["下午","Lake Tekapo 湖边","tekapo"],["傍晚","Church of the Good Shepherd | 好牧羊人教堂","church_good_shepherd"],["傍晚","湖边炸鱼薯条","tekapo_fish_chips"],["傍晚","Tekapo 日记本","tekapo_journal"]] },
+      { day:11, date:"2026-05-03", title:"Tekapo 到 Christchurch", transport:"Tekapo → Christchurch，约 3 小时", base:"Airport Gateway Hotel", sunrise:"Christchurch 07:22", sunset:"Christchurch 17:29", alerts:["第二天早班机"], timeline:[["上午","Tekapo 民宿阳光早餐","tekapo_breakfast"],["上午","Tekapo 出发"],["中午","BNZ Centre 吃饭","bnz_centre"],["下午","基督城艺术中心","christchurch"],["下午","Christchurch Botanic Gardens | 基督城植物园","christchurch_botanic_gardens"],["傍晚","机场附近入住"]] },
+      { day:12, date:"2026-05-04", title:"奥克兰 Citywalk 与伊甸山日落", transport:"基督城 → 奥克兰，09:40-11:00", base:"奥克伍德庄园汽车旅馆", sunrise:"Auckland 07:02", sunset:"Auckland 17:32", alerts:["奥莱 18:00 关门"], timeline:[["09:40","基督城飞奥克兰：飞机上看到的塔拉纳基山","taranaki_flight"],["下午","Queen Street | 皇后街","queen_street"],["下午","St Matthew-in-the-City | 圣马修大教堂","st_matthew_auckland"],["下午","Auckland Art Gallery | 奥克兰美术馆","auckland_art_gallery"],["下午","Albert Park | 阿尔伯特公园","albert_park"],["傍晚","Mount Eden | 伊甸山看日落","auckland"]] },
+      { day:13, date:"2026-05-05", title:"北岛一日：蓝泉、地热与胡卡瀑布", transport:"奥克兰往返 Rotorua / Taupo 方向", base:"奥克伍德庄园汽车旅馆", sunrise:"Taupo 07:01", sunset:"Taupo 17:23", alerts:["天气差就取消", "长距离往返"], timeline:[["上午","机场取车"],["上午","Blue Spring | 蓝泉","blue_spring"],["中午","Wai-O-Tapu Thermal Wonderland | 怀欧塔普地热公园","wai_o_tapu"],["下午","Huka Falls | 胡卡瀑布","huka"],["下午","Taupo Plane McDonald's | 陶波飞机麦当劳","taupo_mcdonalds"],["夜间","返回奥克兰"]] },
+      { day:14, date:"2026-05-06", title:"悉尼短暂停靠，回到温暖的家", transport:"奥克兰 → 悉尼 → 杭州", base:"回程", sunrise:"Sydney 06:32", sunset:"Sydney 17:10", alerts:["悉尼转机留足时间"], timeline:[["06:15","奥克兰飞悉尼"],["上午","Circular Quay | 环形码头","sydney"],["上午","Sydney Opera House | 悉尼歌剧院","sydney_opera_house"],["中午","Royal Botanic Garden Sydney | 皇家植物园","sydney_royal_botanic_garden"],["中午","Art Gallery of New South Wales | 新南威尔士美术馆","art_gallery_nsw"],["中午","St Mary's Cathedral | 圣母玛丽教堂","st_marys_cathedral_sydney"],["14:10","悉尼 T1 飞杭州"]] }
     ];
 
     const foods = [
       { title:"墨尔本", text:"SkyBus 进城后以市中心顺路餐饮为主，Queen Victoria Market 更适合感受菜场氛围，不必为吃饭绕路。" },
       { title:"皇后镇 / 箭镇", text:"Patagonia Chocolates 适合冰淇淋；皇后镇亚洲超市可补调料、火锅和后续自驾食材。" },
       { title:"Twizel / Tekapo", text:"Twizel 超市适合买牛羊肉；普卡基湖附近可吃高山三文鱼；Tekapo 湖边炸鱼薯条选炸鸡口味更稳。" },
-      { title:"Christchurch", text:"Riverside Market 比硬逛景点更实用，Bacon Brothers 和 Rollickin Gelato 适合快速解决一餐。" },
+      { title:"Christchurch", text:"BNZ Centre 适合快速解决轻食和甜品；下午保留艺术中心与植物园，别为了购物把节奏拉长。" },
       { title:"Auckland", text:"有购物打算可直奔主题店铺或奥莱，奥莱关门早；别把晚饭和购物都压到傍晚之后。" },
       { title:"Taupo", text:"飞机麦当劳是打卡点，陶波小镇店铺关得早，别指望太丰富的晚餐选择。" }
     ];
@@ -1396,12 +1612,16 @@
       { from:"Tekapo", to:"Christchurch", drive:"自驾", time:"约 3h", note:"第二天早班机" },
       { from:"Christchurch", to:"Auckland", drive:"航班", time:"1h20m", note:"09:40-11:00" },
       { from:"Auckland", to:"Sydney", drive:"航班", time:"3h50m", note:"06:15-08:05" },
-      { from:"Sydney", to:"Hangzhou", drive:"航班", time:"11h05m", note:"14:10-23:15" }
+      { from:"Sydney", to:"杭州", drive:"航班", time:"11h05m", note:"14:10-23:15" }
     ];
 
     let map;
     const routeTracker = { pending: 0, failed: 0 };
     const allPlaces = [...spots, ...hotels];
+    let selectedId = spots[0]?.id;
+    let selectedImageIndex = 0;
+    let touchStartX = 0;
+    let lightboxTouchStartX = 0;
 
     function displayName(place) {
       if (!place.zh || place.zh === place.name) return place.name;
@@ -1421,30 +1641,178 @@
 
     function openImageLightbox(src, caption = "") {
       if (!src) return;
+      const images = getSpotImages(currentSpot());
+      const index = images.findIndex((item) => item.src === src);
+      if (index >= 0) selectedImageIndex = index;
       const lightbox = document.getElementById("imageLightbox");
-      const image = document.getElementById("lightboxImage");
-      const captionEl = document.getElementById("lightboxCaption");
-      image.src = src;
-      image.alt = caption || "景点图片";
-      captionEl.textContent = caption;
       lightbox.classList.add("open");
       document.body.style.overflow = "hidden";
+      renderLightboxImage(caption);
     }
 
     function closeImageLightbox(event) {
-      if (event && event.target.closest(".lightbox-image")) return;
+      if (event && event.target.closest(".lightbox-image, .lightbox-video, .lightbox-nav, .lightbox-dots")) return;
       const lightbox = document.getElementById("imageLightbox");
       const image = document.getElementById("lightboxImage");
-      lightbox.classList.remove("open");
+      const video = document.getElementById("lightboxVideo");
+      lightbox.classList.remove("open", "has-multiple", "show-video");
       image.removeAttribute("src");
+      if (video) {
+        video.pause();
+        video.removeAttribute("src");
+        video.load();
+      }
       document.body.style.overflow = "";
     }
 
     window.openImageLightbox = openImageLightbox;
     window.closeImageLightbox = closeImageLightbox;
 
+    function getSpotImages(spot) {
+      const raw = Array.isArray(spot.images) && spot.images.length ? spot.images : [spot.image];
+      return raw.map((item) => typeof item === "string" ? { src: item } : item).filter((item) => item?.src);
+    }
+
+    function isVideoItem(item) {
+      return item?.type === "video" || isVideoMedia(item?.src);
+    }
+
+    function mediaCaption(item, spot, fallbackCaption = "") {
+      return item?.caption || fallbackCaption || displayName(spot);
+    }
+
+    function coverImageFor(spot, item) {
+      if (!isVideoItem(item)) return item?.src || spot.image;
+      return getSpotImages(spot).find((media) => !isVideoItem(media))?.src || spot.image;
+    }
+
+    function currentSpot() {
+      return spots.find((item) => item.id === selectedId) || spots[0];
+    }
+
+    function renderLightboxImage(fallbackCaption = "") {
+      const lightbox = document.getElementById("imageLightbox");
+      const imageEl = document.getElementById("lightboxImage");
+      const videoEl = document.getElementById("lightboxVideo");
+      const captionEl = document.getElementById("lightboxCaption");
+      const dots = document.getElementById("lightboxDots");
+      const spot = currentSpot();
+      const images = getSpotImages(spot);
+      const image = images[selectedImageIndex] || images[0];
+      if (!image || !lightbox || !imageEl || !videoEl || !captionEl || !dots) return;
+      selectedImageIndex = Math.max(0, Math.min(selectedImageIndex, images.length - 1));
+      const caption = mediaCaption(image, spot, fallbackCaption);
+      const videoMode = isVideoItem(image);
+      lightbox.classList.toggle("has-multiple", images.length > 1);
+      lightbox.classList.toggle("show-video", videoMode);
+      if (videoMode) {
+        imageEl.removeAttribute("src");
+        imageEl.alt = "";
+        videoEl.src = image.src;
+        videoEl.controls = true;
+        videoEl.playsInline = true;
+        videoEl.load();
+      } else {
+        videoEl.pause();
+        videoEl.removeAttribute("src");
+        videoEl.load();
+        imageEl.src = image.src;
+        imageEl.alt = caption || "景点图片";
+      }
+      captionEl.textContent = caption;
+      const touchTarget = videoMode ? videoEl : imageEl;
+      touchTarget.ontouchstart = (event) => {
+        lightboxTouchStartX = event.touches[0].clientX;
+      };
+      touchTarget.ontouchend = (event) => {
+        const delta = event.changedTouches[0].clientX - lightboxTouchStartX;
+        if (Math.abs(delta) > 42) shiftLightboxImage(delta < 0 ? 1 : -1, event);
+      };
+      dots.innerHTML = images.map((_, index) => `
+        <button class="lightbox-dot${index === selectedImageIndex ? " active" : ""}" type="button" aria-label="查看第 ${index + 1} 个放大媒体" onclick="setLightboxImage(${index}, event)"></button>
+      `).join("");
+    }
+
+    function renderSpotImageCarousel() {
+      const spot = currentSpot();
+      const images = getSpotImages(spot);
+      const image = images[selectedImageIndex] || images[0];
+      const wrap = document.getElementById("panelImageWrap");
+      const panelImage = document.getElementById("panelImage");
+      const dots = document.getElementById("panelImageDots");
+      if (!image || !wrap || !panelImage || !dots) return;
+      selectedImageIndex = Math.max(0, Math.min(selectedImageIndex, images.length - 1));
+      const caption = mediaCaption(image, spot);
+      const videoMode = isVideoItem(image);
+      wrap.classList.toggle("has-multiple", images.length > 1);
+      panelImage.classList.toggle("has-video", videoMode);
+      panelImage.style.backgroundImage = videoMode ? "" : `url("${image.src}")`;
+      panelImage.innerHTML = videoMode
+        ? `<video class="panel-video" src="${image.src}" muted autoplay loop playsinline controls preload="metadata" aria-label="${caption}"></video>`
+        : "";
+      panelImage.setAttribute("role", "button");
+      panelImage.setAttribute("tabindex", "0");
+      panelImage.setAttribute("aria-label", videoMode ? `播放${displayName(spot)}视频` : `放大查看${displayName(spot)}图片`);
+      panelImage.onclick = (event) => {
+        if (videoMode && event.target.closest("video")) return;
+        openImageLightbox(image.src, caption);
+      };
+      panelImage.onkeydown = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openImageLightbox(image.src, caption);
+        }
+        if (event.key === "ArrowLeft") shiftSpotImage(-1);
+        if (event.key === "ArrowRight") shiftSpotImage(1);
+      };
+      panelImage.ontouchstart = (event) => {
+        touchStartX = event.touches[0].clientX;
+      };
+      panelImage.ontouchend = (event) => {
+        const delta = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(delta) > 42) shiftSpotImage(delta < 0 ? 1 : -1);
+      };
+      dots.innerHTML = images.map((_, index) => `
+        <button class="carousel-dot${index === selectedImageIndex ? " active" : ""}" type="button" aria-label="查看第 ${index + 1} 个媒体" onclick="setSpotImage(${index})"></button>
+      `).join("");
+    }
+
+    function setSpotImage(index, event) {
+      if (event) event.stopPropagation();
+      selectedImageIndex = index;
+      renderSpotImageCarousel();
+      renderRating();
+      if (document.getElementById("imageLightbox")?.classList.contains("open")) renderLightboxImage();
+    }
+
+    function shiftSpotImage(delta, event) {
+      if (event) event.stopPropagation();
+      const images = getSpotImages(currentSpot());
+      if (images.length <= 1) return;
+      selectedImageIndex = (selectedImageIndex + delta + images.length) % images.length;
+      renderSpotImageCarousel();
+      renderRating();
+      if (document.getElementById("imageLightbox")?.classList.contains("open")) renderLightboxImage();
+    }
+
+    function setLightboxImage(index, event) {
+      setSpotImage(index, event);
+    }
+
+    function shiftLightboxImage(delta, event) {
+      shiftSpotImage(delta, event);
+    }
+
+    window.setSpotImage = setSpotImage;
+    window.shiftSpotImage = shiftSpotImage;
+    window.setLightboxImage = setLightboxImage;
+    window.shiftLightboxImage = shiftLightboxImage;
+
     document.addEventListener("keydown", (event) => {
+      const lightboxOpen = document.getElementById("imageLightbox")?.classList.contains("open");
       if (event.key === "Escape") closeImageLightbox();
+      if (lightboxOpen && event.key === "ArrowLeft") shiftLightboxImage(-1, event);
+      if (lightboxOpen && event.key === "ArrowRight") shiftLightboxImage(1, event);
     });
 
     function ratingModel(spot) {
@@ -1464,18 +1832,9 @@
 
     function selectSpot(id, openSheet = true) {
       const spot = spots.find((item) => item.id === id) || spots[0];
-      const panelImage = document.getElementById("panelImage");
-      panelImage.style.backgroundImage = `url('${spot.image}')`;
-      panelImage.setAttribute("role", "button");
-      panelImage.setAttribute("tabindex", "0");
-      panelImage.setAttribute("aria-label", `放大查看${displayName(spot)}图片`);
-      panelImage.onclick = () => openImageLightbox(spot.image, displayName(spot));
-      panelImage.onkeydown = (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          openImageLightbox(spot.image, displayName(spot));
-        }
-      };
+      selectedId = spot.id;
+      selectedImageIndex = 0;
+      renderSpotImageCarousel();
       document.getElementById("panelBody").innerHTML = `
         <div class="tag-row"><span class="tag main">Day ${spot.day}</span><span class="tag">${spot.time}</span><span class="tag">${spot.stay}</span></div>
         <h3>${displayName(spot)}</h3>
@@ -1487,28 +1846,33 @@
           <div class="mini-card"><h4>怎么玩</h4><p>${spot.play}</p></div>
           <div class="mini-card"><h4>注意事项</h4><p>${spot.note}</p></div>
         </div>`;
-      renderRating(spot);
-      if (map) map.flyTo([spot.lat, spot.lng], isMobileView() ? 7 : 6, { duration: .6 });
+      renderRating();
+      if (map) map.panTo([spot.lat, spot.lng], { animate: true, duration: .6 });
       if (isMobileView() && openSheet) openSpotSheet();
     }
     window.selectSpot = selectSpot;
 
-    function renderRating(spot = spots[0]) {
+    function renderRating() {
+      const spot = currentSpot();
+      const image = getSpotImages(spot)[selectedImageIndex] || getSpotImages(spot)[0] || { src: spot.image };
+      const videoMode = isVideoItem(image);
+      const coverImage = coverImageFor(spot, image);
+      const caption = mediaCaption(image, spot);
       const { score } = ratingModel(spot);
       const ratingPanel = document.getElementById("ratingPanel");
       ratingPanel.innerHTML = `
-        <div class="rating-image" role="button" tabindex="0" aria-label="放大查看${displayName(spot)}图片" style="background-image:url('${spot.image}')"></div>
+        <div class="rating-image${videoMode ? " has-video" : ""}" role="button" tabindex="0" aria-label="${videoMode ? `播放${displayName(spot)}视频` : `放大查看${displayName(spot)}图片`}" style="background-image:url('${coverImage}')"></div>
         <h3>${displayName(spot)}</h3>
         <p>${spot.intro}</p>
         <div class="tag-row">${spot.features.map((feature) => `<span class="tag">${feature}</span>`).join("")}</div>
         <p>综合评分：${score} / 10</p>
         ${renderBars(spot)}`;
       const ratingImage = ratingPanel.querySelector(".rating-image");
-      ratingImage.onclick = () => openImageLightbox(spot.image, displayName(spot));
+      ratingImage.onclick = () => openImageLightbox(image.src, caption);
       ratingImage.onkeydown = (event) => {
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
-          openImageLightbox(spot.image, displayName(spot));
+          openImageLightbox(image.src, caption);
         }
       };
     }
