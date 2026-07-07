@@ -1,0 +1,4272 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2025 西藏林芝14日游行程攻略</title>
+  <meta name="description" content="林芝进、拉萨出，串起南迦巴瓦、波密、墨脱、鲁朗、巴松措、新措与拉萨的国庆 14 日行程攻略。">
+  <style>
+    :root {
+      --bg: #f5f2ec;
+      --paper: #fffaf2;
+      --ink: #18211d;
+      --muted: #687069;
+      --line: #ded4c5;
+      --green: #275745;
+      --blue: #1e6a8c;
+      --orange: #bc6339;
+      --gold: #c29334;
+      --shadow: 0 14px 36px rgba(42, 34, 20, .12);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.58;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    button, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .hero {
+      position: relative;
+      min-height: 68vh;
+      display: grid;
+      align-items: end;
+      padding: 32px;
+      color: #fff;
+      overflow: hidden;
+      background: #0c1511;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(12, 21, 17, .12), rgba(12, 21, 17, .76));
+      pointer-events: none;
+    }
+
+    #heroMediaSlot {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .hero-media.is-video {
+      background: #0c1511;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: rgba(255,255,255,.82);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 920px;
+      margin: 0;
+      font-size: clamp(38px, 7vw, 88px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 820px;
+      margin: 18px 0 0;
+      color: rgba(255,255,255,.88);
+      font-size: clamp(17px, 2vw, 23px);
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .hero-stat {
+      min-width: 145px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 22px;
+    }
+
+    .hero-stat span {
+      color: rgba(255,255,255,.8);
+      font-size: 13px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 500;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 14px;
+      overflow-x: auto;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,250,242,.9);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav a {
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav a:hover {
+      background: #eadfce;
+      text-decoration: none;
+    }
+
+    .nav a::before {
+      content: attr(data-icon);
+      display: none;
+    }
+
+    section { padding: 54px 24px; }
+
+    .inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 820px;
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .notice {
+      margin: 18px 0 0;
+      padding: 14px 16px;
+      border: 1px solid #e0bf82;
+      border-radius: var(--radius);
+      background: #fff4d8;
+      color: #6a4b14;
+      font-weight: 700;
+    }
+
+    .map-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 380px;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .map-wrap {
+      position: relative;
+      min-height: 640px;
+    }
+
+    #map {
+      height: 100%;
+      min-height: 640px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    #map.map-fallback {
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      background: #e9dfd0;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .route-status {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      z-index: 460;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      max-width: calc(100% - 28px);
+      padding: 10px 12px;
+      border: 1px solid rgba(222, 212, 197, .9);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 242, .94);
+      color: var(--muted);
+      box-shadow: 0 10px 28px rgba(41, 54, 48, .16);
+      backdrop-filter: blur(14px);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .route-status.show {
+      display: flex;
+    }
+
+    .route-status.warning {
+      border-color: #e0bf82;
+      background: rgba(255, 244, 216, .96);
+      color: #6a4b14;
+    }
+
+    .route-status::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .route-status.warning::before {
+      background: var(--orange);
+    }
+
+    .spot-panel, .card, .food-card, .prep-card, .transport-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .spot-panel {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      position: relative;
+    }
+
+    .sheet-close {
+      display: none;
+    }
+
+    .panel-img-wrap {
+      position: relative;
+      height: 210px;
+      min-height: 0;
+      background: #d8d2c8;
+      overflow: hidden;
+    }
+
+    .panel-img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      min-height: 0;
+      background: #d8d2c8 center / cover;
+    }
+
+    .panel-video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      background: #111;
+    }
+
+    .panel-img,
+    .rating-image {
+      cursor: zoom-in;
+    }
+
+    .panel-img.has-video {
+      cursor: default;
+    }
+
+    .panel-img:focus-visible,
+    .rating-image:focus-visible {
+      outline: 3px solid rgba(30, 106, 140, .55);
+      outline-offset: -3px;
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      z-index: 4;
+      display: none;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255, 255, 255, .48);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .9);
+      color: var(--ink);
+      box-shadow: 0 8px 20px rgba(41, 54, 48, .18);
+      transform: translateY(-50%);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .carousel-button.prev {
+      left: 10px;
+    }
+
+    .carousel-button.next {
+      right: 10px;
+    }
+
+    .panel-img-wrap.has-multiple .carousel-button {
+      display: grid;
+    }
+
+    .carousel-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      z-index: 4;
+      display: none;
+      gap: 6px;
+      transform: translateX(-50%);
+    }
+
+    .panel-img-wrap.has-multiple .carousel-dots {
+      display: flex;
+    }
+
+    .carousel-dot {
+      width: 7px;
+      height: 7px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .62);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+      padding: 0;
+    }
+
+    .carousel-dot.active {
+      background: #fff;
+      transform: scale(1.18);
+    }
+
+    .panel-body {
+      padding: 16px;
+      overflow: auto;
+    }
+
+    .panel-body h3 {
+      margin: 0 0 7px;
+      font-size: 23px;
+      line-height: 1.14;
+    }
+
+    .panel-intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .tag.main {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+    }
+
+    .detail-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin: 12px 0 0;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 0;
+    }
+
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .action-link.primary {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+    }
+
+    .action-link:hover {
+      text-decoration: none;
+      filter: brightness(.98);
+    }
+
+    .mini-card {
+      min-width: 0;
+      padding: 11px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fffdf8;
+    }
+
+    .mini-card.context {
+      background: #f4f8f3;
+    }
+
+    .mini-card h4 {
+      margin: 0 0 5px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.48;
+    }
+
+    .route-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .day-list-wrap {
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .day-jump {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+      margin-top: 18px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 242, .92);
+      box-shadow: 0 10px 26px rgba(42, 34, 20, .08);
+      backdrop-filter: blur(12px);
+    }
+
+    .day-jump button {
+      display: grid;
+      place-items: center;
+      min-height: 42px;
+      padding: 5px 4px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      background: transparent;
+      color: var(--muted);
+      line-height: 1.1;
+    }
+
+    .day-jump button:hover,
+    .day-jump button.active {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .day-jump strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .day-jump span {
+      display: block;
+      margin-top: 2px;
+      font-size: 10px;
+      font-weight: 800;
+      opacity: .78;
+    }
+
+    .card {
+      padding: 18px;
+      box-shadow: none;
+    }
+
+    .day-card {
+      scroll-margin-top: 84px;
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .card-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .card p {
+      margin: 4px 0 0;
+      color: var(--muted);
+    }
+
+    .date-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border: 1px solid #d8e2d9;
+      border-radius: 999px;
+      background: #f2f7f0;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .day-toggle {
+      display: none;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline li {
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      gap: 10px;
+      padding: 10px;
+      border-radius: var(--radius);
+      background: #f8efe2;
+    }
+
+    .timeline strong {
+      color: var(--green);
+    }
+
+    .timeline button {
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: rgba(30, 106, 140, .35);
+      text-underline-offset: 3px;
+    }
+
+    .day-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .day-meta div {
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fffdf8;
+    }
+
+    .day-meta strong {
+      display: block;
+      color: var(--ink);
+    }
+
+    .alert-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 12px 0 0;
+    }
+
+    .alert-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 9px;
+      border: 1px solid #e0bf82;
+      border-radius: 999px;
+      background: #fff4d8;
+      color: #6a4b14;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .side-stack {
+      position: sticky;
+      top: 68px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .transport-card, .rating-card {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+
+    .rating-card {
+      max-height: calc(100vh - 96px);
+      overflow: auto;
+    }
+
+    .transport-card h3, .rating-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .rating-image {
+      width: 100%;
+      aspect-ratio: 16 / 8.6;
+      margin: 0 0 10px;
+      border-radius: var(--radius);
+      background: #d8d2c8 center / cover;
+    }
+
+    .rating-image.has-video {
+      position: relative;
+    }
+
+    .rating-image.has-video::after {
+      content: "播放视频";
+      position: absolute;
+      left: 12px;
+      bottom: 10px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(255, 250, 242, .92);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .rating-card h3 {
+      line-height: 1.22;
+    }
+
+    .rating-card p {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .rating-card .tag-row {
+      margin: 7px 0 8px;
+    }
+
+    .rating-card .tag {
+      min-height: 24px;
+      padding: 2px 7px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    select {
+      width: 100%;
+      min-height: 42px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .estimate {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .estimate div {
+      min-width: 0;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .estimate strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr) 30px;
+      gap: 8px;
+      align-items: center;
+      margin: 6px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .bar {
+      height: 8px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #e7ddce;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: var(--orange);
+    }
+
+    .panel-rating {
+      display: none;
+    }
+
+    .food-grid, .prep-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .food-card, .prep-card {
+      padding: 16px;
+      box-shadow: none;
+    }
+
+    .food-card h3, .prep-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .food-card p, .prep-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .prep-card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .marker-pin {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border: 2px solid #fff;
+      border-radius: 50% 50% 50% 4px;
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 7px 18px rgba(0,0,0,.25);
+      transform: rotate(-45deg);
+      font-weight: 900;
+    }
+
+    .marker-pin span {
+      transform: rotate(45deg);
+      font-size: 12px;
+    }
+
+    .marker-pin.hotel { background: var(--gold); }
+    .marker-pin.airport { background: var(--green); }
+
+    footer {
+      padding: 22px 24px 44px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .image-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(12, 21, 17, .88);
+      backdrop-filter: blur(12px);
+    }
+
+    .image-lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-image {
+      max-width: min(1120px, 100%);
+      max-height: min(82vh, 780px);
+      border-radius: var(--radius);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
+      object-fit: contain;
+      background: #111;
+      touch-action: pan-y;
+    }
+
+    .lightbox-video {
+      display: none;
+      max-width: min(1120px, 100%);
+      max-height: min(82vh, 780px);
+      border-radius: var(--radius);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
+      background: #111;
+      touch-action: pan-y;
+    }
+
+    .image-lightbox.show-video .lightbox-image {
+      display: none;
+    }
+
+    .image-lightbox.show-video .lightbox-video {
+      display: block;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      display: none;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255, 255, 255, .34);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .92);
+      color: var(--ink);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .24);
+      transform: translateY(-50%);
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .lightbox-nav.prev {
+      left: max(18px, env(safe-area-inset-left, 0px));
+    }
+
+    .lightbox-nav.next {
+      right: max(18px, env(safe-area-inset-right, 0px));
+    }
+
+    .image-lightbox.has-multiple .lightbox-nav {
+      display: grid;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: max(18px, env(safe-area-inset-top, 0px));
+      right: max(18px, env(safe-area-inset-right, 0px));
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .94);
+      color: var(--ink);
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .lightbox-caption {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: max(18px, env(safe-area-inset-bottom, 0px));
+      color: rgba(255, 255, 255, .86);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .lightbox-dots {
+      position: absolute;
+      left: 50%;
+      bottom: max(46px, calc(env(safe-area-inset-bottom, 0px) + 46px));
+      z-index: 2;
+      display: none;
+      gap: 7px;
+      transform: translateX(-50%);
+    }
+
+    .image-lightbox.has-multiple .lightbox-dots {
+      display: flex;
+    }
+
+    .lightbox-dot {
+      width: 8px;
+      height: 8px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .54);
+      box-shadow: 0 1px 6px rgba(0, 0, 0, .38);
+      padding: 0;
+    }
+
+    .lightbox-dot.active {
+      background: #fff;
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 980px) {
+      .map-grid, .two-col { grid-template-columns: 1fr; }
+      .side-stack { position: static; }
+      .map-wrap, #map { min-height: 520px; }
+      .food-grid, .prep-grid { grid-template-columns: repeat(2, 1fr); }
+      .day-list-wrap {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .day-jump {
+        z-index: 20;
+        display: flex;
+        gap: 6px;
+        margin: 14px 0 0;
+        padding: 7px;
+        overflow-x: auto;
+      }
+
+      .day-jump button {
+        flex: 0 0 54px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      body {
+        padding-bottom: calc(82px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 26px 18px 28px;
+      }
+
+      .hero-inner {
+        margin-top: 28px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero-copy {
+        font-size: 17px;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .hero-stat {
+        min-width: 0;
+        padding: 9px 10px;
+      }
+
+      .hero-stat strong {
+        font-size: 17px;
+        line-height: 1.15;
+      }
+
+      .hero-stat span {
+        font-size: 11px;
+        line-height: 1.25;
+      }
+
+      .notice {
+        font-size: 14px;
+      }
+
+      .nav {
+        position: fixed;
+        inset: auto 10px calc(10px + env(safe-area-inset-bottom, 0px)) 10px;
+        z-index: 1200;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4px;
+        padding: 8px;
+        border: 1px solid rgba(41, 54, 48, .14);
+        border-radius: 18px;
+        background: rgba(255, 250, 242, .94);
+        box-shadow: 0 18px 44px rgba(41, 54, 48, .18);
+      }
+
+      .nav a {
+        display: grid;
+        place-items: center;
+        gap: 2px;
+        min-height: 52px;
+        padding: 4px 2px;
+        border-radius: 12px;
+        font-size: 12px;
+        line-height: 1.2;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .nav a::before {
+        display: block;
+        font-size: 17px;
+        line-height: 1;
+      }
+
+      section {
+        padding: 44px 16px;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .map-grid {
+        display: block;
+      }
+
+      .map-wrap {
+        height: 62vh;
+        min-height: 440px;
+      }
+
+      #map {
+        height: 100%;
+        min-height: 0;
+        border-radius: 12px;
+      }
+
+      .route-status {
+        bottom: 12px;
+        font-size: 12px;
+      }
+
+      .spot-panel {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1300;
+        max-height: min(78vh, 640px);
+        border-radius: 18px 18px 0 0;
+        transform: translateY(106%);
+        transition: transform .28s ease;
+        box-shadow: 0 -18px 48px rgba(41, 54, 48, .24);
+      }
+
+      .spot-panel.open {
+        transform: translateY(0);
+      }
+
+      .spot-panel::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        width: 44px;
+        height: 5px;
+        border-radius: 999px;
+        background: rgba(41, 54, 48, .22);
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+
+      .sheet-close {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        z-index: 3;
+        width: 34px;
+        height: 34px;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .92);
+        color: var(--ink);
+        font-size: 24px;
+        line-height: 1;
+        box-shadow: 0 8px 20px rgba(41, 54, 48, .16);
+      }
+
+      .panel-img {
+        min-height: 0;
+      }
+
+      .panel-img-wrap {
+        height: 170px;
+      }
+
+      .panel-body {
+        max-height: calc(78vh - 170px);
+        padding: 16px 16px calc(18px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .panel-body h3 {
+        font-size: 21px;
+      }
+
+      .panel-intro {
+        font-size: 14px;
+      }
+
+      .detail-list {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .mini-card {
+        padding: 10px;
+      }
+
+      .panel-rating {
+        display: block;
+        margin-top: 12px;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fffdf8;
+      }
+
+      .panel-rating h4 {
+        margin: 0 0 6px;
+        font-size: 16px;
+      }
+
+      .panel-rating p {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .route-list {
+        margin-top: 12px;
+      }
+
+      .day-jump {
+        top: 10px;
+        border-radius: 999px;
+      }
+
+      .day-card {
+        padding: 14px;
+        scroll-margin-top: 80px;
+      }
+
+      .card-head {
+        align-items: flex-start;
+        margin-bottom: 0;
+      }
+
+      .card h3 {
+        font-size: 19px;
+      }
+
+      .card-title-row {
+        gap: 6px;
+      }
+
+      .date-pill {
+        min-height: 24px;
+        padding: 2px 8px;
+        font-size: 11px;
+      }
+
+      .day-card:not(.expanded) .timeline,
+      .day-card:not(.expanded) .day-meta,
+      .day-card:not(.expanded) .alert-strip {
+        display: none;
+      }
+
+      .day-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        padding: 7px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fffdf8;
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .side-stack {
+        gap: 10px;
+      }
+
+      .transport-card,
+      .rating-card {
+        padding: 14px;
+      }
+
+      .estimate {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .estimate div {
+        padding: 9px;
+      }
+
+      .estimate strong {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .map-wrap {
+        height: 58vh;
+        min-height: 390px;
+      }
+      .food-grid, .prep-grid, .day-meta { grid-template-columns: 1fr; }
+      .timeline li { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .estimate {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div id="heroMediaSlot" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">Tibet East · 2025.09.28-10.11</p>
+      <h1>西藏林芝14日游</h1>
+      <p class="hero-copy">落地林芝后先在索松村看南迦巴瓦，再沿波密、墨脱、鲁朗、巴松措一路向西，最后把节奏收进拉萨的博物馆、布达拉宫、大昭寺和八廓街。</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>14 日</strong><span>9/28-10/11 行程</span></div>
+        <div class="hero-stat"><strong>藏东环线</strong><span>林芝 / 波密 / 墨脱 / 鲁朗 / 巴松措</span></div>
+        <div class="hero-stat"><strong>拉萨收尾</strong><span>博物馆 / 布达拉宫 / 大昭寺</span></div>
+      </div>
+      <div class="notice">高原提醒：第一天到拉萨走慢一点，洗澡不要洗头；阿尔卑斯式的景观很多，但海拔、天气和路况会比普通城市行程更影响实际执行。</div>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="页面导航">
+    <a href="#map-section" data-icon="图">路线地图</a>
+    <a href="#itinerary-section" data-icon="日">每日行程</a>
+    <a href="#food-section" data-icon="食">餐饮补给</a>
+    <a href="#prep-section" data-icon="备">提前准备</a>
+  </nav>
+
+  <main>
+    <section id="map-section">
+      <div class="inner">
+        <p class="kicker">Route Map</p>
+        <h2>林芝进 · 拉萨出路线地图</h2>
+        <p class="lead">地图串起林芝藏东环线、巴松措新措和拉萨收尾。跨城航班/火车为虚线，藏东段以包车/自驾线路为主。</p>
+        <div class="map-grid">
+          <div class="map-wrap">
+            <div id="map" role="application" aria-label="塔斯马尼亚行程地图"></div>
+            <div class="route-status show" id="routeStatus" role="status">正在加载自驾路线</div>
+          </div>
+          <aside class="spot-panel" aria-live="polite">
+            <button class="sheet-close" type="button" aria-label="关闭景点详情" onclick="closeSpotSheet()">×</button>
+            <div class="panel-img-wrap" id="panelImageWrap">
+              <button class="carousel-button prev" type="button" aria-label="上一张图片" onclick="shiftSpotImage(-1)">‹</button>
+              <div class="panel-img" id="panelImage"></div>
+              <button class="carousel-button next" type="button" aria-label="下一张图片" onclick="shiftSpotImage(1)">›</button>
+              <div class="carousel-dots" id="panelImageDots" aria-label="景点图片分页"></div>
+            </div>
+            <div class="panel-body" id="panelBody"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="itinerary-section">
+      <div class="inner">
+        <p class="kicker">Daily Plan</p>
+        <h2>每日行程安排</h2>
+        <p class="lead">按日期、交通、住宿和备注整理。点击时间线里的景点名，可以联动地图与详情面板。</p>
+        <div class="two-col">
+          <div class="day-list-wrap">
+            <nav class="day-jump" id="dayJump" aria-label="分天导览"></nav>
+            <div class="route-list" id="dayList"></div>
+          </div>
+          <aside class="side-stack">
+            <div class="transport-card">
+              <h3>点到点交通时间</h3>
+              <label>起点<select id="fromSelect"></select></label>
+              <label>终点<select id="toSelect"></select></label>
+              <div class="estimate" id="estimateBox"></div>
+            </div>
+            <div class="rating-card" id="ratingPanel"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="food-section">
+      <div class="inner">
+        <p class="kicker">Food</p>
+        <h2>沿线餐饮与补给</h2>
+        <p class="lead">结合记账 sheet 中的实际餐饮和路线特点，优先标出顺路、吃饱、能补能量的选择。</p>
+        <div class="food-grid" id="foodGrid"></div>
+      </div>
+    </section>
+
+    <section id="prep-section">
+      <div class="inner">
+        <p class="kicker">Before Departure</p>
+        <h2>需要提前确认的东西</h2>
+        <p class="lead">把高原注意、门票预约、包车衔接、徒步补给和酒店关键备注集中到一处。</p>
+        <div class="prep-grid" id="prepGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="图片预览" onclick="closeImageLightbox(event)">
+    <button class="lightbox-close" type="button" aria-label="关闭图片预览" onclick="closeImageLightbox(event)">×</button>
+    <button class="lightbox-nav prev" type="button" aria-label="上一张图片" onclick="shiftLightboxImage(-1, event)">‹</button>
+    <img class="lightbox-image" id="lightboxImage" alt="">
+    <video class="lightbox-video" id="lightboxVideo" controls playsinline></video>
+    <button class="lightbox-nav next" type="button" aria-label="下一张图片" onclick="shiftLightboxImage(1, event)">›</button>
+    <div class="lightbox-dots" id="lightboxDots" aria-label="放大图片分页"></div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <footer>2025 西藏林芝14日游行程攻略 · 图片来自旅途素材</footer>
+
+  <script>
+    const heroMedia = {
+      "src": "assets/linzhi-banner.jpg",
+      "poster": "",
+      "alt": "林芝森林徒步合影"
+};
+
+    const spots = [
+      {
+            "id": "tianyige",
+            "name": "天一阁",
+            "zh": "",
+            "type": "spot",
+            "day": 1,
+            "time": "9/28 下午",
+            "lat": 29.8731,
+            "lng": 121.5469,
+            "stay": "1-1.5 小时",
+            "image": "assets/行程_r003_c005_image1.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r003_c005_image1.png",
+                        "caption": "天一阁｜宁波半日游"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "宁波过境",
+                  "藏书楼",
+                  "30 元门票"
+            ],
+            "intro": "天一阁是宁波半日过境里的文化锚点，节奏轻，不会影响晚上飞重庆。",
+            "play": "杭州南 14:08 到宁波 15:04 后，先把天一阁作为主要参观点，再接鼓楼和晚餐。",
+            "note": "晚上还要去宁波 T1 飞重庆，半日游不要拖太晚。",
+            "ratings": {
+                  "nature": 3,
+                  "culture": 8,
+                  "weather": 3,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "ningbo_gulou",
+            "name": "宁波鼓楼",
+            "zh": "",
+            "type": "spot",
+            "day": 1,
+            "time": "9/28 傍晚",
+            "lat": 29.8737,
+            "lng": 121.5509,
+            "stay": "30-45 分钟",
+            "image": "assets/行程_r004_c005_image2.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r004_c005_image2.png",
+                        "caption": "宁波鼓楼"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "宁波老城",
+                  "顺路拍照",
+                  "机场前机动"
+            ],
+            "intro": "鼓楼是宁波市中心很容易顺路串起来的老城节点，适合作为天一阁之后的轻量散步。",
+            "play": "不做重参观，走走拍照、吃木木鲜海鲜面后去机场。",
+            "note": "宁波站到栎社机场地铁 2 号线约 30 分钟，留足安检时间。",
+            "ratings": {
+                  "nature": 2,
+                  "culture": 6,
+                  "weather": 3,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "fosha_dune",
+            "name": "佛掌沙丘",
+            "zh": "",
+            "type": "spot",
+            "day": 2,
+            "time": "9/29 下午",
+            "lat": 29.575,
+            "lng": 94.84,
+            "stay": "远观/路过",
+            "image": "assets/行程_r010_c005_image4.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r010_c005_image4.png",
+                        "caption": "佛掌沙丘｜远观南迦巴瓦"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "雅鲁藏布江畔",
+                  "沙丘",
+                  "南迦巴瓦视角"
+            ],
+            "intro": "佛掌沙丘是从林芝去索松村路线上适合远观的景观点，沙丘和雪山同框很有反差。",
+            "play": "落地日以轻松为主，司机顺路停靠即可，不建议为了拍照消耗太多体力。",
+            "note": "当天清晨重庆飞林芝，落地后别安排高强度徒步。",
+            "ratings": {
+                  "nature": 8,
+                  "culture": 3,
+                  "weather": 8,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "namcha_barwa",
+            "name": "南迦巴瓦峰",
+            "zh": "",
+            "type": "spot",
+            "day": 2,
+            "time": "9/29-9/30",
+            "lat": 29.631,
+            "lng": 95.061,
+            "stay": "索松村守山景",
+            "image": "assets/行程_r011_c005_image5.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r011_c005_image5.png",
+                        "caption": "南迦巴瓦峰｜索松村视角"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "神山",
+                  "日照金山",
+                  "索松村"
+            ],
+            "intro": "南迦巴瓦是藏东段最重要的景观主角，能不能看到很看天气，索松村的价值就是给它留观察窗口。",
+            "play": "住吉美·南迦巴瓦山居，后花园适合半夜和早上拍照；天气好时优先守山，不必急着赶景点。",
+            "note": "行程特别备注值机选左边，飞林芝途中也有看雪山的机会。",
+            "ratings": {
+                  "nature": 10,
+                  "culture": 6,
+                  "weather": 10,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "yarlung_canyon",
+            "name": "雅鲁藏布大峡谷",
+            "zh": "",
+            "type": "spot",
+            "day": 2,
+            "time": "9/29 下午",
+            "lat": 29.6,
+            "lng": 94.93,
+            "stay": "1-2 小时",
+            "image": "assets/行程_r012_c005_image6.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r012_c005_image6.png",
+                        "caption": "雅鲁藏布大峡谷"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "峡谷",
+                  "江景",
+                  "索松村周边"
+            ],
+            "intro": "雅鲁藏布大峡谷把江水、村落和雪山视角连在一起，是索松村段的主要区域景观。",
+            "play": "按天气和到达时间决定停留长度，重心仍是轻松适应高原和等待南迦巴瓦。",
+            "note": "落地日避免在景区里走太满。",
+            "ratings": {
+                  "nature": 9,
+                  "culture": 5,
+                  "weather": 8,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "sosong_village",
+            "name": "索松村",
+            "zh": "",
+            "type": "spot",
+            "day": 2,
+            "time": "9/29 晚上",
+            "lat": 29.598,
+            "lng": 94.919,
+            "stay": "1 晚",
+            "image": "assets/行程_r013_c005_image7.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r013_c005_image7.png",
+                        "caption": "索松村｜南迦巴瓦山居"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "村里躺平",
+                  "山居",
+                  "拍照窗口"
+            ],
+            "intro": "索松村不是为了打很多点，而是给南迦巴瓦和雅鲁藏布江留出足够的慢节奏。",
+            "play": "下午到村里后休息，半夜和清晨看天气拍山，第二天再慢慢转去林芝市区。",
+            "note": "林芝到索松村和酒店约车，行程记录 100 元/人。",
+            "ratings": {
+                  "nature": 9,
+                  "culture": 5,
+                  "weather": 8,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "biri_mountain",
+            "name": "比日神山",
+            "zh": "",
+            "type": "spot",
+            "day": 3,
+            "time": "9/30",
+            "lat": 29.66,
+            "lng": 94.39,
+            "stay": "2-3 小时",
+            "image": "assets/行程_r015_c005_image8.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r015_c005_image8.png",
+                        "caption": "比日神山｜林芝转山"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "转山",
+                  "林芝市区",
+                  "栈道入口"
+            ],
+            "intro": "比日神山是林芝市区附近适合转山闲逛的地方，强度比后面的徒步更友好。",
+            "play": "打车时一定要和司机讲到比日神山入口栈道（拉丁嘎村），转一圈后在博物馆门口坐黑车下山。",
+            "note": "行程备注黑车 5 元/人送到山下。",
+            "ratings": {
+                  "nature": 7,
+                  "culture": 6,
+                  "weather": 6,
+                  "stamina": 6
+            }
+      },
+      {
+            "id": "gongbu_park",
+            "name": "工布公园",
+            "zh": "",
+            "type": "spot",
+            "day": 3,
+            "time": "9/30 下午",
+            "lat": 29.653,
+            "lng": 94.362,
+            "stay": "45-60 分钟",
+            "image": "assets/行程_r016_c005_image9.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r016_c005_image9.png",
+                        "caption": "工布公园｜林芝市区"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "市区散步",
+                  "湖面",
+                  "低强度"
+            ],
+            "intro": "工布公园是林芝市区里适合过渡休息的散步点，放在转山之后正好缓一缓。",
+            "play": "按体力在湖边走走，晚上再去工布老街看锅庄。",
+            "note": "住林芝散步去咖啡民宿，行程备注无早餐但有洗衣机。",
+            "ratings": {
+                  "nature": 5,
+                  "culture": 4,
+                  "weather": 4,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "gongbu_old_street",
+            "name": "工布老街",
+            "zh": "",
+            "type": "spot",
+            "day": 3,
+            "time": "9/30 晚上",
+            "lat": 29.65,
+            "lng": 94.36,
+            "stay": "1 小时",
+            "image": "assets/行程_r017_c005_image10.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r017_c005_image10.png",
+                        "caption": "工布老街｜跳锅庄"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "夜间散步",
+                  "锅庄",
+                  "市区补给"
+            ],
+            "intro": "工布老街更像林芝市区晚上的轻活动，适合看跳锅庄、吃饭和补给。",
+            "play": "晚上随缘逛，不把它当成硬景点。",
+            "note": "如果第二天休息日状态不好，可以把老街缩短。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 6,
+                  "weather": 2,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "fujian_yuan",
+            "name": "福建园",
+            "zh": "",
+            "type": "spot",
+            "day": 4,
+            "time": "10/1",
+            "lat": 29.65,
+            "lng": 94.36,
+            "stay": "1 小时",
+            "image": "assets/行程_r019_c005_image11.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r019_c005_image11.png",
+                        "caption": "福建园｜休息日遛弯"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "休息日",
+                  "响箭协会",
+                  "轻散步"
+            ],
+            "intro": "10 月 1 日安排为休息日，福建园只是酒店附近遛弯和看射箭的低压力选择。",
+            "play": "园内有响箭协会，可以看射箭；其余时间休息、洗衣和调整状态。",
+            "note": "这是全程很重要的缓冲日，不要临时加太多项目。",
+            "ratings": {
+                  "nature": 3,
+                  "culture": 5,
+                  "weather": 3,
+                  "stamina": 1
+            }
+      },
+      {
+            "id": "sejila_pass",
+            "name": "色季拉山口观景台",
+            "zh": "",
+            "type": "spot",
+            "day": 5,
+            "time": "10/2",
+            "lat": 29.61,
+            "lng": 94.69,
+            "stay": "30-45 分钟",
+            "image": "assets/行程_r022_c005_image12.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r022_c005_image12.png",
+                        "caption": "色季拉山口观景台"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "免费",
+                  "山口",
+                  "风大冷"
+            ],
+            "intro": "从林芝往波密的路上，色季拉山口是看雪山和山口景观的关键停车点。",
+            "play": "司机接送到汇合点后出发，路上按天气停车拍照。",
+            "note": "行程备注免费，但风大冷，多穿。",
+            "ratings": {
+                  "nature": 9,
+                  "culture": 3,
+                  "weather": 9,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "zhatang_lutso",
+            "name": "扎塘鲁措",
+            "zh": "",
+            "type": "spot",
+            "day": 5,
+            "time": "10/2",
+            "lat": 29.86,
+            "lng": 95.48,
+            "stay": "45-60 分钟",
+            "image": "assets/行程_r023_c005_image13.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r023_c005_image13.png",
+                        "caption": "扎塘鲁措｜湖泊倒影"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "免费",
+                  "湖泊",
+                  "波密途中"
+            ],
+            "intro": "扎塘鲁措是林芝去波密途中的免费湖泊点，适合把赶路日变得不那么单调。",
+            "play": "作为路上停靠点看湖、雪山和倒影，别停到影响抵达波密。",
+            "note": "当晚住波密灵溪山居，行程备注有早餐、最早 10 点可入住。",
+            "ratings": {
+                  "nature": 9,
+                  "culture": 2,
+                  "weather": 8,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "gangyun_forest",
+            "name": "岗云杉林",
+            "zh": "",
+            "type": "spot",
+            "day": 6,
+            "time": "10/3",
+            "lat": 29.87,
+            "lng": 95.77,
+            "stay": "4-5 小时",
+            "image": "assets/行程_r024_c005_image14.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r024_c005_image14.png",
+                        "caption": "岗云杉林徒步"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "徒步",
+                  "杉林",
+                  "国庆半价"
+            ],
+            "intro": "岗云杉林是波密段的核心徒步，森林、雪山和湿润峡谷感很强。",
+            "play": "行程备注徒步四五小时，早上吃饱，带零食和水。",
+            "note": "门票 80 元，国庆期间半价；当天不要再排高强度活动。",
+            "ratings": {
+                  "nature": 10,
+                  "culture": 3,
+                  "weather": 8,
+                  "stamina": 8
+            }
+      },
+      {
+            "id": "galang_palace",
+            "name": "噶朗王宫",
+            "zh": "",
+            "type": "spot",
+            "day": 6,
+            "time": "10/3 下午",
+            "lat": 29.86,
+            "lng": 95.78,
+            "stay": "45-60 分钟",
+            "image": "assets/行程_r025_c005_image15.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r025_c005_image15.png",
+                        "caption": "噶朗王宫｜色彩超绝"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "免费",
+                  "色彩",
+                  "波密周边"
+            ],
+            "intro": "噶朗王宫是岗云杉林徒步后的轻量文化点，原文评价“色彩超绝”。",
+            "play": "徒步结束后按体力去看外观和色彩细节。",
+            "note": "如果徒步太累，王宫可缩短。",
+            "ratings": {
+                  "nature": 4,
+                  "culture": 7,
+                  "weather": 4,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "duodong_monastery",
+            "name": "多东寺",
+            "zh": "",
+            "type": "spot",
+            "day": 7,
+            "time": "10/4",
+            "lat": 29.74,
+            "lng": 95.28,
+            "stay": "30-60 分钟",
+            "image": "assets/行程_r027_c005_image16.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r027_c005_image16.png",
+                        "caption": "多东寺"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "免费",
+                  "墨脱路上",
+                  "寺院"
+            ],
+            "intro": "多东寺是波密去墨脱路上的免费停靠点，适合把长距离赶路拆开。",
+            "play": "短暂停留、拍照、上厕所和缓路程。",
+            "note": "当天重点仍是翻越扎墨路段去墨脱。",
+            "ratings": {
+                  "nature": 4,
+                  "culture": 7,
+                  "weather": 5,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "zhamo_monument",
+            "name": "扎墨公路纪念碑",
+            "zh": "",
+            "type": "spot",
+            "day": 7,
+            "time": "10/4",
+            "lat": 29.91,
+            "lng": 95.55,
+            "stay": "15-30 分钟",
+            "image": "assets/行程_r028_c005_image17.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r028_c005_image17.png",
+                        "caption": "扎墨公路纪念碑"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "扎墨公路",
+                  "路标",
+                  "停车点"
+            ],
+            "intro": "扎墨公路纪念碑是进入墨脱线路的标志性节点，适合短停留。",
+            "play": "拍照留念即可，后面还要过嘎隆拉隧道。",
+            "note": "路况和天气比景点本身更重要。",
+            "ratings": {
+                  "nature": 5,
+                  "culture": 4,
+                  "weather": 7,
+                  "stamina": 1
+            }
+      },
+      {
+            "id": "galongla_tunnel",
+            "name": "嘎隆拉隧道",
+            "zh": "",
+            "type": "transport",
+            "day": 7,
+            "time": "10/4",
+            "lat": 29.76,
+            "lng": 95.47,
+            "stay": "路过",
+            "image": "assets/行程_r029_c005_image18.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r029_c005_image18.png",
+                        "caption": "嘎隆拉隧道｜波密到墨脱"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "交通节点",
+                  "雪山路段",
+                  "墨脱通道"
+            ],
+            "intro": "嘎隆拉隧道是波密到墨脱路线上很有存在感的交通节点，天气和路况会直接影响体验。",
+            "play": "路过拍照即可，不作为停留型景点。",
+            "note": "高海拔路段风雪天气注意保暖。",
+            "ratings": {
+                  "nature": 8,
+                  "culture": 3,
+                  "weather": 9,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "guoguo_turn",
+            "name": "果果塘大拐弯",
+            "zh": "",
+            "type": "spot",
+            "day": 7,
+            "time": "10/4 下午",
+            "lat": 29.22,
+            "lng": 95.16,
+            "stay": "45-60 分钟",
+            "image": "assets/行程_r030_c005_image19.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r030_c005_image19.png",
+                        "caption": "果果塘大拐弯"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "墨脱",
+                  "雅鲁藏布江",
+                  "60 元门票"
+            ],
+            "intro": "果果塘大拐弯是墨脱最标志性的江湾视角，开阔、湿润、和前面的雪山路段气质完全不同。",
+            "play": "到墨脱后优先安排，天气好时视野更完整。",
+            "note": "行程记录门票 60 元。",
+            "ratings": {
+                  "nature": 9,
+                  "culture": 3,
+                  "weather": 8,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "motuo_museum",
+            "name": "墨脱博物馆",
+            "zh": "",
+            "type": "spot",
+            "day": 7,
+            "time": "10/4 下午",
+            "lat": 29.326,
+            "lng": 95.333,
+            "stay": "45-60 分钟",
+            "image": "assets/行程_r031_c005_image20.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r031_c005_image20.png",
+                        "caption": "墨脱博物馆"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "免费",
+                  "17 点结束",
+                  "周一闭馆"
+            ],
+            "intro": "墨脱博物馆适合补足对墨脱地理、民族和交通历史的理解。",
+            "play": "如果抵达时间合适，果果塘之后或之前插入。",
+            "note": "行程备注免费，周一闭馆，17 点结束。",
+            "ratings": {
+                  "nature": 2,
+                  "culture": 7,
+                  "weather": 2,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "motuo_mirage",
+            "name": "海市蜃楼",
+            "zh": "",
+            "type": "spot",
+            "day": 8,
+            "time": "10/5 上午",
+            "lat": 29.33,
+            "lng": 95.34,
+            "stay": "30-60 分钟",
+            "image": "assets/行程_r032_c005_image21.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r032_c005_image21.png",
+                        "caption": "墨脱海市蜃楼"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "免费",
+                  "墨脱云雾",
+                  "赶路日前半"
+            ],
+            "intro": "墨脱的海市蜃楼/云雾景观更像天气礼物，适合早上出发前看一眼。",
+            "play": "如果云雾条件好就停，条件一般就直接去仁青崩寺。",
+            "note": "当天要从墨脱赶到鲁朗，不要在上午拖太久。",
+            "ratings": {
+                  "nature": 8,
+                  "culture": 2,
+                  "weather": 10,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "renqingbeng_monastery",
+            "name": "仁青崩寺",
+            "zh": "",
+            "type": "spot",
+            "day": 8,
+            "time": "10/5 上午",
+            "lat": 29.42,
+            "lng": 95.23,
+            "stay": "45-60 分钟",
+            "image": "assets/行程_r033_c005_image22.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r033_c005_image22.png",
+                        "caption": "仁青崩寺"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "免费",
+                  "墨脱周边",
+                  "寺院"
+            ],
+            "intro": "仁青崩寺是离开墨脱前的文化停靠点，和前一天的江湾、隧道形成对照。",
+            "play": "短暂停留，之后开始墨脱到鲁朗的长距离移动。",
+            "note": "当天晚餐 行程明确写鲁朗必吃石锅鸡。",
+            "ratings": {
+                  "nature": 5,
+                  "culture": 7,
+                  "weather": 5,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "zaxigang_village",
+            "name": "扎西岗村",
+            "zh": "",
+            "type": "spot",
+            "day": 8,
+            "time": "10/5 下午/晚上",
+            "lat": 29.769,
+            "lng": 94.742,
+            "stay": "1 晚",
+            "image": "assets/行程_r035_c005_image23.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r035_c005_image23.png",
+                        "caption": "扎西岗村｜鲁朗住宿区域"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "鲁朗",
+                  "村落",
+                  "石锅鸡"
+            ],
+            "intro": "扎西岗村是鲁朗住宿和晚餐落脚点，适合把墨脱赶路日收住。",
+            "play": "下午抵达后休息，晚上吃石锅鸡。",
+            "note": "达琅酒店在鲁朗镇扎西岗村，行程备注有早餐、当天 18 点前可取消。",
+            "ratings": {
+                  "nature": 7,
+                  "culture": 5,
+                  "weather": 5,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "alpine_pasture",
+            "name": "高山牧场",
+            "zh": "",
+            "type": "spot",
+            "day": 9,
+            "time": "10/6 上午",
+            "lat": 29.78,
+            "lng": 94.75,
+            "stay": "30-60 分钟",
+            "image": "assets/行程_r036_c005_image24.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r036_c005_image24.png",
+                        "caption": "高山牧场"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "鲁朗",
+                  "小路免费",
+                  "牧场"
+            ],
+            "intro": "高山牧场是鲁朗离开前的轻停靠，草甸、牛羊和山景很适合路上换气。",
+            "play": "行程备注走小路可免费，按司机熟悉程度和时间决定。",
+            "note": "当天要去巴松措，不要把鲁朗上午拖太满。",
+            "ratings": {
+                  "nature": 8,
+                  "culture": 3,
+                  "weather": 7,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "basum_tso",
+            "name": "巴松措",
+            "zh": "",
+            "type": "spot",
+            "day": 9,
+            "time": "10/6 下午",
+            "lat": 30.011,
+            "lng": 93.926,
+            "stay": "2-3 小时",
+            "image": "assets/行程_r038_c005_image25.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r038_c005_image25.png",
+                        "caption": "巴松措"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "湖泊",
+                  "门票 120",
+                  "住宿返押金"
+            ],
+            "intro": "巴松措是藏东湖泊段的主角，颜色、岛屿、雪山和村落都适合放慢看。",
+            "play": "住在景区内时，按住宿与景区规则安排进出，下午先看湖边主要视角。",
+            "note": "行程记录门票 120 元；住宿的话押金 60 会在酒店返还。",
+            "ratings": {
+                  "nature": 10,
+                  "culture": 5,
+                  "weather": 8,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "jieba_village",
+            "name": "结巴村",
+            "zh": "",
+            "type": "spot",
+            "day": 9,
+            "time": "10/6 晚上",
+            "lat": 30.003,
+            "lng": 93.87,
+            "stay": "1 晚",
+            "image": "assets/行程_r039_c005_image26.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r039_c005_image26.png",
+                        "caption": "结巴村｜巴松措住宿区域"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "巴松措村落",
+                  "住宿",
+                  "新措前夜"
+            ],
+            "intro": "结巴村是新措徒步前的落脚点，第二天一早从这里出发更顺。",
+            "play": "晚上休息、准备徒步水和零食。",
+            "note": "巴松措纳拉尕布精品客栈有早餐，10 月 4 日 24 点前可取消。",
+            "ratings": {
+                  "nature": 8,
+                  "culture": 5,
+                  "weather": 6,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "xincuo",
+            "name": "新措",
+            "zh": "",
+            "type": "spot",
+            "day": 10,
+            "time": "10/7 08:00",
+            "lat": 30.08,
+            "lng": 93.71,
+            "stay": "3 小时徒步",
+            "image": "assets/行程_r041_c005_image27.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r041_c005_image27.png",
+                        "caption": "新措徒步"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "徒步",
+                  "10 元清洁费",
+                  "搓衣板路"
+            ],
+            "intro": "新措是巴松措段的野趣徒步，路况折腾但景观开阔，是 Day 10 的核心。",
+            "play": "结巴村到新措 500 元一车，8 点出发，搓衣板路往返约 2.5 小时，徒步约 3 小时。",
+            "note": "清洁费 10 元；车路辛苦，上午要吃饱。",
+            "ratings": {
+                  "nature": 10,
+                  "culture": 3,
+                  "weather": 8,
+                  "stamina": 8
+            }
+      },
+      {
+            "id": "songtsam_basum",
+            "name": "松赞巴松措林卡",
+            "zh": "",
+            "type": "spot",
+            "day": 10,
+            "time": "10/7 下午",
+            "lat": 30.004,
+            "lng": 93.9,
+            "stay": "躺平半日",
+            "image": "assets/行程_r043_c005_image28.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r043_c005_image28.png",
+                        "caption": "松赞巴松措林卡｜躺平"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "躺平",
+                  "下午茶",
+                  "洗衣烘干"
+            ],
+            "intro": "松赞这晚是全程很重要的恢复点，用来消化新措徒步和前面连续赶路。",
+            "play": "14 点入住，住到最晚退房时间，享受晚安饮品、自助下午茶，把衣服洗干净。",
+            "note": "行程备注有洗衣机烘干机，衣服全洗了。",
+            "ratings": {
+                  "nature": 8,
+                  "culture": 6,
+                  "weather": 3,
+                  "stamina": 1
+            }
+      },
+      {
+            "id": "tibet_museum",
+            "name": "西藏博物馆",
+            "zh": "",
+            "type": "spot",
+            "day": 12,
+            "time": "10/9 下午",
+            "lat": 29.654,
+            "lng": 91.096,
+            "stay": "1.5-2 小时",
+            "image": "assets/行程_r047_c005_image30.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r047_c005_image30.png",
+                        "caption": "西藏博物馆"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "拉萨第一天",
+                  "预约",
+                  "农奴主题"
+            ],
+            "intro": "西藏博物馆是拉萨第一天很适合的室内点，能帮后面的布达拉宫、大昭寺建立背景。",
+            "play": "行程备注 10 月 2 日去预约，一定要去看农奴主题。",
+            "note": "刚到拉萨要慢点走，别把博物馆和户外点排太紧。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 9,
+                  "weather": 1,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "norbulingka",
+            "name": "罗布林卡",
+            "zh": "",
+            "type": "spot",
+            "day": 12,
+            "time": "10/9 机动",
+            "lat": 29.654,
+            "lng": 91.09,
+            "stay": "外观/机动",
+            "image": "assets/行程_r048_c005_image31.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r048_c005_image31.png",
+                        "caption": "罗布林卡"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "拉萨",
+                  "机动",
+                  "慢走"
+            ],
+            "intro": "罗布林卡放在拉萨第一天更适合作为机动点，状态好就进，状态一般外面打卡即可。",
+            "play": "行程记录来不及就在外面打了下卡。",
+            "note": "第一天到拉萨注意步速，洗澡不要洗头。",
+            "ratings": {
+                  "nature": 4,
+                  "culture": 7,
+                  "weather": 4,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "yaowangshan",
+            "name": "药王山观景台",
+            "zh": "",
+            "type": "spot",
+            "day": 12,
+            "time": "10/9 傍晚",
+            "lat": 29.6547,
+            "lng": 91.114,
+            "stay": "30 分钟",
+            "image": "assets/行程_r050_c005_image33.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r050_c005_image33.png",
+                        "caption": "药王山 50 元打卡"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "布达拉宫机位",
+                  "50 元",
+                  "拉萨经典视角"
+            ],
+            "intro": "药王山是拍布达拉宫的经典机位，行程特别写了 50 元打卡。",
+            "play": "如果博物馆后状态还好，傍晚去拍布达拉宫视角。",
+            "note": "别走太快，拉萨第一天不要逞强。",
+            "ratings": {
+                  "nature": 5,
+                  "culture": 7,
+                  "weather": 7,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "potala_square",
+            "name": "布达拉宫广场",
+            "zh": "",
+            "type": "spot",
+            "day": 13,
+            "time": "10/10 上午",
+            "lat": 29.656,
+            "lng": 91.116,
+            "stay": "30-45 分钟",
+            "image": "assets/行程_r051_c005_image34.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r051_c005_image34.png",
+                        "caption": "布达拉宫广场"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "布达拉宫",
+                  "广场",
+                  "参观前集合"
+            ],
+            "intro": "布达拉宫广场是进入布达拉宫参观前最自然的集合和外观视角。",
+            "play": "10 点左右进入布达拉宫前，先在广场和外部视角做轻停留。",
+            "note": "后面有 11:00-11:20 的布达拉宫一号线时段。",
+            "ratings": {
+                  "nature": 4,
+                  "culture": 9,
+                  "weather": 5,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "potala_palace",
+            "name": "布达拉宫",
+            "zh": "",
+            "type": "spot",
+            "day": 13,
+            "time": "10/10 11:00-11:20",
+            "lat": 29.6578,
+            "lng": 91.1169,
+            "stay": "2-3 小时",
+            "image": "assets/行程_r052_c005_image35.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r052_c005_image35.png",
+                        "caption": "布达拉宫"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "一号线",
+                  "已预约",
+                  "讲解员"
+            ],
+            "intro": "布达拉宫是拉萨收尾日的核心，参观时间和讲解安排都已经在行程里写得很清楚。",
+            "play": "一号线 11:00-11:20 时段，可提前一小时进入；行程记录 10 点进，找了讲解员，50 元/人，12 点多结束。",
+            "note": "讲解员微信在原文中有记录，页面不公开展示完整联系方式，出行前出行前再核对。",
+            "ratings": {
+                  "nature": 3,
+                  "culture": 10,
+                  "weather": 3,
+                  "stamina": 6
+            }
+      },
+      {
+            "id": "heaven_post",
+            "name": "天上邮局",
+            "zh": "",
+            "type": "spot",
+            "day": 13,
+            "time": "10/10 中午",
+            "lat": 29.653,
+            "lng": 91.121,
+            "stay": "20-40 分钟",
+            "image": "assets/行程_r053_c005_image36.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r053_c005_image36.png",
+                        "caption": "天上邮局｜寄明信片"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "明信片",
+                  "拉萨纪念",
+                  "轻停留"
+            ],
+            "intro": "天上邮局是布达拉宫之后的轻量纪念点，适合寄明信片。",
+            "play": "布达拉宫参观结束后，找地方吃饭，再寄明信片。",
+            "note": "下午还有大昭寺预约，不要在邮局拖太久。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 5,
+                  "weather": 1,
+                  "stamina": 1
+            }
+      },
+      {
+            "id": "jokhang_temple",
+            "name": "大昭寺",
+            "zh": "",
+            "type": "spot",
+            "day": 13,
+            "time": "10/10 15:30-16:30",
+            "lat": 29.6501,
+            "lng": 91.1328,
+            "stay": "1-1.5 小时",
+            "image": "assets/行程_r054_c005_image37.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r054_c005_image37.png",
+                        "caption": "大昭寺"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "已预约",
+                  "15:30-16:30",
+                  "八廓街"
+            ],
+            "intro": "大昭寺和八廓街共同构成拉萨最有朝圣氛围的区域，适合放在布达拉宫之后。",
+            "play": "按 15:30-16:30 的预约时间进入，出来后顺路逛八廓街。",
+            "note": "当天文化信息量很大，午后留好休息和补水。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 10,
+                  "weather": 2,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "barkhor_street",
+            "name": "八廓街",
+            "zh": "",
+            "type": "spot",
+            "day": 13,
+            "time": "10/10 傍晚",
+            "lat": 29.6507,
+            "lng": 91.1325,
+            "stay": "1-2 小时",
+            "image": "assets/行程_r055_c005_image38.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r055_c005_image38.png",
+                        "caption": "八廓街"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "转经道",
+                  "街区",
+                  "拉萨傍晚"
+            ],
+            "intro": "八廓街适合慢慢走，观察转经、街巷和店铺，是大昭寺之后的自然延伸。",
+            "play": "不要只当商业街看，顺着人流慢慢走一圈更有感觉。",
+            "note": "注意人流和随身物品，晚上再去看布达拉宫夜景。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 9,
+                  "weather": 3,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "potala_night",
+            "name": "布达拉宫夜景",
+            "zh": "",
+            "type": "spot",
+            "day": 13,
+            "time": "10/10 晚上",
+            "lat": 29.6578,
+            "lng": 91.1169,
+            "stay": "30-60 分钟",
+            "image": "assets/行程_r056_c005_image39.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r056_c005_image39.png",
+                        "caption": "布达拉宫夜景"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "夜景",
+                  "行程收尾",
+                  "拉萨"
+            ],
+            "intro": "布达拉宫夜景适合作为整个藏东神山行程的视觉收尾。",
+            "play": "晚饭后按体力去广场或药王山附近看夜景。",
+            "note": "第二天返程，别熬太晚。",
+            "ratings": {
+                  "nature": 4,
+                  "culture": 9,
+                  "weather": 5,
+                  "stamina": 3
+            }
+      }
+];
+
+    const hotels = [
+      {
+            "id": "stay_sosong",
+            "name": "吉美·南迦巴瓦山居",
+            "zh": "索松村住宿",
+            "type": "hotel",
+            "day": 2,
+            "lat": 29.598,
+            "lng": 94.919
+      },
+      {
+            "id": "stay_linzhi_cafe",
+            "name": "林芝散步去咖啡民宿",
+            "zh": "林芝市区住宿",
+            "type": "hotel",
+            "day": 3,
+            "lat": 29.653,
+            "lng": 94.362
+      },
+      {
+            "id": "stay_bomi_lingxi",
+            "name": "波密灵溪山居（岗云山林店）",
+            "zh": "波密住宿",
+            "type": "hotel",
+            "day": 5,
+            "lat": 29.86,
+            "lng": 95.77
+      },
+      {
+            "id": "stay_motuo_jinjiang",
+            "name": "锦江之星酒店（林芝墨脱）",
+            "zh": "墨脱住宿",
+            "type": "hotel",
+            "day": 7,
+            "lat": 29.326,
+            "lng": 95.333
+      },
+      {
+            "id": "stay_lulang_dalang",
+            "name": "达琅酒店（鲁朗镇扎西岗村店）",
+            "zh": "鲁朗住宿",
+            "type": "hotel",
+            "day": 8,
+            "lat": 29.769,
+            "lng": 94.742
+      },
+      {
+            "id": "stay_basum_nala",
+            "name": "巴松措纳拉尕布精品客栈",
+            "zh": "结巴村住宿",
+            "type": "hotel",
+            "day": 9,
+            "lat": 30.003,
+            "lng": 93.87
+      },
+      {
+            "id": "stay_songtsam",
+            "name": "松赞巴松措林卡酒店",
+            "zh": "松赞巴松措",
+            "type": "hotel",
+            "day": 10,
+            "lat": 30.004,
+            "lng": 93.9
+      },
+      {
+            "id": "stay_linzhi_bus",
+            "name": "安丽卡酒店（林芝汽车站）",
+            "zh": "林芝汽车站住宿",
+            "type": "hotel",
+            "day": 11,
+            "lat": 29.653,
+            "lng": 94.362
+      },
+      {
+            "id": "stay_lhasa_oxygen",
+            "name": "萨吉富氧酒店（布达拉宫店）",
+            "zh": "拉萨住宿",
+            "type": "hotel",
+            "day": 12,
+            "lat": 29.657,
+            "lng": 91.116
+      }
+];
+
+    const route = [
+      "tianyige",
+      "ningbo_gulou",
+      "fosha_dune",
+      "namcha_barwa",
+      "yarlung_canyon",
+      "sosong_village",
+      "biri_mountain",
+      "gongbu_park",
+      "gongbu_old_street",
+      "fujian_yuan",
+      "sejila_pass",
+      "zhatang_lutso",
+      "gangyun_forest",
+      "galang_palace",
+      "duodong_monastery",
+      "zhamo_monument",
+      "galongla_tunnel",
+      "guoguo_turn",
+      "motuo_museum",
+      "motuo_mirage",
+      "renqingbeng_monastery",
+      "zaxigang_village",
+      "alpine_pasture",
+      "basum_tso",
+      "jieba_village",
+      "xincuo",
+      "songtsam_basum",
+      "tibet_museum",
+      "norbulingka",
+      "yaowangshan",
+      "potala_square",
+      "potala_palace",
+      "heaven_post",
+      "jokhang_temple",
+      "barkhor_street",
+      "potala_night"
+];
+
+    const routeSegments = [
+      {
+            "mode": "walk",
+            "ids": [
+                  "tianyige",
+                  "ningbo_gulou"
+            ]
+      },
+      {
+            "mode": "flight",
+            "ids": [
+                  "ningbo_gulou",
+                  "fosha_dune"
+            ]
+      },
+      {
+            "mode": "drive",
+            "ids": [
+                  "fosha_dune",
+                  "namcha_barwa",
+                  "yarlung_canyon",
+                  "sosong_village",
+                  "biri_mountain",
+                  "gongbu_park",
+                  "gongbu_old_street",
+                  "fujian_yuan"
+            ]
+      },
+      {
+            "mode": "drive",
+            "ids": [
+                  "fujian_yuan",
+                  "sejila_pass",
+                  "zhatang_lutso",
+                  "gangyun_forest",
+                  "galang_palace"
+            ]
+      },
+      {
+            "mode": "drive",
+            "ids": [
+                  "galang_palace",
+                  "duodong_monastery",
+                  "zhamo_monument",
+                  "galongla_tunnel",
+                  "guoguo_turn",
+                  "motuo_museum",
+                  "motuo_mirage",
+                  "renqingbeng_monastery",
+                  "zaxigang_village"
+            ]
+      },
+      {
+            "mode": "drive",
+            "ids": [
+                  "zaxigang_village",
+                  "alpine_pasture",
+                  "basum_tso",
+                  "jieba_village",
+                  "xincuo",
+                  "songtsam_basum",
+                  "tibet_museum"
+            ]
+      },
+      {
+            "mode": "walk",
+            "ids": [
+                  "tibet_museum",
+                  "norbulingka",
+                  "yaowangshan",
+                  "potala_square",
+                  "potala_palace",
+                  "heaven_post",
+                  "jokhang_temple",
+                  "barkhor_street",
+                  "potala_night"
+            ]
+      }
+];
+
+    const spotInsights = {
+      "namcha_barwa": {
+            "unique": "索松村不是密集打卡，而是给南迦巴瓦留天气窗口；看到山本身就是当天最大收益。",
+            "history": "南迦巴瓦在雅鲁藏布大峡谷区域形成强烈高差，云雾变化极快，因此常被旅行者称作难得一见的神山。"
+      },
+      "gangyun_forest": {
+            "unique": "杉林徒步把波密的湿润森林、雪山和高原空气集中在一天里，是全程体力要求最高的自然体验之一。",
+            "history": "波密一带受印度洋水汽影响，森林景观和西藏常见的荒寒高原反差很大。"
+      },
+      "guoguo_turn": {
+            "unique": "果果塘大拐弯用一个完整江湾把墨脱的热带湿润感拉出来，和嘎隆拉雪山路段形成强烈切换。",
+            "history": "墨脱长期交通艰难，扎墨公路和嘎隆拉隧道让这条路线从艰险进藏路逐渐变成可抵达的旅行线路。"
+      },
+      "basum_tso": {
+            "unique": "巴松措的湖色、村落和雪山关系很适合慢住，住在景区内比单纯路过更能感到它的层次。",
+            "history": "巴松措是林芝重要湖泊景区，周边村落、寺庙和徒步线路共同组成多日停留空间。"
+      },
+      "potala_palace": {
+            "unique": "布达拉宫这天不只是拍照，而是用讲解把前面一路的藏地文化线索收束起来。",
+            "history": "布达拉宫是拉萨最重要的历史建筑之一，参观线路、预约时段和讲解质量会明显影响体验。"
+      }
+};
+
+    const days = [
+      {
+            "day": 1,
+            "date": "2025-09-28",
+            "title": "杭州南 → 宁波半日游 → 重庆",
+            "base": "重庆转机夜",
+            "lat": 29.873,
+            "lng": 121.55,
+            "sunLabel": "宁波",
+            "sunrise": "宁波约 05:49",
+            "sunset": "宁波约 17:45",
+            "alerts": [
+                  "14:08-15:04 G7595 杭州南到宁波",
+                  "宁波 T1 → 重庆 T3：21:05-23:35"
+            ],
+            "transport": "杭州南坐高铁到宁波，半日游后地铁 2 号线去栎社机场，再飞重庆。",
+            "timeline": [
+                  [
+                        "14:08-15:04",
+                        "杭州南 → 宁波，G7595，约 56 分钟"
+                  ],
+                  [
+                        "下午",
+                        "天一阁",
+                        "tianyige"
+                  ],
+                  [
+                        "傍晚",
+                        "宁波鼓楼",
+                        "ningbo_gulou"
+                  ],
+                  [
+                        "晚餐",
+                        "木木鲜海鲜面"
+                  ],
+                  [
+                        "晚间",
+                        "宁波站 → 宁波 T1，地铁 2 号线约 30 分钟"
+                  ],
+                  [
+                        "21:05-23:35",
+                        "宁波 T1 → 重庆 T3，约 2h30m"
+                  ]
+            ]
+      },
+      {
+            "day": 2,
+            "date": "2025-09-29",
+            "title": "重庆 → 林芝 → 索松村",
+            "base": "吉美·南迦巴瓦山居，277 元 1 晚，有早餐",
+            "lat": 29.598,
+            "lng": 94.919,
+            "sunLabel": "索松村",
+            "sunrise": "索松村约 07:34",
+            "sunset": "索松村约 19:28",
+            "alerts": [
+                  "06:40-09:05 重庆 T3 到林芝 T2，值机选左边",
+                  "林芝到索松村和酒店约车，100 元/人",
+                  "后花园适合半夜和早上拍照"
+            ],
+            "transport": "清晨飞林芝，落地后直接进索松村，下午轻松看山看江。",
+            "timeline": [
+                  [
+                        "06:40-09:05",
+                        "重庆 T3 → 林芝 T2，约 2h25m"
+                  ],
+                  [
+                        "中午",
+                        "林芝 → 索松村，酒店约车 100 元/人"
+                  ],
+                  [
+                        "下午",
+                        "佛掌沙丘",
+                        "fosha_dune"
+                  ],
+                  [
+                        "下午/傍晚",
+                        "南迦巴瓦峰",
+                        "namcha_barwa"
+                  ],
+                  [
+                        "下午",
+                        "雅鲁藏布大峡谷",
+                        "yarlung_canyon"
+                  ],
+                  [
+                        "晚上",
+                        "索松村",
+                        "sosong_village"
+                  ]
+            ]
+      },
+      {
+            "day": 3,
+            "date": "2025-09-30",
+            "title": "索松村 → 林芝市区转山闲逛",
+            "base": "林芝散步去咖啡民宿，356 元 2 晚，无早餐，有洗衣机",
+            "lat": 29.653,
+            "lng": 94.362,
+            "sunLabel": "林芝",
+            "sunrise": "林芝约 07:35",
+            "sunset": "林芝约 19:27",
+            "alerts": [
+                  "索松村到林芝市区提前找老板问车，100 元送到市区",
+                  "比日神山打车要说到入口栈道（拉丁嘎村）"
+            ],
+            "transport": "从索松村回林芝市区，下午比日神山转山，再在市区散步。",
+            "timeline": [
+                  [
+                        "上午",
+                        "索松村慢起，看南迦巴瓦天气"
+                  ],
+                  [
+                        "中午",
+                        "索松村 → 林芝市区"
+                  ],
+                  [
+                        "下午",
+                        "比日神山",
+                        "biri_mountain"
+                  ],
+                  [
+                        "下午",
+                        "工布公园",
+                        "gongbu_park"
+                  ],
+                  [
+                        "晚上",
+                        "工布老街",
+                        "gongbu_old_street"
+                  ]
+            ]
+      },
+      {
+            "day": 4,
+            "date": "2025-10-01",
+            "title": "林芝休息日",
+            "base": "林芝散步去咖啡民宿",
+            "lat": 29.653,
+            "lng": 94.362,
+            "sunLabel": "林芝",
+            "sunrise": "林芝约 07:36",
+            "sunset": "林芝约 19:25",
+            "alerts": [
+                  "这天主题是休息，不要临时加太满",
+                  "福建园里有响箭协会，可以看射箭"
+            ],
+            "transport": "酒店休息为主，附近轻散步。",
+            "timeline": [
+                  [
+                        "上午",
+                        "酒店休息、洗衣、调整状态"
+                  ],
+                  [
+                        "下午",
+                        "福建园",
+                        "fujian_yuan"
+                  ],
+                  [
+                        "晚上",
+                        "继续休息，为第二天开始的包车段留体力"
+                  ]
+            ]
+      },
+      {
+            "day": 5,
+            "date": "2025-10-02",
+            "title": "林芝 → 波密",
+            "base": "波密灵溪山居（岗云山林店），525 元 2 晚 2 人，有早餐",
+            "lat": 29.86,
+            "lng": 95.77,
+            "sunLabel": "波密",
+            "sunrise": "波密约 07:36",
+            "sunset": "波密约 19:25",
+            "alerts": [
+                  "司机接送到汇合点后开始包车段",
+                  "色季拉山口风大冷，多穿"
+            ],
+            "transport": "林芝出发去波密，赶路日穿插色季拉山口和扎塘鲁措。",
+            "timeline": [
+                  [
+                        "上午",
+                        "碰头，司机接送到汇合点"
+                  ],
+                  [
+                        "路上",
+                        "色季拉山口观景台",
+                        "sejila_pass"
+                  ],
+                  [
+                        "路上",
+                        "扎塘鲁措",
+                        "zhatang_lutso"
+                  ],
+                  [
+                        "傍晚",
+                        "抵达波密灵溪山居"
+                  ]
+            ]
+      },
+      {
+            "day": 6,
+            "date": "2025-10-03",
+            "title": "岗云杉林徒步 + 噶朗王宫",
+            "base": "波密灵溪山居（岗云山林店）",
+            "lat": 29.87,
+            "lng": 95.77,
+            "sunLabel": "波密",
+            "sunrise": "波密约 07:37",
+            "sunset": "波密约 19:24",
+            "alerts": [
+                  "岗云杉林徒步四五小时",
+                  "早上吃饱，带零食和水",
+                  "门票 80 元，国庆期间半价"
+            ],
+            "transport": "波密周边一日，上午徒步，下午按体力看噶朗王宫。",
+            "timeline": [
+                  [
+                        "上午-下午",
+                        "岗云杉林",
+                        "gangyun_forest"
+                  ],
+                  [
+                        "下午",
+                        "噶朗王宫",
+                        "galang_palace"
+                  ],
+                  [
+                        "晚上",
+                        "回波密休息"
+                  ]
+            ]
+      },
+      {
+            "day": 7,
+            "date": "2025-10-04",
+            "title": "波密 → 墨脱",
+            "base": "锦江之星酒店（林芝墨脱），326 元 1 晚 2 人",
+            "lat": 29.326,
+            "lng": 95.333,
+            "sunLabel": "墨脱",
+            "sunrise": "墨脱约 07:36",
+            "sunset": "墨脱约 19:24",
+            "alerts": [
+                  "锦江之星原无早餐，实际送了早餐",
+                  "墨脱博物馆免费，周一闭馆，17 点结束",
+                  "果果塘大拐弯门票 60 元"
+            ],
+            "transport": "波密到墨脱，穿过扎墨公路和嘎隆拉隧道，下午看墨脱核心点。",
+            "timeline": [
+                  [
+                        "上午",
+                        "多东寺",
+                        "duodong_monastery"
+                  ],
+                  [
+                        "路上",
+                        "扎墨公路纪念碑",
+                        "zhamo_monument"
+                  ],
+                  [
+                        "路上",
+                        "嘎隆拉隧道",
+                        "galongla_tunnel"
+                  ],
+                  [
+                        "下午",
+                        "果果塘大拐弯",
+                        "guoguo_turn"
+                  ],
+                  [
+                        "下午",
+                        "墨脱博物馆",
+                        "motuo_museum"
+                  ]
+            ]
+      },
+      {
+            "day": 8,
+            "date": "2025-10-05",
+            "title": "墨脱 → 鲁朗",
+            "base": "达琅酒店（鲁朗镇扎西岗村店），320.28 元 1 晚 2 人，有早餐",
+            "lat": 29.769,
+            "lng": 94.742,
+            "sunLabel": "鲁朗",
+            "sunrise": "鲁朗约 07:38",
+            "sunset": "鲁朗约 19:22",
+            "alerts": [
+                  "墨脱到鲁朗是赶路日",
+                  "鲁朗必吃石锅鸡"
+            ],
+            "transport": "上午看墨脱周边，之后从墨脱赶到鲁朗。",
+            "timeline": [
+                  [
+                        "上午",
+                        "海市蜃楼",
+                        "motuo_mirage"
+                  ],
+                  [
+                        "上午",
+                        "仁青崩寺",
+                        "renqingbeng_monastery"
+                  ],
+                  [
+                        "白天",
+                        "墨脱 → 鲁朗"
+                  ],
+                  [
+                        "傍晚",
+                        "扎西岗村",
+                        "zaxigang_village"
+                  ],
+                  [
+                        "晚餐",
+                        "鲁朗石锅鸡"
+                  ]
+            ]
+      },
+      {
+            "day": 9,
+            "date": "2025-10-06",
+            "title": "鲁朗 → 巴松措 / 结巴村",
+            "base": "巴松措纳拉尕布精品客栈，387 元 1 晚 2 人，有早餐",
+            "lat": 30.011,
+            "lng": 93.926,
+            "sunLabel": "巴松措",
+            "sunrise": "巴松措约 07:42",
+            "sunset": "巴松措约 19:25",
+            "alerts": [
+                  "高山牧场走小路可免费",
+                  "巴松措门票 120 元，住宿押金 60 会在酒店返还"
+            ],
+            "transport": "从鲁朗出发，经高山牧场去巴松措，晚上住结巴村。",
+            "timeline": [
+                  [
+                        "上午",
+                        "高山牧场",
+                        "alpine_pasture"
+                  ],
+                  [
+                        "白天",
+                        "鲁朗 → 巴松措"
+                  ],
+                  [
+                        "下午",
+                        "巴松措",
+                        "basum_tso"
+                  ],
+                  [
+                        "晚上",
+                        "结巴村",
+                        "jieba_village"
+                  ]
+            ]
+      },
+      {
+            "day": 10,
+            "date": "2025-10-07",
+            "title": "新措徒步 → 松赞躺平",
+            "base": "松赞巴松措林卡酒店，4573 元 1 晚 4 人",
+            "lat": 30.004,
+            "lng": 93.9,
+            "sunLabel": "巴松措",
+            "sunrise": "巴松措约 07:43",
+            "sunset": "巴松措约 19:24",
+            "alerts": [
+                  "结巴村到新措 500 元一车，8 点出发",
+                  "搓衣板路往返约 2.5 小时",
+                  "新措徒步 3 小时，清洁费 10 元"
+            ],
+            "transport": "早上从结巴村去新措徒步，下午回松赞巴松措林卡休息。",
+            "timeline": [
+                  [
+                        "08:00",
+                        "结巴村 → 新措，包车 500 元一车"
+                  ],
+                  [
+                        "上午-中午",
+                        "新措",
+                        "xincuo"
+                  ],
+                  [
+                        "下午",
+                        "松赞巴松措林卡",
+                        "songtsam_basum"
+                  ],
+                  [
+                        "晚上",
+                        "晚安饮品、洗衣烘干、躺平恢复"
+                  ]
+            ]
+      },
+      {
+            "day": 11,
+            "date": "2025-10-08",
+            "title": "松赞 → 林芝市区",
+            "base": "安丽卡酒店（林芝汽车站），184 元 1 晚 2 人",
+            "lat": 29.653,
+            "lng": 94.362,
+            "sunLabel": "林芝",
+            "sunrise": "林芝约 07:40",
+            "sunset": "林芝约 19:16",
+            "alerts": [
+                  "松赞到林芝包车 500 元一车",
+                  "安丽卡就在大巴站，很方便但条件普通"
+            ],
+            "transport": "从松赞返回林芝，住汽车站附近，为第二天去拉萨做准备。",
+            "timeline": [
+                  [
+                        "上午",
+                        "松赞住到较晚退房时间"
+                  ],
+                  [
+                        "白天",
+                        "松赞 → 林芝，包车 500 元一车"
+                  ],
+                  [
+                        "下午",
+                        "林芝市区闲逛"
+                  ],
+                  [
+                        "晚上",
+                        "住林芝汽车站附近"
+                  ]
+            ]
+      },
+      {
+            "day": 12,
+            "date": "2025-10-09",
+            "title": "林芝 → 拉萨 citywalk",
+            "base": "萨吉富氧酒店（布达拉宫店），354.35 元 2 晚，有早餐",
+            "lat": 29.657,
+            "lng": 91.116,
+            "sunLabel": "拉萨",
+            "sunrise": "拉萨约 07:54",
+            "sunset": "拉萨约 19:28",
+            "alerts": [
+                  "林芝 → 拉萨：8:00-12:00",
+                  "第一天到拉萨走慢点，洗澡不要洗头",
+                  "火车站可接站，提前 2 小时预约"
+            ],
+            "transport": "上午林芝到拉萨，下午以室内和低强度 citywalk 为主。",
+            "timeline": [
+                  [
+                        "08:00-12:00",
+                        "林芝 → 拉萨"
+                  ],
+                  [
+                        "下午",
+                        "西藏博物馆",
+                        "tibet_museum"
+                  ],
+                  [
+                        "机动",
+                        "罗布林卡",
+                        "norbulingka"
+                  ],
+                  [
+                        "傍晚",
+                        "药王山观景台",
+                        "yaowangshan"
+                  ]
+            ]
+      },
+      {
+            "day": 13,
+            "date": "2025-10-10",
+            "title": "布达拉宫 + 大昭寺 + 八廓街",
+            "base": "萨吉富氧酒店（布达拉宫店）",
+            "lat": 29.657,
+            "lng": 91.116,
+            "sunLabel": "拉萨",
+            "sunrise": "拉萨约 07:55",
+            "sunset": "拉萨约 19:27",
+            "alerts": [
+                  "布达拉宫一号线 11:00-11:20，可提前一小时进入",
+                  "大昭寺已预约 15:30-16:30",
+                  "天上邮局可寄明信片"
+            ],
+            "transport": "拉萨核心文化日，上午布达拉宫，下午大昭寺和八廓街，晚上看夜景。",
+            "timeline": [
+                  [
+                        "上午",
+                        "布达拉宫广场",
+                        "potala_square"
+                  ],
+                  [
+                        "11:00-11:20",
+                        "布达拉宫",
+                        "potala_palace"
+                  ],
+                  [
+                        "中午",
+                        "天上邮局",
+                        "heaven_post"
+                  ],
+                  [
+                        "15:30-16:30",
+                        "大昭寺",
+                        "jokhang_temple"
+                  ],
+                  [
+                        "傍晚",
+                        "八廓街",
+                        "barkhor_street"
+                  ],
+                  [
+                        "晚上",
+                        "布达拉宫夜景",
+                        "potala_night"
+                  ]
+            ]
+      },
+      {
+            "day": 14,
+            "date": "2025-10-11",
+            "title": "拉萨 → 成都 → 杭州",
+            "base": "返程",
+            "lat": 29.657,
+            "lng": 91.116,
+            "sunLabel": "拉萨",
+            "sunrise": "拉萨约 07:56",
+            "sunset": "返程日",
+            "alerts": [
+                  "8 点到航运站，小程序买大巴票 30 元，9 点到机场",
+                  "拉萨 T3 → 成都 T2：10:40-12:40",
+                  "成都 T1 → 杭州 T4：18:20-21:00，飞猪预约接机"
+            ],
+            "transport": "早上机场大巴去拉萨机场，经成都中转回杭州。",
+            "timeline": [
+                  [
+                        "08:00",
+                        "到航运站，买机场大巴票 30 元"
+                  ],
+                  [
+                        "09:00",
+                        "到拉萨机场"
+                  ],
+                  [
+                        "10:40-12:40",
+                        "拉萨 T3 → 成都 T2，贵宾厅休息"
+                  ],
+                  [
+                        "18:20-21:00",
+                        "成都 T1 → 杭州 T4，飞猪预约接机"
+                  ]
+            ]
+      }
+];
+
+    const foods = [
+      {
+            "area": "宁波",
+            "type": "过境晚餐",
+            "title": "木木鲜海鲜面",
+            "text": "Day 1 宁波半日游后的晚餐点，吃完直接去机场。过境日重点是稳，不要选太远餐厅。",
+            "budget": "按现场点单"
+      },
+      {
+            "area": "鲁朗",
+            "type": "必吃正餐",
+            "title": "鲁朗石锅鸡",
+            "text": "行程明确写“鲁朗必吃石锅鸡”，共同花费里有两顿记录，约 453-543 元/桌。",
+            "budget": "约 RMB 110-136/人"
+      },
+      {
+            "area": "墨脱",
+            "type": "赶路补给",
+            "title": "有盐有味川菜 + 芭蕉补给",
+            "text": "墨脱段记账里有川菜 330 元和芭蕉小额补给，湿热路段适合吃扎实一点。",
+            "budget": "约 RMB 80+/人"
+      },
+      {
+            "area": "巴松措",
+            "type": "湖区正餐",
+            "title": "巴河冷水鱼",
+            "text": "共同花费记录巴河冷水鱼 630 元，适合巴松措/结巴村段作为一顿正式餐。",
+            "budget": "约 RMB 158/人"
+      },
+      {
+            "area": "松赞巴松措",
+            "type": "酒店餐厅",
+            "title": "地平线餐厅",
+            "text": "松赞这晚主打恢复，记账里地平线餐厅 615 元。价格高一点，但胜在不用折腾。",
+            "budget": "约 RMB 154/人"
+      },
+      {
+            "area": "拉萨",
+            "type": "低强度补给",
+            "title": "潮汕砂锅粥 + 鲁固茶馆",
+            "text": "返程前两天在拉萨节奏放慢，砂锅粥、茶馆这类补给比重口味硬撑更友好。",
+            "budget": "约 RMB 13-37/人"
+      }
+];
+
+    const prep = [
+      {
+            "title": "交通确认",
+            "items": [
+                  "杭州南 → 宁波：2025-09-28 14:08-15:04，G7595。",
+                  "宁波 T1 → 重庆 T3：2025-09-28 21:05-23:35。",
+                  "重庆 T3 → 林芝 T2：2025-09-29 06:40-09:05，值机选左边。",
+                  "林芝 → 拉萨：2025-10-09 8:00-12:00。",
+                  "拉萨 T3 → 成都 T2：2025-10-11 10:40-12:40；成都 T1 → 杭州 T4：18:20-21:00。"
+            ]
+      },
+      {
+            "title": "高原与体力",
+            "items": [
+                  "刚到林芝和拉萨都不要走太快，第一天到拉萨洗澡不要洗头。",
+                  "岗云杉林徒步四五小时，早上吃饱，带零食和水。",
+                  "新措路况颠簸，搓衣板路往返约 2.5 小时，徒步约 3 小时。",
+                  "色季拉山口、嘎隆拉一带风大冷，多穿防风保暖层。"
+            ]
+      },
+      {
+            "title": "门票预约",
+            "items": [
+                  "天一阁：30 元。",
+                  "岗云杉林：门票 80 元，国庆期间半价。",
+                  "果果塘大拐弯：60 元。",
+                  "巴松措：120 元，住宿押金 60 会在酒店返还。",
+                  "新措：10 元清洁费。",
+                  "西藏博物馆：10 月 2 日去预约，重点看农奴主题。",
+                  "布达拉宫：一号线 11:00-11:20，可提前一小时进入。",
+                  "大昭寺：15:30-16:30 已预约。"
+            ]
+      },
+      {
+            "title": "住宿关键备注",
+            "items": [
+                  "吉美·南迦巴瓦山居：有早餐，后花园适合半夜和早上拍照。",
+                  "林芝散步去咖啡民宿：无早餐，有洗衣机。",
+                  "波密灵溪山居：有早餐，最早 10 点可入住。",
+                  "墨脱锦江之星：很新，实际送了早餐。",
+                  "松赞巴松措林卡：赠晚安饮品、自助下午茶，有洗衣机烘干机。",
+                  "安丽卡酒店：就在大巴站，很方便，但条件普通。",
+                  "萨吉富氧酒店：有早餐，火车站可接站，提前 2 小时预约。"
+            ]
+      }
+];
+
+    const allPlaces = [...spots, ...hotels];
+    let map;
+    let selectedId = "namcha_barwa";
+    let selectedImageIndex = 0;
+    let touchStartX = 0;
+    let lightboxTouchStartX = 0;
+    const routeTracker = { pending: 0, failed: 0 };
+
+    function displayName(item) {
+      return item.zh ? `${item.name}｜${item.zh}` : item.name;
+    }
+
+    function googleMapsUrl(item) {
+      return `https://www.google.com/maps/dir/?api=1&destination=${item.lat},${item.lng}&travelmode=driving`;
+    }
+
+    function appleMapsUrl(item) {
+      return `https://maps.apple.com/?daddr=${item.lat},${item.lng}&q=${encodeURIComponent(displayName(item))}`;
+    }
+
+    function setRouteStatus(message, warning = false, visible = true) {
+      const status = document.getElementById("routeStatus");
+      if (!status) return;
+      status.textContent = message;
+      status.classList.toggle("warning", warning);
+      status.classList.toggle("show", visible);
+    }
+
+    function updateRouteStatus() {
+      if (routeTracker.pending > 0) {
+        setRouteStatus(`正在加载自驾路线，还剩 ${routeTracker.pending} 段`);
+        return;
+      }
+      if (routeTracker.failed > 0) {
+        setRouteStatus(`有 ${routeTracker.failed} 段自驾路线加载失败，已用直线示意`, true);
+        return;
+      }
+      setRouteStatus("自驾路线已加载");
+      window.setTimeout(() => setRouteStatus("", false, false), 1200);
+    }
+
+    function iconFor(item, label) {
+      const iconClass = item.type === "hotel" ? "hotel" : item.type === "airport" ? "airport" : "";
+      return L.divIcon({
+        className: "",
+        html: `<div class="marker-pin ${iconClass}"><span>${label}</span></div>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30],
+        popupAnchor: [0, -28]
+      });
+    }
+
+    function initMap() {
+      if (typeof L === "undefined") {
+        renderMapUnavailable();
+        return;
+      }
+      map = L.map("map", { scrollWheelZoom: true });
+      const topo = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", {
+        maxZoom: 18,
+        attribution: "Tiles &copy; Esri"
+      });
+      const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: "&copy; OpenStreetMap contributors"
+      });
+      topo.addTo(map);
+      L.control.layers({ "地形地图": topo, "街道地图": osm }, null, { position: "topleft" }).addTo(map);
+
+      drawRoute();
+
+      spots.forEach((spot, index) => {
+        const marker = L.marker([spot.lat, spot.lng], { icon: iconFor(spot, index + 1) }).addTo(map);
+        marker.bindPopup(`<strong>${displayName(spot)}</strong><br>${spot.features.join(" · ")}`);
+        marker.on("click", () => selectSpot(spot.id));
+      });
+
+      hotels.forEach((hotel) => {
+        const marker = L.marker([hotel.lat, hotel.lng], { icon: iconFor(hotel, "住") }).addTo(map);
+        marker.bindPopup(`<strong>${displayName(hotel)}</strong><br>Day ${hotel.day} 住宿区域`);
+      });
+
+      fitMapToAllPlaces();
+      requestAnimationFrame(() => {
+        map.invalidateSize();
+        fitMapToAllPlaces();
+      });
+      setTimeout(() => {
+        map.invalidateSize();
+        fitMapToAllPlaces();
+      }, 350);
+    }
+
+    function renderMapUnavailable() {
+      const mapEl = document.getElementById("map");
+      if (mapEl) {
+        mapEl.classList.add("map-fallback");
+        mapEl.textContent = "地图资源暂时没有加载成功；下方每日行程、导航入口和准备清单仍可正常使用。";
+      }
+      setRouteStatus("地图资源未加载，刷新或联网后可恢复交互地图", true);
+    }
+
+    function loadLeaflet() {
+      if (window.L) return Promise.resolve();
+      setRouteStatus("正在加载地图资源");
+      if (!document.querySelector('link[data-leaflet-css="true"]')) {
+        const css = document.createElement("link");
+        css.rel = "stylesheet";
+        css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+        css.dataset.leafletCss = "true";
+        document.head.appendChild(css);
+      }
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        const timer = window.setTimeout(() => {
+          script.remove();
+          reject(new Error("leaflet load timeout"));
+        }, 8000);
+        script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+        script.onload = () => {
+          window.clearTimeout(timer);
+          resolve();
+        };
+        script.onerror = () => {
+          window.clearTimeout(timer);
+          reject(new Error("leaflet load failed"));
+        };
+        document.head.appendChild(script);
+      });
+    }
+
+    function fitMapToAllPlaces() {
+      const bounds = L.latLngBounds(allPlaces.map((place) => [place.lat, place.lng]));
+      const wide = window.matchMedia("(min-width: 981px)").matches;
+      const mobile = isMobileView();
+      map.fitBounds(bounds, {
+        paddingTopLeft: wide ? [56, 56] : [30, 34],
+        paddingBottomRight: wide ? [72, 56] : mobile ? [30, 118] : [30, 44],
+        maxZoom: 7
+      });
+    }
+
+    function isMobileView() {
+      return window.matchMedia("(max-width: 760px)").matches;
+    }
+
+    function openSpotSheet() {
+      document.querySelector(".spot-panel")?.classList.add("open");
+    }
+
+    function closeSpotSheet() {
+      document.querySelector(".spot-panel")?.classList.remove("open");
+    }
+
+    window.closeSpotSheet = closeSpotSheet;
+
+    function openImageLightbox(src, caption = "") {
+      if (!src) return;
+      const images = getSpotImages(currentSpot());
+      const index = images.findIndex((item) => item.src === src);
+      if (index >= 0) selectedImageIndex = index;
+      const lightbox = document.getElementById("imageLightbox");
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+      renderLightboxImage(caption);
+    }
+
+    function closeImageLightbox(event) {
+      if (event && event.target.closest(".lightbox-image, .lightbox-video, .lightbox-nav, .lightbox-dots")) return;
+      const lightbox = document.getElementById("imageLightbox");
+      const image = document.getElementById("lightboxImage");
+      const video = document.getElementById("lightboxVideo");
+      lightbox.classList.remove("open", "has-multiple", "show-video");
+      image.removeAttribute("src");
+      if (video) {
+        video.pause();
+        video.removeAttribute("src");
+        video.load();
+      }
+      document.body.style.overflow = "";
+    }
+
+    window.openImageLightbox = openImageLightbox;
+    window.closeImageLightbox = closeImageLightbox;
+
+    function getSpotImages(spot) {
+      const raw = Array.isArray(spot.images) && spot.images.length ? spot.images : [spot.image];
+      return raw.map((item) => typeof item === "string" ? { src: item } : item).filter((item) => item?.src);
+    }
+
+    function isVideoMedia(src = "") {
+      return /\.(mp4|webm|mov|m4v)(\?.*)?$/i.test(src);
+    }
+
+    function renderHeroMedia() {
+      const slot = document.getElementById("heroMediaSlot");
+      if (!slot || !heroMedia.src) return;
+      if (isVideoMedia(heroMedia.src)) {
+        slot.innerHTML = `<video class="hero-media is-video" autoplay muted loop playsinline preload="metadata" poster="${heroMedia.poster || ""}"><source src="${heroMedia.src}"></video>`;
+        return;
+      }
+      slot.innerHTML = `<img class="hero-media" src="${heroMedia.src}" alt="${heroMedia.alt || ""}">`;
+    }
+
+    function isVideoItem(item) {
+      return item?.type === "video" || isVideoMedia(item?.src);
+    }
+
+    function mediaCaption(item, spot, fallbackCaption = "") {
+      return item?.caption || fallbackCaption || displayName(spot);
+    }
+
+    function coverImageFor(spot, item) {
+      if (!isVideoItem(item)) return item?.src || spot.image;
+      return item?.poster || getSpotImages(spot).find((media) => !isVideoItem(media))?.src || spot.image;
+    }
+
+    function currentSpot() {
+      return spots.find((item) => item.id === selectedId) || spots[0];
+    }
+
+    function renderLightboxImage(fallbackCaption = "") {
+      const lightbox = document.getElementById("imageLightbox");
+      const imageEl = document.getElementById("lightboxImage");
+      const videoEl = document.getElementById("lightboxVideo");
+      const captionEl = document.getElementById("lightboxCaption");
+      const dots = document.getElementById("lightboxDots");
+      const spot = currentSpot();
+      const images = getSpotImages(spot);
+      const image = images[selectedImageIndex] || images[0];
+      if (!image || !lightbox || !imageEl || !videoEl || !captionEl || !dots) return;
+      selectedImageIndex = Math.max(0, Math.min(selectedImageIndex, images.length - 1));
+      const caption = mediaCaption(image, spot, fallbackCaption);
+      const videoMode = isVideoItem(image);
+      lightbox.classList.toggle("has-multiple", images.length > 1);
+      lightbox.classList.toggle("show-video", videoMode);
+      if (videoMode) {
+        imageEl.removeAttribute("src");
+        imageEl.alt = "";
+        videoEl.src = image.src;
+        videoEl.controls = true;
+        videoEl.playsInline = true;
+        videoEl.load();
+      } else {
+        videoEl.pause();
+        videoEl.removeAttribute("src");
+        videoEl.load();
+        imageEl.src = image.src;
+        imageEl.alt = caption || "景点图片";
+      }
+      captionEl.textContent = caption;
+      const touchTarget = videoMode ? videoEl : imageEl;
+      touchTarget.ontouchstart = (event) => {
+        lightboxTouchStartX = event.touches[0].clientX;
+      };
+      touchTarget.ontouchend = (event) => {
+        const delta = event.changedTouches[0].clientX - lightboxTouchStartX;
+        if (Math.abs(delta) > 42) shiftLightboxImage(delta < 0 ? 1 : -1, event);
+      };
+      dots.innerHTML = images.map((_, index) => `
+        <button class="lightbox-dot${index === selectedImageIndex ? " active" : ""}" type="button" aria-label="查看第 ${index + 1} 个放大媒体" onclick="setLightboxImage(${index}, event)"></button>
+      `).join("");
+    }
+
+    function renderSpotImageCarousel() {
+      const spot = currentSpot();
+      const images = getSpotImages(spot);
+      const image = images[selectedImageIndex] || images[0];
+      const wrap = document.getElementById("panelImageWrap");
+      const panelImage = document.getElementById("panelImage");
+      const dots = document.getElementById("panelImageDots");
+      if (!image) return;
+      selectedImageIndex = Math.max(0, Math.min(selectedImageIndex, images.length - 1));
+      const caption = mediaCaption(image, spot);
+      const videoMode = isVideoItem(image);
+      wrap.classList.toggle("has-multiple", images.length > 1);
+      panelImage.classList.toggle("has-video", videoMode);
+      panelImage.style.backgroundImage = videoMode ? "" : `url("${image.src}")`;
+      panelImage.innerHTML = videoMode
+        ? `<video class="panel-video" src="${image.src}" muted autoplay loop playsinline controls preload="metadata" aria-label="${caption}"></video>`
+        : "";
+      panelImage.setAttribute("role", "button");
+      panelImage.setAttribute("tabindex", "0");
+      panelImage.setAttribute("aria-label", videoMode ? `播放${displayName(spot)}视频` : `放大查看${displayName(spot)}图片`);
+      panelImage.onclick = (event) => {
+        if (videoMode && event.target.closest("video")) return;
+        openImageLightbox(image.src, caption);
+      };
+      panelImage.onkeydown = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openImageLightbox(image.src, caption);
+        }
+        if (event.key === "ArrowLeft") shiftSpotImage(-1);
+        if (event.key === "ArrowRight") shiftSpotImage(1);
+      };
+      panelImage.ontouchstart = (event) => {
+        touchStartX = event.touches[0].clientX;
+      };
+      panelImage.ontouchend = (event) => {
+        const delta = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(delta) > 42) shiftSpotImage(delta < 0 ? 1 : -1);
+      };
+      dots.innerHTML = images.map((_, index) => `
+        <button class="carousel-dot${index === selectedImageIndex ? " active" : ""}" type="button" aria-label="查看第 ${index + 1} 个媒体" onclick="setSpotImage(${index})"></button>
+      `).join("");
+    }
+
+    function setSpotImage(index, event) {
+      if (event) event.stopPropagation();
+      selectedImageIndex = index;
+      renderSpotImageCarousel();
+      renderRating();
+      if (document.getElementById("imageLightbox")?.classList.contains("open")) renderLightboxImage();
+    }
+
+    function shiftSpotImage(delta, event) {
+      if (event) event.stopPropagation();
+      const images = getSpotImages(currentSpot());
+      if (images.length <= 1) return;
+      selectedImageIndex = (selectedImageIndex + delta + images.length) % images.length;
+      renderSpotImageCarousel();
+      renderRating();
+      if (document.getElementById("imageLightbox")?.classList.contains("open")) renderLightboxImage();
+    }
+
+    function setLightboxImage(index, event) {
+      setSpotImage(index, event);
+    }
+
+    function shiftLightboxImage(delta, event) {
+      shiftSpotImage(delta, event);
+    }
+
+    window.setSpotImage = setSpotImage;
+    window.shiftSpotImage = shiftSpotImage;
+    window.setLightboxImage = setLightboxImage;
+    window.shiftLightboxImage = shiftLightboxImage;
+
+    async function drawRoute() {
+      routeTracker.pending = routeSegments.filter((segment) => segment.mode === "drive").length;
+      routeTracker.failed = 0;
+      updateRouteStatus();
+      const routeTasks = routeSegments.map(async (segment) => {
+        const points = segment.ids.map((id) => spots.find((spot) => spot.id === id)).filter(Boolean);
+        if (segment.mode === "drive") {
+          try {
+            const roadPath = await fetchRoadRoute(points);
+            drawPath(roadPath, false, "drive");
+          } catch (error) {
+            routeTracker.failed += 1;
+            drawLine(points, true, "fallback");
+          } finally {
+            routeTracker.pending = Math.max(0, routeTracker.pending - 1);
+            updateRouteStatus();
+          }
+        } else {
+          drawLine(points, true, segment.mode);
+        }
+      });
+      await Promise.all(routeTasks);
+    }
+
+    async function fetchRoadRoute(points) {
+      const coords = points.map((point) => `${point.lng},${point.lat}`).join(";");
+      const url = `https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`;
+      const controller = new AbortController();
+      const timer = window.setTimeout(() => controller.abort(), 6500);
+      let response;
+      try {
+        response = await fetch(url, { signal: controller.signal });
+      } finally {
+        window.clearTimeout(timer);
+      }
+      if (!response.ok) throw new Error("route request failed");
+      const payload = await response.json();
+      const coordinates = payload.routes?.[0]?.geometry?.coordinates;
+      if (!coordinates?.length) throw new Error("route geometry missing");
+      return coordinates.map(([lng, lat]) => [lat, lng]);
+    }
+
+    function drawLine(points, dashed, mode) {
+      const path = points.filter(Boolean).map((point) => [point.lat, point.lng]);
+      if (path.length < 2) return;
+      drawPath(path, dashed, mode);
+    }
+
+    function drawPath(path, dashed, mode) {
+      const color = mode === "ferry" ? "#1e6a8c" : mode === "fallback" ? "#6b7280" : "#bc6339";
+      L.polyline(path, { color: "#fff", weight: dashed ? 7 : 8, opacity: .9 }).addTo(map);
+      L.polyline(path, {
+        color,
+        weight: dashed ? 3 : 4,
+        opacity: .88,
+        dashArray: dashed ? "7 8" : null
+      }).addTo(map);
+    }
+
+    function ratingModel(spot) {
+      const labels = { nature: "自然", culture: "人文", weather: "天气", stamina: "体力" };
+      const score = Math.round((spot.ratings.nature + spot.ratings.culture + (10 - spot.ratings.weather * .35) + (10 - spot.ratings.stamina * .35)) / 4 * 10) / 10;
+      return { labels, score };
+    }
+
+    function renderRatingBars(spot) {
+      const { labels } = ratingModel(spot);
+      return Object.entries(spot.ratings).map(([key, value]) => `
+        <div class="bar-row">
+          <span>${labels[key]}</span>
+          <div class="bar"><span style="width:${value * 10}%"></span></div>
+          <strong>${value}</strong>
+        </div>
+      `).join("");
+    }
+
+    function renderPanelRating(spot) {
+      const { score } = ratingModel(spot);
+      return `
+        <div class="panel-rating">
+          <h4>综合评分：${score} / 10</h4>
+          <p>自然、人文、天气、体力四个维度的即时参考。</p>
+          ${renderRatingBars(spot)}
+        </div>
+      `;
+    }
+
+    function renderSpotInsights(spot) {
+      const insight = spotInsights[spot.id];
+      if (!insight) return "";
+      return `
+        <div class="mini-card context"><h4>景观特色</h4><p>${insight.unique}</p></div>
+        <div class="mini-card context"><h4>背景 / 历史</h4><p>${insight.history}</p></div>
+      `;
+    }
+
+    function selectSpot(id, openSheet = true) {
+      const spot = spots.find((item) => item.id === id) || spots[0];
+      selectedId = spot.id;
+      selectedImageIndex = 0;
+      renderSpotImageCarousel();
+      document.getElementById("panelBody").innerHTML = `
+        <div class="tag-row">
+        <span class="tag main">Day ${spot.day}</span>
+        <span class="tag">${spot.time}</span>
+        <span class="tag">建议 ${spot.stay}</span>
+        </div>
+        <h3>${displayName(spot)}</h3>
+        <p class="panel-intro">${spot.intro}</p>
+        <div class="tag-row">${spot.features.map((item) => `<span class="tag">${item}</span>`).join("")}</div>
+        <div class="action-row">
+          <a class="action-link primary" href="${googleMapsUrl(spot)}" target="_blank" rel="noopener">Google 导航</a>
+          <a class="action-link" href="${appleMapsUrl(spot)}" target="_blank" rel="noopener">Apple 地图</a>
+        </div>
+        ${renderPanelRating(spot)}
+        <div class="detail-list">
+          ${renderSpotInsights(spot)}
+          <div class="mini-card"><h4>怎么玩</h4><p>${spot.play}</p></div>
+          <div class="mini-card"><h4>注意事项</h4><p>${spot.note}</p></div>
+        </div>
+      `;
+      renderRating();
+      if (isMobileView() && openSheet) openSpotSheet();
+      if (map && openSheet) map.panTo([spot.lat, spot.lng], { animate: true, duration: .6 });
+    }
+
+    window.selectSpot = selectSpot;
+
+    function renderDays() {
+      document.getElementById("dayList").innerHTML = days.map((day) => `
+        <article class="card day-card${day.day === 1 ? " expanded" : ""}" id="day-${day.day}">
+          <div class="card-head">
+            <div>
+              <div class="card-title-row">
+                <h3>Day ${day.day} · ${day.title}</h3>
+                <span class="date-pill">${day.date.slice(5)}</span>
+              </div>
+              <p>${day.transport}</p>
+            </div>
+            <button class="day-toggle" type="button" onclick="toggleDay(this)">${day.day === 1 ? "收起" : "展开"}</button>
+          </div>
+          <ul class="timeline">
+            ${day.timeline.map((item) => renderTimelineItem(item)).join("")}
+          </ul>
+          ${renderDayAlerts(day)}
+          <div class="day-meta">
+            <div><span>住宿</span><strong>${day.base}</strong></div>
+            <div><span>日出</span><strong>${day.sunrise}</strong></div>
+            <div><span>日落</span><strong>${day.sunset}</strong></div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderDayJump() {
+      const jump = document.getElementById("dayJump");
+      if (!jump) return;
+      jump.innerHTML = days.map((day) => `
+        <button type="button" data-day="${day.day}" onclick="jumpToDay(${day.day})" aria-label="跳转到 Day ${day.day}">
+          <strong>D${day.day}</strong>
+          <span>${day.date.slice(5)}</span>
+        </button>
+      `).join("");
+      setActiveDayJump(days.find((day) => day.day === 1)?.day ?? days[0]?.day);
+    }
+
+    function setActiveDayJump(dayNumber) {
+      document.querySelectorAll("#dayJump button").forEach((button) => {
+        button.classList.toggle("active", Number(button.dataset.day) === dayNumber);
+      });
+    }
+
+    function jumpToDay(dayNumber) {
+      const card = document.getElementById(`day-${dayNumber}`);
+      if (!card) return;
+      card.classList.add("expanded");
+      const toggle = card.querySelector(".day-toggle");
+      if (toggle) toggle.textContent = "收起";
+      setActiveDayJump(dayNumber);
+      card.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    window.jumpToDay = jumpToDay;
+
+    function toggleDay(button) {
+      const card = button.closest(".day-card");
+      if (!card) return;
+      card.classList.toggle("expanded");
+      button.textContent = card.classList.contains("expanded") ? "收起" : "展开";
+    }
+
+    window.toggleDay = toggleDay;
+
+    function renderDayAlerts(day) {
+      if (!day.alerts?.length) return "";
+      return `<div class="alert-strip">${day.alerts.map((alert) => `<span class="alert-chip">${alert}</span>`).join("")}</div>`;
+    }
+
+    function renderTimelineItem(item) {
+      const placeId = item[2];
+      const text = placeId
+        ? `<button type="button" onclick="selectSpot('${placeId}')">${item[1]}</button>`
+        : `<span>${item[1]}</span>`;
+      return `<li><strong>${item[0]}</strong>${text}</li>`;
+    }
+
+    function renderFood() {
+      document.getElementById("foodGrid").innerHTML = foods.map((food) => `
+        <article class="food-card">
+          <span class="tag">${food.area}</span>
+          <h3>${food.title}</h3>
+          <p>${food.text}</p>
+          <div class="tag-row"><span class="tag">${food.type}</span><span class="tag">${food.budget}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderPrep() {
+      document.getElementById("prepGrid").innerHTML = prep.map((group) => `
+        <article class="prep-card">
+          <h3>${group.title}</h3>
+          <ul>${group.items.map((item) => `<li>${item}</li>`).join("")}</ul>
+        </article>
+      `).join("");
+    }
+
+    function populateTransport() {
+      const options = allPlaces.map((place) => `<option value="${place.id}">${displayName(place)}</option>`).join("");
+      document.getElementById("fromSelect").innerHTML = options;
+      document.getElementById("toSelect").innerHTML = options;
+      document.getElementById("fromSelect").value = "namcha_barwa";
+      document.getElementById("toSelect").value = "potala_palace";
+      document.getElementById("fromSelect").addEventListener("change", renderEstimate);
+      document.getElementById("toSelect").addEventListener("change", renderEstimate);
+      renderEstimate();
+    }
+
+    function renderEstimate() {
+      const from = allPlaces.find((place) => place.id === document.getElementById("fromSelect").value);
+      const to = allPlaces.find((place) => place.id === document.getElementById("toSelect").value);
+      const km = haversine(from, to) * 1.22;
+      const walkHours = km / 4.6;
+      const modes = [
+        ["自驾", km / 62, "山区和海岸路会更慢"],
+        ["公共交通", km / 35 + 0.5, "塔州班次少，需当天查"],
+        ["步行", walkHours, "30 分钟内才展示"]
+      ].filter(([label, hours]) => label !== "步行" || hours <= 0.5);
+      document.getElementById("estimateBox").innerHTML = modes.map(([label, hours, note]) => `
+        <div><span>${label}</span><strong>${formatDuration(hours)}</strong><small>${note}</small></div>
+      `).join("");
+    }
+
+    function renderRating() {
+      const spot = spots.find((item) => item.id === selectedId) || spots[0];
+      const image = getSpotImages(spot)[selectedImageIndex] || getSpotImages(spot)[0] || { src: spot.image };
+      const videoMode = isVideoItem(image);
+      const coverImage = coverImageFor(spot, image);
+      const caption = mediaCaption(image, spot);
+      const { score } = ratingModel(spot);
+      const ratingPanel = document.getElementById("ratingPanel");
+      ratingPanel.innerHTML = `
+        <div class="rating-image${videoMode ? " has-video" : ""}" role="button" tabindex="0" aria-label="${videoMode ? `播放${displayName(spot)}视频` : `放大查看${displayName(spot)}图片`}" style="background-image:url('${coverImage}')"></div>
+        <h3>${displayName(spot)}</h3>
+        <p>${spot.intro}</p>
+        <div class="tag-row">${spot.features.slice(0, 3).map((item) => `<span class="tag">${item}</span>`).join("")}</div>
+        <p>综合评分：${score} / 10</p>
+        ${renderRatingBars(spot)}
+      `;
+      const ratingImage = ratingPanel.querySelector(".rating-image");
+      ratingImage.onclick = () => openImageLightbox(image.src, caption);
+      ratingImage.onkeydown = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openImageLightbox(image.src, caption);
+        }
+      };
+    }
+
+    function haversine(a, b) {
+      const radius = 6371;
+      const dLat = toRad(b.lat - a.lat);
+      const dLng = toRad(b.lng - a.lng);
+      const lat1 = toRad(a.lat);
+      const lat2 = toRad(b.lat);
+      const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
+      return 2 * radius * Math.asin(Math.sqrt(h));
+    }
+
+    function toRad(value) {
+      return value * Math.PI / 180;
+    }
+
+    function formatDuration(hours) {
+      const mins = Math.max(3, Math.round(hours * 60));
+      const h = Math.floor(mins / 60);
+      const m = mins % 60;
+      return h ? `${h}h ${m}m` : `${m}m`;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderHeroMedia();
+      renderDays();
+      renderDayJump();
+      renderFood();
+      renderPrep();
+      populateTransport();
+      selectSpot(selectedId, false);
+      loadLeaflet().then(initMap).catch(renderMapUnavailable);
+      document.querySelectorAll(".nav a").forEach((link) => {
+        link.addEventListener("click", closeSpotSheet);
+      });
+      window.addEventListener("resize", () => {
+        closeSpotSheet();
+        if (!map) return;
+        window.clearTimeout(window.__mapResizeTimer);
+        window.__mapResizeTimer = window.setTimeout(() => {
+          map.invalidateSize();
+          fitMapToAllPlaces();
+        }, 180);
+      });
+      document.addEventListener("keydown", (event) => {
+        const lightboxOpen = document.getElementById("imageLightbox")?.classList.contains("open");
+        if (event.key === "Escape") closeImageLightbox();
+        if (!lightboxOpen) return;
+        if (event.key === "ArrowLeft") shiftLightboxImage(-1, event);
+        if (event.key === "ArrowRight") shiftLightboxImage(1, event);
+      });
+    });
+  </script>
+</body>
+</html>

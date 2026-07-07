@@ -1,0 +1,1109 @@
+{
+  "page": {
+    "title": "2024 国庆印尼北斗七星 10 日游",
+    "htmlTitle": "2024 国庆印尼北斗七星行程攻略",
+    "description": "从雅加达入境，串起日惹双遗产、布罗莫火山、赛武瀑布、泗水和科莫多海岛，最后从雅加达返程的国庆 10 日路线。",
+    "eyebrow": "Indonesia · 2024.09.27-10.06",
+    "heroTitle": "印尼北斗七星10日游",
+    "heroCopy": "从雅加达城市初见开始，到日惹的婆罗浮屠与普兰巴南，再转入布罗莫银河日出、赛武瀑布湿身徒步，最后把帕达尔岛、科莫多龙、粉红沙滩和卡隆岛蝙蝠日落收进海风里。",
+    "heroImage": "assets/indonesia-hero.jpg",
+    "heroAlt": "帕达尔岛三色海湾与山脊",
+    "notice": "这条路线强度很高：布罗莫凌晨出发、赛武瀑布会湿身、科莫多出海暴晒。火山段准备保暖层、口罩/护目镜和三脚架，瀑布段准备速干衣、溯溪鞋和防水包，海岛段重点防晒补水。",
+    "footer": "2024 国庆印尼北斗七星行程攻略 · 图片来自旅途素材",
+    "mapKicker": "Route Map",
+    "mapTitle": "雅加达 · 日惹 · 东爪哇 · 科莫多路线地图",
+    "mapLead": "地图串起爪哇岛城市与火山瀑布，再跳到弗洛勒斯和科莫多海岛。跨城段以航班、火车和包车衔接，科莫多段以出海一日游和包船看蝙蝠为主。",
+    "itineraryKicker": "Daily Plan",
+    "itineraryTitle": "每日行程安排",
+    "itineraryLead": "按日期、交通、景点说明和住宿备注整理。点击时间线里的景点名，可以联动地图与详情面板。",
+    "foodKicker": "Food",
+    "foodTitle": "沿线餐饮与补给",
+    "foodLead": "这趟以赶路、火山、瀑布和出海为主，吃饭重点是补能量、带水、防止湿冷和暴晒。",
+    "prepKicker": "Before Departure",
+    "prepTitle": "需要提前确认的东西",
+    "prepLead": "集中整理入境申报、签证、火山装备、瀑布装备、浮潜装备、交通票和酒店接驳。",
+    "defaultSelectedSpotId": "padar_island",
+    "defaultFromId": "taman_mini",
+    "defaultToId": "kalong_bats",
+    "timeZone": "Asia/Jakarta"
+  },
+  "heroStats": [
+    {
+      "value": "10 日",
+      "label": "9/27-10/6 国庆路线"
+    },
+    {
+      "value": "3 段",
+      "label": "雅加达 / 日惹东爪哇 / 科莫多"
+    },
+    {
+      "value": "火山海岛",
+      "label": "Bromo / Tumpak Sewu / Padar / Komodo"
+    }
+  ],
+  "spots": [
+    {
+      "id": "taman_mini",
+      "name": "Taman Mini Indonesia Indah",
+      "zh": "雅加达缩影公园",
+      "type": "spot",
+      "day": 0,
+      "time": "9/27 下午",
+      "lat": -6.3024,
+      "lng": 106.8951,
+      "stay": "1.5-2.5 小时",
+      "image": "assets/image1.png",
+      "images": [
+        {
+          "src": "assets/image1.png",
+          "caption": "Taman Mini Indonesia Indah｜雅加达缩影公园"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["印尼建筑缩影", "09:00-17:30", "门票 25k"],
+      "intro": "雅加达缩影公园把印尼不同地区的建筑、文化和区域风貌集中在一个大公园里，适合作为刚落地后的轻量开场。",
+      "play": "Grab 打车过去即可；园内有免费景区车，人多时也可以租小电驴。",
+      "note": "现场可能不能用现金购票，可提前在平台买票。",
+      "ratings": { "nature": 4, "culture": 7, "weather": 6, "stamina": 4 }
+    },
+    {
+      "id": "jakarta_cathedral",
+      "name": "Jakarta Cathedral",
+      "zh": "雅加达大教堂",
+      "type": "spot",
+      "day": 0,
+      "time": "9/27 下午",
+      "lat": -6.1693,
+      "lng": 106.8334,
+      "stay": "20-40 分钟",
+      "image": "assets/image3.png",
+      "images": [
+        {
+          "src": "assets/image3.png",
+          "caption": "Jakarta Cathedral｜雅加达大教堂"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["教堂", "老城节点", "06:00-12:00 / 15:30-21:00"],
+      "intro": "雅加达大教堂位于市中心，与伊斯蒂克拉尔清真寺隔街相望，是雅加达宗教建筑并置感最强的区域之一。",
+      "play": "适合和伊斯蒂克拉尔清真寺、国家纪念碑一起串成 citywalk。",
+      "note": "注意开放时段，下午段更适合和落地行程衔接。",
+      "ratings": { "nature": 1, "culture": 7, "weather": 4, "stamina": 2 }
+    },
+    {
+      "id": "istiqlal_mosque",
+      "name": "Istiqlal Mosque",
+      "zh": "伊斯蒂克拉尔清真寺",
+      "type": "spot",
+      "day": 0,
+      "time": "9/27 下午",
+      "lat": -6.1702,
+      "lng": 106.8314,
+      "stay": "30-60 分钟",
+      "image": "assets/image4.png",
+      "images": [
+        {
+          "src": "assets/image4.png",
+          "caption": "Istiqlal Mosque｜伊斯蒂克拉尔清真寺"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["大清真寺", "10:00-16:30", "市中心"],
+      "intro": "伊斯蒂克拉尔清真寺是雅加达最重要的清真寺之一，空间尺度巨大，和对面的大教堂形成有意思的城市对话。",
+      "play": "从大教堂步行过去，控制停留时间，后面还要接国家纪念碑和老城。",
+      "note": "注意着装和礼拜时间。",
+      "ratings": { "nature": 1, "culture": 8, "weather": 4, "stamina": 3 }
+    },
+    {
+      "id": "monas",
+      "name": "National Monument",
+      "zh": "雅加达国家纪念碑广场",
+      "type": "spot",
+      "day": 0,
+      "time": "9/27 下午",
+      "lat": -6.1754,
+      "lng": 106.8272,
+      "stay": "30-60 分钟",
+      "image": "assets/image5.png",
+      "images": [
+        {
+          "src": "assets/image5.png",
+          "caption": "National Monument｜雅加达国家纪念碑广场"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["城市地标", "08:00-15:00", "广场散步"],
+      "intro": "国家纪念碑是雅加达核心地标，适合在市中心快速打卡，感受城市尺度。",
+      "play": "如果到达时间较晚，可以只在广场外观拍照。",
+      "note": "开放时间偏早，落地当天更适合作为外观打卡。",
+      "ratings": { "nature": 2, "culture": 6, "weather": 6, "stamina": 2 }
+    },
+    {
+      "id": "national_museum_jakarta",
+      "name": "National Museum",
+      "zh": "雅加达国家博物馆",
+      "type": "spot",
+      "day": 0,
+      "time": "9/27 下午备选",
+      "lat": -6.1764,
+      "lng": 106.8217,
+      "stay": "1-1.5 小时",
+      "image": "assets/image6.png",
+      "images": [
+        {
+          "src": "assets/image6.png",
+          "caption": "National Museum｜雅加达国家博物馆"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["室内备选", "文化线", "市中心"],
+      "intro": "雅加达国家博物馆适合作为高温或下雨时的室内备选，帮助快速建立印尼历史文化背景。",
+      "play": "如果缩影公园耗时过长，国家博物馆可以放弃。",
+      "note": "当天经过长途飞行，室内点不要排太满。",
+      "ratings": { "nature": 1, "culture": 7, "weather": 2, "stamina": 3 }
+    },
+    {
+      "id": "kota_tua",
+      "name": "Kota Tua Jakarta",
+      "zh": "荷兰老城",
+      "type": "spot",
+      "day": 0,
+      "time": "9/27 傍晚备选",
+      "lat": -6.1352,
+      "lng": 106.8133,
+      "stay": "45-90 分钟",
+      "image": "assets/image7.png",
+      "images": [
+        {
+          "src": "assets/image7.png",
+          "caption": "Kota Tua Jakarta｜荷兰老城"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["老城", "殖民建筑", "傍晚散步"],
+      "intro": "Kota Tua 是雅加达老城区域，保留了殖民时期建筑和广场氛围。",
+      "play": "如果 D0 体力够，可以把这里放在 citywalk 最后；体力不足就直接回机场酒店。",
+      "note": "傍晚人流较多，注意随身物品。",
+      "ratings": { "nature": 1, "culture": 6, "weather": 5, "stamina": 4 }
+    },
+    {
+      "id": "masangin",
+      "name": "Masangin Banyan Trees",
+      "zh": "Masangin 大榕树",
+      "type": "spot",
+      "day": 1,
+      "time": "9/28 晚间",
+      "lat": -7.8117,
+      "lng": 110.363,
+      "stay": "30-60 分钟",
+      "image": "assets/image10.jpg",
+      "images": [
+        {
+          "src": "assets/image10.jpg",
+          "caption": "Masangin Banyan Trees｜大榕树"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["神话传说", "夜间散步", "心愿游戏"],
+      "intro": "Masangin 的传说是闭眼穿过两棵榕树之间，就能实现心里的愿望。",
+      "play": "日惹集合日晚上去轻松玩一下，作为后面高强度行程前的热身。",
+      "note": "人多时不要把手机钱包放外侧口袋。",
+      "ratings": { "nature": 3, "culture": 6, "weather": 4, "stamina": 2 }
+    },
+    {
+      "id": "borobudur",
+      "name": "Borobudur Temple",
+      "zh": "婆罗浮屠",
+      "type": "spot",
+      "day": 2,
+      "time": "9/29 上午",
+      "lat": -7.6079,
+      "lng": 110.2038,
+      "stay": "2-3 小时",
+      "image": "assets/image11.png",
+      "images": [
+        {
+          "src": "assets/image11.png",
+          "caption": "Borobudur Temple｜婆罗浮屠"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["世界遗产", "06:00-17:00", "登顶票"],
+      "intro": "婆罗浮屠是爪哇最具代表性的佛教遗迹，石塔层层上升，清晨顺光时最适合拍摄。",
+      "play": "提前在线买票，选择外国游客区和登顶票；官方通常提前一周放票，周一闭园。",
+      "note": "无人机禁飞，会查包；越早越好，中午石头非常热。",
+      "ratings": { "nature": 5, "culture": 10, "weather": 8, "stamina": 6 }
+    },
+    {
+      "id": "prambanan",
+      "name": "Prambanan Temple",
+      "zh": "普兰巴南",
+      "type": "spot",
+      "day": 2,
+      "time": "9/29 下午",
+      "lat": -7.752,
+      "lng": 110.4915,
+      "stay": "2-3 小时",
+      "image": "assets/image13.png",
+      "images": [
+        {
+          "src": "assets/image13.png",
+          "caption": "Prambanan Temple｜普兰巴南"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["印度教遗迹", "06:30-17:00", "17 点光线好"],
+      "intro": "普兰巴南是日惹另一座重量级遗迹，尖塔群和夕阳光线很适合和婆罗浮屠形成一日双遗产路线。",
+      "play": "15 点左右出发，约 15:40 到达，避开最热时段，17 点前后光线最好。",
+      "note": "无人机禁飞；可以和婆罗浮屠一起买联票。",
+      "ratings": { "nature": 4, "culture": 10, "weather": 8, "stamina": 5 }
+    },
+    {
+      "id": "malioboro_axis",
+      "name": "Yogyakarta Axis Citywalk",
+      "zh": "日惹中轴线 citywalk",
+      "type": "spot",
+      "day": 3,
+      "time": "9/30 上午",
+      "lat": -7.7928,
+      "lng": 110.3658,
+      "stay": "1-2 小时",
+      "image": "assets/image14.png",
+      "images": [
+        {
+          "src": "assets/image14.png",
+          "caption": "Yogyakarta Axis Citywalk｜日惹中轴线"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["中轴线", "申遗街区", "市内步行"],
+      "intro": "日惹老城区中轴线把南端宫城到北端纪念碑串联起来，适合作为离开日惹前的城市散步。",
+      "play": "上午从老城一路向火车站方向走，结合王宫、水宫和午餐。",
+      "note": "下午要坐火车去泗水，不要把 citywalk 走散。",
+      "ratings": { "nature": 2, "culture": 7, "weather": 5, "stamina": 5 }
+    },
+    {
+      "id": "kraton_yogyakarta",
+      "name": "Kraton Yogyakarta",
+      "zh": "日惹王宫",
+      "type": "spot",
+      "day": 3,
+      "time": "9/30 上午",
+      "lat": -7.8053,
+      "lng": 110.3642,
+      "stay": "30-60 分钟",
+      "image": "assets/image15.png",
+      "images": [
+        {
+          "src": "assets/image15.png",
+          "caption": "Kraton Yogyakarta｜日惹王宫"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["08:30-14:00", "门票 25k", "王宫展览"],
+      "intro": "日惹王宫是日惹特区国王居住的地方，部分区域对外开放展览。",
+      "play": "游览约 30 分钟即可，作为日惹中轴线的重要节点。",
+      "note": "开放到 14:00，上午去更稳。",
+      "ratings": { "nature": 1, "culture": 8, "weather": 4, "stamina": 3 }
+    },
+    {
+      "id": "taman_sari",
+      "name": "Taman Sari Water Castle",
+      "zh": "水宫",
+      "type": "spot",
+      "day": 3,
+      "time": "9/30 上午",
+      "lat": -7.8101,
+      "lng": 110.359,
+      "stay": "30-60 分钟",
+      "image": "assets/image16.png",
+      "images": [
+        {
+          "src": "assets/image16.png",
+          "caption": "Taman Sari｜水宫"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["09:00-15:00", "门票 25k", "王宫后花园"],
+      "intro": "水宫类似王宫后花园，从王宫步行约 10 分钟即可抵达。",
+      "play": "和王宫连在一起看，整体控制在 1 小时左右。",
+      "note": "空间不大，重点是水池和建筑线条。",
+      "ratings": { "nature": 2, "culture": 7, "weather": 5, "stamina": 3 }
+    },
+    {
+      "id": "java_train",
+      "name": "Java Train to Surabaya",
+      "zh": "印尼小绿皮",
+      "type": "spot",
+      "day": 3,
+      "time": "9/30 13:38-17:35",
+      "lat": -7.7897,
+      "lng": 110.3639,
+      "stay": "约 4-5 小时",
+      "image": "assets/image17.png",
+      "images": [
+        {
+          "src": "assets/image17.png",
+          "caption": "Java Train｜日惹前往泗水"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["火车", "13:38-17:35", "冷气足"],
+      "intro": "日惹到泗水的火车是从城市遗产线转入火山线的过渡段，车窗风景和补觉都很重要。",
+      "play": "提前买票，经济舱椅背不能调，商务舱可倾斜；冷气足，带外套。",
+      "note": "印尼火车可能晚点，下车后还要通宵爬火山。",
+      "ratings": { "nature": 5, "culture": 3, "weather": 2, "stamina": 4 }
+    },
+    {
+      "id": "bromo_penanjakan",
+      "name": "Penanjakan Viewpoint",
+      "zh": "布罗莫日出观景台",
+      "type": "spot",
+      "day": 4,
+      "time": "10/1 03:00-06:00",
+      "lat": -7.909,
+      "lng": 112.95,
+      "stay": "3 小时",
+      "image": "assets/image18.png",
+      "images": [
+        {
+          "src": "assets/image18.png",
+          "caption": "Penanjakan Viewpoint｜布罗莫日出"
+        },
+        {
+          "src": "assets/image20.png",
+          "caption": "Bromo Milky Way｜布罗莫银河"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["银河", "日出", "网红树"],
+      "intro": "Penanjakan 观景平台是看布罗莫火山群、银河和日出的核心位置，凌晨最辛苦但也最值。",
+      "play": "3:00 到山顶拍银河，5:00 拍日出，5:30 去网红树拍人像，6:00 出发去 Bromo 山下。",
+      "note": "温差很大，长裤、摇粒绒或薄羽绒内搭、冲锋衣都用得上。",
+      "ratings": { "nature": 10, "culture": 3, "weather": 10, "stamina": 8 }
+    },
+    {
+      "id": "bromo_crater",
+      "name": "Mount Bromo Crater",
+      "zh": "布罗莫火山口",
+      "type": "spot",
+      "day": 4,
+      "time": "10/1 08:00-09:30",
+      "lat": -7.9425,
+      "lng": 112.953,
+      "stay": "1.5-2 小时",
+      "image": "assets/image19.png",
+      "images": [
+        {
+          "src": "assets/image19.png",
+          "caption": "Mount Bromo Crater｜布罗莫火山口"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["火山口", "吉普车", "火山灰"],
+      "intro": "布罗莫火山口是东爪哇火山线的经典体验，近距离走到火山口边缘会比远观更有冲击力。",
+      "play": "8:00 到 Bromo 山下，9:00 登顶火山口，9:30 返回山下。",
+      "note": "必备口罩、护目镜或墨镜和防晒；护栏有断开处，安全第一。",
+      "ratings": { "nature": 9, "culture": 3, "weather": 8, "stamina": 8 }
+    },
+    {
+      "id": "pronojiwo",
+      "name": "Pronojiwo Village",
+      "zh": "Pronojiwo 小村庄",
+      "type": "spot",
+      "day": 5,
+      "time": "10/2 上午",
+      "lat": -8.2305,
+      "lng": 112.915,
+      "stay": "30-60 分钟",
+      "image": "assets/image21.png",
+      "images": [
+        {
+          "src": "assets/image21.png",
+          "caption": "Pronojiwo Village｜火山小村庄"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["塞梅鲁火山", "村庄风景", "拍照"],
+      "intro": "Pronojiwo 靠近赛武瀑布，天气好时能把村庄和塞梅鲁火山一起拍出富士山感。",
+      "play": "把参考照片给司机看，通常司机知道类似机位。",
+      "note": "作为去赛武前的轻停靠，不要耽误瀑布最佳光线。",
+      "ratings": { "nature": 8, "culture": 3, "weather": 8, "stamina": 2 }
+    },
+    {
+      "id": "tumpak_sewu",
+      "name": "Tumpak Sewu Waterfall",
+      "zh": "赛武瀑布",
+      "type": "spot",
+      "day": 5,
+      "time": "10/2 10:00",
+      "lat": -8.2306,
+      "lng": 112.9153,
+      "stay": "约 3 小时",
+      "image": "assets/image22.png",
+      "images": [
+        {
+          "src": "assets/image22.png",
+          "caption": "Tumpak Sewu Waterfall｜赛武瀑布"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["瀑布徒步", "可飞但水汽重", "速干衣溯溪鞋"],
+      "intro": "赛武瀑布是东爪哇最壮观的瀑布之一，峡谷湿滑、雾气和水汽都很强，但画面非常震撼。",
+      "play": "最好 10 点去，雾气基本散开，太阳能照下去；全程约 3 小时。",
+      "note": "穿速干衣和溯溪鞋，带防水包；相机容易湿，飞行设备不要飞太低。",
+      "ratings": { "nature": 10, "culture": 2, "weather": 9, "stamina": 9 }
+    },
+    {
+      "id": "surabaya_city",
+      "name": "Surabaya City",
+      "zh": "泗水 citywalk",
+      "type": "spot",
+      "day": 6,
+      "time": "10/3 上午",
+      "lat": -7.2575,
+      "lng": 112.7521,
+      "stay": "半日弹性",
+      "image": "assets/image25.png",
+      "images": [
+        {
+          "src": "assets/image25.png",
+          "caption": "Surabaya City｜泗水街景"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["城市休整", "补给", "飞科莫多前过渡"],
+      "intro": "泗水这天主要承担休整和转场功能，上午补觉、吃饭、采购，下午飞科莫多。",
+      "play": "火山瀑布两天后不要安排太硬，优先洗衣、补给和去机场。",
+      "note": "泗水到科莫多航班 14:00-16:30。",
+      "ratings": { "nature": 2, "culture": 4, "weather": 4, "stamina": 2 }
+    },
+    {
+      "id": "labuan_bajo",
+      "name": "Labuan Bajo",
+      "zh": "科莫多小镇",
+      "type": "spot",
+      "day": 6,
+      "time": "10/3 傍晚",
+      "lat": -8.496,
+      "lng": 119.887,
+      "stay": "半日",
+      "image": "assets/image26.png",
+      "images": [
+        {
+          "src": "assets/image26.png",
+          "caption": "Labuan Bajo｜科莫多小镇"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["出海基地", "旅行社预订", "酒店入住"],
+      "intro": "Labuan Bajo 是前往科莫多国家公园的出海基地，镇上旅行社很多，可以现场比价。",
+      "play": "抵达后先入住，晚上找当地旅行社确认第二天出海一日游。",
+      "note": "如果订 Klook 更省心，当地旅行社通常更便宜。",
+      "ratings": { "nature": 6, "culture": 3, "weather": 6, "stamina": 2 }
+    },
+    {
+      "id": "padar_island",
+      "name": "Padar Island",
+      "zh": "帕达尔岛",
+      "type": "spot",
+      "day": 7,
+      "time": "10/4 上午",
+      "lat": -8.653,
+      "lng": 119.585,
+      "stay": "1.5-2 小时",
+      "image": "assets/image29.png",
+      "images": [
+        {
+          "src": "assets/image29.png",
+          "caption": "Padar Island｜帕达尔岛"
+        },
+        {
+          "src": "assets/indonesia-hero.jpg",
+          "caption": "Padar Island｜帕达尔岛横幅视角"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["人间塞尔达", "爬坡约半小时", "无人机额外收费"],
+      "intro": "帕达尔岛山脊同时看见多色海湾，是科莫多线路最标志性的视角。",
+      "play": "轻装上阵，防晒补水；爬到高点大约半小时，一路有几个 view point，人少时先拍。",
+      "note": "想飞行拍摄需要额外交费；越晚人越多。",
+      "ratings": { "nature": 10, "culture": 2, "weather": 10, "stamina": 7 }
+    },
+    {
+      "id": "komodo_dragon",
+      "name": "Komodo Dragon",
+      "zh": "科莫多巨蜥",
+      "type": "spot",
+      "day": 7,
+      "time": "10/4 中午",
+      "lat": -8.544,
+      "lng": 119.489,
+      "stay": "1-1.5 小时",
+      "image": "assets/image30.png",
+      "images": [
+        {
+          "src": "assets/image30.png",
+          "caption": "Komodo Dragon｜科莫多巨蜥"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["科莫多龙", "国家公园", "向导陪同"],
+      "intro": "科莫多巨蜥是世界上个头最大的蜥蜴，成年雄蜥体长可达 3 米，是这条海岛线最独特的野生动物体验。",
+      "play": "跟随向导走指定路线，听从安全距离要求，不要为了拍照靠太近。",
+      "note": "天气热且暴晒，带足水。",
+      "ratings": { "nature": 9, "culture": 4, "weather": 8, "stamina": 4 }
+    },
+    {
+      "id": "komodo_snorkeling",
+      "name": "Komodo Snorkeling",
+      "zh": "科莫多浮潜",
+      "type": "spot",
+      "day": 7,
+      "time": "10/4 下午",
+      "lat": -8.602,
+      "lng": 119.521,
+      "stay": "1-2 小时",
+      "image": "assets/image31.png",
+      "images": [
+        {
+          "src": "assets/image31.png",
+          "caption": "Komodo Snorkeling｜科莫多浮潜"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["热带鱼", "海胆", "珊瑚"],
+      "intro": "科莫多海域的浮潜可以看到热带鱼、珊瑚和清澈海水，是出海日的中段放松点。",
+      "play": "最好自备浮潜装备，现场装备质量不稳定。",
+      "note": "注意海胆和船只，别离队太远。",
+      "ratings": { "nature": 9, "culture": 1, "weather": 9, "stamina": 5 }
+    },
+    {
+      "id": "kalong_bats",
+      "name": "Kalong Island Bats",
+      "zh": "卡隆岛日落蝙蝠",
+      "type": "spot",
+      "day": 7,
+      "time": "10/4 傍晚",
+      "lat": -8.488,
+      "lng": 119.816,
+      "stay": "2-3 小时",
+      "image": "assets/image32.png",
+      "images": [
+        {
+          "src": "assets/image32.png",
+          "caption": "Kalong Island Bats｜日落蝙蝠"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["日落蝙蝠", "包船 1400k", "回程星空"],
+      "intro": "卡隆岛日落蝙蝠是科莫多夜色的高光：成群蝙蝠从红色天空里飞出，回程还能看到很美的星空。",
+      "play": "在镇上找船包船，3 点从码头出发；更建议 4 点前出发，早到等一等。",
+      "note": "回程天黑，带外套和防水袋。",
+      "ratings": { "nature": 10, "culture": 2, "weather": 9, "stamina": 4 }
+    },
+    {
+      "id": "pink_beach",
+      "name": "Pink Beach",
+      "zh": "粉红沙滩",
+      "type": "spot",
+      "day": 8,
+      "time": "10/5 上午",
+      "lat": -8.606,
+      "lng": 119.521,
+      "stay": "1-2 小时",
+      "image": "assets/image33.png",
+      "images": [
+        {
+          "src": "assets/image33.png",
+          "caption": "Pink Beach｜粉红沙滩"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["粉色沙滩", "自然醒", "返程前放松"],
+      "intro": "粉红沙滩是科莫多海岛段的轻松收尾，适合自然醒后慢慢玩。",
+      "play": "注意退房时间，上午休闲游玩后回镇上准备下午航班。",
+      "note": "如果前一天出海已经很累，这天以恢复体力为主。",
+      "ratings": { "nature": 9, "culture": 1, "weather": 9, "stamina": 3 }
+    }
+  ],
+  "hotels": [
+    {
+      "id": "stay_jakarta_airport",
+      "name": "FM7 Resort Hotel Jakarta Airport",
+      "zh": "雅加达机场酒店",
+      "type": "hotel",
+      "day": 0,
+      "lat": -6.1256,
+      "lng": 106.6559,
+      "notes": "Jl. Raya Perancis No. 67 Cengkareng；约 330；有早餐。"
+    },
+    {
+      "id": "stay_yogyakarta_melia",
+      "name": "Melia Purosani Yogyakarta",
+      "zh": "日惹美利亚普罗萨尼酒店",
+      "type": "hotel",
+      "day": 1,
+      "lat": -7.7967,
+      "lng": 110.3694,
+      "notes": "Jalan Suryotomo no. 31；约 626/晚；有早餐。"
+    },
+    {
+      "id": "stay_malang_ibis",
+      "name": "Ibis Styles Malang",
+      "zh": "玛琅宜必思",
+      "type": "hotel",
+      "day": 4,
+      "lat": -7.9522,
+      "lng": 112.6315,
+      "notes": "布罗莫火山后休息点。"
+    },
+    {
+      "id": "stay_surabaya_marriott",
+      "name": "Surabaya Marriott Hotel",
+      "zh": "泗水万豪",
+      "type": "hotel",
+      "day": 5,
+      "lat": -7.2912,
+      "lng": 112.7156,
+      "notes": "Jl. Mayjen Sungkono No.178；有早餐。"
+    },
+    {
+      "id": "stay_bintang_flores",
+      "name": "Bintang Flores Hotel",
+      "zh": "科莫多宾唐弗洛雷斯酒店",
+      "type": "hotel",
+      "day": 6,
+      "lat": -8.512,
+      "lng": 119.879,
+      "notes": "Jl. Pantai Pede, Flores-Labuan Bajo；约 531/晚；有早餐。"
+    }
+  ],
+  "route": [
+    "taman_mini",
+    "jakarta_cathedral",
+    "istiqlal_mosque",
+    "monas",
+    "national_museum_jakarta",
+    "kota_tua",
+    "masangin",
+    "borobudur",
+    "prambanan",
+    "malioboro_axis",
+    "kraton_yogyakarta",
+    "taman_sari",
+    "java_train",
+    "bromo_penanjakan",
+    "bromo_crater",
+    "pronojiwo",
+    "tumpak_sewu",
+    "surabaya_city",
+    "labuan_bajo",
+    "padar_island",
+    "komodo_dragon",
+    "komodo_snorkeling",
+    "kalong_bats",
+    "pink_beach"
+  ],
+  "routeSegments": [
+    { "mode": "drive", "ids": ["taman_mini", "jakarta_cathedral", "istiqlal_mosque", "monas", "national_museum_jakarta", "kota_tua"] },
+    { "mode": "flight", "ids": ["kota_tua", "masangin"] },
+    { "mode": "drive", "ids": ["masangin", "borobudur", "prambanan"] },
+    { "mode": "walk", "ids": ["malioboro_axis", "kraton_yogyakarta", "taman_sari", "java_train"] },
+    { "mode": "drive", "ids": ["java_train", "bromo_penanjakan", "bromo_crater", "pronojiwo", "tumpak_sewu", "surabaya_city"] },
+    { "mode": "flight", "ids": ["surabaya_city", "labuan_bajo"] },
+    { "mode": "ferry", "ids": ["labuan_bajo", "padar_island", "komodo_dragon", "komodo_snorkeling", "kalong_bats", "pink_beach"] }
+  ],
+  "spotInsights": {
+    "borobudur": {
+      "unique": "婆罗浮屠的清晨顺光和层层佛塔，是整条日惹文化线最稳的高光。",
+      "history": "这座佛教遗迹建于中爪哇古代王朝时期，与普兰巴南一起构成日惹周边最重要的世界遗产组合。"
+    },
+    "prambanan": {
+      "unique": "尖塔群在傍晚光线里非常立体，和婆罗浮屠的水平层叠形成鲜明对比。",
+      "history": "普兰巴南是爪哇印度教建筑的代表，遗迹规模和细部雕刻都值得慢看。"
+    },
+    "bromo_penanjakan": {
+      "unique": "银河、日出、火山群和云海可能在同一个清晨出现，是整趟行程强度最高也最出片的时刻。",
+      "history": "布罗莫所在的腾格尔火山群是东爪哇最知名的火山景观带。"
+    },
+    "tumpak_sewu": {
+      "unique": "瀑布像帘幕一样从环形峡谷边缘落下，近距离徒步会湿透但视觉冲击非常强。",
+      "history": "赛武瀑布位于塞梅鲁火山区域，瀑布、峡谷和火山远景共同构成东爪哇自然线的核心。"
+    },
+    "padar_island": {
+      "unique": "山脊两侧同时展开多色海湾，视角开阔到像游戏地图，是科莫多海岛线的标志画面。",
+      "history": "帕达尔岛属于科莫多国家公园区域，干燥丘陵和海湾地形共同塑造了独特景观。"
+    },
+    "kalong_bats": {
+      "unique": "红色日落、成群蝙蝠和回程星空连在一起，适合作为科莫多出海日的情绪收尾。",
+      "history": "卡隆岛因黄昏蝙蝠群出动而成为 Labuan Bajo 周边非常受欢迎的傍晚包船点。"
+    }
+  },
+  "days": [
+    {
+      "day": 0,
+      "date": "2024-09-27",
+      "title": "杭州 → 吉隆坡 → 雅加达 citywalk",
+      "base": "FM7 Resort Hotel Jakarta Airport，约 330，有早餐",
+      "lat": -6.1754,
+      "lng": 106.8272,
+      "sunLabel": "雅加达",
+      "sunrise": "雅加达 05:39",
+      "sunset": "雅加达 17:48",
+      "alerts": [
+        "萧山机场 T4 → 吉隆坡 T2：00:15-04:53，D7307",
+        "吉隆坡 T2 → 雅加达：11:00-12:10，AK351",
+        "落地后以 Grab 打车为主，城市点位按体力取舍"
+      ],
+      "transport": "凌晨从杭州出发，经吉隆坡转机到雅加达，下午市区轻量 citywalk 后回机场酒店。",
+      "timeline": [
+        ["00:15-04:53", "萧山机场 T4 → 吉隆坡 T2，D7307"],
+        ["11:00-12:10", "吉隆坡 T2 → 雅加达，AK351"],
+        ["下午", "Taman Mini Indonesia Indah｜雅加达缩影公园", "taman_mini"],
+        ["下午", "Jakarta Cathedral｜雅加达大教堂", "jakarta_cathedral"],
+        ["下午", "Istiqlal Mosque｜伊斯蒂克拉尔清真寺", "istiqlal_mosque"],
+        ["下午备选", "National Monument｜雅加达国家纪念碑广场", "monas"],
+        ["下午备选", "National Museum｜雅加达国家博物馆", "national_museum_jakarta"],
+        ["傍晚备选", "Kota Tua Jakarta｜荷兰老城", "kota_tua"]
+      ]
+    },
+    {
+      "day": 1,
+      "date": "2024-09-28",
+      "title": "雅加达 → 日惹集合日",
+      "base": "Melia Purosani Yogyakarta，约 626/晚，有早餐",
+      "lat": -7.7956,
+      "lng": 110.3695,
+      "sunLabel": "日惹",
+      "sunrise": "日惹 05:25",
+      "sunset": "日惹 17:34",
+      "alerts": [
+        "雅加达 → 日惹：08:25-09:40，约 325",
+        "日惹机场到市区列车可用 KA Bandara app 购买",
+        "晚上可以去 Masangin 大榕树"
+      ],
+      "transport": "上午飞日惹，机场列车或打车进市区，下午集合休整。",
+      "timeline": [
+        ["08:25-09:40", "雅加达 → 日惹"],
+        ["白天", "日惹酒店入住 / 集合休整"],
+        ["晚间", "Masangin Banyan Trees｜Masangin 大榕树", "masangin"]
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2024-09-29",
+      "title": "日惹双遗产一日游",
+      "base": "Melia Purosani Yogyakarta",
+      "lat": -7.6079,
+      "lng": 110.2038,
+      "sunLabel": "日惹",
+      "sunrise": "日惹 05:25",
+      "sunset": "日惹 17:34",
+      "alerts": [
+        "婆罗浮屠、普兰巴南均禁飞",
+        "婆罗浮屠登顶票提前抢，周一闭园",
+        "普兰巴南建议下午去，17 点光线最好"
+      ],
+      "transport": "日惹一日包车，上午婆罗浮屠，下午普兰巴南。",
+      "timeline": [
+        ["上午", "Borobudur Temple｜婆罗浮屠", "borobudur"],
+        ["午餐", "日惹午饭"],
+        ["15:00-18:00", "Prambanan Temple｜普兰巴南", "prambanan"]
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2024-09-30",
+      "title": "日惹 citywalk → 火车前往泗水 / 布罗莫",
+      "base": "夜间包车前往布罗莫",
+      "lat": -7.7956,
+      "lng": 110.3695,
+      "sunLabel": "日惹 / 泗水",
+      "sunrise": "日惹 05:23",
+      "sunset": "泗水 17:24",
+      "alerts": [
+        "D3-D5 包三天车",
+        "火车 13:38-17:35，可能晚点约 1 小时",
+        "下车后接通宵火山行程，车上尽量睡"
+      ],
+      "transport": "上午日惹中轴线步行，下午火车前往泗水，下车后包车直奔布罗莫。",
+      "timeline": [
+        ["上午", "Yogyakarta Axis Citywalk｜日惹中轴线 citywalk", "malioboro_axis"],
+        ["上午", "Kraton Yogyakarta｜日惹王宫", "kraton_yogyakarta"],
+        ["上午", "Taman Sari Water Castle｜水宫", "taman_sari"],
+        ["13:38-17:35", "Java Train to Surabaya｜体验印尼小绿皮", "java_train"],
+        ["晚间", "包车直接前往布罗莫"]
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2024-10-01",
+      "title": "布罗莫火山银河日出 / 火山口",
+      "base": "Ibis Styles Malang，布罗莫后休整",
+      "lat": -7.9425,
+      "lng": 112.953,
+      "sunLabel": "布罗莫",
+      "sunrise": "布罗莫 05:13",
+      "sunset": "布罗莫 17:23",
+      "alerts": [
+        "3:00 到山顶观景平台拍银河",
+        "火山灰多，必备口罩、护目镜或墨镜、防晒",
+        "火山口护栏有断开处，安全第一"
+      ],
+      "transport": "凌晨吉普车上山看银河和日出，再前往 Bromo 火山口，上午结束后去酒店休息。",
+      "timeline": [
+        ["03:00", "Penanjakan Viewpoint｜山顶观景平台拍银河", "bromo_penanjakan"],
+        ["05:00", "Penanjakan Viewpoint｜布罗莫日出", "bromo_penanjakan"],
+        ["05:30", "网红树拍火山群像", "bromo_penanjakan"],
+        ["08:00", "Mount Bromo Crater｜到达 Bromo 山下", "bromo_crater"],
+        ["09:00", "Mount Bromo Crater｜登顶火山口", "bromo_crater"],
+        ["上午", "去酒店休息"]
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2024-10-02",
+      "title": "Pronojiwo 小村庄 / 赛武瀑布徒步 → 泗水",
+      "base": "Surabaya Marriott Hotel，约 264/晚，有早餐",
+      "lat": -8.2306,
+      "lng": 112.9153,
+      "sunLabel": "赛武 / 泗水",
+      "sunrise": "赛武 05:12",
+      "sunset": "泗水 17:24",
+      "alerts": [
+        "赛武瀑布最好 10 点去，雾气基本散开",
+        "穿速干衣、溯溪鞋，带防水包",
+        "瀑布附近水汽大，设备不要飞太低"
+      ],
+      "transport": "包车串起 Pronojiwo、赛武瀑布，再前往泗水市区。",
+      "timeline": [
+        ["上午", "Pronojiwo Village｜Pronojiwo 小村庄", "pronojiwo"],
+        ["10:00-13:00", "Tumpak Sewu Waterfall｜赛武瀑布徒步", "tumpak_sewu"],
+        ["下午", "前往泗水市区，车程约 2 小时"]
+      ]
+    },
+    {
+      "day": 6,
+      "date": "2024-10-03",
+      "title": "泗水 citywalk → 飞科莫多",
+      "base": "Bintang Flores Hotel，约 531/晚，有早餐",
+      "lat": -7.2575,
+      "lng": 112.7521,
+      "sunLabel": "泗水 / 科莫多",
+      "sunrise": "泗水 05:13",
+      "sunset": "科莫多 17:55",
+      "alerts": [
+        "泗水 → 科莫多：14:00-16:30，约 692",
+        "抵达后在镇上找旅行社确认第二天一日游",
+        "火山瀑布后注意休整补给"
+      ],
+      "transport": "上午泗水休整，下午飞 Labuan Bajo，晚上确认科莫多出海安排。",
+      "timeline": [
+        ["上午", "Surabaya City｜泗水 citywalk / 补给", "surabaya_city"],
+        ["14:00-16:30", "泗水 → 科莫多"],
+        ["傍晚", "Labuan Bajo｜科莫多小镇", "labuan_bajo"],
+        ["晚间", "酒店入住，确认第二天一日游"]
+      ]
+    },
+    {
+      "day": 7,
+      "date": "2024-10-04",
+      "title": "帕达尔岛 / 科莫多龙 / 浮潜 / 日落蝙蝠",
+      "base": "Bintang Flores Hotel",
+      "lat": -8.653,
+      "lng": 119.585,
+      "sunLabel": "科莫多",
+      "sunrise": "科莫多 05:44",
+      "sunset": "科莫多 17:56",
+      "alerts": [
+        "一日游可在 Klook 或当地旅行社订，当地通常更便宜",
+        "帕达尔岛防晒补水，爬上去约半小时",
+        "浮潜最好自备装备，当地装备质量不稳定"
+      ],
+      "transport": "出海一日游，白天帕达尔岛、科莫多龙和浮潜，下午包船去卡隆岛看蝙蝠。",
+      "timeline": [
+        ["上午", "Padar Island｜帕达尔岛", "padar_island"],
+        ["中午", "Komodo Dragon｜科莫多巨蜥", "komodo_dragon"],
+        ["下午", "Komodo Snorkeling｜科莫多浮潜", "komodo_snorkeling"],
+        ["15:00-晚间", "Kalong Island Bats｜卡隆岛日落蝙蝠", "kalong_bats"]
+      ]
+    },
+    {
+      "day": 8,
+      "date": "2024-10-05",
+      "title": "粉红沙滩 / 科莫多 → 雅加达",
+      "base": "回到温暖的家",
+      "lat": -8.496,
+      "lng": 119.887,
+      "sunLabel": "科莫多 / 雅加达",
+      "sunrise": "科莫多 05:43",
+      "sunset": "雅加达 17:46",
+      "alerts": [
+        "睡到自然醒，休闲游玩，注意退房时间",
+        "科莫多 → 雅加达：16:35-17:55，约 618"
+      ],
+      "transport": "上午粉红沙滩或酒店休闲，下午飞回雅加达。",
+      "timeline": [
+        ["上午", "Pink Beach｜粉红沙滩", "pink_beach"],
+        ["16:35-17:55", "科莫多 → 雅加达"]
+      ]
+    },
+    {
+      "day": 9,
+      "date": "2024-10-06",
+      "title": "雅加达 → 马尼拉 → 上海 → 杭州",
+      "base": "返回杭州",
+      "lat": -6.1256,
+      "lng": 106.6559,
+      "sunLabel": "雅加达",
+      "sunrise": "雅加达 05:36",
+      "sunset": "雅加达 17:47",
+      "alerts": [
+        "雅加达 T3 → 马尼拉 T1：00:55-06:10，PR536",
+        "马尼拉 T1 → 上海浦东 T2：10:50-14:30，PR336",
+        "上海 → 杭州"
+      ],
+      "transport": "凌晨从雅加达出发，经马尼拉、上海回杭州。",
+      "timeline": [
+        ["00:55-06:10", "雅加达 T3 → 马尼拉 T1，PR536"],
+        ["10:50-14:30", "马尼拉 T1 → 上海浦东 T2，PR336"],
+        ["下午/晚间", "上海 → 杭州"]
+      ]
+    }
+  ],
+  "foods": [
+    {
+      "area": "日惹",
+      "type": "集合日晚餐",
+      "title": "日惹第一晚简单吃饱",
+      "text": "D1 是集合日，第二天一早要出门看双遗产，晚餐不要折腾太远。",
+      "budget": "按现场点餐"
+    },
+    {
+      "area": "布罗莫",
+      "type": "凌晨补给",
+      "title": "山顶泡面 / 热饮 / 水",
+      "text": "凌晨等日出非常冷，山顶有泡面和热饮，带一点现金；也可以自备能量棒。",
+      "budget": "小额现金"
+    },
+    {
+      "area": "赛武瀑布",
+      "type": "徒步后午餐",
+      "title": "瀑布后补一顿热饭",
+      "text": "赛武全程湿身，出来后优先吃热饭、换干衣服，再上车去泗水。",
+      "budget": "按当地餐厅"
+    },
+    {
+      "area": "泗水",
+      "type": "城市补给",
+      "title": "泗水休整餐和超市补给",
+      "text": "火山和瀑布后可以在泗水补水、买零食、洗漱整理，再飞科莫多。",
+      "budget": "按实际采购"
+    },
+    {
+      "area": "科莫多",
+      "type": "出海补给",
+      "title": "出海日防晒补水",
+      "text": "帕达尔岛和浮潜都非常晒，带足饮用水、防晒、盐糖补给；晚上回酒店再好好吃。",
+      "budget": "水和零食自备"
+    }
+  ],
+  "prep": [
+    {
+      "title": "入境与证件",
+      "items": [
+        "提前 3 天内完成印尼电子海关申报：https://ecd.beacukai.go.id/。",
+        "填写健康通行证并保存二维码：https://sshp.kemkes.go.id。",
+        "落地签 visa on arrival 约 50k 印尼盾，准备现金和护照。",
+        "机票酒店信息打印或离线保存。"
+      ]
+    },
+    {
+      "title": "火山装备",
+      "items": [
+        "长裤、短袖、摇粒绒或薄羽绒内搭、冲锋衣。",
+        "口罩、护目镜或墨镜、防晒霜。",
+        "拍银河带三脚架，头灯也很有用。",
+        "可准备便宜鞋或解放鞋，火山灰很重。"
+      ]
+    },
+    {
+      "title": "瀑布与海岛装备",
+      "items": [
+        "赛武瀑布穿速干衣和溯溪鞋，带防水包。",
+        "浮潜最好自备咬嘴或浮潜装备。",
+        "一次性浴巾、一次性内裤、一次性拖鞋。",
+        "隐形眼镜、电话卡、转换插头、护发素。"
+      ]
+    },
+    {
+      "title": "药品与随身物",
+      "items": [
+        "治拉肚子的药。",
+        "感冒药、消炎药、布洛芬。",
+        "创口贴、碘伏棉签。",
+        "红糖姜茶、常用个人药品。"
+      ]
+    },
+    {
+      "title": "关键交通",
+      "items": [
+        "杭州 → 吉隆坡 → 雅加达：2024-09-27 抵达。",
+        "雅加达 → 日惹：2024-09-28 08:25-09:40。",
+        "日惹 → 泗水火车：2024-09-30 13:38-17:35，可能晚点。",
+        "泗水 → 科莫多：2024-10-03 14:00-16:30。",
+        "科莫多 → 雅加达：2024-10-05 16:35-17:55。",
+        "雅加达 → 马尼拉 → 上海 → 杭州：2024-10-06。"
+      ]
+    }
+  ]
+}

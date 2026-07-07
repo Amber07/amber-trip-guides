@@ -1,0 +1,2167 @@
+{
+  "page": {
+    "title": "2025 西藏林芝14日游行程",
+    "htmlTitle": "2025 西藏林芝14日游行程攻略",
+    "description": "林芝进、拉萨出，串起南迦巴瓦、波密、墨脱、鲁朗、巴松措、新措与拉萨的国庆 14 日行程攻略。",
+    "eyebrow": "Tibet East · 2025.09.28-10.11",
+    "heroTitle": "西藏林芝14日游",
+    "heroCopy": "落地林芝后先在索松村看南迦巴瓦，再沿波密、墨脱、鲁朗、巴松措一路向西，最后把节奏收进拉萨的博物馆、布达拉宫、大昭寺和八廓街。",
+    "heroImage": "assets/linzhi-banner.jpg",
+    "heroAlt": "林芝森林徒步合影",
+    "notice": "高原提醒：第一天到拉萨走慢一点，洗澡不要洗头；阿尔卑斯式的景观很多，但海拔、天气和路况会比普通城市行程更影响实际执行。",
+    "footer": "2025 西藏林芝14日游行程攻略 · 图片来自旅途素材",
+    "mapKicker": "Route Map",
+    "mapTitle": "林芝进 · 拉萨出路线地图",
+    "mapLead": "地图串起林芝藏东环线、巴松措新措和拉萨收尾。跨城航班/火车为虚线，藏东段以包车/自驾线路为主。",
+    "itineraryKicker": "Daily Plan",
+    "itineraryTitle": "每日行程安排",
+    "itineraryLead": "按日期、交通、住宿和备注整理。点击时间线里的景点名，可以联动地图与详情面板。",
+    "foodKicker": "Food",
+    "foodTitle": "沿线餐饮与补给",
+    "foodLead": "结合记账 sheet 中的实际餐饮和路线特点，优先标出顺路、吃饱、能补能量的选择。",
+    "prepKicker": "Before Departure",
+    "prepTitle": "需要提前确认的东西",
+    "prepLead": "把高原注意、门票预约、包车衔接、徒步补给和酒店关键备注集中到一处。",
+    "defaultSelectedSpotId": "namcha_barwa",
+    "defaultFromId": "namcha_barwa",
+    "defaultToId": "potala_palace",
+    "timeZone": "Asia/Shanghai"
+  },
+  "heroStats": [
+    {
+      "value": "14 日",
+      "label": "9/28-10/11 行程"
+    },
+    {
+      "value": "藏东环线",
+      "label": "林芝 / 波密 / 墨脱 / 鲁朗 / 巴松措"
+    },
+    {
+      "value": "拉萨收尾",
+      "label": "博物馆 / 布达拉宫 / 大昭寺"
+    }
+  ],
+  "spots": [
+    {
+      "id": "tianyige",
+      "name": "天一阁",
+      "zh": "",
+      "type": "spot",
+      "day": 1,
+      "time": "9/28 下午",
+      "lat": 29.8731,
+      "lng": 121.5469,
+      "stay": "1-1.5 小时",
+      "image": "assets/行程_r003_c005_image1.png",
+      "images": [
+        {
+          "src": "assets/行程_r003_c005_image1.png",
+          "caption": "天一阁｜宁波半日游"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "宁波过境",
+        "藏书楼",
+        "30 元门票"
+      ],
+      "intro": "天一阁是宁波半日过境里的文化锚点，节奏轻，不会影响晚上飞重庆。",
+      "play": "杭州南 14:08 到宁波 15:04 后，先把天一阁作为主要参观点，再接鼓楼和晚餐。",
+      "note": "晚上还要去宁波 T1 飞重庆，半日游不要拖太晚。",
+      "ratings": {
+        "nature": 3,
+        "culture": 8,
+        "weather": 3,
+        "stamina": 3
+      }
+    },
+    {
+      "id": "ningbo_gulou",
+      "name": "宁波鼓楼",
+      "zh": "",
+      "type": "spot",
+      "day": 1,
+      "time": "9/28 傍晚",
+      "lat": 29.8737,
+      "lng": 121.5509,
+      "stay": "30-45 分钟",
+      "image": "assets/行程_r004_c005_image2.png",
+      "images": [
+        {
+          "src": "assets/行程_r004_c005_image2.png",
+          "caption": "宁波鼓楼"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "宁波老城",
+        "顺路拍照",
+        "机场前机动"
+      ],
+      "intro": "鼓楼是宁波市中心很容易顺路串起来的老城节点，适合作为天一阁之后的轻量散步。",
+      "play": "不做重参观，走走拍照、吃木木鲜海鲜面后去机场。",
+      "note": "宁波站到栎社机场地铁 2 号线约 30 分钟，留足安检时间。",
+      "ratings": {
+        "nature": 2,
+        "culture": 6,
+        "weather": 3,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "fosha_dune",
+      "name": "佛掌沙丘",
+      "zh": "",
+      "type": "spot",
+      "day": 2,
+      "time": "9/29 下午",
+      "lat": 29.575,
+      "lng": 94.84,
+      "stay": "远观/路过",
+      "image": "assets/行程_r010_c005_image4.png",
+      "images": [
+        {
+          "src": "assets/行程_r010_c005_image4.png",
+          "caption": "佛掌沙丘｜远观南迦巴瓦"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "雅鲁藏布江畔",
+        "沙丘",
+        "南迦巴瓦视角"
+      ],
+      "intro": "佛掌沙丘是从林芝去索松村路线上适合远观的景观点，沙丘和雪山同框很有反差。",
+      "play": "落地日以轻松为主，司机顺路停靠即可，不建议为了拍照消耗太多体力。",
+      "note": "当天清晨重庆飞林芝，落地后别安排高强度徒步。",
+      "ratings": {
+        "nature": 8,
+        "culture": 3,
+        "weather": 8,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "namcha_barwa",
+      "name": "南迦巴瓦峰",
+      "zh": "",
+      "type": "spot",
+      "day": 2,
+      "time": "9/29-9/30",
+      "lat": 29.631,
+      "lng": 95.061,
+      "stay": "索松村守山景",
+      "image": "assets/行程_r011_c005_image5.png",
+      "images": [
+        {
+          "src": "assets/行程_r011_c005_image5.png",
+          "caption": "南迦巴瓦峰｜索松村视角"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "神山",
+        "日照金山",
+        "索松村"
+      ],
+      "intro": "南迦巴瓦是藏东段最重要的景观主角，能不能看到很看天气，索松村的价值就是给它留观察窗口。",
+      "play": "住吉美·南迦巴瓦山居，后花园适合半夜和早上拍照；天气好时优先守山，不必急着赶景点。",
+      "note": "行程特别备注值机选左边，飞林芝途中也有看雪山的机会。",
+      "ratings": {
+        "nature": 10,
+        "culture": 6,
+        "weather": 10,
+        "stamina": 3
+      }
+    },
+    {
+      "id": "yarlung_canyon",
+      "name": "雅鲁藏布大峡谷",
+      "zh": "",
+      "type": "spot",
+      "day": 2,
+      "time": "9/29 下午",
+      "lat": 29.6,
+      "lng": 94.93,
+      "stay": "1-2 小时",
+      "image": "assets/行程_r012_c005_image6.png",
+      "images": [
+        {
+          "src": "assets/行程_r012_c005_image6.png",
+          "caption": "雅鲁藏布大峡谷"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "峡谷",
+        "江景",
+        "索松村周边"
+      ],
+      "intro": "雅鲁藏布大峡谷把江水、村落和雪山视角连在一起，是索松村段的主要区域景观。",
+      "play": "按天气和到达时间决定停留长度，重心仍是轻松适应高原和等待南迦巴瓦。",
+      "note": "落地日避免在景区里走太满。",
+      "ratings": {
+        "nature": 9,
+        "culture": 5,
+        "weather": 8,
+        "stamina": 4
+      }
+    },
+    {
+      "id": "sosong_village",
+      "name": "索松村",
+      "zh": "",
+      "type": "spot",
+      "day": 2,
+      "time": "9/29 晚上",
+      "lat": 29.598,
+      "lng": 94.919,
+      "stay": "1 晚",
+      "image": "assets/行程_r013_c005_image7.png",
+      "images": [
+        {
+          "src": "assets/行程_r013_c005_image7.png",
+          "caption": "索松村｜南迦巴瓦山居"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "村里躺平",
+        "山居",
+        "拍照窗口"
+      ],
+      "intro": "索松村不是为了打很多点，而是给南迦巴瓦和雅鲁藏布江留出足够的慢节奏。",
+      "play": "下午到村里后休息，半夜和清晨看天气拍山，第二天再慢慢转去林芝市区。",
+      "note": "林芝到索松村和酒店约车，行程记录 100 元/人。",
+      "ratings": {
+        "nature": 9,
+        "culture": 5,
+        "weather": 8,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "biri_mountain",
+      "name": "比日神山",
+      "zh": "",
+      "type": "spot",
+      "day": 3,
+      "time": "9/30",
+      "lat": 29.66,
+      "lng": 94.39,
+      "stay": "2-3 小时",
+      "image": "assets/行程_r015_c005_image8.png",
+      "images": [
+        {
+          "src": "assets/行程_r015_c005_image8.png",
+          "caption": "比日神山｜林芝转山"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "转山",
+        "林芝市区",
+        "栈道入口"
+      ],
+      "intro": "比日神山是林芝市区附近适合转山闲逛的地方，强度比后面的徒步更友好。",
+      "play": "打车时一定要和司机讲到比日神山入口栈道（拉丁嘎村），转一圈后在博物馆门口坐黑车下山。",
+      "note": "行程备注黑车 5 元/人送到山下。",
+      "ratings": {
+        "nature": 7,
+        "culture": 6,
+        "weather": 6,
+        "stamina": 6
+      }
+    },
+    {
+      "id": "gongbu_park",
+      "name": "工布公园",
+      "zh": "",
+      "type": "spot",
+      "day": 3,
+      "time": "9/30 下午",
+      "lat": 29.653,
+      "lng": 94.362,
+      "stay": "45-60 分钟",
+      "image": "assets/行程_r016_c005_image9.png",
+      "images": [
+        {
+          "src": "assets/行程_r016_c005_image9.png",
+          "caption": "工布公园｜林芝市区"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "市区散步",
+        "湖面",
+        "低强度"
+      ],
+      "intro": "工布公园是林芝市区里适合过渡休息的散步点，放在转山之后正好缓一缓。",
+      "play": "按体力在湖边走走，晚上再去工布老街看锅庄。",
+      "note": "住林芝散步去咖啡民宿，行程备注无早餐但有洗衣机。",
+      "ratings": {
+        "nature": 5,
+        "culture": 4,
+        "weather": 4,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "gongbu_old_street",
+      "name": "工布老街",
+      "zh": "",
+      "type": "spot",
+      "day": 3,
+      "time": "9/30 晚上",
+      "lat": 29.65,
+      "lng": 94.36,
+      "stay": "1 小时",
+      "image": "assets/行程_r017_c005_image10.png",
+      "images": [
+        {
+          "src": "assets/行程_r017_c005_image10.png",
+          "caption": "工布老街｜跳锅庄"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "夜间散步",
+        "锅庄",
+        "市区补给"
+      ],
+      "intro": "工布老街更像林芝市区晚上的轻活动，适合看跳锅庄、吃饭和补给。",
+      "play": "晚上随缘逛，不把它当成硬景点。",
+      "note": "如果第二天休息日状态不好，可以把老街缩短。",
+      "ratings": {
+        "nature": 1,
+        "culture": 6,
+        "weather": 2,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "fujian_yuan",
+      "name": "福建园",
+      "zh": "",
+      "type": "spot",
+      "day": 4,
+      "time": "10/1",
+      "lat": 29.65,
+      "lng": 94.36,
+      "stay": "1 小时",
+      "image": "assets/行程_r019_c005_image11.png",
+      "images": [
+        {
+          "src": "assets/行程_r019_c005_image11.png",
+          "caption": "福建园｜休息日遛弯"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "休息日",
+        "响箭协会",
+        "轻散步"
+      ],
+      "intro": "10 月 1 日安排为休息日，福建园只是酒店附近遛弯和看射箭的低压力选择。",
+      "play": "园内有响箭协会，可以看射箭；其余时间休息、洗衣和调整状态。",
+      "note": "这是全程很重要的缓冲日，不要临时加太多项目。",
+      "ratings": {
+        "nature": 3,
+        "culture": 5,
+        "weather": 3,
+        "stamina": 1
+      }
+    },
+    {
+      "id": "sejila_pass",
+      "name": "色季拉山口观景台",
+      "zh": "",
+      "type": "spot",
+      "day": 5,
+      "time": "10/2",
+      "lat": 29.61,
+      "lng": 94.69,
+      "stay": "30-45 分钟",
+      "image": "assets/行程_r022_c005_image12.png",
+      "images": [
+        {
+          "src": "assets/行程_r022_c005_image12.png",
+          "caption": "色季拉山口观景台"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "免费",
+        "山口",
+        "风大冷"
+      ],
+      "intro": "从林芝往波密的路上，色季拉山口是看雪山和山口景观的关键停车点。",
+      "play": "司机接送到汇合点后出发，路上按天气停车拍照。",
+      "note": "行程备注免费，但风大冷，多穿。",
+      "ratings": {
+        "nature": 9,
+        "culture": 3,
+        "weather": 9,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "zhatang_lutso",
+      "name": "扎塘鲁措",
+      "zh": "",
+      "type": "spot",
+      "day": 5,
+      "time": "10/2",
+      "lat": 29.86,
+      "lng": 95.48,
+      "stay": "45-60 分钟",
+      "image": "assets/行程_r023_c005_image13.png",
+      "images": [
+        {
+          "src": "assets/行程_r023_c005_image13.png",
+          "caption": "扎塘鲁措｜湖泊倒影"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "免费",
+        "湖泊",
+        "波密途中"
+      ],
+      "intro": "扎塘鲁措是林芝去波密途中的免费湖泊点，适合把赶路日变得不那么单调。",
+      "play": "作为路上停靠点看湖、雪山和倒影，别停到影响抵达波密。",
+      "note": "当晚住波密灵溪山居，行程备注有早餐、最早 10 点可入住。",
+      "ratings": {
+        "nature": 9,
+        "culture": 2,
+        "weather": 8,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "gangyun_forest",
+      "name": "岗云杉林",
+      "zh": "",
+      "type": "spot",
+      "day": 6,
+      "time": "10/3",
+      "lat": 29.87,
+      "lng": 95.77,
+      "stay": "4-5 小时",
+      "image": "assets/行程_r024_c005_image14.png",
+      "images": [
+        {
+          "src": "assets/行程_r024_c005_image14.png",
+          "caption": "岗云杉林徒步"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "徒步",
+        "杉林",
+        "国庆半价"
+      ],
+      "intro": "岗云杉林是波密段的核心徒步，森林、雪山和湿润峡谷感很强。",
+      "play": "行程备注徒步四五小时，早上吃饱，带零食和水。",
+      "note": "门票 80 元，国庆期间半价；当天不要再排高强度活动。",
+      "ratings": {
+        "nature": 10,
+        "culture": 3,
+        "weather": 8,
+        "stamina": 8
+      }
+    },
+    {
+      "id": "galang_palace",
+      "name": "噶朗王宫",
+      "zh": "",
+      "type": "spot",
+      "day": 6,
+      "time": "10/3 下午",
+      "lat": 29.86,
+      "lng": 95.78,
+      "stay": "45-60 分钟",
+      "image": "assets/行程_r025_c005_image15.png",
+      "images": [
+        {
+          "src": "assets/行程_r025_c005_image15.png",
+          "caption": "噶朗王宫｜色彩超绝"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "免费",
+        "色彩",
+        "波密周边"
+      ],
+      "intro": "噶朗王宫是岗云杉林徒步后的轻量文化点，原文评价“色彩超绝”。",
+      "play": "徒步结束后按体力去看外观和色彩细节。",
+      "note": "如果徒步太累，王宫可缩短。",
+      "ratings": {
+        "nature": 4,
+        "culture": 7,
+        "weather": 4,
+        "stamina": 3
+      }
+    },
+    {
+      "id": "duodong_monastery",
+      "name": "多东寺",
+      "zh": "",
+      "type": "spot",
+      "day": 7,
+      "time": "10/4",
+      "lat": 29.74,
+      "lng": 95.28,
+      "stay": "30-60 分钟",
+      "image": "assets/行程_r027_c005_image16.png",
+      "images": [
+        {
+          "src": "assets/行程_r027_c005_image16.png",
+          "caption": "多东寺"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "免费",
+        "墨脱路上",
+        "寺院"
+      ],
+      "intro": "多东寺是波密去墨脱路上的免费停靠点，适合把长距离赶路拆开。",
+      "play": "短暂停留、拍照、上厕所和缓路程。",
+      "note": "当天重点仍是翻越扎墨路段去墨脱。",
+      "ratings": {
+        "nature": 4,
+        "culture": 7,
+        "weather": 5,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "zhamo_monument",
+      "name": "扎墨公路纪念碑",
+      "zh": "",
+      "type": "spot",
+      "day": 7,
+      "time": "10/4",
+      "lat": 29.91,
+      "lng": 95.55,
+      "stay": "15-30 分钟",
+      "image": "assets/行程_r028_c005_image17.png",
+      "images": [
+        {
+          "src": "assets/行程_r028_c005_image17.png",
+          "caption": "扎墨公路纪念碑"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "扎墨公路",
+        "路标",
+        "停车点"
+      ],
+      "intro": "扎墨公路纪念碑是进入墨脱线路的标志性节点，适合短停留。",
+      "play": "拍照留念即可，后面还要过嘎隆拉隧道。",
+      "note": "路况和天气比景点本身更重要。",
+      "ratings": {
+        "nature": 5,
+        "culture": 4,
+        "weather": 7,
+        "stamina": 1
+      }
+    },
+    {
+      "id": "galongla_tunnel",
+      "name": "嘎隆拉隧道",
+      "zh": "",
+      "type": "transport",
+      "day": 7,
+      "time": "10/4",
+      "lat": 29.76,
+      "lng": 95.47,
+      "stay": "路过",
+      "image": "assets/行程_r029_c005_image18.png",
+      "images": [
+        {
+          "src": "assets/行程_r029_c005_image18.png",
+          "caption": "嘎隆拉隧道｜波密到墨脱"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "交通节点",
+        "雪山路段",
+        "墨脱通道"
+      ],
+      "intro": "嘎隆拉隧道是波密到墨脱路线上很有存在感的交通节点，天气和路况会直接影响体验。",
+      "play": "路过拍照即可，不作为停留型景点。",
+      "note": "高海拔路段风雪天气注意保暖。",
+      "ratings": {
+        "nature": 8,
+        "culture": 3,
+        "weather": 9,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "guoguo_turn",
+      "name": "果果塘大拐弯",
+      "zh": "",
+      "type": "spot",
+      "day": 7,
+      "time": "10/4 下午",
+      "lat": 29.22,
+      "lng": 95.16,
+      "stay": "45-60 分钟",
+      "image": "assets/行程_r030_c005_image19.png",
+      "images": [
+        {
+          "src": "assets/行程_r030_c005_image19.png",
+          "caption": "果果塘大拐弯"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "墨脱",
+        "雅鲁藏布江",
+        "60 元门票"
+      ],
+      "intro": "果果塘大拐弯是墨脱最标志性的江湾视角，开阔、湿润、和前面的雪山路段气质完全不同。",
+      "play": "到墨脱后优先安排，天气好时视野更完整。",
+      "note": "行程记录门票 60 元。",
+      "ratings": {
+        "nature": 9,
+        "culture": 3,
+        "weather": 8,
+        "stamina": 3
+      }
+    },
+    {
+      "id": "motuo_museum",
+      "name": "墨脱博物馆",
+      "zh": "",
+      "type": "spot",
+      "day": 7,
+      "time": "10/4 下午",
+      "lat": 29.326,
+      "lng": 95.333,
+      "stay": "45-60 分钟",
+      "image": "assets/行程_r031_c005_image20.png",
+      "images": [
+        {
+          "src": "assets/行程_r031_c005_image20.png",
+          "caption": "墨脱博物馆"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "免费",
+        "17 点结束",
+        "周一闭馆"
+      ],
+      "intro": "墨脱博物馆适合补足对墨脱地理、民族和交通历史的理解。",
+      "play": "如果抵达时间合适，果果塘之后或之前插入。",
+      "note": "行程备注免费，周一闭馆，17 点结束。",
+      "ratings": {
+        "nature": 2,
+        "culture": 7,
+        "weather": 2,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "motuo_mirage",
+      "name": "海市蜃楼",
+      "zh": "",
+      "type": "spot",
+      "day": 8,
+      "time": "10/5 上午",
+      "lat": 29.33,
+      "lng": 95.34,
+      "stay": "30-60 分钟",
+      "image": "assets/行程_r032_c005_image21.png",
+      "images": [
+        {
+          "src": "assets/行程_r032_c005_image21.png",
+          "caption": "墨脱海市蜃楼"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "免费",
+        "墨脱云雾",
+        "赶路日前半"
+      ],
+      "intro": "墨脱的海市蜃楼/云雾景观更像天气礼物，适合早上出发前看一眼。",
+      "play": "如果云雾条件好就停，条件一般就直接去仁青崩寺。",
+      "note": "当天要从墨脱赶到鲁朗，不要在上午拖太久。",
+      "ratings": {
+        "nature": 8,
+        "culture": 2,
+        "weather": 10,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "renqingbeng_monastery",
+      "name": "仁青崩寺",
+      "zh": "",
+      "type": "spot",
+      "day": 8,
+      "time": "10/5 上午",
+      "lat": 29.42,
+      "lng": 95.23,
+      "stay": "45-60 分钟",
+      "image": "assets/行程_r033_c005_image22.png",
+      "images": [
+        {
+          "src": "assets/行程_r033_c005_image22.png",
+          "caption": "仁青崩寺"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "免费",
+        "墨脱周边",
+        "寺院"
+      ],
+      "intro": "仁青崩寺是离开墨脱前的文化停靠点，和前一天的江湾、隧道形成对照。",
+      "play": "短暂停留，之后开始墨脱到鲁朗的长距离移动。",
+      "note": "当天晚餐 行程明确写鲁朗必吃石锅鸡。",
+      "ratings": {
+        "nature": 5,
+        "culture": 7,
+        "weather": 5,
+        "stamina": 3
+      }
+    },
+    {
+      "id": "zaxigang_village",
+      "name": "扎西岗村",
+      "zh": "",
+      "type": "spot",
+      "day": 8,
+      "time": "10/5 下午/晚上",
+      "lat": 29.769,
+      "lng": 94.742,
+      "stay": "1 晚",
+      "image": "assets/行程_r035_c005_image23.png",
+      "images": [
+        {
+          "src": "assets/行程_r035_c005_image23.png",
+          "caption": "扎西岗村｜鲁朗住宿区域"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "鲁朗",
+        "村落",
+        "石锅鸡"
+      ],
+      "intro": "扎西岗村是鲁朗住宿和晚餐落脚点，适合把墨脱赶路日收住。",
+      "play": "下午抵达后休息，晚上吃石锅鸡。",
+      "note": "达琅酒店在鲁朗镇扎西岗村，行程备注有早餐、当天 18 点前可取消。",
+      "ratings": {
+        "nature": 7,
+        "culture": 5,
+        "weather": 5,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "alpine_pasture",
+      "name": "高山牧场",
+      "zh": "",
+      "type": "spot",
+      "day": 9,
+      "time": "10/6 上午",
+      "lat": 29.78,
+      "lng": 94.75,
+      "stay": "30-60 分钟",
+      "image": "assets/行程_r036_c005_image24.png",
+      "images": [
+        {
+          "src": "assets/行程_r036_c005_image24.png",
+          "caption": "高山牧场"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "鲁朗",
+        "小路免费",
+        "牧场"
+      ],
+      "intro": "高山牧场是鲁朗离开前的轻停靠，草甸、牛羊和山景很适合路上换气。",
+      "play": "行程备注走小路可免费，按司机熟悉程度和时间决定。",
+      "note": "当天要去巴松措，不要把鲁朗上午拖太满。",
+      "ratings": {
+        "nature": 8,
+        "culture": 3,
+        "weather": 7,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "basum_tso",
+      "name": "巴松措",
+      "zh": "",
+      "type": "spot",
+      "day": 9,
+      "time": "10/6 下午",
+      "lat": 30.011,
+      "lng": 93.926,
+      "stay": "2-3 小时",
+      "image": "assets/行程_r038_c005_image25.png",
+      "images": [
+        {
+          "src": "assets/行程_r038_c005_image25.png",
+          "caption": "巴松措"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "湖泊",
+        "门票 120",
+        "住宿返押金"
+      ],
+      "intro": "巴松措是藏东湖泊段的主角，颜色、岛屿、雪山和村落都适合放慢看。",
+      "play": "住在景区内时，按住宿与景区规则安排进出，下午先看湖边主要视角。",
+      "note": "行程记录门票 120 元；住宿的话押金 60 会在酒店返还。",
+      "ratings": {
+        "nature": 10,
+        "culture": 5,
+        "weather": 8,
+        "stamina": 3
+      }
+    },
+    {
+      "id": "jieba_village",
+      "name": "结巴村",
+      "zh": "",
+      "type": "spot",
+      "day": 9,
+      "time": "10/6 晚上",
+      "lat": 30.003,
+      "lng": 93.87,
+      "stay": "1 晚",
+      "image": "assets/行程_r039_c005_image26.png",
+      "images": [
+        {
+          "src": "assets/行程_r039_c005_image26.png",
+          "caption": "结巴村｜巴松措住宿区域"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "巴松措村落",
+        "住宿",
+        "新措前夜"
+      ],
+      "intro": "结巴村是新措徒步前的落脚点，第二天一早从这里出发更顺。",
+      "play": "晚上休息、准备徒步水和零食。",
+      "note": "巴松措纳拉尕布精品客栈有早餐，10 月 4 日 24 点前可取消。",
+      "ratings": {
+        "nature": 8,
+        "culture": 5,
+        "weather": 6,
+        "stamina": 2
+      }
+    },
+    {
+      "id": "xincuo",
+      "name": "新措",
+      "zh": "",
+      "type": "spot",
+      "day": 10,
+      "time": "10/7 08:00",
+      "lat": 30.08,
+      "lng": 93.71,
+      "stay": "3 小时徒步",
+      "image": "assets/行程_r041_c005_image27.png",
+      "images": [
+        {
+          "src": "assets/行程_r041_c005_image27.png",
+          "caption": "新措徒步"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "徒步",
+        "10 元清洁费",
+        "搓衣板路"
+      ],
+      "intro": "新措是巴松措段的野趣徒步，路况折腾但景观开阔，是 Day 10 的核心。",
+      "play": "结巴村到新措 500 元一车，8 点出发，搓衣板路往返约 2.5 小时，徒步约 3 小时。",
+      "note": "清洁费 10 元；车路辛苦，上午要吃饱。",
+      "ratings": {
+        "nature": 10,
+        "culture": 3,
+        "weather": 8,
+        "stamina": 8
+      }
+    },
+    {
+      "id": "songtsam_basum",
+      "name": "松赞巴松措林卡",
+      "zh": "",
+      "type": "spot",
+      "day": 10,
+      "time": "10/7 下午",
+      "lat": 30.004,
+      "lng": 93.9,
+      "stay": "躺平半日",
+      "image": "assets/行程_r043_c005_image28.png",
+      "images": [
+        {
+          "src": "assets/行程_r043_c005_image28.png",
+          "caption": "松赞巴松措林卡｜躺平"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "躺平",
+        "下午茶",
+        "洗衣烘干"
+      ],
+      "intro": "松赞这晚是全程很重要的恢复点，用来消化新措徒步和前面连续赶路。",
+      "play": "14 点入住，住到最晚退房时间，享受晚安饮品、自助下午茶，把衣服洗干净。",
+      "note": "行程备注有洗衣机烘干机，衣服全洗了。",
+      "ratings": {
+        "nature": 8,
+        "culture": 6,
+        "weather": 3,
+        "stamina": 1
+      }
+    },
+    {
+      "id": "tibet_museum",
+      "name": "西藏博物馆",
+      "zh": "",
+      "type": "spot",
+      "day": 12,
+      "time": "10/9 下午",
+      "lat": 29.654,
+      "lng": 91.096,
+      "stay": "1.5-2 小时",
+      "image": "assets/行程_r047_c005_image30.png",
+      "images": [
+        {
+          "src": "assets/行程_r047_c005_image30.png",
+          "caption": "西藏博物馆"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "拉萨第一天",
+        "预约",
+        "农奴主题"
+      ],
+      "intro": "西藏博物馆是拉萨第一天很适合的室内点，能帮后面的布达拉宫、大昭寺建立背景。",
+      "play": "行程备注 10 月 2 日去预约，一定要去看农奴主题。",
+      "note": "刚到拉萨要慢点走，别把博物馆和户外点排太紧。",
+      "ratings": {
+        "nature": 1,
+        "culture": 9,
+        "weather": 1,
+        "stamina": 3
+      }
+    },
+    {
+      "id": "norbulingka",
+      "name": "罗布林卡",
+      "zh": "",
+      "type": "spot",
+      "day": 12,
+      "time": "10/9 机动",
+      "lat": 29.654,
+      "lng": 91.09,
+      "stay": "外观/机动",
+      "image": "assets/行程_r048_c005_image31.png",
+      "images": [
+        {
+          "src": "assets/行程_r048_c005_image31.png",
+          "caption": "罗布林卡"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "拉萨",
+        "机动",
+        "慢走"
+      ],
+      "intro": "罗布林卡放在拉萨第一天更适合作为机动点，状态好就进，状态一般外面打卡即可。",
+      "play": "行程记录来不及就在外面打了下卡。",
+      "note": "第一天到拉萨注意步速，洗澡不要洗头。",
+      "ratings": {
+        "nature": 4,
+        "culture": 7,
+        "weather": 4,
+        "stamina": 4
+      }
+    },
+    {
+      "id": "yaowangshan",
+      "name": "药王山观景台",
+      "zh": "",
+      "type": "spot",
+      "day": 12,
+      "time": "10/9 傍晚",
+      "lat": 29.6547,
+      "lng": 91.114,
+      "stay": "30 分钟",
+      "image": "assets/行程_r050_c005_image33.png",
+      "images": [
+        {
+          "src": "assets/行程_r050_c005_image33.png",
+          "caption": "药王山 50 元打卡"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "布达拉宫机位",
+        "50 元",
+        "拉萨经典视角"
+      ],
+      "intro": "药王山是拍布达拉宫的经典机位，行程特别写了 50 元打卡。",
+      "play": "如果博物馆后状态还好，傍晚去拍布达拉宫视角。",
+      "note": "别走太快，拉萨第一天不要逞强。",
+      "ratings": {
+        "nature": 5,
+        "culture": 7,
+        "weather": 7,
+        "stamina": 4
+      }
+    },
+    {
+      "id": "potala_square",
+      "name": "布达拉宫广场",
+      "zh": "",
+      "type": "spot",
+      "day": 13,
+      "time": "10/10 上午",
+      "lat": 29.656,
+      "lng": 91.116,
+      "stay": "30-45 分钟",
+      "image": "assets/行程_r051_c005_image34.png",
+      "images": [
+        {
+          "src": "assets/行程_r051_c005_image34.png",
+          "caption": "布达拉宫广场"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "布达拉宫",
+        "广场",
+        "参观前集合"
+      ],
+      "intro": "布达拉宫广场是进入布达拉宫参观前最自然的集合和外观视角。",
+      "play": "10 点左右进入布达拉宫前，先在广场和外部视角做轻停留。",
+      "note": "后面有 11:00-11:20 的布达拉宫一号线时段。",
+      "ratings": {
+        "nature": 4,
+        "culture": 9,
+        "weather": 5,
+        "stamina": 3
+      }
+    },
+    {
+      "id": "potala_palace",
+      "name": "布达拉宫",
+      "zh": "",
+      "type": "spot",
+      "day": 13,
+      "time": "10/10 11:00-11:20",
+      "lat": 29.6578,
+      "lng": 91.1169,
+      "stay": "2-3 小时",
+      "image": "assets/行程_r052_c005_image35.png",
+      "images": [
+        {
+          "src": "assets/行程_r052_c005_image35.png",
+          "caption": "布达拉宫"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "一号线",
+        "已预约",
+        "讲解员"
+      ],
+      "intro": "布达拉宫是拉萨收尾日的核心，参观时间和讲解安排都已经在行程里写得很清楚。",
+      "play": "一号线 11:00-11:20 时段，可提前一小时进入；行程记录 10 点进，找了讲解员，50 元/人，12 点多结束。",
+      "note": "讲解员微信在原文中有记录，页面不公开展示完整联系方式，出行前出行前再核对。",
+      "ratings": {
+        "nature": 3,
+        "culture": 10,
+        "weather": 3,
+        "stamina": 6
+      }
+    },
+    {
+      "id": "heaven_post",
+      "name": "天上邮局",
+      "zh": "",
+      "type": "spot",
+      "day": 13,
+      "time": "10/10 中午",
+      "lat": 29.653,
+      "lng": 91.121,
+      "stay": "20-40 分钟",
+      "image": "assets/行程_r053_c005_image36.png",
+      "images": [
+        {
+          "src": "assets/行程_r053_c005_image36.png",
+          "caption": "天上邮局｜寄明信片"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "明信片",
+        "拉萨纪念",
+        "轻停留"
+      ],
+      "intro": "天上邮局是布达拉宫之后的轻量纪念点，适合寄明信片。",
+      "play": "布达拉宫参观结束后，找地方吃饭，再寄明信片。",
+      "note": "下午还有大昭寺预约，不要在邮局拖太久。",
+      "ratings": {
+        "nature": 1,
+        "culture": 5,
+        "weather": 1,
+        "stamina": 1
+      }
+    },
+    {
+      "id": "jokhang_temple",
+      "name": "大昭寺",
+      "zh": "",
+      "type": "spot",
+      "day": 13,
+      "time": "10/10 15:30-16:30",
+      "lat": 29.6501,
+      "lng": 91.1328,
+      "stay": "1-1.5 小时",
+      "image": "assets/行程_r054_c005_image37.png",
+      "images": [
+        {
+          "src": "assets/行程_r054_c005_image37.png",
+          "caption": "大昭寺"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "已预约",
+        "15:30-16:30",
+        "八廓街"
+      ],
+      "intro": "大昭寺和八廓街共同构成拉萨最有朝圣氛围的区域，适合放在布达拉宫之后。",
+      "play": "按 15:30-16:30 的预约时间进入，出来后顺路逛八廓街。",
+      "note": "当天文化信息量很大，午后留好休息和补水。",
+      "ratings": {
+        "nature": 1,
+        "culture": 10,
+        "weather": 2,
+        "stamina": 5
+      }
+    },
+    {
+      "id": "barkhor_street",
+      "name": "八廓街",
+      "zh": "",
+      "type": "spot",
+      "day": 13,
+      "time": "10/10 傍晚",
+      "lat": 29.6507,
+      "lng": 91.1325,
+      "stay": "1-2 小时",
+      "image": "assets/行程_r055_c005_image38.png",
+      "images": [
+        {
+          "src": "assets/行程_r055_c005_image38.png",
+          "caption": "八廓街"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "转经道",
+        "街区",
+        "拉萨傍晚"
+      ],
+      "intro": "八廓街适合慢慢走，观察转经、街巷和店铺，是大昭寺之后的自然延伸。",
+      "play": "不要只当商业街看，顺着人流慢慢走一圈更有感觉。",
+      "note": "注意人流和随身物品，晚上再去看布达拉宫夜景。",
+      "ratings": {
+        "nature": 1,
+        "culture": 9,
+        "weather": 3,
+        "stamina": 4
+      }
+    },
+    {
+      "id": "potala_night",
+      "name": "布达拉宫夜景",
+      "zh": "",
+      "type": "spot",
+      "day": 13,
+      "time": "10/10 晚上",
+      "lat": 29.6578,
+      "lng": 91.1169,
+      "stay": "30-60 分钟",
+      "image": "assets/行程_r056_c005_image39.png",
+      "images": [
+        {
+          "src": "assets/行程_r056_c005_image39.png",
+          "caption": "布达拉宫夜景"
+        }
+      ],
+      "imageSourceType": "document",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": [
+        "夜景",
+        "行程收尾",
+        "拉萨"
+      ],
+      "intro": "布达拉宫夜景适合作为整个藏东神山行程的视觉收尾。",
+      "play": "晚饭后按体力去广场或药王山附近看夜景。",
+      "note": "第二天返程，别熬太晚。",
+      "ratings": {
+        "nature": 4,
+        "culture": 9,
+        "weather": 5,
+        "stamina": 3
+      }
+    }
+  ],
+  "hotels": [
+    {
+      "id": "stay_sosong",
+      "name": "吉美·南迦巴瓦山居",
+      "zh": "索松村住宿",
+      "type": "hotel",
+      "day": 2,
+      "lat": 29.598,
+      "lng": 94.919
+    },
+    {
+      "id": "stay_linzhi_cafe",
+      "name": "林芝散步去咖啡民宿",
+      "zh": "林芝市区住宿",
+      "type": "hotel",
+      "day": 3,
+      "lat": 29.653,
+      "lng": 94.362
+    },
+    {
+      "id": "stay_bomi_lingxi",
+      "name": "波密灵溪山居（岗云山林店）",
+      "zh": "波密住宿",
+      "type": "hotel",
+      "day": 5,
+      "lat": 29.86,
+      "lng": 95.77
+    },
+    {
+      "id": "stay_motuo_jinjiang",
+      "name": "锦江之星酒店（林芝墨脱）",
+      "zh": "墨脱住宿",
+      "type": "hotel",
+      "day": 7,
+      "lat": 29.326,
+      "lng": 95.333
+    },
+    {
+      "id": "stay_lulang_dalang",
+      "name": "达琅酒店（鲁朗镇扎西岗村店）",
+      "zh": "鲁朗住宿",
+      "type": "hotel",
+      "day": 8,
+      "lat": 29.769,
+      "lng": 94.742
+    },
+    {
+      "id": "stay_basum_nala",
+      "name": "巴松措纳拉尕布精品客栈",
+      "zh": "结巴村住宿",
+      "type": "hotel",
+      "day": 9,
+      "lat": 30.003,
+      "lng": 93.87
+    },
+    {
+      "id": "stay_songtsam",
+      "name": "松赞巴松措林卡酒店",
+      "zh": "松赞巴松措",
+      "type": "hotel",
+      "day": 10,
+      "lat": 30.004,
+      "lng": 93.9
+    },
+    {
+      "id": "stay_linzhi_bus",
+      "name": "安丽卡酒店（林芝汽车站）",
+      "zh": "林芝汽车站住宿",
+      "type": "hotel",
+      "day": 11,
+      "lat": 29.653,
+      "lng": 94.362
+    },
+    {
+      "id": "stay_lhasa_oxygen",
+      "name": "萨吉富氧酒店（布达拉宫店）",
+      "zh": "拉萨住宿",
+      "type": "hotel",
+      "day": 12,
+      "lat": 29.657,
+      "lng": 91.116
+    }
+  ],
+  "route": [
+    "tianyige",
+    "ningbo_gulou",
+    "fosha_dune",
+    "namcha_barwa",
+    "yarlung_canyon",
+    "sosong_village",
+    "biri_mountain",
+    "gongbu_park",
+    "gongbu_old_street",
+    "fujian_yuan",
+    "sejila_pass",
+    "zhatang_lutso",
+    "gangyun_forest",
+    "galang_palace",
+    "duodong_monastery",
+    "zhamo_monument",
+    "galongla_tunnel",
+    "guoguo_turn",
+    "motuo_museum",
+    "motuo_mirage",
+    "renqingbeng_monastery",
+    "zaxigang_village",
+    "alpine_pasture",
+    "basum_tso",
+    "jieba_village",
+    "xincuo",
+    "songtsam_basum",
+    "tibet_museum",
+    "norbulingka",
+    "yaowangshan",
+    "potala_square",
+    "potala_palace",
+    "heaven_post",
+    "jokhang_temple",
+    "barkhor_street",
+    "potala_night"
+  ],
+  "routeSegments": [
+    {
+      "mode": "walk",
+      "ids": [
+        "tianyige",
+        "ningbo_gulou"
+      ]
+    },
+    {
+      "mode": "flight",
+      "ids": [
+        "ningbo_gulou",
+        "fosha_dune"
+      ]
+    },
+    {
+      "mode": "drive",
+      "ids": [
+        "fosha_dune",
+        "namcha_barwa",
+        "yarlung_canyon",
+        "sosong_village",
+        "biri_mountain",
+        "gongbu_park",
+        "gongbu_old_street",
+        "fujian_yuan"
+      ]
+    },
+    {
+      "mode": "drive",
+      "ids": [
+        "fujian_yuan",
+        "sejila_pass",
+        "zhatang_lutso",
+        "gangyun_forest",
+        "galang_palace"
+      ]
+    },
+    {
+      "mode": "drive",
+      "ids": [
+        "galang_palace",
+        "duodong_monastery",
+        "zhamo_monument",
+        "galongla_tunnel",
+        "guoguo_turn",
+        "motuo_museum",
+        "motuo_mirage",
+        "renqingbeng_monastery",
+        "zaxigang_village"
+      ]
+    },
+    {
+      "mode": "drive",
+      "ids": [
+        "zaxigang_village",
+        "alpine_pasture",
+        "basum_tso",
+        "jieba_village",
+        "xincuo",
+        "songtsam_basum",
+        "tibet_museum"
+      ]
+    },
+    {
+      "mode": "walk",
+      "ids": [
+        "tibet_museum",
+        "norbulingka",
+        "yaowangshan",
+        "potala_square",
+        "potala_palace",
+        "heaven_post",
+        "jokhang_temple",
+        "barkhor_street",
+        "potala_night"
+      ]
+    }
+  ],
+  "spotInsights": {
+    "namcha_barwa": {
+      "unique": "索松村不是密集打卡，而是给南迦巴瓦留天气窗口；看到山本身就是当天最大收益。",
+      "history": "南迦巴瓦在雅鲁藏布大峡谷区域形成强烈高差，云雾变化极快，因此常被旅行者称作难得一见的神山。"
+    },
+    "gangyun_forest": {
+      "unique": "杉林徒步把波密的湿润森林、雪山和高原空气集中在一天里，是全程体力要求最高的自然体验之一。",
+      "history": "波密一带受印度洋水汽影响，森林景观和西藏常见的荒寒高原反差很大。"
+    },
+    "guoguo_turn": {
+      "unique": "果果塘大拐弯用一个完整江湾把墨脱的热带湿润感拉出来，和嘎隆拉雪山路段形成强烈切换。",
+      "history": "墨脱长期交通艰难，扎墨公路和嘎隆拉隧道让这条路线从艰险进藏路逐渐变成可抵达的旅行线路。"
+    },
+    "basum_tso": {
+      "unique": "巴松措的湖色、村落和雪山关系很适合慢住，住在景区内比单纯路过更能感到它的层次。",
+      "history": "巴松措是林芝重要湖泊景区，周边村落、寺庙和徒步线路共同组成多日停留空间。"
+    },
+    "potala_palace": {
+      "unique": "布达拉宫这天不只是拍照，而是用讲解把前面一路的藏地文化线索收束起来。",
+      "history": "布达拉宫是拉萨最重要的历史建筑之一，参观线路、预约时段和讲解质量会明显影响体验。"
+    }
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2025-09-28",
+      "title": "杭州南 → 宁波半日游 → 重庆",
+      "base": "重庆转机夜",
+      "lat": 29.873,
+      "lng": 121.55,
+      "sunLabel": "宁波",
+      "sunrise": "宁波约 05:49",
+      "sunset": "宁波约 17:45",
+      "alerts": [
+        "14:08-15:04 G7595 杭州南到宁波",
+        "宁波 T1 → 重庆 T3：21:05-23:35"
+      ],
+      "transport": "杭州南坐高铁到宁波，半日游后地铁 2 号线去栎社机场，再飞重庆。",
+      "timeline": [
+        [
+          "14:08-15:04",
+          "杭州南 → 宁波，G7595，约 56 分钟"
+        ],
+        [
+          "下午",
+          "天一阁",
+          "tianyige"
+        ],
+        [
+          "傍晚",
+          "宁波鼓楼",
+          "ningbo_gulou"
+        ],
+        [
+          "晚餐",
+          "木木鲜海鲜面"
+        ],
+        [
+          "晚间",
+          "宁波站 → 宁波 T1，地铁 2 号线约 30 分钟"
+        ],
+        [
+          "21:05-23:35",
+          "宁波 T1 → 重庆 T3，约 2h30m"
+        ]
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2025-09-29",
+      "title": "重庆 → 林芝 → 索松村",
+      "base": "吉美·南迦巴瓦山居，277 元 1 晚，有早餐",
+      "lat": 29.598,
+      "lng": 94.919,
+      "sunLabel": "索松村",
+      "sunrise": "索松村约 07:34",
+      "sunset": "索松村约 19:28",
+      "alerts": [
+        "06:40-09:05 重庆 T3 到林芝 T2，值机选左边",
+        "林芝到索松村和酒店约车，100 元/人",
+        "后花园适合半夜和早上拍照"
+      ],
+      "transport": "清晨飞林芝，落地后直接进索松村，下午轻松看山看江。",
+      "timeline": [
+        [
+          "06:40-09:05",
+          "重庆 T3 → 林芝 T2，约 2h25m"
+        ],
+        [
+          "中午",
+          "林芝 → 索松村，酒店约车 100 元/人"
+        ],
+        [
+          "下午",
+          "佛掌沙丘",
+          "fosha_dune"
+        ],
+        [
+          "下午/傍晚",
+          "南迦巴瓦峰",
+          "namcha_barwa"
+        ],
+        [
+          "下午",
+          "雅鲁藏布大峡谷",
+          "yarlung_canyon"
+        ],
+        [
+          "晚上",
+          "索松村",
+          "sosong_village"
+        ]
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2025-09-30",
+      "title": "索松村 → 林芝市区转山闲逛",
+      "base": "林芝散步去咖啡民宿，356 元 2 晚，无早餐，有洗衣机",
+      "lat": 29.653,
+      "lng": 94.362,
+      "sunLabel": "林芝",
+      "sunrise": "林芝约 07:35",
+      "sunset": "林芝约 19:27",
+      "alerts": [
+        "索松村到林芝市区提前找老板问车，100 元送到市区",
+        "比日神山打车要说到入口栈道（拉丁嘎村）"
+      ],
+      "transport": "从索松村回林芝市区，下午比日神山转山，再在市区散步。",
+      "timeline": [
+        [
+          "上午",
+          "索松村慢起，看南迦巴瓦天气"
+        ],
+        [
+          "中午",
+          "索松村 → 林芝市区"
+        ],
+        [
+          "下午",
+          "比日神山",
+          "biri_mountain"
+        ],
+        [
+          "下午",
+          "工布公园",
+          "gongbu_park"
+        ],
+        [
+          "晚上",
+          "工布老街",
+          "gongbu_old_street"
+        ]
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2025-10-01",
+      "title": "林芝休息日",
+      "base": "林芝散步去咖啡民宿",
+      "lat": 29.653,
+      "lng": 94.362,
+      "sunLabel": "林芝",
+      "sunrise": "林芝约 07:36",
+      "sunset": "林芝约 19:25",
+      "alerts": [
+        "这天主题是休息，不要临时加太满",
+        "福建园里有响箭协会，可以看射箭"
+      ],
+      "transport": "酒店休息为主，附近轻散步。",
+      "timeline": [
+        [
+          "上午",
+          "酒店休息、洗衣、调整状态"
+        ],
+        [
+          "下午",
+          "福建园",
+          "fujian_yuan"
+        ],
+        [
+          "晚上",
+          "继续休息，为第二天开始的包车段留体力"
+        ]
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2025-10-02",
+      "title": "林芝 → 波密",
+      "base": "波密灵溪山居（岗云山林店），525 元 2 晚 2 人，有早餐",
+      "lat": 29.86,
+      "lng": 95.77,
+      "sunLabel": "波密",
+      "sunrise": "波密约 07:36",
+      "sunset": "波密约 19:25",
+      "alerts": [
+        "司机接送到汇合点后开始包车段",
+        "色季拉山口风大冷，多穿"
+      ],
+      "transport": "林芝出发去波密，赶路日穿插色季拉山口和扎塘鲁措。",
+      "timeline": [
+        [
+          "上午",
+          "碰头，司机接送到汇合点"
+        ],
+        [
+          "路上",
+          "色季拉山口观景台",
+          "sejila_pass"
+        ],
+        [
+          "路上",
+          "扎塘鲁措",
+          "zhatang_lutso"
+        ],
+        [
+          "傍晚",
+          "抵达波密灵溪山居"
+        ]
+      ]
+    },
+    {
+      "day": 6,
+      "date": "2025-10-03",
+      "title": "岗云杉林徒步 + 噶朗王宫",
+      "base": "波密灵溪山居（岗云山林店）",
+      "lat": 29.87,
+      "lng": 95.77,
+      "sunLabel": "波密",
+      "sunrise": "波密约 07:37",
+      "sunset": "波密约 19:24",
+      "alerts": [
+        "岗云杉林徒步四五小时",
+        "早上吃饱，带零食和水",
+        "门票 80 元，国庆期间半价"
+      ],
+      "transport": "波密周边一日，上午徒步，下午按体力看噶朗王宫。",
+      "timeline": [
+        [
+          "上午-下午",
+          "岗云杉林",
+          "gangyun_forest"
+        ],
+        [
+          "下午",
+          "噶朗王宫",
+          "galang_palace"
+        ],
+        [
+          "晚上",
+          "回波密休息"
+        ]
+      ]
+    },
+    {
+      "day": 7,
+      "date": "2025-10-04",
+      "title": "波密 → 墨脱",
+      "base": "锦江之星酒店（林芝墨脱），326 元 1 晚 2 人",
+      "lat": 29.326,
+      "lng": 95.333,
+      "sunLabel": "墨脱",
+      "sunrise": "墨脱约 07:36",
+      "sunset": "墨脱约 19:24",
+      "alerts": [
+        "锦江之星原无早餐，实际送了早餐",
+        "墨脱博物馆免费，周一闭馆，17 点结束",
+        "果果塘大拐弯门票 60 元"
+      ],
+      "transport": "波密到墨脱，穿过扎墨公路和嘎隆拉隧道，下午看墨脱核心点。",
+      "timeline": [
+        [
+          "上午",
+          "多东寺",
+          "duodong_monastery"
+        ],
+        [
+          "路上",
+          "扎墨公路纪念碑",
+          "zhamo_monument"
+        ],
+        [
+          "路上",
+          "嘎隆拉隧道",
+          "galongla_tunnel"
+        ],
+        [
+          "下午",
+          "果果塘大拐弯",
+          "guoguo_turn"
+        ],
+        [
+          "下午",
+          "墨脱博物馆",
+          "motuo_museum"
+        ]
+      ]
+    },
+    {
+      "day": 8,
+      "date": "2025-10-05",
+      "title": "墨脱 → 鲁朗",
+      "base": "达琅酒店（鲁朗镇扎西岗村店），320.28 元 1 晚 2 人，有早餐",
+      "lat": 29.769,
+      "lng": 94.742,
+      "sunLabel": "鲁朗",
+      "sunrise": "鲁朗约 07:38",
+      "sunset": "鲁朗约 19:22",
+      "alerts": [
+        "墨脱到鲁朗是赶路日",
+        "鲁朗必吃石锅鸡"
+      ],
+      "transport": "上午看墨脱周边，之后从墨脱赶到鲁朗。",
+      "timeline": [
+        [
+          "上午",
+          "海市蜃楼",
+          "motuo_mirage"
+        ],
+        [
+          "上午",
+          "仁青崩寺",
+          "renqingbeng_monastery"
+        ],
+        [
+          "白天",
+          "墨脱 → 鲁朗"
+        ],
+        [
+          "傍晚",
+          "扎西岗村",
+          "zaxigang_village"
+        ],
+        [
+          "晚餐",
+          "鲁朗石锅鸡"
+        ]
+      ]
+    },
+    {
+      "day": 9,
+      "date": "2025-10-06",
+      "title": "鲁朗 → 巴松措 / 结巴村",
+      "base": "巴松措纳拉尕布精品客栈，387 元 1 晚 2 人，有早餐",
+      "lat": 30.011,
+      "lng": 93.926,
+      "sunLabel": "巴松措",
+      "sunrise": "巴松措约 07:42",
+      "sunset": "巴松措约 19:25",
+      "alerts": [
+        "高山牧场走小路可免费",
+        "巴松措门票 120 元，住宿押金 60 会在酒店返还"
+      ],
+      "transport": "从鲁朗出发，经高山牧场去巴松措，晚上住结巴村。",
+      "timeline": [
+        [
+          "上午",
+          "高山牧场",
+          "alpine_pasture"
+        ],
+        [
+          "白天",
+          "鲁朗 → 巴松措"
+        ],
+        [
+          "下午",
+          "巴松措",
+          "basum_tso"
+        ],
+        [
+          "晚上",
+          "结巴村",
+          "jieba_village"
+        ]
+      ]
+    },
+    {
+      "day": 10,
+      "date": "2025-10-07",
+      "title": "新措徒步 → 松赞躺平",
+      "base": "松赞巴松措林卡酒店，4573 元 1 晚 4 人",
+      "lat": 30.004,
+      "lng": 93.9,
+      "sunLabel": "巴松措",
+      "sunrise": "巴松措约 07:43",
+      "sunset": "巴松措约 19:24",
+      "alerts": [
+        "结巴村到新措 500 元一车，8 点出发",
+        "搓衣板路往返约 2.5 小时",
+        "新措徒步 3 小时，清洁费 10 元"
+      ],
+      "transport": "早上从结巴村去新措徒步，下午回松赞巴松措林卡休息。",
+      "timeline": [
+        [
+          "08:00",
+          "结巴村 → 新措，包车 500 元一车"
+        ],
+        [
+          "上午-中午",
+          "新措",
+          "xincuo"
+        ],
+        [
+          "下午",
+          "松赞巴松措林卡",
+          "songtsam_basum"
+        ],
+        [
+          "晚上",
+          "晚安饮品、洗衣烘干、躺平恢复"
+        ]
+      ]
+    },
+    {
+      "day": 11,
+      "date": "2025-10-08",
+      "title": "松赞 → 林芝市区",
+      "base": "安丽卡酒店（林芝汽车站），184 元 1 晚 2 人",
+      "lat": 29.653,
+      "lng": 94.362,
+      "sunLabel": "林芝",
+      "sunrise": "林芝约 07:40",
+      "sunset": "林芝约 19:16",
+      "alerts": [
+        "松赞到林芝包车 500 元一车",
+        "安丽卡就在大巴站，很方便但条件普通"
+      ],
+      "transport": "从松赞返回林芝，住汽车站附近，为第二天去拉萨做准备。",
+      "timeline": [
+        [
+          "上午",
+          "松赞住到较晚退房时间"
+        ],
+        [
+          "白天",
+          "松赞 → 林芝，包车 500 元一车"
+        ],
+        [
+          "下午",
+          "林芝市区闲逛"
+        ],
+        [
+          "晚上",
+          "住林芝汽车站附近"
+        ]
+      ]
+    },
+    {
+      "day": 12,
+      "date": "2025-10-09",
+      "title": "林芝 → 拉萨 citywalk",
+      "base": "萨吉富氧酒店（布达拉宫店），354.35 元 2 晚，有早餐",
+      "lat": 29.657,
+      "lng": 91.116,
+      "sunLabel": "拉萨",
+      "sunrise": "拉萨约 07:54",
+      "sunset": "拉萨约 19:28",
+      "alerts": [
+        "林芝 → 拉萨：8:00-12:00",
+        "第一天到拉萨走慢点，洗澡不要洗头",
+        "火车站可接站，提前 2 小时预约"
+      ],
+      "transport": "上午林芝到拉萨，下午以室内和低强度 citywalk 为主。",
+      "timeline": [
+        [
+          "08:00-12:00",
+          "林芝 → 拉萨"
+        ],
+        [
+          "下午",
+          "西藏博物馆",
+          "tibet_museum"
+        ],
+        [
+          "机动",
+          "罗布林卡",
+          "norbulingka"
+        ],
+        [
+          "傍晚",
+          "药王山观景台",
+          "yaowangshan"
+        ]
+      ]
+    },
+    {
+      "day": 13,
+      "date": "2025-10-10",
+      "title": "布达拉宫 + 大昭寺 + 八廓街",
+      "base": "萨吉富氧酒店（布达拉宫店）",
+      "lat": 29.657,
+      "lng": 91.116,
+      "sunLabel": "拉萨",
+      "sunrise": "拉萨约 07:55",
+      "sunset": "拉萨约 19:27",
+      "alerts": [
+        "布达拉宫一号线 11:00-11:20，可提前一小时进入",
+        "大昭寺已预约 15:30-16:30",
+        "天上邮局可寄明信片"
+      ],
+      "transport": "拉萨核心文化日，上午布达拉宫，下午大昭寺和八廓街，晚上看夜景。",
+      "timeline": [
+        [
+          "上午",
+          "布达拉宫广场",
+          "potala_square"
+        ],
+        [
+          "11:00-11:20",
+          "布达拉宫",
+          "potala_palace"
+        ],
+        [
+          "中午",
+          "天上邮局",
+          "heaven_post"
+        ],
+        [
+          "15:30-16:30",
+          "大昭寺",
+          "jokhang_temple"
+        ],
+        [
+          "傍晚",
+          "八廓街",
+          "barkhor_street"
+        ],
+        [
+          "晚上",
+          "布达拉宫夜景",
+          "potala_night"
+        ]
+      ]
+    },
+    {
+      "day": 14,
+      "date": "2025-10-11",
+      "title": "拉萨 → 成都 → 杭州",
+      "base": "返程",
+      "lat": 29.657,
+      "lng": 91.116,
+      "sunLabel": "拉萨",
+      "sunrise": "拉萨约 07:56",
+      "sunset": "返程日",
+      "alerts": [
+        "8 点到航运站，小程序买大巴票 30 元，9 点到机场",
+        "拉萨 T3 → 成都 T2：10:40-12:40",
+        "成都 T1 → 杭州 T4：18:20-21:00，飞猪预约接机"
+      ],
+      "transport": "早上机场大巴去拉萨机场，经成都中转回杭州。",
+      "timeline": [
+        [
+          "08:00",
+          "到航运站，买机场大巴票 30 元"
+        ],
+        [
+          "09:00",
+          "到拉萨机场"
+        ],
+        [
+          "10:40-12:40",
+          "拉萨 T3 → 成都 T2，贵宾厅休息"
+        ],
+        [
+          "18:20-21:00",
+          "成都 T1 → 杭州 T4，飞猪预约接机"
+        ]
+      ]
+    }
+  ],
+  "foods": [
+    {
+      "area": "宁波",
+      "type": "过境晚餐",
+      "title": "木木鲜海鲜面",
+      "text": "Day 1 宁波半日游后的晚餐点，吃完直接去机场。过境日重点是稳，不要选太远餐厅。",
+      "budget": "按现场点单"
+    },
+    {
+      "area": "鲁朗",
+      "type": "必吃正餐",
+      "title": "鲁朗石锅鸡",
+      "text": "行程明确写“鲁朗必吃石锅鸡”，共同花费里有两顿记录，约 453-543 元/桌。",
+      "budget": "约 RMB 110-136/人"
+    },
+    {
+      "area": "墨脱",
+      "type": "赶路补给",
+      "title": "有盐有味川菜 + 芭蕉补给",
+      "text": "墨脱段记账里有川菜 330 元和芭蕉小额补给，湿热路段适合吃扎实一点。",
+      "budget": "约 RMB 80+/人"
+    },
+    {
+      "area": "巴松措",
+      "type": "湖区正餐",
+      "title": "巴河冷水鱼",
+      "text": "共同花费记录巴河冷水鱼 630 元，适合巴松措/结巴村段作为一顿正式餐。",
+      "budget": "约 RMB 158/人"
+    },
+    {
+      "area": "松赞巴松措",
+      "type": "酒店餐厅",
+      "title": "地平线餐厅",
+      "text": "松赞这晚主打恢复，记账里地平线餐厅 615 元。价格高一点，但胜在不用折腾。",
+      "budget": "约 RMB 154/人"
+    },
+    {
+      "area": "拉萨",
+      "type": "低强度补给",
+      "title": "潮汕砂锅粥 + 鲁固茶馆",
+      "text": "返程前两天在拉萨节奏放慢，砂锅粥、茶馆这类补给比重口味硬撑更友好。",
+      "budget": "约 RMB 13-37/人"
+    }
+  ],
+  "prep": [
+    {
+      "title": "交通确认",
+      "items": [
+        "杭州南 → 宁波：2025-09-28 14:08-15:04，G7595。",
+        "宁波 T1 → 重庆 T3：2025-09-28 21:05-23:35。",
+        "重庆 T3 → 林芝 T2：2025-09-29 06:40-09:05，值机选左边。",
+        "林芝 → 拉萨：2025-10-09 8:00-12:00。",
+        "拉萨 T3 → 成都 T2：2025-10-11 10:40-12:40；成都 T1 → 杭州 T4：18:20-21:00。"
+      ]
+    },
+    {
+      "title": "高原与体力",
+      "items": [
+        "刚到林芝和拉萨都不要走太快，第一天到拉萨洗澡不要洗头。",
+        "岗云杉林徒步四五小时，早上吃饱，带零食和水。",
+        "新措路况颠簸，搓衣板路往返约 2.5 小时，徒步约 3 小时。",
+        "色季拉山口、嘎隆拉一带风大冷，多穿防风保暖层。"
+      ]
+    },
+    {
+      "title": "门票预约",
+      "items": [
+        "天一阁：30 元。",
+        "岗云杉林：门票 80 元，国庆期间半价。",
+        "果果塘大拐弯：60 元。",
+        "巴松措：120 元，住宿押金 60 会在酒店返还。",
+        "新措：10 元清洁费。",
+        "西藏博物馆：10 月 2 日去预约，重点看农奴主题。",
+        "布达拉宫：一号线 11:00-11:20，可提前一小时进入。",
+        "大昭寺：15:30-16:30 已预约。"
+      ]
+    },
+    {
+      "title": "住宿关键备注",
+      "items": [
+        "吉美·南迦巴瓦山居：有早餐，后花园适合半夜和早上拍照。",
+        "林芝散步去咖啡民宿：无早餐，有洗衣机。",
+        "波密灵溪山居：有早餐，最早 10 点可入住。",
+        "墨脱锦江之星：很新，实际送了早餐。",
+        "松赞巴松措林卡：赠晚安饮品、自助下午茶，有洗衣机烘干机。",
+        "安丽卡酒店：就在大巴站，很方便，但条件普通。",
+        "萨吉富氧酒店：有早餐，火车站可接站，提前 2 小时预约。"
+      ]
+    }
+  ]
+}

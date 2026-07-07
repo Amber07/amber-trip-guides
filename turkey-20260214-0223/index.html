@@ -1,0 +1,3904 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026 春节浪漫土耳其行程攻略</title>
+  <meta name="description" content="杭州出发，经成都夜航伊斯坦布尔，串起伊斯坦布尔新城与老城、卡帕多奇亚热气球、安塔利亚老城海港和佩尔盖/阿斯潘多斯/西代一日游。">
+  <style>
+    :root {
+      --bg: #f5f2ec;
+      --paper: #fffaf2;
+      --ink: #18211d;
+      --muted: #687069;
+      --line: #ded4c5;
+      --green: #275745;
+      --blue: #1e6a8c;
+      --orange: #bc6339;
+      --gold: #c29334;
+      --shadow: 0 14px 36px rgba(42, 34, 20, .12);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.58;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    button, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .hero {
+      position: relative;
+      min-height: 68vh;
+      display: grid;
+      align-items: end;
+      padding: 32px;
+      color: #fff;
+      overflow: hidden;
+      background: #0c1511;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(12, 21, 17, .12), rgba(12, 21, 17, .76));
+      pointer-events: none;
+    }
+
+    #heroMediaSlot {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .hero-media.is-video {
+      background: #0c1511;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: rgba(255,255,255,.82);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 920px;
+      margin: 0;
+      font-size: clamp(38px, 7vw, 88px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 820px;
+      margin: 18px 0 0;
+      color: rgba(255,255,255,.88);
+      font-size: clamp(17px, 2vw, 23px);
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .hero-stat {
+      min-width: 145px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 22px;
+    }
+
+    .hero-stat span {
+      color: rgba(255,255,255,.8);
+      font-size: 13px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 500;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 14px;
+      overflow-x: auto;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,250,242,.9);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav a {
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav a:hover {
+      background: #eadfce;
+      text-decoration: none;
+    }
+
+    .nav a::before {
+      content: attr(data-icon);
+      display: none;
+    }
+
+    section { padding: 54px 24px; }
+
+    .inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 820px;
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .notice {
+      margin: 18px 0 0;
+      padding: 14px 16px;
+      border: 1px solid #e0bf82;
+      border-radius: var(--radius);
+      background: #fff4d8;
+      color: #6a4b14;
+      font-weight: 700;
+    }
+
+    .map-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 380px;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .map-wrap {
+      position: relative;
+      min-height: 640px;
+    }
+
+    #map {
+      height: 100%;
+      min-height: 640px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    #map.map-fallback {
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      background: #e9dfd0;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .route-status {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      z-index: 460;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      max-width: calc(100% - 28px);
+      padding: 10px 12px;
+      border: 1px solid rgba(222, 212, 197, .9);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 242, .94);
+      color: var(--muted);
+      box-shadow: 0 10px 28px rgba(41, 54, 48, .16);
+      backdrop-filter: blur(14px);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .route-status.show {
+      display: flex;
+    }
+
+    .route-status.warning {
+      border-color: #e0bf82;
+      background: rgba(255, 244, 216, .96);
+      color: #6a4b14;
+    }
+
+    .route-status::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .route-status.warning::before {
+      background: var(--orange);
+    }
+
+    .spot-panel, .card, .food-card, .prep-card, .transport-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .spot-panel {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      position: relative;
+    }
+
+    .sheet-close {
+      display: none;
+    }
+
+    .panel-img-wrap {
+      position: relative;
+      height: 210px;
+      min-height: 0;
+      background: #d8d2c8;
+      overflow: hidden;
+    }
+
+    .panel-img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      min-height: 0;
+      background: #d8d2c8 center / cover;
+    }
+
+    .panel-video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      background: #111;
+    }
+
+    .panel-img,
+    .rating-image {
+      cursor: zoom-in;
+    }
+
+    .panel-img.has-video {
+      cursor: default;
+    }
+
+    .panel-img:focus-visible,
+    .rating-image:focus-visible {
+      outline: 3px solid rgba(30, 106, 140, .55);
+      outline-offset: -3px;
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      z-index: 4;
+      display: none;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255, 255, 255, .48);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .9);
+      color: var(--ink);
+      box-shadow: 0 8px 20px rgba(41, 54, 48, .18);
+      transform: translateY(-50%);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .carousel-button.prev {
+      left: 10px;
+    }
+
+    .carousel-button.next {
+      right: 10px;
+    }
+
+    .panel-img-wrap.has-multiple .carousel-button {
+      display: grid;
+    }
+
+    .carousel-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      z-index: 4;
+      display: none;
+      gap: 6px;
+      transform: translateX(-50%);
+    }
+
+    .panel-img-wrap.has-multiple .carousel-dots {
+      display: flex;
+    }
+
+    .carousel-dot {
+      width: 7px;
+      height: 7px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .62);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+      padding: 0;
+    }
+
+    .carousel-dot.active {
+      background: #fff;
+      transform: scale(1.18);
+    }
+
+    .panel-body {
+      padding: 16px;
+      overflow: auto;
+    }
+
+    .panel-body h3 {
+      margin: 0 0 7px;
+      font-size: 23px;
+      line-height: 1.14;
+    }
+
+    .panel-intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .tag.main {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+    }
+
+    .detail-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin: 12px 0 0;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 0;
+    }
+
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .action-link.primary {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+    }
+
+    .action-link:hover {
+      text-decoration: none;
+      filter: brightness(.98);
+    }
+
+    .mini-card {
+      min-width: 0;
+      padding: 11px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fffdf8;
+    }
+
+    .mini-card.context {
+      background: #f4f8f3;
+    }
+
+    .mini-card h4 {
+      margin: 0 0 5px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.48;
+    }
+
+    .route-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .day-list-wrap {
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .day-jump {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+      margin-top: 18px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 242, .92);
+      box-shadow: 0 10px 26px rgba(42, 34, 20, .08);
+      backdrop-filter: blur(12px);
+    }
+
+    .day-jump button {
+      display: grid;
+      place-items: center;
+      min-height: 42px;
+      padding: 5px 4px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      background: transparent;
+      color: var(--muted);
+      line-height: 1.1;
+    }
+
+    .day-jump button:hover,
+    .day-jump button.active {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .day-jump strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .day-jump span {
+      display: block;
+      margin-top: 2px;
+      font-size: 10px;
+      font-weight: 800;
+      opacity: .78;
+    }
+
+    .card {
+      padding: 18px;
+      box-shadow: none;
+    }
+
+    .day-card {
+      scroll-margin-top: 84px;
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .card-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .card p {
+      margin: 4px 0 0;
+      color: var(--muted);
+    }
+
+    .date-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border: 1px solid #d8e2d9;
+      border-radius: 999px;
+      background: #f2f7f0;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .day-toggle {
+      display: none;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline li {
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      gap: 10px;
+      padding: 10px;
+      border-radius: var(--radius);
+      background: #f8efe2;
+    }
+
+    .timeline strong {
+      color: var(--green);
+    }
+
+    .timeline button {
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: rgba(30, 106, 140, .35);
+      text-underline-offset: 3px;
+    }
+
+    .day-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .day-meta div {
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fffdf8;
+    }
+
+    .day-meta strong {
+      display: block;
+      color: var(--ink);
+    }
+
+    .alert-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 12px 0 0;
+    }
+
+    .alert-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 9px;
+      border: 1px solid #e0bf82;
+      border-radius: 999px;
+      background: #fff4d8;
+      color: #6a4b14;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .side-stack {
+      position: sticky;
+      top: 68px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .transport-card, .rating-card {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+
+    .rating-card {
+      max-height: calc(100vh - 96px);
+      overflow: auto;
+    }
+
+    .transport-card h3, .rating-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .rating-image {
+      width: 100%;
+      aspect-ratio: 16 / 8.6;
+      margin: 0 0 10px;
+      border-radius: var(--radius);
+      background: #d8d2c8 center / cover;
+    }
+
+    .rating-image.has-video {
+      position: relative;
+    }
+
+    .rating-image.has-video::after {
+      content: "播放视频";
+      position: absolute;
+      left: 12px;
+      bottom: 10px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(255, 250, 242, .92);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .rating-card h3 {
+      line-height: 1.22;
+    }
+
+    .rating-card p {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .rating-card .tag-row {
+      margin: 7px 0 8px;
+    }
+
+    .rating-card .tag {
+      min-height: 24px;
+      padding: 2px 7px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    select {
+      width: 100%;
+      min-height: 42px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .estimate {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .estimate div {
+      min-width: 0;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .estimate strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr) 30px;
+      gap: 8px;
+      align-items: center;
+      margin: 6px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .bar {
+      height: 8px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #e7ddce;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: var(--orange);
+    }
+
+    .panel-rating {
+      display: none;
+    }
+
+    .food-grid, .prep-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .food-card, .prep-card {
+      padding: 16px;
+      box-shadow: none;
+    }
+
+    .food-card h3, .prep-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .food-card p, .prep-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .prep-card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .marker-pin {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border: 2px solid #fff;
+      border-radius: 50% 50% 50% 4px;
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 7px 18px rgba(0,0,0,.25);
+      transform: rotate(-45deg);
+      font-weight: 900;
+    }
+
+    .marker-pin span {
+      transform: rotate(45deg);
+      font-size: 12px;
+    }
+
+    .marker-pin.hotel { background: var(--gold); }
+    .marker-pin.airport { background: var(--green); }
+
+    footer {
+      padding: 22px 24px 44px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .image-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(12, 21, 17, .88);
+      backdrop-filter: blur(12px);
+    }
+
+    .image-lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-image {
+      max-width: min(1120px, 100%);
+      max-height: min(82vh, 780px);
+      border-radius: var(--radius);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
+      object-fit: contain;
+      background: #111;
+      touch-action: pan-y;
+    }
+
+    .lightbox-video {
+      display: none;
+      max-width: min(1120px, 100%);
+      max-height: min(82vh, 780px);
+      border-radius: var(--radius);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
+      background: #111;
+      touch-action: pan-y;
+    }
+
+    .image-lightbox.show-video .lightbox-image {
+      display: none;
+    }
+
+    .image-lightbox.show-video .lightbox-video {
+      display: block;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      display: none;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255, 255, 255, .34);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .92);
+      color: var(--ink);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .24);
+      transform: translateY(-50%);
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .lightbox-nav.prev {
+      left: max(18px, env(safe-area-inset-left, 0px));
+    }
+
+    .lightbox-nav.next {
+      right: max(18px, env(safe-area-inset-right, 0px));
+    }
+
+    .image-lightbox.has-multiple .lightbox-nav {
+      display: grid;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: max(18px, env(safe-area-inset-top, 0px));
+      right: max(18px, env(safe-area-inset-right, 0px));
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .94);
+      color: var(--ink);
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .lightbox-caption {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: max(18px, env(safe-area-inset-bottom, 0px));
+      color: rgba(255, 255, 255, .86);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .lightbox-dots {
+      position: absolute;
+      left: 50%;
+      bottom: max(46px, calc(env(safe-area-inset-bottom, 0px) + 46px));
+      z-index: 2;
+      display: none;
+      gap: 7px;
+      transform: translateX(-50%);
+    }
+
+    .image-lightbox.has-multiple .lightbox-dots {
+      display: flex;
+    }
+
+    .lightbox-dot {
+      width: 8px;
+      height: 8px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .54);
+      box-shadow: 0 1px 6px rgba(0, 0, 0, .38);
+      padding: 0;
+    }
+
+    .lightbox-dot.active {
+      background: #fff;
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 980px) {
+      .map-grid, .two-col { grid-template-columns: 1fr; }
+      .side-stack { position: static; }
+      .map-wrap, #map { min-height: 520px; }
+      .food-grid, .prep-grid { grid-template-columns: repeat(2, 1fr); }
+      .day-list-wrap {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .day-jump {
+        z-index: 20;
+        display: flex;
+        gap: 6px;
+        margin: 14px 0 0;
+        padding: 7px;
+        overflow-x: auto;
+      }
+
+      .day-jump button {
+        flex: 0 0 54px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      body {
+        padding-bottom: calc(82px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 26px 18px 28px;
+      }
+
+      .hero-inner {
+        margin-top: 28px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero-copy {
+        font-size: 17px;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .hero-stat {
+        min-width: 0;
+        padding: 9px 10px;
+      }
+
+      .hero-stat strong {
+        font-size: 17px;
+        line-height: 1.15;
+      }
+
+      .hero-stat span {
+        font-size: 11px;
+        line-height: 1.25;
+      }
+
+      .notice {
+        font-size: 14px;
+      }
+
+      .nav {
+        position: fixed;
+        inset: auto 10px calc(10px + env(safe-area-inset-bottom, 0px)) 10px;
+        z-index: 1200;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4px;
+        padding: 8px;
+        border: 1px solid rgba(41, 54, 48, .14);
+        border-radius: 18px;
+        background: rgba(255, 250, 242, .94);
+        box-shadow: 0 18px 44px rgba(41, 54, 48, .18);
+      }
+
+      .nav a {
+        display: grid;
+        place-items: center;
+        gap: 2px;
+        min-height: 52px;
+        padding: 4px 2px;
+        border-radius: 12px;
+        font-size: 12px;
+        line-height: 1.2;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .nav a::before {
+        display: block;
+        font-size: 17px;
+        line-height: 1;
+      }
+
+      section {
+        padding: 44px 16px;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .map-grid {
+        display: block;
+      }
+
+      .map-wrap {
+        height: 62vh;
+        min-height: 440px;
+      }
+
+      #map {
+        height: 100%;
+        min-height: 0;
+        border-radius: 12px;
+      }
+
+      .route-status {
+        bottom: 12px;
+        font-size: 12px;
+      }
+
+      .spot-panel {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1300;
+        max-height: min(78vh, 640px);
+        border-radius: 18px 18px 0 0;
+        transform: translateY(106%);
+        transition: transform .28s ease;
+        box-shadow: 0 -18px 48px rgba(41, 54, 48, .24);
+      }
+
+      .spot-panel.open {
+        transform: translateY(0);
+      }
+
+      .spot-panel::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        width: 44px;
+        height: 5px;
+        border-radius: 999px;
+        background: rgba(41, 54, 48, .22);
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+
+      .sheet-close {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        z-index: 3;
+        width: 34px;
+        height: 34px;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .92);
+        color: var(--ink);
+        font-size: 24px;
+        line-height: 1;
+        box-shadow: 0 8px 20px rgba(41, 54, 48, .16);
+      }
+
+      .panel-img {
+        min-height: 0;
+      }
+
+      .panel-img-wrap {
+        height: 170px;
+      }
+
+      .panel-body {
+        max-height: calc(78vh - 170px);
+        padding: 16px 16px calc(18px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .panel-body h3 {
+        font-size: 21px;
+      }
+
+      .panel-intro {
+        font-size: 14px;
+      }
+
+      .detail-list {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .mini-card {
+        padding: 10px;
+      }
+
+      .panel-rating {
+        display: block;
+        margin-top: 12px;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fffdf8;
+      }
+
+      .panel-rating h4 {
+        margin: 0 0 6px;
+        font-size: 16px;
+      }
+
+      .panel-rating p {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .route-list {
+        margin-top: 12px;
+      }
+
+      .day-jump {
+        top: 10px;
+        border-radius: 999px;
+      }
+
+      .day-card {
+        padding: 14px;
+        scroll-margin-top: 80px;
+      }
+
+      .card-head {
+        align-items: flex-start;
+        margin-bottom: 0;
+      }
+
+      .card h3 {
+        font-size: 19px;
+      }
+
+      .card-title-row {
+        gap: 6px;
+      }
+
+      .date-pill {
+        min-height: 24px;
+        padding: 2px 8px;
+        font-size: 11px;
+      }
+
+      .day-card:not(.expanded) .timeline,
+      .day-card:not(.expanded) .day-meta,
+      .day-card:not(.expanded) .alert-strip {
+        display: none;
+      }
+
+      .day-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        padding: 7px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fffdf8;
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .side-stack {
+        gap: 10px;
+      }
+
+      .transport-card,
+      .rating-card {
+        padding: 14px;
+      }
+
+      .estimate {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .estimate div {
+        padding: 9px;
+      }
+
+      .estimate strong {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .map-wrap {
+        height: 58vh;
+        min-height: 390px;
+      }
+      .food-grid, .prep-grid, .day-meta { grid-template-columns: 1fr; }
+      .timeline li { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .estimate {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div id="heroMediaSlot" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">Romantic Turkey · 2026.02.14-02.23</p>
+      <h1>春节浪漫土耳其10日游</h1>
+      <p class="hero-copy">从伊斯坦布尔海峡和奥斯曼宫殿开场，把年夜饭留在老城日落之后；再去卡帕多奇亚追热气球、走玫瑰红谷，最后在安塔利亚把罗马遗迹、地中海海港和西代日落收进旅程。</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>10 日</strong><span>2/14-2/23 春节行程</span></div>
+        <div class="hero-stat"><strong>3 段</strong><span>伊斯坦布尔 / 卡帕多奇亚 / 安塔利亚</span></div>
+        <div class="hero-stat"><strong>热气球</strong><span>Love Valley / Goreme / Rose-Red Valley</span></div>
+      </div>
+      <div class="notice">春节高峰期交通和机场大巴要留足余量；清真寺需要脱鞋，女士准备头巾或能包住头发的帽子；卡帕多奇亚热气球受天气影响很大，早晨安排保持弹性。</div>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="页面导航">
+    <a href="#map-section" data-icon="图">路线地图</a>
+    <a href="#itinerary-section" data-icon="日">每日行程</a>
+    <a href="#food-section" data-icon="食">餐饮补给</a>
+    <a href="#prep-section" data-icon="备">提前准备</a>
+  </nav>
+
+  <main>
+    <section id="map-section">
+      <div class="inner">
+        <p class="kicker">Route Map</p>
+        <h2>伊斯坦布尔 · 卡帕多奇亚 · 安塔利亚路线地图</h2>
+        <p class="lead">地图串起伊斯坦布尔新老城区、卡帕多奇亚热气球和安塔利亚地中海古迹。跨城段以航班为主，市内以公交、有轨电车、轮渡和步行为主。</p>
+        <div class="map-grid">
+          <div class="map-wrap">
+            <div id="map" role="application" aria-label="塔斯马尼亚行程地图"></div>
+            <div class="route-status show" id="routeStatus" role="status">正在加载自驾路线</div>
+          </div>
+          <aside class="spot-panel" aria-live="polite">
+            <button class="sheet-close" type="button" aria-label="关闭景点详情" onclick="closeSpotSheet()">×</button>
+            <div class="panel-img-wrap" id="panelImageWrap">
+              <button class="carousel-button prev" type="button" aria-label="上一张图片" onclick="shiftSpotImage(-1)">‹</button>
+              <div class="panel-img" id="panelImage"></div>
+              <button class="carousel-button next" type="button" aria-label="下一张图片" onclick="shiftSpotImage(1)">›</button>
+              <div class="carousel-dots" id="panelImageDots" aria-label="景点图片分页"></div>
+            </div>
+            <div class="panel-body" id="panelBody"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="itinerary-section">
+      <div class="inner">
+        <p class="kicker">Daily Plan</p>
+        <h2>每日行程安排</h2>
+        <p class="lead">按行程日期、航班、交通、景点说明和酒店备注整理。点击时间线中的景点名，可以联动地图与详情面板。</p>
+        <div class="two-col">
+          <div class="day-list-wrap">
+            <nav class="day-jump" id="dayJump" aria-label="分天导览"></nav>
+            <div class="route-list" id="dayList"></div>
+          </div>
+          <aside class="side-stack">
+            <div class="transport-card">
+              <h3>点到点交通时间</h3>
+              <label>起点<select id="fromSelect"></select></label>
+              <label>终点<select id="toSelect"></select></label>
+              <div class="estimate" id="estimateBox"></div>
+            </div>
+            <div class="rating-card" id="ratingPanel"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="food-section">
+      <div class="inner">
+        <p class="kicker">Food</p>
+        <h2>沿线餐饮与补给</h2>
+        <p class="lead">保留原行程中的年夜饭、梅花中餐厅和城市段补给提醒，把赶路日和清真寺参观日的吃饭节奏单独标出来。</p>
+        <div class="food-grid" id="foodGrid"></div>
+      </div>
+    </section>
+
+    <section id="prep-section">
+      <div class="inner">
+        <p class="kicker">Before Departure</p>
+        <h2>需要提前确认的东西</h2>
+        <p class="lead">集中整理航班、接驳、酒店、签证、现金、清真寺装备和拍摄设备。</p>
+        <div class="prep-grid" id="prepGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="图片预览" onclick="closeImageLightbox(event)">
+    <button class="lightbox-close" type="button" aria-label="关闭图片预览" onclick="closeImageLightbox(event)">×</button>
+    <button class="lightbox-nav prev" type="button" aria-label="上一张图片" onclick="shiftLightboxImage(-1, event)">‹</button>
+    <img class="lightbox-image" id="lightboxImage" alt="">
+    <video class="lightbox-video" id="lightboxVideo" controls playsinline></video>
+    <button class="lightbox-nav next" type="button" aria-label="下一张图片" onclick="shiftLightboxImage(1, event)">›</button>
+    <div class="lightbox-dots" id="lightboxDots" aria-label="放大图片分页"></div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <footer>2026 春节浪漫土耳其行程攻略 · 图片来自旅途素材</footer>
+
+  <script>
+    const heroMedia = {
+      "src": "assets/turkey-hero.jpg",
+      "poster": "",
+      "alt": "卡帕多奇亚热气球飞过岩石峡谷"
+};
+
+    const spots = [
+      {
+            "id": "galata_tower",
+            "name": "Galata Tower",
+            "zh": "加拉达石塔",
+            "type": "spot",
+            "day": 2,
+            "time": "2/15 上午",
+            "lat": 41.0256,
+            "lng": 28.9741,
+            "stay": "30-60 分钟",
+            "image": "assets/image5.png",
+            "images": [
+                  {
+                        "src": "assets/image5.png",
+                        "caption": "Galata Tower｜加拉达石塔"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "热那亚塔楼",
+                  "新城区地标",
+                  "街巷拍照"
+            ],
+            "intro": "加拉达石塔原名基督塔，1348 年由热那亚人修建，是加拉塔殖民地防御体系的制高点。",
+            "play": "酒店寄存行李后从 Elmadag 坐公交到附近，适合和独立大街、塔克西姆广场串成一条步行线。",
+            "note": "周边坡路和街巷多，第一天落地后不要安排得太赶。",
+            "ratings": {
+                  "nature": 3,
+                  "culture": 8,
+                  "weather": 5,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "istiklal_avenue",
+            "name": "Istiklal Avenue",
+            "zh": "独立大街",
+            "type": "spot",
+            "day": 2,
+            "time": "2/15 上午",
+            "lat": 41.034,
+            "lng": 28.9784,
+            "stay": "1-2 小时",
+            "image": "assets/image6.png",
+            "images": [
+                  {
+                        "src": "assets/image6.png",
+                        "caption": "Istiklal Avenue｜独立大街"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "步行街",
+                  "红色电车",
+                  "新城商业"
+            ],
+            "intro": "独立大街是伊斯坦布尔标志性步行街，全长约 3 公里，连接塔克西姆广场和加拉塔桥附近街区。",
+            "play": "从加拉达一带一路往塔克西姆方向走，顺路拍红色复古电车和街景。",
+            "note": "人流密集，随身物品看好；赶后续宫殿和轮渡时不要在商店停太久。",
+            "ratings": {
+                  "nature": 2,
+                  "culture": 7,
+                  "weather": 4,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "taksim_square",
+            "name": "Taksim Square",
+            "zh": "塔克西姆广场",
+            "type": "spot",
+            "day": 2,
+            "time": "2/15 中午",
+            "lat": 41.0369,
+            "lng": 28.985,
+            "stay": "20-40 分钟",
+            "image": "assets/image7.png",
+            "images": [
+                  {
+                        "src": "assets/image7.png",
+                        "caption": "Taksim Square｜塔克西姆广场"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "共和国纪念碑",
+                  "交通换乘",
+                  "新城中心"
+            ],
+            "intro": "塔克西姆广场上的共和国纪念碑建于 1928 年，纪念 1923 年土耳其共和国成立。",
+            "play": "作为独立大街后的换乘点，从这里坐 D31 到多尔玛巴赫切宫方向。",
+            "note": "这里更像交通和城市节点，拍照打卡即可。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 6,
+                  "weather": 4,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "dolmabahce_palace",
+            "name": "Dolmabahce Palace",
+            "zh": "多尔玛巴赫切宫",
+            "type": "spot",
+            "day": 2,
+            "time": "2/15 下午",
+            "lat": 41.0392,
+            "lng": 29.0005,
+            "stay": "1-2 小时",
+            "image": "assets/image8.png",
+            "images": [
+                  {
+                        "src": "assets/image8.png",
+                        "caption": "Dolmabahce Palace｜多尔玛巴赫切宫"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "新皇宫",
+                  "花园拍照",
+                  "博斯普鲁斯海峡"
+            ],
+            "intro": "多尔玛巴赫切宫建于 19 世纪，被称为奥斯曼帝国的新皇宫，以欧洲宫廷风格、奢华内饰和海峡位置闻名。",
+            "play": "如果只想在花园拍照，可以按行程提醒选择较便宜票种；宫殿内部兴趣不高时不必硬逛。",
+            "note": "开放时间约 09:00-16:00，行程里后面还要接奥塔科伊和轮渡。",
+            "ratings": {
+                  "nature": 5,
+                  "culture": 9,
+                  "weather": 6,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "ortakoy_mosque",
+            "name": "Ortakoy Mosque",
+            "zh": "奥塔科伊清真寺",
+            "type": "spot",
+            "day": 2,
+            "time": "2/15 下午",
+            "lat": 41.0472,
+            "lng": 29.027,
+            "stay": "30-60 分钟",
+            "image": "assets/image9.png",
+            "images": [
+                  {
+                        "src": "assets/image9.png",
+                        "caption": "Ortakoy Mosque｜奥塔科伊清真寺"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "海峡边清真寺",
+                  "新巴洛克",
+                  "桥景"
+            ],
+            "intro": "奥塔科伊清真寺建于 19 世纪，融合新巴洛克与奥斯曼风格，是博斯普鲁斯海峡边很上镜的清真寺。",
+            "play": "从多尔玛巴赫切宫坐 22 路到 Ortakoy 一带，清真寺和海峡背景适合一起拍。",
+            "note": "清真寺参观需要注意礼拜时间和着装。",
+            "ratings": {
+                  "nature": 6,
+                  "culture": 8,
+                  "weather": 7,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "bosphorus_kuzguncuk",
+            "name": "Bosphorus Viewpoint",
+            "zh": "博斯普鲁斯海峡观景点",
+            "type": "spot",
+            "day": 2,
+            "time": "2/15 傍晚",
+            "lat": 41.037,
+            "lng": 29.0299,
+            "stay": "30-60 分钟",
+            "image": "assets/image10.png",
+            "images": [
+                  {
+                        "src": "assets/image10.png",
+                        "caption": "Bosphorus Viewpoint｜博斯普鲁斯海峡观景点"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "轮渡",
+                  "亚洲城区",
+                  "海峡风景"
+            ],
+            "intro": "从 Ortakoy 轮渡到 Kuzguncuk，可以把欧洲侧到亚洲侧的海峡体验放进第一天城市动线。",
+            "play": "按原行程走 Ortakoy → Kuzguncuk，再坐 15U 到 Uskudar。",
+            "note": "轮渡班次要现场看，风大时注意保暖。",
+            "ratings": {
+                  "nature": 7,
+                  "culture": 5,
+                  "weather": 8,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "maidens_tower",
+            "name": "Maiden's Tower",
+            "zh": "少女塔",
+            "type": "spot",
+            "day": 2,
+            "time": "2/15 傍晚",
+            "lat": 41.0211,
+            "lng": 29.0041,
+            "stay": "30-45 分钟",
+            "image": "assets/image11.png",
+            "images": [
+                  {
+                        "src": "assets/image11.png",
+                        "caption": "Maiden's Tower｜少女塔"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "爱情传说",
+                  "海峡小塔",
+                  "日落氛围"
+            ],
+            "intro": "少女塔因 Hero 与 Leandros 的爱情传说，以及国王与公主的蛇咬预言故事，成为伊斯坦布尔浪漫象征之一。",
+            "play": "在 Uskudar 一带看塔和海峡，再坐轮渡回 Kabatas 新城区。",
+            "note": "适合作为 Day 2 的收尾，不一定要登塔。",
+            "ratings": {
+                  "nature": 7,
+                  "culture": 7,
+                  "weather": 8,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "suleymaniye_mosque",
+            "name": "Suleymaniye Mosque",
+            "zh": "苏莱曼尼耶清真寺",
+            "type": "spot",
+            "day": 3,
+            "time": "2/16 上午",
+            "lat": 41.0161,
+            "lng": 28.9638,
+            "stay": "45-75 分钟",
+            "image": "assets/image12.png",
+            "images": [
+                  {
+                        "src": "assets/image12.png",
+                        "caption": "Suleymaniye Mosque｜苏莱曼尼耶清真寺"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "免费入场",
+                  "清真寺",
+                  "老城视野"
+            ],
+            "intro": "苏莱曼尼耶清真寺是伊斯坦布尔老城的重要清真寺，适合用作 Day 3 老城区文化线的第一站。",
+            "play": "从 Elmadag 坐 70FE 到 Eminonu 后步行或换乘前往，入内需脱鞋，女士需包头巾。",
+            "note": "行程标注开放约 08:30-16:45。",
+            "ratings": {
+                  "nature": 4,
+                  "culture": 9,
+                  "weather": 5,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "istanbul_university_gate",
+            "name": "Istanbul University Gate",
+            "zh": "伊斯坦布尔大学校门",
+            "type": "spot",
+            "day": 3,
+            "time": "2/16 上午",
+            "lat": 41.0128,
+            "lng": 28.9635,
+            "stay": "10-20 分钟",
+            "image": "assets/image13.png",
+            "images": [
+                  {
+                        "src": "assets/image13.png",
+                        "caption": "Istanbul University Gate｜伊斯坦布尔大学"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "路过打卡",
+                  "大学校门",
+                  "老城街区"
+            ],
+            "intro": "伊斯坦布尔大学校门位于老城动线附近，适合作为苏莱曼尼耶到大巴扎之间的轻量打卡点。",
+            "play": "路过门口拍照即可，不需要单独预留太长时间。",
+            "note": "后面还有大巴扎和 Sultanahmet 区域，别在这里耽误太久。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 5,
+                  "weather": 3,
+                  "stamina": 1
+            }
+      },
+      {
+            "id": "grand_bazaar",
+            "name": "Grand Bazaar",
+            "zh": "大巴扎",
+            "type": "spot",
+            "day": 3,
+            "time": "2/16 上午",
+            "lat": 41.0107,
+            "lng": 28.968,
+            "stay": "1-2 小时",
+            "image": "assets/image14.png",
+            "images": [
+                  {
+                        "src": "assets/image14.png",
+                        "caption": "Grand Bazaar｜大巴扎"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "市集",
+                  "购物",
+                  "08:30-19:00"
+            ],
+            "intro": "大巴扎是伊斯坦布尔最经典的室内市集，适合看灯、地毯、香料和纪念品，也适合作为老城上午的雨天备选。",
+            "play": "按原行程 08:30-19:00 的营业窗口安排，逛完后坐 T1 到 Sultanahmet。",
+            "note": "容易逛过头，午饭和下午古迹时间要控住。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 8,
+                  "weather": 2,
+                  "stamina": 6
+            }
+      },
+      {
+            "id": "sultanahmet_obelisk",
+            "name": "Obelisk of Theodosius",
+            "zh": "方尖碑",
+            "type": "spot",
+            "day": 3,
+            "time": "2/16 下午",
+            "lat": 41.0061,
+            "lng": 28.9754,
+            "stay": "15-30 分钟",
+            "image": "assets/image15.png",
+            "images": [
+                  {
+                        "src": "assets/image15.png",
+                        "caption": "Obelisk of Theodosius｜方尖碑"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "古埃及遗迹",
+                  "竞技场中轴",
+                  "Sultanahmet"
+            ],
+            "intro": "这座方尖碑源自公元前 15 世纪古埃及卢克索卡尔纳克神庙，公元 390 年被运到君士坦丁堡。",
+            "play": "从 Beyazit 坐 T1 到 Sultanahmet 后，先在广场区串起方尖碑、蓝色清真寺和索菲亚大教堂。",
+            "note": "方尖碑本身停留不久，但周边人流多，拍照需要耐心。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 8,
+                  "weather": 5,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "blue_mosque",
+            "name": "Blue Mosque",
+            "zh": "蓝色清真寺",
+            "type": "spot",
+            "day": 3,
+            "time": "2/16 下午",
+            "lat": 41.0054,
+            "lng": 28.9768,
+            "stay": "45-75 分钟",
+            "image": "assets/image16.png",
+            "images": [
+                  {
+                        "src": "assets/image16.png",
+                        "caption": "Blue Mosque｜蓝色清真寺"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "免费入场",
+                  "六座宣礼塔",
+                  "清真寺礼仪"
+            ],
+            "intro": "蓝色清真寺因六座宣礼塔和内部蓝色瓷砖闻名，是伊斯坦布尔老城最重要的清真寺之一。",
+            "play": "非礼拜时间进入，按行程提醒带鞋袋，女士准备头巾或帽子。",
+            "note": "开放约 08:30-18:30，实际以当日礼拜安排为准。",
+            "ratings": {
+                  "nature": 2,
+                  "culture": 10,
+                  "weather": 5,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "hagia_sophia",
+            "name": "Hagia Sophia",
+            "zh": "索菲亚大教堂",
+            "type": "spot",
+            "day": 3,
+            "time": "2/16 下午",
+            "lat": 41.0086,
+            "lng": 28.9802,
+            "stay": "30-90 分钟",
+            "image": "assets/image17.png",
+            "images": [
+                  {
+                        "src": "assets/image17.png",
+                        "caption": "Hagia Sophia｜索菲亚大教堂"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "教堂到清真寺",
+                  "外观拍照",
+                  "Seven Hills 视角"
+            ],
+            "intro": "索菲亚大教堂经历了基督教堂、清真寺、博物馆再到清真寺的身份变化，是伊斯坦布尔最具历史层次的地标。",
+            "play": "行程提醒门票约 25 欧，外观也很好拍；可以导航 Seven Hills Restaurant 找经典视角。",
+            "note": "若对内部兴趣一般，可以把时间留给托普卡帕宫。",
+            "ratings": {
+                  "nature": 2,
+                  "culture": 10,
+                  "weather": 5,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "topkapi_palace",
+            "name": "Topkapi Palace",
+            "zh": "托普卡帕宫",
+            "type": "spot",
+            "day": 3,
+            "time": "2/16 下午",
+            "lat": 41.0115,
+            "lng": 28.9834,
+            "stay": "2-3 小时",
+            "image": "assets/image18.png",
+            "images": [
+                  {
+                        "src": "assets/image18.png",
+                        "caption": "Topkapi Palace｜托普卡帕宫"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "奥斯曼皇宫",
+                  "09:00-17:00",
+                  "50 欧"
+            ],
+            "intro": "托普卡帕宫曾是奥斯曼帝国苏丹居住和理政近 400 年的地方，融合拜占庭、波斯和伊斯兰艺术。",
+            "play": "行程标注可逛约 3 小时，若决定进去，需要把大巴扎和清真寺时间压实。",
+            "note": "票价较高，进不进取决于当天体力和兴趣。",
+            "ratings": {
+                  "nature": 4,
+                  "culture": 10,
+                  "weather": 5,
+                  "stamina": 7
+            }
+      },
+      {
+            "id": "sirkeci_station",
+            "name": "Sirkeci Station",
+            "zh": "Sirkeci Garı",
+            "type": "spot",
+            "day": 3,
+            "time": "2/16 傍晚",
+            "lat": 41.0145,
+            "lng": 28.9771,
+            "stay": "20-40 分钟",
+            "image": "assets/image19.png",
+            "images": [
+                  {
+                        "src": "assets/image19.png",
+                        "caption": "Sirkeci Station｜东方快车车站"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "东方快车",
+                  "火车站",
+                  "拍照打卡"
+            ],
+            "intro": "Sirkeci Garı 与东方快车相关，是《东方快车谋杀案》旅行想象里的经典车站节点。",
+            "play": "从 Gulhane 坐 T1 到 Eminonu 前后都可以顺路打卡。",
+            "note": "行程提醒博物馆周一关闭，D3 正好是周一，按外观打卡处理更稳。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 7,
+                  "weather": 2,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "uskudar_ferry_sunset",
+            "name": "Uskudar Ferry Sunset",
+            "zh": "Üsküdar 轮渡日落",
+            "type": "spot",
+            "day": 3,
+            "time": "2/16 17:45-18:30",
+            "lat": 41.0179,
+            "lng": 28.9706,
+            "stay": "25-60 分钟",
+            "image": "assets/image20.png",
+            "images": [
+                  {
+                        "src": "assets/image20.png",
+                        "caption": "Uskudar Ferry Sunset｜轮渡日落"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "日落轮渡",
+                  "Eminonu",
+                  "Uskudar"
+            ],
+            "intro": "Eminonu 到 Uskudar 的轮渡能完整看海峡日落，是老城日的轻松收尾。",
+            "play": "建议选 17:45-18:30 之间班次，单程约 25 分钟，提前 15 分钟排队占位置。",
+            "note": "风大时保暖；年夜饭安排在轮渡之后。",
+            "ratings": {
+                  "nature": 8,
+                  "culture": 5,
+                  "weather": 8,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "goreme_viewpoint",
+            "name": "Sunset/Sunrise/Balloons Highest View Point",
+            "zh": "格雷梅小镇夜景点",
+            "type": "spot",
+            "day": 4,
+            "time": "2/17 傍晚",
+            "lat": 38.6427,
+            "lng": 34.8319,
+            "stay": "30-60 分钟",
+            "image": "assets/image22.png",
+            "images": [
+                  {
+                        "src": "assets/image22.png",
+                        "caption": "Goreme Viewpoint｜格雷梅小镇夜景"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "夜景",
+                  "步行 1km",
+                  "30 里拉"
+            ],
+            "intro": "格雷梅观景点能俯看洞穴酒店和小镇灯火，是抵达卡帕多奇亚后的第一眼氛围。",
+            "play": "导航 Sunset/Sunrise/Ballons Highest View Point in Goreme，距离酒店约 1km。",
+            "note": "第一天到格雷梅可能有点赶，日落点太远就改看近一点夜景。",
+            "ratings": {
+                  "nature": 8,
+                  "culture": 5,
+                  "weather": 8,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "love_valley",
+            "name": "Love Valley",
+            "zh": "Love Garden 热气球点",
+            "type": "spot",
+            "day": 5,
+            "time": "2/18 07:00",
+            "lat": 38.662,
+            "lng": 34.819,
+            "stay": "1-2 小时",
+            "image": "assets/image23.png",
+            "images": [
+                  {
+                        "src": "assets/image23.png",
+                        "caption": "Love Valley｜卡帕多奇亚热气球"
+                  },
+                  {
+                        "src": "assets/turkey-hero.jpg",
+                        "caption": "卡帕多奇亚热气球横幅裁切"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "免费追球",
+                  "日出前半小时",
+                  "步行 1.4km"
+            ],
+            "intro": "Love Valley 是卡帕多奇亚追热气球的核心点之一，岩石峡谷和清晨升空的热气球很适合做整趟土耳其行程的记忆点。",
+            "play": "从酒店步行约 1.4km，日出前半小时抵达，也就是 7 点左右；若想看降落，可改去 Highground Photography Scenic Overlook。",
+            "note": "热气球非常看天气，若当天没追到，行程改去乌奇萨城堡也合理。",
+            "ratings": {
+                  "nature": 10,
+                  "culture": 4,
+                  "weather": 10,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "uchisar_castle",
+            "name": "Uchisar Castle",
+            "zh": "乌奇萨城堡",
+            "type": "spot",
+            "day": 5,
+            "time": "2/18 上午备选",
+            "lat": 38.6306,
+            "lng": 34.8059,
+            "stay": "1-1.5 小时",
+            "image": "assets/image25.png",
+            "images": [
+                  {
+                        "src": "assets/image25.png",
+                        "caption": "Uchisar Castle｜乌奇萨城堡"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "城堡",
+                  "小巴 50 里拉",
+                  "外观也好拍"
+            ],
+            "intro": "乌奇萨城堡是卡帕多奇亚高点之一，可以从格雷梅坐小巴前往，适合热气球不顺利时补上半天景观。",
+            "play": "导航 Goreme Otobus Terminal，牌子上是 NEVSEHIR，车程约 10 分钟；上车后跟售票员说去乌奇希萨尔。",
+            "note": "门票约 400 里拉，外面也很好拍，可按天气和体力决定是否进入。",
+            "ratings": {
+                  "nature": 8,
+                  "culture": 6,
+                  "weather": 7,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "rose_red_valley",
+            "name": "Rose-Red Valley",
+            "zh": "玫瑰红谷徒步",
+            "type": "spot",
+            "day": 5,
+            "time": "2/18 下午",
+            "lat": 38.6592,
+            "lng": 34.8606,
+            "stay": "2-3 小时",
+            "image": "assets/image26.png",
+            "images": [
+                  {
+                        "src": "assets/image26.png",
+                        "caption": "Rose-Red Valley｜玫瑰红谷徒步"
+                  },
+                  {
+                        "src": "assets/image27.png",
+                        "caption": "Sunset View Point in Goreme｜格雷梅观景台"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "徒步",
+                  "两步路 APP",
+                  "日落景观"
+            ],
+            "intro": "Rose-Red Valley 是卡帕多奇亚典型峡谷徒步区域，岩层颜色和落日光线会把地貌变得很戏剧化。",
+            "play": "用两步路找徒步线路；下午徒步后再到 Sunset View point in Goreme 看日落。",
+            "note": "冬季天黑快，别把徒步开始时间拖得太晚。",
+            "ratings": {
+                  "nature": 9,
+                  "culture": 4,
+                  "weather": 8,
+                  "stamina": 7
+            }
+      },
+      {
+            "id": "hadrians_gate",
+            "name": "Hadrian's Gate",
+            "zh": "哈德良门",
+            "type": "spot",
+            "day": 7,
+            "time": "2/20 上午",
+            "lat": 36.887,
+            "lng": 30.7084,
+            "stay": "20-40 分钟",
+            "image": "assets/image29.png",
+            "images": [
+                  {
+                        "src": "assets/image29.png",
+                        "caption": "Hadrian's Gate｜哈德良门"
+                  },
+                  {
+                        "src": "assets/image28.png",
+                        "caption": "Antalya Old Town｜安塔利亚老城街巷"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "罗马遗迹",
+                  "老城入口",
+                  "1800 年历史"
+            ],
+            "intro": "哈德良门为纪念罗马皇帝哈德良访问安塔利亚而建，已有约 1800 年历史。",
+            "play": "从酒店附近坐 TC16 到 Antalya Lisesi 后，开始安塔利亚老城步行线。",
+            "note": "适合上午先拍，光线通常更干净。",
+            "ratings": {
+                  "nature": 2,
+                  "culture": 8,
+                  "weather": 6,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "clock_tower_antalya",
+            "name": "Antalya Clock Tower",
+            "zh": "安塔利亚钟楼",
+            "type": "spot",
+            "day": 7,
+            "time": "2/20 上午",
+            "lat": 36.8879,
+            "lng": 30.7046,
+            "stay": "15-25 分钟",
+            "image": "assets/image30.png",
+            "images": [
+                  {
+                        "src": "assets/image30.png",
+                        "caption": "Antalya Clock Tower｜钟楼"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "老城地标",
+                  "步行节点",
+                  "拍照"
+            ],
+            "intro": "安塔利亚钟楼位于老城核心，是哈德良门、海港和老城街巷之间的轻量节点。",
+            "play": "从哈德良门步行过来，打卡后继续往罗马港方向走。",
+            "note": "停留时间不需要太长。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 5,
+                  "weather": 5,
+                  "stamina": 1
+            }
+      },
+      {
+            "id": "old_harbor_antalya",
+            "name": "Antalya Old Harbor Viewpoint",
+            "zh": "罗马港观景台",
+            "type": "spot",
+            "day": 7,
+            "time": "2/20 中午",
+            "lat": 36.8835,
+            "lng": 30.7053,
+            "stay": "45-75 分钟",
+            "image": "assets/image31.png",
+            "images": [
+                  {
+                        "src": "assets/image31.png",
+                        "caption": "Antalya Old Harbor Viewpoint｜罗马港观景台"
+                  },
+                  {
+                        "src": "assets/image33.png",
+                        "caption": "Antalya Old Harbor｜安塔利亚港湾"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "地中海",
+                  "老城港湾",
+                  "午间散步"
+            ],
+            "intro": "安塔利亚罗马港观景台可以俯看老城、游船和地中海，是 Day 7 最轻松的风景点。",
+            "play": "把它和玩具博物馆、Keçili 公园串在一起，中午前后走慢一点。",
+            "note": "晴天反差大，拍照注意避开正午强光。",
+            "ratings": {
+                  "nature": 8,
+                  "culture": 5,
+                  "weather": 8,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "toy_museum_antalya",
+            "name": "Antalya Toy Museum",
+            "zh": "安塔利亚玩具博物馆",
+            "type": "spot",
+            "day": 7,
+            "time": "2/20 下午",
+            "lat": 36.8848,
+            "lng": 30.704,
+            "stay": "30-60 分钟",
+            "image": "assets/image32.png",
+            "images": [
+                  {
+                        "src": "assets/image32.png",
+                        "caption": "Antalya Toy Museum｜安塔利亚玩具博物馆"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "免费",
+                  "有厕所",
+                  "9:00-18:00"
+            ],
+            "intro": "安塔利亚玩具博物馆是老城海港附近的轻松室内点，原行程特别标注免费且有厕所。",
+            "play": "作为老城散步中的缓冲点，天气热或想休息时很有用。",
+            "note": "开放约 09:00-18:00。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 4,
+                  "weather": 2,
+                  "stamina": 1
+            }
+      },
+      {
+            "id": "hidirlik_tower",
+            "name": "Hidirlik Tower",
+            "zh": "希德尔勒克塔",
+            "type": "spot",
+            "day": 7,
+            "time": "2/20 下午",
+            "lat": 36.882,
+            "lng": 30.704,
+            "stay": "20-40 分钟",
+            "image": "assets/image34.png",
+            "images": [
+                  {
+                        "src": "assets/image34.png",
+                        "caption": "Hidirlik Tower｜希德尔勒克塔"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "罗马塔楼",
+                  "地中海眺望",
+                  "公园边"
+            ],
+            "intro": "希德尔勒克塔始建于公元 1-2 世纪，曾在城市防御中发挥瞭望作用。",
+            "play": "从海港一路走到塔楼，再接卡拉阿里奥卢公园。",
+            "note": "附近适合吹海风，但风大时注意保暖。",
+            "ratings": {
+                  "nature": 6,
+                  "culture": 7,
+                  "weather": 7,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "karaalioglu_park",
+            "name": "Karaalioglu Park",
+            "zh": "卡拉阿里奥卢公园",
+            "type": "spot",
+            "day": 7,
+            "time": "2/20 下午",
+            "lat": 36.881,
+            "lng": 30.7064,
+            "stay": "30-60 分钟",
+            "image": "assets/image35.png",
+            "images": [
+                  {
+                        "src": "assets/image35.png",
+                        "caption": "Karaalioglu Park｜卡拉阿里奥卢公园"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "海边公园",
+                  "散步",
+                  "休息"
+            ],
+            "intro": "卡拉阿里奥卢公园靠近老城南侧，可以作为安塔利亚老城步行的休息和观海点。",
+            "play": "走完希德尔勒克塔后在公园里放慢节奏，再决定是否去 Konyaalti 海滩。",
+            "note": "这天点位多，公园适合作为弹性停留。",
+            "ratings": {
+                  "nature": 7,
+                  "culture": 3,
+                  "weather": 7,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "konyaalti_beach",
+            "name": "Konyaalti Beach",
+            "zh": "Konyaalti 海滩",
+            "type": "spot",
+            "day": 7,
+            "time": "2/20 傍晚",
+            "lat": 36.8623,
+            "lng": 30.6349,
+            "stay": "45-90 分钟",
+            "image": "assets/image36.png",
+            "images": [
+                  {
+                        "src": "assets/image36.png",
+                        "caption": "Konyaalti Beach｜Konyaalti 海滩"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "地中海海滩",
+                  "雪山背景",
+                  "傍晚散步"
+            ],
+            "intro": "Konyaalti 海滩是安塔利亚城市海岸线代表，晴天能看到海湾和远处山景。",
+            "play": "老城走完后，如果体力还够，傍晚去海滩收尾。",
+            "note": "冬季海边风大，拍完照即可，不必久坐。",
+            "ratings": {
+                  "nature": 9,
+                  "culture": 2,
+                  "weather": 8,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "perge",
+            "name": "Perge Ancient City",
+            "zh": "佩尔盖古城",
+            "type": "spot",
+            "day": 8,
+            "time": "2/21 上午",
+            "lat": 36.9593,
+            "lng": 30.8543,
+            "stay": "1-1.5 小时",
+            "image": "assets/image37.png",
+            "images": [
+                  {
+                        "src": "assets/image37.png",
+                        "caption": "Perge Ancient City｜佩尔盖古城"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "古城遗址",
+                  "Klook 一日游",
+                  "门票约 11 欧"
+            ],
+            "intro": "佩尔盖古城是安塔利亚周边重要古迹，适合和阿斯潘多斯、西代阿波罗神庙打包成一日游。",
+            "play": "行程记录 Klook 一日游不含门票约 252 元/人，含门票约 543 元/人。",
+            "note": "冬季户外遗址暴晒少但风可能大，带水和防风衣。",
+            "ratings": {
+                  "nature": 5,
+                  "culture": 8,
+                  "weather": 7,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "aspendos",
+            "name": "Aspendos Theater",
+            "zh": "阿斯潘多斯",
+            "type": "spot",
+            "day": 8,
+            "time": "2/21 中午",
+            "lat": 36.9381,
+            "lng": 31.1726,
+            "stay": "1-1.5 小时",
+            "image": "assets/image38.png",
+            "images": [
+                  {
+                        "src": "assets/image38.png",
+                        "caption": "Aspendos Theater｜阿斯潘多斯"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "古罗马剧场",
+                  "门票约 15 欧",
+                  "声学设计"
+            ],
+            "intro": "阿斯潘多斯是世界上保存最完好的古罗马剧场之一，建于公元 2 世纪，至今仍以声学设计闻名。",
+            "play": "作为一日游中段重点，进剧场后可以上到高处看整体结构。",
+            "note": "台阶多，鞋子要稳。",
+            "ratings": {
+                  "nature": 4,
+                  "culture": 9,
+                  "weather": 7,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "side_apollo",
+            "name": "Temple of Apollo, Side",
+            "zh": "西代阿波罗神庙",
+            "type": "spot",
+            "day": 8,
+            "time": "2/21 日落",
+            "lat": 36.7647,
+            "lng": 31.386,
+            "stay": "45-90 分钟",
+            "image": "assets/image39.png",
+            "images": [
+                  {
+                        "src": "assets/image39.png",
+                        "caption": "Temple of Apollo, Side｜西代阿波罗神庙"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "免费",
+                  "海边遗迹",
+                  "日落漂亮"
+            ],
+            "intro": "西代阿波罗神庙位于海边，柱廊遗迹和日落很适合作为安塔利亚古迹一日游的收束。",
+            "play": "按行程提醒，尽量把西代安排到日落时段。",
+            "note": "免费但人可能多，留一点时间等光线。",
+            "ratings": {
+                  "nature": 8,
+                  "culture": 8,
+                  "weather": 9,
+                  "stamina": 3
+            }
+      }
+];
+
+    const hotels = [
+      {
+            "id": "stay_nippon_hotel",
+            "name": "Nippon Hotel",
+            "zh": "日本酒店",
+            "type": "hotel",
+            "day": 2,
+            "lat": 41.0385,
+            "lng": 28.9854,
+            "notes": "Topcu Cd. No:6 Talimhane Taksim；价格 858；无早餐，不可取消，同程订。"
+      },
+      {
+            "id": "stay_premium_cappadocia_house",
+            "name": "Premium Cappadocia House",
+            "zh": "格雷梅住宿",
+            "type": "hotel",
+            "day": 4,
+            "lat": 38.6429,
+            "lng": 34.8289,
+            "notes": "无早餐，可取消，Booking 订；开塞利机场拼车接机约 74.8 元。"
+      },
+      {
+            "id": "stay_delta_antalya_lara",
+            "name": "Delta Hotels Antalya Lara",
+            "zh": "安塔利亚 Lara 住宿",
+            "type": "hotel",
+            "day": 6,
+            "lat": 36.859,
+            "lng": 30.755,
+            "notes": "无早餐，可取消，官网订；机场公交 800 到 İsmet Gokşen Cd-11。"
+      }
+];
+
+    const route = [
+      "galata_tower",
+      "istiklal_avenue",
+      "taksim_square",
+      "dolmabahce_palace",
+      "ortakoy_mosque",
+      "bosphorus_kuzguncuk",
+      "maidens_tower",
+      "suleymaniye_mosque",
+      "istanbul_university_gate",
+      "grand_bazaar",
+      "sultanahmet_obelisk",
+      "blue_mosque",
+      "hagia_sophia",
+      "topkapi_palace",
+      "sirkeci_station",
+      "uskudar_ferry_sunset",
+      "goreme_viewpoint",
+      "love_valley",
+      "uchisar_castle",
+      "rose_red_valley",
+      "hadrians_gate",
+      "clock_tower_antalya",
+      "old_harbor_antalya",
+      "toy_museum_antalya",
+      "hidirlik_tower",
+      "karaalioglu_park",
+      "konyaalti_beach",
+      "perge",
+      "aspendos",
+      "side_apollo"
+];
+
+    const routeSegments = [
+      {
+            "mode": "walk",
+            "ids": [
+                  "galata_tower",
+                  "istiklal_avenue",
+                  "taksim_square"
+            ]
+      },
+      {
+            "mode": "drive",
+            "ids": [
+                  "taksim_square",
+                  "dolmabahce_palace",
+                  "ortakoy_mosque"
+            ]
+      },
+      {
+            "mode": "ferry",
+            "ids": [
+                  "ortakoy_mosque",
+                  "bosphorus_kuzguncuk",
+                  "maidens_tower"
+            ]
+      },
+      {
+            "mode": "drive",
+            "ids": [
+                  "suleymaniye_mosque",
+                  "istanbul_university_gate",
+                  "grand_bazaar",
+                  "sultanahmet_obelisk",
+                  "blue_mosque",
+                  "hagia_sophia",
+                  "topkapi_palace",
+                  "sirkeci_station"
+            ]
+      },
+      {
+            "mode": "ferry",
+            "ids": [
+                  "sirkeci_station",
+                  "uskudar_ferry_sunset"
+            ]
+      },
+      {
+            "mode": "flight",
+            "ids": [
+                  "uskudar_ferry_sunset",
+                  "goreme_viewpoint"
+            ]
+      },
+      {
+            "mode": "walk",
+            "ids": [
+                  "goreme_viewpoint",
+                  "love_valley",
+                  "uchisar_castle",
+                  "rose_red_valley"
+            ]
+      },
+      {
+            "mode": "flight",
+            "ids": [
+                  "rose_red_valley",
+                  "hadrians_gate"
+            ]
+      },
+      {
+            "mode": "walk",
+            "ids": [
+                  "hadrians_gate",
+                  "clock_tower_antalya",
+                  "old_harbor_antalya",
+                  "toy_museum_antalya",
+                  "hidirlik_tower",
+                  "karaalioglu_park",
+                  "konyaalti_beach"
+            ]
+      },
+      {
+            "mode": "drive",
+            "ids": [
+                  "hadrians_gate",
+                  "perge",
+                  "aspendos",
+                  "side_apollo"
+            ]
+      }
+];
+
+    const spotInsights = {
+      "dolmabahce_palace": {
+            "unique": "多尔玛巴赫切宫把奥斯曼权力想象转向欧洲宫廷审美，花园与海峡位置很适合拍照。",
+            "history": "19 世纪奥斯曼苏丹阿卜杜勒-迈吉德一世下令修建，1856 年完工，原行程备注其黄金和金箔用量极夸张。"
+      },
+      "hagia_sophia": {
+            "unique": "同一座建筑承载教堂、清真寺、博物馆再到清真寺的多重身份，是老城最强的历史叠层。",
+            "history": "拜占庭、奥斯曼和现代土耳其的政治文化变迁都能在索菲亚大教堂看到痕迹。"
+      },
+      "love_valley": {
+            "unique": "热气球、晨光和卡帕多奇亚岩柱同时出现，天气好时是整趟旅行的高光。",
+            "history": "卡帕多奇亚的火山凝灰岩被风化成峡谷与岩柱，后来叠加洞穴聚落和热气球旅行文化。"
+      },
+      "aspendos": {
+            "unique": "剧场保存度和声学效果都很突出，即使只是站在看台上，也能感到古罗马公共建筑的尺度。",
+            "history": "阿斯潘多斯剧场建于公元 2 世纪，是安塔利亚周边最有代表性的罗马遗迹之一。"
+      },
+      "side_apollo": {
+            "unique": "海边柱廊在日落时会变成剪影，适合作为安塔利亚古迹线的浪漫收尾。",
+            "history": "西代曾是古代潘菲利亚重要港口，阿波罗神庙遗迹保留了海岸城市的古典想象。"
+      }
+};
+
+    const days = [
+      {
+            "day": 1,
+            "date": "2026-02-14",
+            "title": "杭州萧山 → 成都双流 / 天府 → 伊斯坦布尔夜航",
+            "base": "成都转机夜航",
+            "lat": 30.5785,
+            "lng": 103.9471,
+            "sunLabel": "成都",
+            "sunrise": "成都 07:46",
+            "sunset": "成都 18:51",
+            "alerts": [
+                  "杭州萧山 T4 → 成都双流 T1：10:45-13:55，3U8912",
+                  "T1 到达层顺丰服务柜台或丰巢柜办理行李转运",
+                  "成都天府 T1 → 伊斯坦布尔：01:00-06:10，3U3827"
+            ],
+            "transport": "杭州飞成都，成都停留后夜航伊斯坦布尔。",
+            "timeline": [
+                  [
+                        "10:45-13:55",
+                        "杭州萧山 T4 → 成都双流 T1，3U8912"
+                  ],
+                  [
+                        "下午",
+                        "蚊子家休整 / 行李转运"
+                  ],
+                  [
+                        "01:00-06:10",
+                        "成都天府 T1 → 伊斯坦布尔，3U3827"
+                  ]
+            ]
+      },
+      {
+            "day": 2,
+            "date": "2026-02-15",
+            "title": "伊斯坦布尔新城区与海峡轮渡",
+            "base": "Nippon Hotel，日本酒店；无早餐，不可取消",
+            "lat": 41.0369,
+            "lng": 28.985,
+            "sunLabel": "伊斯坦布尔",
+            "sunrise": "伊斯坦布尔 07:59",
+            "sunset": "伊斯坦布尔 18:38",
+            "alerts": [
+                  "机场大巴 Havist，车票可能涨到 450 里拉",
+                  "酒店先寄存行李",
+                  "公交 97T/66/70FE/54HT 可从 Elmadag 上车"
+            ],
+            "transport": "Havist 进城后寄存行李，公交、缆车、轮渡串联新城区与亚洲侧。",
+            "timeline": [
+                  [
+                        "清晨",
+                        "抵达伊斯坦布尔，Havist 进城，酒店寄存行李"
+                  ],
+                  [
+                        "上午",
+                        "Galata Tower｜加拉达石塔",
+                        "galata_tower"
+                  ],
+                  [
+                        "上午",
+                        "Istiklal Avenue｜独立大街",
+                        "istiklal_avenue"
+                  ],
+                  [
+                        "中午",
+                        "Taksim Square｜塔克西姆广场",
+                        "taksim_square"
+                  ],
+                  [
+                        "下午",
+                        "Dolmabahce Palace｜多尔玛巴赫切宫",
+                        "dolmabahce_palace"
+                  ],
+                  [
+                        "下午",
+                        "Ortakoy Mosque｜奥塔科伊清真寺",
+                        "ortakoy_mosque"
+                  ],
+                  [
+                        "傍晚",
+                        "Ortakoy → Kuzguncuk 轮渡，博斯普鲁斯海峡观景",
+                        "bosphorus_kuzguncuk"
+                  ],
+                  [
+                        "傍晚",
+                        "Maiden's Tower｜少女塔",
+                        "maidens_tower"
+                  ],
+                  [
+                        "晚间",
+                        "Üsküdar → Kabataş 轮渡回新城区"
+                  ]
+            ]
+      },
+      {
+            "day": 3,
+            "date": "2026-02-16",
+            "title": "伊斯坦布尔老城区 / 年夜饭",
+            "base": "Nippon Hotel，日本酒店",
+            "lat": 41.0086,
+            "lng": 28.9802,
+            "sunLabel": "伊斯坦布尔",
+            "sunrise": "伊斯坦布尔 07:58",
+            "sunset": "伊斯坦布尔 18:39",
+            "alerts": [
+                  "清真寺免费但需要脱鞋，女士准备头巾",
+                  "大巴扎 08:30-19:00",
+                  "Sirkeci Garı 博物馆周一关闭，按外观打卡"
+            ],
+            "transport": "公交 70FE 到 Eminonu，老城内以步行和 T1 有轨电车为主。",
+            "timeline": [
+                  [
+                        "上午",
+                        "Suleymaniye Mosque｜苏莱曼尼耶清真寺",
+                        "suleymaniye_mosque"
+                  ],
+                  [
+                        "上午",
+                        "Istanbul University Gate｜伊斯坦布尔大学校门",
+                        "istanbul_university_gate"
+                  ],
+                  [
+                        "上午",
+                        "Grand Bazaar｜大巴扎",
+                        "grand_bazaar"
+                  ],
+                  [
+                        "中午",
+                        "午饭"
+                  ],
+                  [
+                        "下午",
+                        "Obelisk of Theodosius｜方尖碑",
+                        "sultanahmet_obelisk"
+                  ],
+                  [
+                        "下午",
+                        "Blue Mosque｜蓝色清真寺",
+                        "blue_mosque"
+                  ],
+                  [
+                        "下午",
+                        "Hagia Sophia｜索菲亚大教堂",
+                        "hagia_sophia"
+                  ],
+                  [
+                        "下午",
+                        "Topkapi Palace｜托普卡帕宫",
+                        "topkapi_palace"
+                  ],
+                  [
+                        "傍晚",
+                        "Sirkeci Station｜Sirkeci Garı",
+                        "sirkeci_station"
+                  ],
+                  [
+                        "17:45-18:30",
+                        "Eminönü → Üsküdar 日落轮渡",
+                        "uskudar_ferry_sunset"
+                  ],
+                  [
+                        "晚间",
+                        "年夜饭"
+                  ]
+            ]
+      },
+      {
+            "day": 4,
+            "date": "2026-02-17",
+            "title": "伊斯坦布尔 → 开塞利 → 格雷梅",
+            "base": "Premium Cappadocia House；无早餐，可取消",
+            "lat": 38.6427,
+            "lng": 34.8319,
+            "sunLabel": "格雷梅",
+            "sunrise": "格雷梅 07:30",
+            "sunset": "格雷梅 18:20",
+            "alerts": [
+                  "坐大巴去机场约 1.5 小时，早点去大巴站",
+                  "萨比哈哥克赛恩 → 开塞利：14:15-15:35，PC2736，15kg",
+                  "开塞利 → 格雷梅拼车接机约 74.8 元，提前 2 天预定"
+            ],
+            "transport": "伊斯坦布尔市区大巴到 SAW，飞开塞利后拼车进格雷梅小镇。",
+            "timeline": [
+                  [
+                        "上午",
+                        "市区 → 萨比哈哥克赛恩机场，预留约 1.5 小时"
+                  ],
+                  [
+                        "14:15-15:35",
+                        "萨比哈哥克赛恩 → 开塞利，PC2736"
+                  ],
+                  [
+                        "傍晚",
+                        "开塞利机场 → 格雷梅小镇酒店，拼车约 1.5 小时"
+                  ],
+                  [
+                        "晚饭",
+                        "梅花中餐厅"
+                  ],
+                  [
+                        "晚间",
+                        "Sunset/Sunrise/Balloons Highest View Point｜格雷梅小镇夜景",
+                        "goreme_viewpoint"
+                  ]
+            ]
+      },
+      {
+            "day": 5,
+            "date": "2026-02-18",
+            "title": "卡帕多奇亚追热气球 / Rose-Red Valley 徒步",
+            "base": "Premium Cappadocia House",
+            "lat": 38.662,
+            "lng": 34.819,
+            "sunLabel": "格雷梅",
+            "sunrise": "格雷梅 07:29",
+            "sunset": "格雷梅 18:21",
+            "alerts": [
+                  "Love Garden 免费追热气球，日出前半小时抵达",
+                  "若追到热气球，回酒店吃早饭休息；没追到就去城堡玩",
+                  "格雷梅到乌奇萨尔小巴约 50 里拉现金"
+            ],
+            "transport": "格雷梅小镇步行追球，小巴可去乌奇萨尔，下午徒步看峡谷。",
+            "timeline": [
+                  [
+                        "07:00",
+                        "Love Valley｜Love Garden 追热气球",
+                        "love_valley"
+                  ],
+                  [
+                        "早餐后",
+                        "回酒店休息"
+                  ],
+                  [
+                        "上午备选",
+                        "Uchisar Castle｜乌奇萨城堡",
+                        "uchisar_castle"
+                  ],
+                  [
+                        "中午",
+                        "午饭"
+                  ],
+                  [
+                        "下午",
+                        "Rose-Red Valley｜玫瑰红谷徒步",
+                        "rose_red_valley"
+                  ],
+                  [
+                        "日落",
+                        "Sunset View point in Göreme｜格雷梅观景台",
+                        "rose_red_valley"
+                  ]
+            ]
+      },
+      {
+            "day": 6,
+            "date": "2026-02-19",
+            "title": "格雷梅弹性调整 → 开塞利 → 安塔利亚",
+            "base": "Delta Hotels Antalya Lara；无早餐，可取消",
+            "lat": 38.6427,
+            "lng": 34.8319,
+            "sunLabel": "格雷梅 / 安塔利亚",
+            "sunrise": "格雷梅 07:27",
+            "sunset": "安塔利亚 18:41",
+            "alerts": [
+                  "根据前一天行程灵活调整，可在小镇 citywalk",
+                  "格雷梅 → 开塞利机场小巴通常提前 3 小时上门接",
+                  "开塞利 → 安塔利亚：16:10-20:00，15kg"
+            ],
+            "transport": "上午留给卡帕多奇亚弹性，下午小巴去开塞利机场，晚间抵达安塔利亚。",
+            "timeline": [
+                  [
+                        "上午",
+                        "格雷梅小镇 citywalk / 补拍热气球"
+                  ],
+                  [
+                        "下午",
+                        "格雷梅 → 开塞利机场，小巴提前约 3 小时接"
+                  ],
+                  [
+                        "16:10-20:00",
+                        "开塞利 → 安塔利亚"
+                  ],
+                  [
+                        "晚间",
+                        "公交 800：Dış Hatlar Terminali 1 → İsmet Gökşen Cd-11，入住酒店"
+                  ]
+            ]
+      },
+      {
+            "day": 7,
+            "date": "2026-02-20",
+            "title": "安塔利亚老城与地中海海岸",
+            "base": "Delta Hotels Antalya Lara",
+            "lat": 36.887,
+            "lng": 30.7084,
+            "sunLabel": "安塔利亚",
+            "sunrise": "安塔利亚 07:40",
+            "sunset": "安塔利亚 18:42",
+            "alerts": [
+                  "公交 TC16：İsmet Gökşen Cd-11 → Antalya Lisesi",
+                  "玩具博物馆免费，有厕所，9:00-18:00",
+                  "海边风可能大，带防风层"
+            ],
+            "transport": "公交到老城，老城和海港以步行为主，傍晚视体力去 Konyaalti 海滩。",
+            "timeline": [
+                  [
+                        "上午",
+                        "Hadrian's Gate｜哈德良门",
+                        "hadrians_gate"
+                  ],
+                  [
+                        "上午",
+                        "Antalya Clock Tower｜钟楼",
+                        "clock_tower_antalya"
+                  ],
+                  [
+                        "中午",
+                        "Antalya Old Harbor Viewpoint｜罗马港观景台",
+                        "old_harbor_antalya"
+                  ],
+                  [
+                        "下午",
+                        "Antalya Toy Museum｜安塔利亚玩具博物馆",
+                        "toy_museum_antalya"
+                  ],
+                  [
+                        "下午",
+                        "Hidirlik Tower｜希德尔勒克塔",
+                        "hidirlik_tower"
+                  ],
+                  [
+                        "下午",
+                        "Karaalioglu Park｜卡拉阿里奥卢公园",
+                        "karaalioglu_park"
+                  ],
+                  [
+                        "傍晚",
+                        "Konyaalti Beach｜Konyaalti 海滩",
+                        "konyaalti_beach"
+                  ]
+            ]
+      },
+      {
+            "day": 8,
+            "date": "2026-02-21",
+            "title": "佩尔盖 / 阿斯潘多斯 / 西代阿波罗一日游",
+            "base": "Delta Hotels Antalya Lara",
+            "lat": 36.9381,
+            "lng": 31.1726,
+            "sunLabel": "安塔利亚",
+            "sunrise": "安塔利亚 07:37",
+            "sunset": "安塔利亚 18:41",
+            "alerts": [
+                  "Klook 一日游：不含门票约 252 元/人，含门票约 543 元/人",
+                  "佩尔盖门票约 11 欧等值里拉",
+                  "阿斯潘多斯门票约 15 欧等值里拉；西代阿波罗免费，日落漂亮"
+            ],
+            "transport": "参加安塔利亚周边古迹一日游，车程连接佩尔盖、阿斯潘多斯和西代。",
+            "timeline": [
+                  [
+                        "上午",
+                        "Perge Ancient City｜佩尔盖古城",
+                        "perge"
+                  ],
+                  [
+                        "中午",
+                        "Aspendos Theater｜阿斯潘多斯",
+                        "aspendos"
+                  ],
+                  [
+                        "日落",
+                        "Temple of Apollo, Side｜西代阿波罗神庙",
+                        "side_apollo"
+                  ]
+            ]
+      },
+      {
+            "day": 9,
+            "date": "2026-02-22",
+            "title": "安塔利亚 → 伊斯坦布尔 → 成都",
+            "base": "返程夜航",
+            "lat": 36.8987,
+            "lng": 30.8005,
+            "sunLabel": "安塔利亚",
+            "sunrise": "安塔利亚 07:38",
+            "sunset": "安塔利亚 18:44",
+            "alerts": [
+                  "安塔利亚 → 伊斯坦布尔：07:30-09:05，TK2433，15kg",
+                  "伊斯坦布尔 → 成都天府 T1：15:30-05:20，3U3828"
+            ],
+            "transport": "早班机回伊斯坦布尔，下午转机回成都。",
+            "timeline": [
+                  [
+                        "07:30-09:05",
+                        "安塔利亚 → 伊斯坦布尔，TK2433"
+                  ],
+                  [
+                        "15:30-05:20",
+                        "伊斯坦布尔 → 成都天府 T1，3U3828"
+                  ]
+            ]
+      },
+      {
+            "day": 10,
+            "date": "2026-02-23",
+            "title": "成都休整 → 杭州",
+            "base": "返回杭州",
+            "lat": 30.5785,
+            "lng": 103.9471,
+            "sunLabel": "成都",
+            "sunrise": "成都 07:38",
+            "sunset": "成都 18:58",
+            "alerts": [
+                  "蚊子家洗漱休整",
+                  "成都天府 T2 → 杭州萧山 T4：19:35-21:50，3U6939"
+            ],
+            "transport": "成都白天休整，晚间飞回杭州。",
+            "timeline": [
+                  [
+                        "上午",
+                        "蚊子家洗漱休整"
+                  ],
+                  [
+                        "19:35-21:50",
+                        "成都天府 T2 → 杭州萧山 T4，3U6939"
+                  ]
+            ]
+      }
+];
+
+    const foods = [
+      {
+            "area": "伊斯坦布尔老城",
+            "type": "年夜饭",
+            "title": "老城日落轮渡后的年夜饭",
+            "text": "Day 3 是除夕，建议把年夜饭放在 Eminonu / Kabatas / Taksim 一带，轮渡日落结束后不用再跨太远区域。",
+            "budget": "按现场餐厅决定"
+      },
+      {
+            "area": "格雷梅",
+            "type": "中餐补给",
+            "title": "梅花中餐厅",
+            "text": "Day 4 抵达格雷梅后的晚饭点，飞行和拼车后吃熟悉口味更稳。",
+            "budget": "按点餐"
+      },
+      {
+            "area": "卡帕多奇亚",
+            "type": "追球早餐",
+            "title": "热气球后回酒店吃早饭",
+            "text": "Love Valley 需要日出前出门，追完球再回酒店吃早饭休息，避免上午直接硬接徒步。",
+            "budget": "酒店 / 小镇咖啡店"
+      },
+      {
+            "area": "安塔利亚老城",
+            "type": "海港午餐",
+            "title": "罗马港与 Kaleici 老城午餐",
+            "text": "Day 7 点位密集，午餐建议放在老城或海港附近，吃完再接玩具博物馆、公园和海滩。",
+            "budget": "约 TRY 现场定"
+      },
+      {
+            "area": "一日游路上",
+            "type": "车程补给",
+            "title": "佩尔盖 / 阿斯潘多斯 / 西代路上补水",
+            "text": "Day 8 户外遗址多，随身带水、能量棒和防风层，避免完全依赖团餐或路边店。",
+            "budget": "零食水自备"
+      }
+];
+
+    const prep = [
+      {
+            "title": "航班与接驳",
+            "items": [
+                  "杭州萧山 T4 → 成都双流 T1：2026-02-14 10:45-13:55，3U8912。",
+                  "成都天府 T1 → 伊斯坦布尔：2026-02-15 01:00-06:10，3U3827。",
+                  "萨比哈哥克赛恩 → 开塞利：2026-02-17 14:15-15:35，PC2736，15kg。",
+                  "开塞利 → 安塔利亚：2026-02-19 16:10-20:00，15kg。",
+                  "安塔利亚 → 伊斯坦布尔：2026-02-22 07:30-09:05，TK2433，15kg。",
+                  "伊斯坦布尔 → 成都天府 T1：2026-02-22 15:30-05:20，3U3828。",
+                  "成都天府 T2 → 杭州萧山 T4：2026-02-23 19:35-21:50，3U6939。"
+            ]
+      },
+      {
+            "title": "酒店与交通确认",
+            "items": [
+                  "Nippon Hotel / 日本酒店：Topcu Cd. No:6 Talimhane Taksim；858；无早餐，不可取消，同程订。",
+                  "Premium Cappadocia House：无早餐，可取消，Booking 订；开塞利到格雷梅接机提前 2 天预定。",
+                  "Delta Hotels Antalya Lara：无早餐，可取消，官网订。",
+                  "伊斯坦布尔机场大巴 Havist 票价可能涨到 450 里拉，预留现金或可刷卡方式。",
+                  "格雷梅到乌奇萨尔小巴需要现金，约 50 里拉。",
+                  "格雷梅到开塞利机场小巴通常提前 3 小时上门接。"
+            ]
+      },
+      {
+            "title": "清真寺与古迹装备",
+            "items": [
+                  "进清真寺需要脱鞋，带鞋套或鞋袋；女士准备头巾或能包住头发的帽子。",
+                  "蓝色清真寺、苏莱曼尼耶清真寺以非礼拜时间为准。",
+                  "托普卡帕宫、索菲亚大教堂票价较高，按当天体力和兴趣决定是否入内。",
+                  "户外古迹和海边风大，防风层比厚重外套更实用。"
+            ]
+      },
+      {
+            "title": "证件与设备",
+            "items": [
+                  "手机卡。",
+                  "现金。",
+                  "签证。",
+                  "热水壶。",
+                  "无人机。",
+                  "Pocket 3。"
+            ]
+      }
+];
+
+    const allPlaces = [...spots, ...hotels];
+    let map;
+    let selectedId = "love_valley";
+    let selectedImageIndex = 0;
+    let touchStartX = 0;
+    let lightboxTouchStartX = 0;
+    const routeTracker = { pending: 0, failed: 0 };
+
+    function displayName(item) {
+      return item.zh ? `${item.name}｜${item.zh}` : item.name;
+    }
+
+    function googleMapsUrl(item) {
+      return `https://www.google.com/maps/dir/?api=1&destination=${item.lat},${item.lng}&travelmode=driving`;
+    }
+
+    function appleMapsUrl(item) {
+      return `https://maps.apple.com/?daddr=${item.lat},${item.lng}&q=${encodeURIComponent(displayName(item))}`;
+    }
+
+    function setRouteStatus(message, warning = false, visible = true) {
+      const status = document.getElementById("routeStatus");
+      if (!status) return;
+      status.textContent = message;
+      status.classList.toggle("warning", warning);
+      status.classList.toggle("show", visible);
+    }
+
+    function updateRouteStatus() {
+      if (routeTracker.pending > 0) {
+        setRouteStatus(`正在加载自驾路线，还剩 ${routeTracker.pending} 段`);
+        return;
+      }
+      if (routeTracker.failed > 0) {
+        setRouteStatus(`有 ${routeTracker.failed} 段自驾路线加载失败，已用直线示意`, true);
+        return;
+      }
+      setRouteStatus("自驾路线已加载");
+      window.setTimeout(() => setRouteStatus("", false, false), 1200);
+    }
+
+    function iconFor(item, label) {
+      const iconClass = item.type === "hotel" ? "hotel" : item.type === "airport" ? "airport" : "";
+      return L.divIcon({
+        className: "",
+        html: `<div class="marker-pin ${iconClass}"><span>${label}</span></div>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30],
+        popupAnchor: [0, -28]
+      });
+    }
+
+    function initMap() {
+      if (typeof L === "undefined") {
+        renderMapUnavailable();
+        return;
+      }
+      map = L.map("map", { scrollWheelZoom: true });
+      const topo = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", {
+        maxZoom: 18,
+        attribution: "Tiles &copy; Esri"
+      });
+      const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: "&copy; OpenStreetMap contributors"
+      });
+      topo.addTo(map);
+      L.control.layers({ "地形地图": topo, "街道地图": osm }, null, { position: "topleft" }).addTo(map);
+
+      drawRoute();
+
+      spots.forEach((spot, index) => {
+        const marker = L.marker([spot.lat, spot.lng], { icon: iconFor(spot, index + 1) }).addTo(map);
+        marker.bindPopup(`<strong>${displayName(spot)}</strong><br>${spot.features.join(" · ")}`);
+        marker.on("click", () => selectSpot(spot.id));
+      });
+
+      hotels.forEach((hotel) => {
+        const marker = L.marker([hotel.lat, hotel.lng], { icon: iconFor(hotel, "住") }).addTo(map);
+        marker.bindPopup(`<strong>${displayName(hotel)}</strong><br>Day ${hotel.day} 住宿区域`);
+      });
+
+      fitMapToAllPlaces();
+      requestAnimationFrame(() => {
+        map.invalidateSize();
+        fitMapToAllPlaces();
+      });
+      setTimeout(() => {
+        map.invalidateSize();
+        fitMapToAllPlaces();
+      }, 350);
+    }
+
+    function renderMapUnavailable() {
+      const mapEl = document.getElementById("map");
+      if (mapEl) {
+        mapEl.classList.add("map-fallback");
+        mapEl.textContent = "地图资源暂时没有加载成功；下方每日行程、导航入口和准备清单仍可正常使用。";
+      }
+      setRouteStatus("地图资源未加载，刷新或联网后可恢复交互地图", true);
+    }
+
+    function loadLeaflet() {
+      if (window.L) return Promise.resolve();
+      setRouteStatus("正在加载地图资源");
+      if (!document.querySelector('link[data-leaflet-css="true"]')) {
+        const css = document.createElement("link");
+        css.rel = "stylesheet";
+        css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+        css.dataset.leafletCss = "true";
+        document.head.appendChild(css);
+      }
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        const timer = window.setTimeout(() => {
+          script.remove();
+          reject(new Error("leaflet load timeout"));
+        }, 8000);
+        script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+        script.onload = () => {
+          window.clearTimeout(timer);
+          resolve();
+        };
+        script.onerror = () => {
+          window.clearTimeout(timer);
+          reject(new Error("leaflet load failed"));
+        };
+        document.head.appendChild(script);
+      });
+    }
+
+    function fitMapToAllPlaces() {
+      const bounds = L.latLngBounds(allPlaces.map((place) => [place.lat, place.lng]));
+      const wide = window.matchMedia("(min-width: 981px)").matches;
+      const mobile = isMobileView();
+      map.fitBounds(bounds, {
+        paddingTopLeft: wide ? [56, 56] : [30, 34],
+        paddingBottomRight: wide ? [72, 56] : mobile ? [30, 118] : [30, 44],
+        maxZoom: 7
+      });
+    }
+
+    function isMobileView() {
+      return window.matchMedia("(max-width: 760px)").matches;
+    }
+
+    function openSpotSheet() {
+      document.querySelector(".spot-panel")?.classList.add("open");
+    }
+
+    function closeSpotSheet() {
+      document.querySelector(".spot-panel")?.classList.remove("open");
+    }
+
+    window.closeSpotSheet = closeSpotSheet;
+
+    function openImageLightbox(src, caption = "") {
+      if (!src) return;
+      const images = getSpotImages(currentSpot());
+      const index = images.findIndex((item) => item.src === src);
+      if (index >= 0) selectedImageIndex = index;
+      const lightbox = document.getElementById("imageLightbox");
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+      renderLightboxImage(caption);
+    }
+
+    function closeImageLightbox(event) {
+      if (event && event.target.closest(".lightbox-image, .lightbox-video, .lightbox-nav, .lightbox-dots")) return;
+      const lightbox = document.getElementById("imageLightbox");
+      const image = document.getElementById("lightboxImage");
+      const video = document.getElementById("lightboxVideo");
+      lightbox.classList.remove("open", "has-multiple", "show-video");
+      image.removeAttribute("src");
+      if (video) {
+        video.pause();
+        video.removeAttribute("src");
+        video.load();
+      }
+      document.body.style.overflow = "";
+    }
+
+    window.openImageLightbox = openImageLightbox;
+    window.closeImageLightbox = closeImageLightbox;
+
+    function getSpotImages(spot) {
+      const raw = Array.isArray(spot.images) && spot.images.length ? spot.images : [spot.image];
+      return raw.map((item) => typeof item === "string" ? { src: item } : item).filter((item) => item?.src);
+    }
+
+    function isVideoMedia(src = "") {
+      return /\.(mp4|webm|mov|m4v)(\?.*)?$/i.test(src);
+    }
+
+    function renderHeroMedia() {
+      const slot = document.getElementById("heroMediaSlot");
+      if (!slot || !heroMedia.src) return;
+      if (isVideoMedia(heroMedia.src)) {
+        slot.innerHTML = `<video class="hero-media is-video" autoplay muted loop playsinline preload="metadata" poster="${heroMedia.poster || ""}"><source src="${heroMedia.src}"></video>`;
+        return;
+      }
+      slot.innerHTML = `<img class="hero-media" src="${heroMedia.src}" alt="${heroMedia.alt || ""}">`;
+    }
+
+    function isVideoItem(item) {
+      return item?.type === "video" || isVideoMedia(item?.src);
+    }
+
+    function mediaCaption(item, spot, fallbackCaption = "") {
+      return item?.caption || fallbackCaption || displayName(spot);
+    }
+
+    function coverImageFor(spot, item) {
+      if (!isVideoItem(item)) return item?.src || spot.image;
+      return item?.poster || getSpotImages(spot).find((media) => !isVideoItem(media))?.src || spot.image;
+    }
+
+    function currentSpot() {
+      return spots.find((item) => item.id === selectedId) || spots[0];
+    }
+
+    function renderLightboxImage(fallbackCaption = "") {
+      const lightbox = document.getElementById("imageLightbox");
+      const imageEl = document.getElementById("lightboxImage");
+      const videoEl = document.getElementById("lightboxVideo");
+      const captionEl = document.getElementById("lightboxCaption");
+      const dots = document.getElementById("lightboxDots");
+      const spot = currentSpot();
+      const images = getSpotImages(spot);
+      const image = images[selectedImageIndex] || images[0];
+      if (!image || !lightbox || !imageEl || !videoEl || !captionEl || !dots) return;
+      selectedImageIndex = Math.max(0, Math.min(selectedImageIndex, images.length - 1));
+      const caption = mediaCaption(image, spot, fallbackCaption);
+      const videoMode = isVideoItem(image);
+      lightbox.classList.toggle("has-multiple", images.length > 1);
+      lightbox.classList.toggle("show-video", videoMode);
+      if (videoMode) {
+        imageEl.removeAttribute("src");
+        imageEl.alt = "";
+        videoEl.src = image.src;
+        videoEl.controls = true;
+        videoEl.playsInline = true;
+        videoEl.load();
+      } else {
+        videoEl.pause();
+        videoEl.removeAttribute("src");
+        videoEl.load();
+        imageEl.src = image.src;
+        imageEl.alt = caption || "景点图片";
+      }
+      captionEl.textContent = caption;
+      const touchTarget = videoMode ? videoEl : imageEl;
+      touchTarget.ontouchstart = (event) => {
+        lightboxTouchStartX = event.touches[0].clientX;
+      };
+      touchTarget.ontouchend = (event) => {
+        const delta = event.changedTouches[0].clientX - lightboxTouchStartX;
+        if (Math.abs(delta) > 42) shiftLightboxImage(delta < 0 ? 1 : -1, event);
+      };
+      dots.innerHTML = images.map((_, index) => `
+        <button class="lightbox-dot${index === selectedImageIndex ? " active" : ""}" type="button" aria-label="查看第 ${index + 1} 个放大媒体" onclick="setLightboxImage(${index}, event)"></button>
+      `).join("");
+    }
+
+    function renderSpotImageCarousel() {
+      const spot = currentSpot();
+      const images = getSpotImages(spot);
+      const image = images[selectedImageIndex] || images[0];
+      const wrap = document.getElementById("panelImageWrap");
+      const panelImage = document.getElementById("panelImage");
+      const dots = document.getElementById("panelImageDots");
+      if (!image) return;
+      selectedImageIndex = Math.max(0, Math.min(selectedImageIndex, images.length - 1));
+      const caption = mediaCaption(image, spot);
+      const videoMode = isVideoItem(image);
+      wrap.classList.toggle("has-multiple", images.length > 1);
+      panelImage.classList.toggle("has-video", videoMode);
+      panelImage.style.backgroundImage = videoMode ? "" : `url("${image.src}")`;
+      panelImage.innerHTML = videoMode
+        ? `<video class="panel-video" src="${image.src}" muted autoplay loop playsinline controls preload="metadata" aria-label="${caption}"></video>`
+        : "";
+      panelImage.setAttribute("role", "button");
+      panelImage.setAttribute("tabindex", "0");
+      panelImage.setAttribute("aria-label", videoMode ? `播放${displayName(spot)}视频` : `放大查看${displayName(spot)}图片`);
+      panelImage.onclick = (event) => {
+        if (videoMode && event.target.closest("video")) return;
+        openImageLightbox(image.src, caption);
+      };
+      panelImage.onkeydown = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openImageLightbox(image.src, caption);
+        }
+        if (event.key === "ArrowLeft") shiftSpotImage(-1);
+        if (event.key === "ArrowRight") shiftSpotImage(1);
+      };
+      panelImage.ontouchstart = (event) => {
+        touchStartX = event.touches[0].clientX;
+      };
+      panelImage.ontouchend = (event) => {
+        const delta = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(delta) > 42) shiftSpotImage(delta < 0 ? 1 : -1);
+      };
+      dots.innerHTML = images.map((_, index) => `
+        <button class="carousel-dot${index === selectedImageIndex ? " active" : ""}" type="button" aria-label="查看第 ${index + 1} 个媒体" onclick="setSpotImage(${index})"></button>
+      `).join("");
+    }
+
+    function setSpotImage(index, event) {
+      if (event) event.stopPropagation();
+      selectedImageIndex = index;
+      renderSpotImageCarousel();
+      renderRating();
+      if (document.getElementById("imageLightbox")?.classList.contains("open")) renderLightboxImage();
+    }
+
+    function shiftSpotImage(delta, event) {
+      if (event) event.stopPropagation();
+      const images = getSpotImages(currentSpot());
+      if (images.length <= 1) return;
+      selectedImageIndex = (selectedImageIndex + delta + images.length) % images.length;
+      renderSpotImageCarousel();
+      renderRating();
+      if (document.getElementById("imageLightbox")?.classList.contains("open")) renderLightboxImage();
+    }
+
+    function setLightboxImage(index, event) {
+      setSpotImage(index, event);
+    }
+
+    function shiftLightboxImage(delta, event) {
+      shiftSpotImage(delta, event);
+    }
+
+    window.setSpotImage = setSpotImage;
+    window.shiftSpotImage = shiftSpotImage;
+    window.setLightboxImage = setLightboxImage;
+    window.shiftLightboxImage = shiftLightboxImage;
+
+    async function drawRoute() {
+      routeTracker.pending = routeSegments.filter((segment) => segment.mode === "drive").length;
+      routeTracker.failed = 0;
+      updateRouteStatus();
+      const routeTasks = routeSegments.map(async (segment) => {
+        const points = segment.ids.map((id) => spots.find((spot) => spot.id === id)).filter(Boolean);
+        if (segment.mode === "drive") {
+          try {
+            const roadPath = await fetchRoadRoute(points);
+            drawPath(roadPath, false, "drive");
+          } catch (error) {
+            routeTracker.failed += 1;
+            drawLine(points, true, "fallback");
+          } finally {
+            routeTracker.pending = Math.max(0, routeTracker.pending - 1);
+            updateRouteStatus();
+          }
+        } else {
+          drawLine(points, true, segment.mode);
+        }
+      });
+      await Promise.all(routeTasks);
+    }
+
+    async function fetchRoadRoute(points) {
+      const coords = points.map((point) => `${point.lng},${point.lat}`).join(";");
+      const url = `https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`;
+      const controller = new AbortController();
+      const timer = window.setTimeout(() => controller.abort(), 6500);
+      let response;
+      try {
+        response = await fetch(url, { signal: controller.signal });
+      } finally {
+        window.clearTimeout(timer);
+      }
+      if (!response.ok) throw new Error("route request failed");
+      const payload = await response.json();
+      const coordinates = payload.routes?.[0]?.geometry?.coordinates;
+      if (!coordinates?.length) throw new Error("route geometry missing");
+      return coordinates.map(([lng, lat]) => [lat, lng]);
+    }
+
+    function drawLine(points, dashed, mode) {
+      const path = points.filter(Boolean).map((point) => [point.lat, point.lng]);
+      if (path.length < 2) return;
+      drawPath(path, dashed, mode);
+    }
+
+    function drawPath(path, dashed, mode) {
+      const color = mode === "ferry" ? "#1e6a8c" : mode === "fallback" ? "#6b7280" : "#bc6339";
+      L.polyline(path, { color: "#fff", weight: dashed ? 7 : 8, opacity: .9 }).addTo(map);
+      L.polyline(path, {
+        color,
+        weight: dashed ? 3 : 4,
+        opacity: .88,
+        dashArray: dashed ? "7 8" : null
+      }).addTo(map);
+    }
+
+    function ratingModel(spot) {
+      const labels = { nature: "自然", culture: "人文", weather: "天气", stamina: "体力" };
+      const score = Math.round((spot.ratings.nature + spot.ratings.culture + (10 - spot.ratings.weather * .35) + (10 - spot.ratings.stamina * .35)) / 4 * 10) / 10;
+      return { labels, score };
+    }
+
+    function renderRatingBars(spot) {
+      const { labels } = ratingModel(spot);
+      return Object.entries(spot.ratings).map(([key, value]) => `
+        <div class="bar-row">
+          <span>${labels[key]}</span>
+          <div class="bar"><span style="width:${value * 10}%"></span></div>
+          <strong>${value}</strong>
+        </div>
+      `).join("");
+    }
+
+    function renderPanelRating(spot) {
+      const { score } = ratingModel(spot);
+      return `
+        <div class="panel-rating">
+          <h4>综合评分：${score} / 10</h4>
+          <p>自然、人文、天气、体力四个维度的即时参考。</p>
+          ${renderRatingBars(spot)}
+        </div>
+      `;
+    }
+
+    function renderSpotInsights(spot) {
+      const insight = spotInsights[spot.id];
+      if (!insight) return "";
+      return `
+        <div class="mini-card context"><h4>景观特色</h4><p>${insight.unique}</p></div>
+        <div class="mini-card context"><h4>背景 / 历史</h4><p>${insight.history}</p></div>
+      `;
+    }
+
+    function selectSpot(id, openSheet = true) {
+      const spot = spots.find((item) => item.id === id) || spots[0];
+      selectedId = spot.id;
+      selectedImageIndex = 0;
+      renderSpotImageCarousel();
+      document.getElementById("panelBody").innerHTML = `
+        <div class="tag-row">
+        <span class="tag main">Day ${spot.day}</span>
+        <span class="tag">${spot.time}</span>
+        <span class="tag">建议 ${spot.stay}</span>
+        </div>
+        <h3>${displayName(spot)}</h3>
+        <p class="panel-intro">${spot.intro}</p>
+        <div class="tag-row">${spot.features.map((item) => `<span class="tag">${item}</span>`).join("")}</div>
+        <div class="action-row">
+          <a class="action-link primary" href="${googleMapsUrl(spot)}" target="_blank" rel="noopener">Google 导航</a>
+          <a class="action-link" href="${appleMapsUrl(spot)}" target="_blank" rel="noopener">Apple 地图</a>
+        </div>
+        ${renderPanelRating(spot)}
+        <div class="detail-list">
+          ${renderSpotInsights(spot)}
+          <div class="mini-card"><h4>怎么玩</h4><p>${spot.play}</p></div>
+          <div class="mini-card"><h4>注意事项</h4><p>${spot.note}</p></div>
+        </div>
+      `;
+      renderRating();
+      if (isMobileView() && openSheet) openSpotSheet();
+      if (map && openSheet) map.panTo([spot.lat, spot.lng], { animate: true, duration: .6 });
+    }
+
+    window.selectSpot = selectSpot;
+
+    function renderDays() {
+      document.getElementById("dayList").innerHTML = days.map((day) => `
+        <article class="card day-card${day.day === 1 ? " expanded" : ""}" id="day-${day.day}">
+          <div class="card-head">
+            <div>
+              <div class="card-title-row">
+                <h3>Day ${day.day} · ${day.title}</h3>
+                <span class="date-pill">${day.date.slice(5)}</span>
+              </div>
+              <p>${day.transport}</p>
+            </div>
+            <button class="day-toggle" type="button" onclick="toggleDay(this)">${day.day === 1 ? "收起" : "展开"}</button>
+          </div>
+          <ul class="timeline">
+            ${day.timeline.map((item) => renderTimelineItem(item)).join("")}
+          </ul>
+          ${renderDayAlerts(day)}
+          <div class="day-meta">
+            <div><span>住宿</span><strong>${day.base}</strong></div>
+            <div><span>日出</span><strong>${day.sunrise}</strong></div>
+            <div><span>日落</span><strong>${day.sunset}</strong></div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderDayJump() {
+      const jump = document.getElementById("dayJump");
+      if (!jump) return;
+      jump.innerHTML = days.map((day) => `
+        <button type="button" data-day="${day.day}" onclick="jumpToDay(${day.day})" aria-label="跳转到 Day ${day.day}">
+          <strong>D${day.day}</strong>
+          <span>${day.date.slice(5)}</span>
+        </button>
+      `).join("");
+      setActiveDayJump(days.find((day) => day.day === 1)?.day ?? days[0]?.day);
+    }
+
+    function setActiveDayJump(dayNumber) {
+      document.querySelectorAll("#dayJump button").forEach((button) => {
+        button.classList.toggle("active", Number(button.dataset.day) === dayNumber);
+      });
+    }
+
+    function jumpToDay(dayNumber) {
+      const card = document.getElementById(`day-${dayNumber}`);
+      if (!card) return;
+      card.classList.add("expanded");
+      const toggle = card.querySelector(".day-toggle");
+      if (toggle) toggle.textContent = "收起";
+      setActiveDayJump(dayNumber);
+      card.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    window.jumpToDay = jumpToDay;
+
+    function toggleDay(button) {
+      const card = button.closest(".day-card");
+      if (!card) return;
+      card.classList.toggle("expanded");
+      button.textContent = card.classList.contains("expanded") ? "收起" : "展开";
+    }
+
+    window.toggleDay = toggleDay;
+
+    function renderDayAlerts(day) {
+      if (!day.alerts?.length) return "";
+      return `<div class="alert-strip">${day.alerts.map((alert) => `<span class="alert-chip">${alert}</span>`).join("")}</div>`;
+    }
+
+    function renderTimelineItem(item) {
+      const placeId = item[2];
+      const text = placeId
+        ? `<button type="button" onclick="selectSpot('${placeId}')">${item[1]}</button>`
+        : `<span>${item[1]}</span>`;
+      return `<li><strong>${item[0]}</strong>${text}</li>`;
+    }
+
+    function renderFood() {
+      document.getElementById("foodGrid").innerHTML = foods.map((food) => `
+        <article class="food-card">
+          <span class="tag">${food.area}</span>
+          <h3>${food.title}</h3>
+          <p>${food.text}</p>
+          <div class="tag-row"><span class="tag">${food.type}</span><span class="tag">${food.budget}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderPrep() {
+      document.getElementById("prepGrid").innerHTML = prep.map((group) => `
+        <article class="prep-card">
+          <h3>${group.title}</h3>
+          <ul>${group.items.map((item) => `<li>${item}</li>`).join("")}</ul>
+        </article>
+      `).join("");
+    }
+
+    function populateTransport() {
+      const options = allPlaces.map((place) => `<option value="${place.id}">${displayName(place)}</option>`).join("");
+      document.getElementById("fromSelect").innerHTML = options;
+      document.getElementById("toSelect").innerHTML = options;
+      document.getElementById("fromSelect").value = "galata_tower";
+      document.getElementById("toSelect").value = "side_apollo";
+      document.getElementById("fromSelect").addEventListener("change", renderEstimate);
+      document.getElementById("toSelect").addEventListener("change", renderEstimate);
+      renderEstimate();
+    }
+
+    function renderEstimate() {
+      const from = allPlaces.find((place) => place.id === document.getElementById("fromSelect").value);
+      const to = allPlaces.find((place) => place.id === document.getElementById("toSelect").value);
+      const km = haversine(from, to) * 1.22;
+      const walkHours = km / 4.6;
+      const modes = [
+        ["自驾", km / 62, "山区和海岸路会更慢"],
+        ["公共交通", km / 35 + 0.5, "塔州班次少，需当天查"],
+        ["步行", walkHours, "30 分钟内才展示"]
+      ].filter(([label, hours]) => label !== "步行" || hours <= 0.5);
+      document.getElementById("estimateBox").innerHTML = modes.map(([label, hours, note]) => `
+        <div><span>${label}</span><strong>${formatDuration(hours)}</strong><small>${note}</small></div>
+      `).join("");
+    }
+
+    function renderRating() {
+      const spot = spots.find((item) => item.id === selectedId) || spots[0];
+      const image = getSpotImages(spot)[selectedImageIndex] || getSpotImages(spot)[0] || { src: spot.image };
+      const videoMode = isVideoItem(image);
+      const coverImage = coverImageFor(spot, image);
+      const caption = mediaCaption(image, spot);
+      const { score } = ratingModel(spot);
+      const ratingPanel = document.getElementById("ratingPanel");
+      ratingPanel.innerHTML = `
+        <div class="rating-image${videoMode ? " has-video" : ""}" role="button" tabindex="0" aria-label="${videoMode ? `播放${displayName(spot)}视频` : `放大查看${displayName(spot)}图片`}" style="background-image:url('${coverImage}')"></div>
+        <h3>${displayName(spot)}</h3>
+        <p>${spot.intro}</p>
+        <div class="tag-row">${spot.features.slice(0, 3).map((item) => `<span class="tag">${item}</span>`).join("")}</div>
+        <p>综合评分：${score} / 10</p>
+        ${renderRatingBars(spot)}
+      `;
+      const ratingImage = ratingPanel.querySelector(".rating-image");
+      ratingImage.onclick = () => openImageLightbox(image.src, caption);
+      ratingImage.onkeydown = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openImageLightbox(image.src, caption);
+        }
+      };
+    }
+
+    function haversine(a, b) {
+      const radius = 6371;
+      const dLat = toRad(b.lat - a.lat);
+      const dLng = toRad(b.lng - a.lng);
+      const lat1 = toRad(a.lat);
+      const lat2 = toRad(b.lat);
+      const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
+      return 2 * radius * Math.asin(Math.sqrt(h));
+    }
+
+    function toRad(value) {
+      return value * Math.PI / 180;
+    }
+
+    function formatDuration(hours) {
+      const mins = Math.max(3, Math.round(hours * 60));
+      const h = Math.floor(mins / 60);
+      const m = mins % 60;
+      return h ? `${h}h ${m}m` : `${m}m`;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderHeroMedia();
+      renderDays();
+      renderDayJump();
+      renderFood();
+      renderPrep();
+      populateTransport();
+      selectSpot(selectedId, false);
+      loadLeaflet().then(initMap).catch(renderMapUnavailable);
+      document.querySelectorAll(".nav a").forEach((link) => {
+        link.addEventListener("click", closeSpotSheet);
+      });
+      window.addEventListener("resize", () => {
+        closeSpotSheet();
+        if (!map) return;
+        window.clearTimeout(window.__mapResizeTimer);
+        window.__mapResizeTimer = window.setTimeout(() => {
+          map.invalidateSize();
+          fitMapToAllPlaces();
+        }, 180);
+      });
+      document.addEventListener("keydown", (event) => {
+        const lightboxOpen = document.getElementById("imageLightbox")?.classList.contains("open");
+        if (event.key === "Escape") closeImageLightbox();
+        if (!lightboxOpen) return;
+        if (event.key === "ArrowLeft") shiftLightboxImage(-1, event);
+        if (event.key === "ArrowRight") shiftLightboxImage(1, event);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1264 @@
+{
+  "page": {
+    "title": "2026 春节浪漫土耳其 10 日游",
+    "htmlTitle": "2026 春节浪漫土耳其行程攻略",
+    "description": "杭州出发，经成都夜航伊斯坦布尔，串起伊斯坦布尔新城与老城、卡帕多奇亚热气球、安塔利亚老城海港和佩尔盖/阿斯潘多斯/西代一日游。",
+    "eyebrow": "Romantic Turkey · 2026.02.14-02.23",
+    "heroTitle": "春节浪漫土耳其10日游",
+    "heroCopy": "从伊斯坦布尔海峡和奥斯曼宫殿开场，把年夜饭留在老城日落之后；再去卡帕多奇亚追热气球、走玫瑰红谷，最后在安塔利亚把罗马遗迹、地中海海港和西代日落收进旅程。",
+    "heroImage": "assets/turkey-hero.jpg",
+    "heroAlt": "卡帕多奇亚热气球飞过岩石峡谷",
+    "notice": "春节高峰期交通和机场大巴要留足余量；清真寺需要脱鞋，女士准备头巾或能包住头发的帽子；卡帕多奇亚热气球受天气影响很大，早晨安排保持弹性。",
+    "footer": "2026 春节浪漫土耳其行程攻略 · 图片来自旅途素材",
+    "mapKicker": "Route Map",
+    "mapTitle": "伊斯坦布尔 · 卡帕多奇亚 · 安塔利亚路线地图",
+    "mapLead": "地图串起伊斯坦布尔新老城区、卡帕多奇亚热气球和安塔利亚地中海古迹。跨城段以航班为主，市内以公交、有轨电车、轮渡和步行为主。",
+    "itineraryKicker": "Daily Plan",
+    "itineraryTitle": "每日行程安排",
+    "itineraryLead": "按行程日期、航班、交通、景点说明和酒店备注整理。点击时间线中的景点名，可以联动地图与详情面板。",
+    "foodKicker": "Food",
+    "foodTitle": "沿线餐饮与补给",
+    "foodLead": "保留原行程中的年夜饭、梅花中餐厅和城市段补给提醒，把赶路日和清真寺参观日的吃饭节奏单独标出来。",
+    "prepKicker": "Before Departure",
+    "prepTitle": "需要提前确认的东西",
+    "prepLead": "集中整理航班、接驳、酒店、签证、现金、清真寺装备和拍摄设备。",
+    "defaultSelectedSpotId": "love_valley",
+    "defaultFromId": "galata_tower",
+    "defaultToId": "side_apollo",
+    "timeZone": "Europe/Istanbul"
+  },
+  "heroStats": [
+    {
+      "value": "10 日",
+      "label": "2/14-2/23 春节行程"
+    },
+    {
+      "value": "3 段",
+      "label": "伊斯坦布尔 / 卡帕多奇亚 / 安塔利亚"
+    },
+    {
+      "value": "热气球",
+      "label": "Love Valley / Goreme / Rose-Red Valley"
+    }
+  ],
+  "spots": [
+    {
+      "id": "galata_tower",
+      "name": "Galata Tower",
+      "zh": "加拉达石塔",
+      "type": "spot",
+      "day": 2,
+      "time": "2/15 上午",
+      "lat": 41.0256,
+      "lng": 28.9741,
+      "stay": "30-60 分钟",
+      "image": "assets/image5.png",
+      "images": [
+        {
+          "src": "assets/image5.png",
+          "caption": "Galata Tower｜加拉达石塔"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["热那亚塔楼", "新城区地标", "街巷拍照"],
+      "intro": "加拉达石塔原名基督塔，1348 年由热那亚人修建，是加拉塔殖民地防御体系的制高点。",
+      "play": "酒店寄存行李后从 Elmadag 坐公交到附近，适合和独立大街、塔克西姆广场串成一条步行线。",
+      "note": "周边坡路和街巷多，第一天落地后不要安排得太赶。",
+      "ratings": { "nature": 3, "culture": 8, "weather": 5, "stamina": 4 }
+    },
+    {
+      "id": "istiklal_avenue",
+      "name": "Istiklal Avenue",
+      "zh": "独立大街",
+      "type": "spot",
+      "day": 2,
+      "time": "2/15 上午",
+      "lat": 41.034,
+      "lng": 28.9784,
+      "stay": "1-2 小时",
+      "image": "assets/image6.png",
+      "images": [
+        {
+          "src": "assets/image6.png",
+          "caption": "Istiklal Avenue｜独立大街"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["步行街", "红色电车", "新城商业"],
+      "intro": "独立大街是伊斯坦布尔标志性步行街，全长约 3 公里，连接塔克西姆广场和加拉塔桥附近街区。",
+      "play": "从加拉达一带一路往塔克西姆方向走，顺路拍红色复古电车和街景。",
+      "note": "人流密集，随身物品看好；赶后续宫殿和轮渡时不要在商店停太久。",
+      "ratings": { "nature": 2, "culture": 7, "weather": 4, "stamina": 5 }
+    },
+    {
+      "id": "taksim_square",
+      "name": "Taksim Square",
+      "zh": "塔克西姆广场",
+      "type": "spot",
+      "day": 2,
+      "time": "2/15 中午",
+      "lat": 41.0369,
+      "lng": 28.985,
+      "stay": "20-40 分钟",
+      "image": "assets/image7.png",
+      "images": [
+        {
+          "src": "assets/image7.png",
+          "caption": "Taksim Square｜塔克西姆广场"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["共和国纪念碑", "交通换乘", "新城中心"],
+      "intro": "塔克西姆广场上的共和国纪念碑建于 1928 年，纪念 1923 年土耳其共和国成立。",
+      "play": "作为独立大街后的换乘点，从这里坐 D31 到多尔玛巴赫切宫方向。",
+      "note": "这里更像交通和城市节点，拍照打卡即可。",
+      "ratings": { "nature": 1, "culture": 6, "weather": 4, "stamina": 2 }
+    },
+    {
+      "id": "dolmabahce_palace",
+      "name": "Dolmabahce Palace",
+      "zh": "多尔玛巴赫切宫",
+      "type": "spot",
+      "day": 2,
+      "time": "2/15 下午",
+      "lat": 41.0392,
+      "lng": 29.0005,
+      "stay": "1-2 小时",
+      "image": "assets/image8.png",
+      "images": [
+        {
+          "src": "assets/image8.png",
+          "caption": "Dolmabahce Palace｜多尔玛巴赫切宫"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["新皇宫", "花园拍照", "博斯普鲁斯海峡"],
+      "intro": "多尔玛巴赫切宫建于 19 世纪，被称为奥斯曼帝国的新皇宫，以欧洲宫廷风格、奢华内饰和海峡位置闻名。",
+      "play": "如果只想在花园拍照，可以按行程提醒选择较便宜票种；宫殿内部兴趣不高时不必硬逛。",
+      "note": "开放时间约 09:00-16:00，行程里后面还要接奥塔科伊和轮渡。",
+      "ratings": { "nature": 5, "culture": 9, "weather": 6, "stamina": 5 }
+    },
+    {
+      "id": "ortakoy_mosque",
+      "name": "Ortakoy Mosque",
+      "zh": "奥塔科伊清真寺",
+      "type": "spot",
+      "day": 2,
+      "time": "2/15 下午",
+      "lat": 41.0472,
+      "lng": 29.027,
+      "stay": "30-60 分钟",
+      "image": "assets/image9.png",
+      "images": [
+        {
+          "src": "assets/image9.png",
+          "caption": "Ortakoy Mosque｜奥塔科伊清真寺"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["海峡边清真寺", "新巴洛克", "桥景"],
+      "intro": "奥塔科伊清真寺建于 19 世纪，融合新巴洛克与奥斯曼风格，是博斯普鲁斯海峡边很上镜的清真寺。",
+      "play": "从多尔玛巴赫切宫坐 22 路到 Ortakoy 一带，清真寺和海峡背景适合一起拍。",
+      "note": "清真寺参观需要注意礼拜时间和着装。",
+      "ratings": { "nature": 6, "culture": 8, "weather": 7, "stamina": 3 }
+    },
+    {
+      "id": "bosphorus_kuzguncuk",
+      "name": "Bosphorus Viewpoint",
+      "zh": "博斯普鲁斯海峡观景点",
+      "type": "spot",
+      "day": 2,
+      "time": "2/15 傍晚",
+      "lat": 41.037,
+      "lng": 29.0299,
+      "stay": "30-60 分钟",
+      "image": "assets/image10.png",
+      "images": [
+        {
+          "src": "assets/image10.png",
+          "caption": "Bosphorus Viewpoint｜博斯普鲁斯海峡观景点"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["轮渡", "亚洲城区", "海峡风景"],
+      "intro": "从 Ortakoy 轮渡到 Kuzguncuk，可以把欧洲侧到亚洲侧的海峡体验放进第一天城市动线。",
+      "play": "按原行程走 Ortakoy → Kuzguncuk，再坐 15U 到 Uskudar。",
+      "note": "轮渡班次要现场看，风大时注意保暖。",
+      "ratings": { "nature": 7, "culture": 5, "weather": 8, "stamina": 3 }
+    },
+    {
+      "id": "maidens_tower",
+      "name": "Maiden's Tower",
+      "zh": "少女塔",
+      "type": "spot",
+      "day": 2,
+      "time": "2/15 傍晚",
+      "lat": 41.0211,
+      "lng": 29.0041,
+      "stay": "30-45 分钟",
+      "image": "assets/image11.png",
+      "images": [
+        {
+          "src": "assets/image11.png",
+          "caption": "Maiden's Tower｜少女塔"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["爱情传说", "海峡小塔", "日落氛围"],
+      "intro": "少女塔因 Hero 与 Leandros 的爱情传说，以及国王与公主的蛇咬预言故事，成为伊斯坦布尔浪漫象征之一。",
+      "play": "在 Uskudar 一带看塔和海峡，再坐轮渡回 Kabatas 新城区。",
+      "note": "适合作为 Day 2 的收尾，不一定要登塔。",
+      "ratings": { "nature": 7, "culture": 7, "weather": 8, "stamina": 2 }
+    },
+    {
+      "id": "suleymaniye_mosque",
+      "name": "Suleymaniye Mosque",
+      "zh": "苏莱曼尼耶清真寺",
+      "type": "spot",
+      "day": 3,
+      "time": "2/16 上午",
+      "lat": 41.0161,
+      "lng": 28.9638,
+      "stay": "45-75 分钟",
+      "image": "assets/image12.png",
+      "images": [
+        {
+          "src": "assets/image12.png",
+          "caption": "Suleymaniye Mosque｜苏莱曼尼耶清真寺"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["免费入场", "清真寺", "老城视野"],
+      "intro": "苏莱曼尼耶清真寺是伊斯坦布尔老城的重要清真寺，适合用作 Day 3 老城区文化线的第一站。",
+      "play": "从 Elmadag 坐 70FE 到 Eminonu 后步行或换乘前往，入内需脱鞋，女士需包头巾。",
+      "note": "行程标注开放约 08:30-16:45。",
+      "ratings": { "nature": 4, "culture": 9, "weather": 5, "stamina": 4 }
+    },
+    {
+      "id": "istanbul_university_gate",
+      "name": "Istanbul University Gate",
+      "zh": "伊斯坦布尔大学校门",
+      "type": "spot",
+      "day": 3,
+      "time": "2/16 上午",
+      "lat": 41.0128,
+      "lng": 28.9635,
+      "stay": "10-20 分钟",
+      "image": "assets/image13.png",
+      "images": [
+        {
+          "src": "assets/image13.png",
+          "caption": "Istanbul University Gate｜伊斯坦布尔大学"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["路过打卡", "大学校门", "老城街区"],
+      "intro": "伊斯坦布尔大学校门位于老城动线附近，适合作为苏莱曼尼耶到大巴扎之间的轻量打卡点。",
+      "play": "路过门口拍照即可，不需要单独预留太长时间。",
+      "note": "后面还有大巴扎和 Sultanahmet 区域，别在这里耽误太久。",
+      "ratings": { "nature": 1, "culture": 5, "weather": 3, "stamina": 1 }
+    },
+    {
+      "id": "grand_bazaar",
+      "name": "Grand Bazaar",
+      "zh": "大巴扎",
+      "type": "spot",
+      "day": 3,
+      "time": "2/16 上午",
+      "lat": 41.0107,
+      "lng": 28.968,
+      "stay": "1-2 小时",
+      "image": "assets/image14.png",
+      "images": [
+        {
+          "src": "assets/image14.png",
+          "caption": "Grand Bazaar｜大巴扎"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["市集", "购物", "08:30-19:00"],
+      "intro": "大巴扎是伊斯坦布尔最经典的室内市集，适合看灯、地毯、香料和纪念品，也适合作为老城上午的雨天备选。",
+      "play": "按原行程 08:30-19:00 的营业窗口安排，逛完后坐 T1 到 Sultanahmet。",
+      "note": "容易逛过头，午饭和下午古迹时间要控住。",
+      "ratings": { "nature": 1, "culture": 8, "weather": 2, "stamina": 6 }
+    },
+    {
+      "id": "sultanahmet_obelisk",
+      "name": "Obelisk of Theodosius",
+      "zh": "方尖碑",
+      "type": "spot",
+      "day": 3,
+      "time": "2/16 下午",
+      "lat": 41.0061,
+      "lng": 28.9754,
+      "stay": "15-30 分钟",
+      "image": "assets/image15.png",
+      "images": [
+        {
+          "src": "assets/image15.png",
+          "caption": "Obelisk of Theodosius｜方尖碑"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["古埃及遗迹", "竞技场中轴", "Sultanahmet"],
+      "intro": "这座方尖碑源自公元前 15 世纪古埃及卢克索卡尔纳克神庙，公元 390 年被运到君士坦丁堡。",
+      "play": "从 Beyazit 坐 T1 到 Sultanahmet 后，先在广场区串起方尖碑、蓝色清真寺和索菲亚大教堂。",
+      "note": "方尖碑本身停留不久，但周边人流多，拍照需要耐心。",
+      "ratings": { "nature": 1, "culture": 8, "weather": 5, "stamina": 2 }
+    },
+    {
+      "id": "blue_mosque",
+      "name": "Blue Mosque",
+      "zh": "蓝色清真寺",
+      "type": "spot",
+      "day": 3,
+      "time": "2/16 下午",
+      "lat": 41.0054,
+      "lng": 28.9768,
+      "stay": "45-75 分钟",
+      "image": "assets/image16.png",
+      "images": [
+        {
+          "src": "assets/image16.png",
+          "caption": "Blue Mosque｜蓝色清真寺"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["免费入场", "六座宣礼塔", "清真寺礼仪"],
+      "intro": "蓝色清真寺因六座宣礼塔和内部蓝色瓷砖闻名，是伊斯坦布尔老城最重要的清真寺之一。",
+      "play": "非礼拜时间进入，按行程提醒带鞋袋，女士准备头巾或帽子。",
+      "note": "开放约 08:30-18:30，实际以当日礼拜安排为准。",
+      "ratings": { "nature": 2, "culture": 10, "weather": 5, "stamina": 4 }
+    },
+    {
+      "id": "hagia_sophia",
+      "name": "Hagia Sophia",
+      "zh": "索菲亚大教堂",
+      "type": "spot",
+      "day": 3,
+      "time": "2/16 下午",
+      "lat": 41.0086,
+      "lng": 28.9802,
+      "stay": "30-90 分钟",
+      "image": "assets/image17.png",
+      "images": [
+        {
+          "src": "assets/image17.png",
+          "caption": "Hagia Sophia｜索菲亚大教堂"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["教堂到清真寺", "外观拍照", "Seven Hills 视角"],
+      "intro": "索菲亚大教堂经历了基督教堂、清真寺、博物馆再到清真寺的身份变化，是伊斯坦布尔最具历史层次的地标。",
+      "play": "行程提醒门票约 25 欧，外观也很好拍；可以导航 Seven Hills Restaurant 找经典视角。",
+      "note": "若对内部兴趣一般，可以把时间留给托普卡帕宫。",
+      "ratings": { "nature": 2, "culture": 10, "weather": 5, "stamina": 5 }
+    },
+    {
+      "id": "topkapi_palace",
+      "name": "Topkapi Palace",
+      "zh": "托普卡帕宫",
+      "type": "spot",
+      "day": 3,
+      "time": "2/16 下午",
+      "lat": 41.0115,
+      "lng": 28.9834,
+      "stay": "2-3 小时",
+      "image": "assets/image18.png",
+      "images": [
+        {
+          "src": "assets/image18.png",
+          "caption": "Topkapi Palace｜托普卡帕宫"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["奥斯曼皇宫", "09:00-17:00", "50 欧"],
+      "intro": "托普卡帕宫曾是奥斯曼帝国苏丹居住和理政近 400 年的地方，融合拜占庭、波斯和伊斯兰艺术。",
+      "play": "行程标注可逛约 3 小时，若决定进去，需要把大巴扎和清真寺时间压实。",
+      "note": "票价较高，进不进取决于当天体力和兴趣。",
+      "ratings": { "nature": 4, "culture": 10, "weather": 5, "stamina": 7 }
+    },
+    {
+      "id": "sirkeci_station",
+      "name": "Sirkeci Station",
+      "zh": "Sirkeci Garı",
+      "type": "spot",
+      "day": 3,
+      "time": "2/16 傍晚",
+      "lat": 41.0145,
+      "lng": 28.9771,
+      "stay": "20-40 分钟",
+      "image": "assets/image19.png",
+      "images": [
+        {
+          "src": "assets/image19.png",
+          "caption": "Sirkeci Station｜东方快车车站"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["东方快车", "火车站", "拍照打卡"],
+      "intro": "Sirkeci Garı 与东方快车相关，是《东方快车谋杀案》旅行想象里的经典车站节点。",
+      "play": "从 Gulhane 坐 T1 到 Eminonu 前后都可以顺路打卡。",
+      "note": "行程提醒博物馆周一关闭，D3 正好是周一，按外观打卡处理更稳。",
+      "ratings": { "nature": 1, "culture": 7, "weather": 2, "stamina": 2 }
+    },
+    {
+      "id": "uskudar_ferry_sunset",
+      "name": "Uskudar Ferry Sunset",
+      "zh": "Üsküdar 轮渡日落",
+      "type": "spot",
+      "day": 3,
+      "time": "2/16 17:45-18:30",
+      "lat": 41.0179,
+      "lng": 28.9706,
+      "stay": "25-60 分钟",
+      "image": "assets/image20.png",
+      "images": [
+        {
+          "src": "assets/image20.png",
+          "caption": "Uskudar Ferry Sunset｜轮渡日落"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["日落轮渡", "Eminonu", "Uskudar"],
+      "intro": "Eminonu 到 Uskudar 的轮渡能完整看海峡日落，是老城日的轻松收尾。",
+      "play": "建议选 17:45-18:30 之间班次，单程约 25 分钟，提前 15 分钟排队占位置。",
+      "note": "风大时保暖；年夜饭安排在轮渡之后。",
+      "ratings": { "nature": 8, "culture": 5, "weather": 8, "stamina": 2 }
+    },
+    {
+      "id": "goreme_viewpoint",
+      "name": "Sunset/Sunrise/Balloons Highest View Point",
+      "zh": "格雷梅小镇夜景点",
+      "type": "spot",
+      "day": 4,
+      "time": "2/17 傍晚",
+      "lat": 38.6427,
+      "lng": 34.8319,
+      "stay": "30-60 分钟",
+      "image": "assets/image22.png",
+      "images": [
+        {
+          "src": "assets/image22.png",
+          "caption": "Goreme Viewpoint｜格雷梅小镇夜景"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["夜景", "步行 1km", "30 里拉"],
+      "intro": "格雷梅观景点能俯看洞穴酒店和小镇灯火，是抵达卡帕多奇亚后的第一眼氛围。",
+      "play": "导航 Sunset/Sunrise/Ballons Highest View Point in Goreme，距离酒店约 1km。",
+      "note": "第一天到格雷梅可能有点赶，日落点太远就改看近一点夜景。",
+      "ratings": { "nature": 8, "culture": 5, "weather": 8, "stamina": 4 }
+    },
+    {
+      "id": "love_valley",
+      "name": "Love Valley",
+      "zh": "Love Garden 热气球点",
+      "type": "spot",
+      "day": 5,
+      "time": "2/18 07:00",
+      "lat": 38.662,
+      "lng": 34.819,
+      "stay": "1-2 小时",
+      "image": "assets/image23.png",
+      "images": [
+        {
+          "src": "assets/image23.png",
+          "caption": "Love Valley｜卡帕多奇亚热气球"
+        },
+        {
+          "src": "assets/turkey-hero.jpg",
+          "caption": "卡帕多奇亚热气球横幅裁切"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["免费追球", "日出前半小时", "步行 1.4km"],
+      "intro": "Love Valley 是卡帕多奇亚追热气球的核心点之一，岩石峡谷和清晨升空的热气球很适合做整趟土耳其行程的记忆点。",
+      "play": "从酒店步行约 1.4km，日出前半小时抵达，也就是 7 点左右；若想看降落，可改去 Highground Photography Scenic Overlook。",
+      "note": "热气球非常看天气，若当天没追到，行程改去乌奇萨城堡也合理。",
+      "ratings": { "nature": 10, "culture": 4, "weather": 10, "stamina": 5 }
+    },
+    {
+      "id": "uchisar_castle",
+      "name": "Uchisar Castle",
+      "zh": "乌奇萨城堡",
+      "type": "spot",
+      "day": 5,
+      "time": "2/18 上午备选",
+      "lat": 38.6306,
+      "lng": 34.8059,
+      "stay": "1-1.5 小时",
+      "image": "assets/image25.png",
+      "images": [
+        {
+          "src": "assets/image25.png",
+          "caption": "Uchisar Castle｜乌奇萨城堡"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["城堡", "小巴 50 里拉", "外观也好拍"],
+      "intro": "乌奇萨城堡是卡帕多奇亚高点之一，可以从格雷梅坐小巴前往，适合热气球不顺利时补上半天景观。",
+      "play": "导航 Goreme Otobus Terminal，牌子上是 NEVSEHIR，车程约 10 分钟；上车后跟售票员说去乌奇希萨尔。",
+      "note": "门票约 400 里拉，外面也很好拍，可按天气和体力决定是否进入。",
+      "ratings": { "nature": 8, "culture": 6, "weather": 7, "stamina": 5 }
+    },
+    {
+      "id": "rose_red_valley",
+      "name": "Rose-Red Valley",
+      "zh": "玫瑰红谷徒步",
+      "type": "spot",
+      "day": 5,
+      "time": "2/18 下午",
+      "lat": 38.6592,
+      "lng": 34.8606,
+      "stay": "2-3 小时",
+      "image": "assets/image26.png",
+      "images": [
+        {
+          "src": "assets/image26.png",
+          "caption": "Rose-Red Valley｜玫瑰红谷徒步"
+        },
+        {
+          "src": "assets/image27.png",
+          "caption": "Sunset View Point in Goreme｜格雷梅观景台"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["徒步", "两步路 APP", "日落景观"],
+      "intro": "Rose-Red Valley 是卡帕多奇亚典型峡谷徒步区域，岩层颜色和落日光线会把地貌变得很戏剧化。",
+      "play": "用两步路找徒步线路；下午徒步后再到 Sunset View point in Goreme 看日落。",
+      "note": "冬季天黑快，别把徒步开始时间拖得太晚。",
+      "ratings": { "nature": 9, "culture": 4, "weather": 8, "stamina": 7 }
+    },
+    {
+      "id": "hadrians_gate",
+      "name": "Hadrian's Gate",
+      "zh": "哈德良门",
+      "type": "spot",
+      "day": 7,
+      "time": "2/20 上午",
+      "lat": 36.887,
+      "lng": 30.7084,
+      "stay": "20-40 分钟",
+      "image": "assets/image29.png",
+      "images": [
+        {
+          "src": "assets/image29.png",
+          "caption": "Hadrian's Gate｜哈德良门"
+        },
+        {
+          "src": "assets/image28.png",
+          "caption": "Antalya Old Town｜安塔利亚老城街巷"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["罗马遗迹", "老城入口", "1800 年历史"],
+      "intro": "哈德良门为纪念罗马皇帝哈德良访问安塔利亚而建，已有约 1800 年历史。",
+      "play": "从酒店附近坐 TC16 到 Antalya Lisesi 后，开始安塔利亚老城步行线。",
+      "note": "适合上午先拍，光线通常更干净。",
+      "ratings": { "nature": 2, "culture": 8, "weather": 6, "stamina": 2 }
+    },
+    {
+      "id": "clock_tower_antalya",
+      "name": "Antalya Clock Tower",
+      "zh": "安塔利亚钟楼",
+      "type": "spot",
+      "day": 7,
+      "time": "2/20 上午",
+      "lat": 36.8879,
+      "lng": 30.7046,
+      "stay": "15-25 分钟",
+      "image": "assets/image30.png",
+      "images": [
+        {
+          "src": "assets/image30.png",
+          "caption": "Antalya Clock Tower｜钟楼"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["老城地标", "步行节点", "拍照"],
+      "intro": "安塔利亚钟楼位于老城核心，是哈德良门、海港和老城街巷之间的轻量节点。",
+      "play": "从哈德良门步行过来，打卡后继续往罗马港方向走。",
+      "note": "停留时间不需要太长。",
+      "ratings": { "nature": 1, "culture": 5, "weather": 5, "stamina": 1 }
+    },
+    {
+      "id": "old_harbor_antalya",
+      "name": "Antalya Old Harbor Viewpoint",
+      "zh": "罗马港观景台",
+      "type": "spot",
+      "day": 7,
+      "time": "2/20 中午",
+      "lat": 36.8835,
+      "lng": 30.7053,
+      "stay": "45-75 分钟",
+      "image": "assets/image31.png",
+      "images": [
+        {
+          "src": "assets/image31.png",
+          "caption": "Antalya Old Harbor Viewpoint｜罗马港观景台"
+        },
+        {
+          "src": "assets/image33.png",
+          "caption": "Antalya Old Harbor｜安塔利亚港湾"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["地中海", "老城港湾", "午间散步"],
+      "intro": "安塔利亚罗马港观景台可以俯看老城、游船和地中海，是 Day 7 最轻松的风景点。",
+      "play": "把它和玩具博物馆、Keçili 公园串在一起，中午前后走慢一点。",
+      "note": "晴天反差大，拍照注意避开正午强光。",
+      "ratings": { "nature": 8, "culture": 5, "weather": 8, "stamina": 3 }
+    },
+    {
+      "id": "toy_museum_antalya",
+      "name": "Antalya Toy Museum",
+      "zh": "安塔利亚玩具博物馆",
+      "type": "spot",
+      "day": 7,
+      "time": "2/20 下午",
+      "lat": 36.8848,
+      "lng": 30.704,
+      "stay": "30-60 分钟",
+      "image": "assets/image32.png",
+      "images": [
+        {
+          "src": "assets/image32.png",
+          "caption": "Antalya Toy Museum｜安塔利亚玩具博物馆"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["免费", "有厕所", "9:00-18:00"],
+      "intro": "安塔利亚玩具博物馆是老城海港附近的轻松室内点，原行程特别标注免费且有厕所。",
+      "play": "作为老城散步中的缓冲点，天气热或想休息时很有用。",
+      "note": "开放约 09:00-18:00。",
+      "ratings": { "nature": 1, "culture": 4, "weather": 2, "stamina": 1 }
+    },
+    {
+      "id": "hidirlik_tower",
+      "name": "Hidirlik Tower",
+      "zh": "希德尔勒克塔",
+      "type": "spot",
+      "day": 7,
+      "time": "2/20 下午",
+      "lat": 36.882,
+      "lng": 30.704,
+      "stay": "20-40 分钟",
+      "image": "assets/image34.png",
+      "images": [
+        {
+          "src": "assets/image34.png",
+          "caption": "Hidirlik Tower｜希德尔勒克塔"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["罗马塔楼", "地中海眺望", "公园边"],
+      "intro": "希德尔勒克塔始建于公元 1-2 世纪，曾在城市防御中发挥瞭望作用。",
+      "play": "从海港一路走到塔楼，再接卡拉阿里奥卢公园。",
+      "note": "附近适合吹海风，但风大时注意保暖。",
+      "ratings": { "nature": 6, "culture": 7, "weather": 7, "stamina": 3 }
+    },
+    {
+      "id": "karaalioglu_park",
+      "name": "Karaalioglu Park",
+      "zh": "卡拉阿里奥卢公园",
+      "type": "spot",
+      "day": 7,
+      "time": "2/20 下午",
+      "lat": 36.881,
+      "lng": 30.7064,
+      "stay": "30-60 分钟",
+      "image": "assets/image35.png",
+      "images": [
+        {
+          "src": "assets/image35.png",
+          "caption": "Karaalioglu Park｜卡拉阿里奥卢公园"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["海边公园", "散步", "休息"],
+      "intro": "卡拉阿里奥卢公园靠近老城南侧，可以作为安塔利亚老城步行的休息和观海点。",
+      "play": "走完希德尔勒克塔后在公园里放慢节奏，再决定是否去 Konyaalti 海滩。",
+      "note": "这天点位多，公园适合作为弹性停留。",
+      "ratings": { "nature": 7, "culture": 3, "weather": 7, "stamina": 2 }
+    },
+    {
+      "id": "konyaalti_beach",
+      "name": "Konyaalti Beach",
+      "zh": "Konyaalti 海滩",
+      "type": "spot",
+      "day": 7,
+      "time": "2/20 傍晚",
+      "lat": 36.8623,
+      "lng": 30.6349,
+      "stay": "45-90 分钟",
+      "image": "assets/image36.png",
+      "images": [
+        {
+          "src": "assets/image36.png",
+          "caption": "Konyaalti Beach｜Konyaalti 海滩"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["地中海海滩", "雪山背景", "傍晚散步"],
+      "intro": "Konyaalti 海滩是安塔利亚城市海岸线代表，晴天能看到海湾和远处山景。",
+      "play": "老城走完后，如果体力还够，傍晚去海滩收尾。",
+      "note": "冬季海边风大，拍完照即可，不必久坐。",
+      "ratings": { "nature": 9, "culture": 2, "weather": 8, "stamina": 3 }
+    },
+    {
+      "id": "perge",
+      "name": "Perge Ancient City",
+      "zh": "佩尔盖古城",
+      "type": "spot",
+      "day": 8,
+      "time": "2/21 上午",
+      "lat": 36.9593,
+      "lng": 30.8543,
+      "stay": "1-1.5 小时",
+      "image": "assets/image37.png",
+      "images": [
+        {
+          "src": "assets/image37.png",
+          "caption": "Perge Ancient City｜佩尔盖古城"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["古城遗址", "Klook 一日游", "门票约 11 欧"],
+      "intro": "佩尔盖古城是安塔利亚周边重要古迹，适合和阿斯潘多斯、西代阿波罗神庙打包成一日游。",
+      "play": "行程记录 Klook 一日游不含门票约 252 元/人，含门票约 543 元/人。",
+      "note": "冬季户外遗址暴晒少但风可能大，带水和防风衣。",
+      "ratings": { "nature": 5, "culture": 8, "weather": 7, "stamina": 5 }
+    },
+    {
+      "id": "aspendos",
+      "name": "Aspendos Theater",
+      "zh": "阿斯潘多斯",
+      "type": "spot",
+      "day": 8,
+      "time": "2/21 中午",
+      "lat": 36.9381,
+      "lng": 31.1726,
+      "stay": "1-1.5 小时",
+      "image": "assets/image38.png",
+      "images": [
+        {
+          "src": "assets/image38.png",
+          "caption": "Aspendos Theater｜阿斯潘多斯"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["古罗马剧场", "门票约 15 欧", "声学设计"],
+      "intro": "阿斯潘多斯是世界上保存最完好的古罗马剧场之一，建于公元 2 世纪，至今仍以声学设计闻名。",
+      "play": "作为一日游中段重点，进剧场后可以上到高处看整体结构。",
+      "note": "台阶多，鞋子要稳。",
+      "ratings": { "nature": 4, "culture": 9, "weather": 7, "stamina": 5 }
+    },
+    {
+      "id": "side_apollo",
+      "name": "Temple of Apollo, Side",
+      "zh": "西代阿波罗神庙",
+      "type": "spot",
+      "day": 8,
+      "time": "2/21 日落",
+      "lat": 36.7647,
+      "lng": 31.386,
+      "stay": "45-90 分钟",
+      "image": "assets/image39.png",
+      "images": [
+        {
+          "src": "assets/image39.png",
+          "caption": "Temple of Apollo, Side｜西代阿波罗神庙"
+        }
+      ],
+      "imageSourceType": "local",
+      "photoSource": "旅途素材",
+      "photoCredit": "用户提供",
+      "features": ["免费", "海边遗迹", "日落漂亮"],
+      "intro": "西代阿波罗神庙位于海边，柱廊遗迹和日落很适合作为安塔利亚古迹一日游的收束。",
+      "play": "按行程提醒，尽量把西代安排到日落时段。",
+      "note": "免费但人可能多，留一点时间等光线。",
+      "ratings": { "nature": 8, "culture": 8, "weather": 9, "stamina": 3 }
+    }
+  ],
+  "hotels": [
+    {
+      "id": "stay_nippon_hotel",
+      "name": "Nippon Hotel",
+      "zh": "日本酒店",
+      "type": "hotel",
+      "day": 2,
+      "lat": 41.0385,
+      "lng": 28.9854,
+      "notes": "Topcu Cd. No:6 Talimhane Taksim；价格 858；无早餐，不可取消，同程订。"
+    },
+    {
+      "id": "stay_premium_cappadocia_house",
+      "name": "Premium Cappadocia House",
+      "zh": "格雷梅住宿",
+      "type": "hotel",
+      "day": 4,
+      "lat": 38.6429,
+      "lng": 34.8289,
+      "notes": "无早餐，可取消，Booking 订；开塞利机场拼车接机约 74.8 元。"
+    },
+    {
+      "id": "stay_delta_antalya_lara",
+      "name": "Delta Hotels Antalya Lara",
+      "zh": "安塔利亚 Lara 住宿",
+      "type": "hotel",
+      "day": 6,
+      "lat": 36.859,
+      "lng": 30.755,
+      "notes": "无早餐，可取消，官网订；机场公交 800 到 İsmet Gokşen Cd-11。"
+    }
+  ],
+  "route": [
+    "galata_tower",
+    "istiklal_avenue",
+    "taksim_square",
+    "dolmabahce_palace",
+    "ortakoy_mosque",
+    "bosphorus_kuzguncuk",
+    "maidens_tower",
+    "suleymaniye_mosque",
+    "istanbul_university_gate",
+    "grand_bazaar",
+    "sultanahmet_obelisk",
+    "blue_mosque",
+    "hagia_sophia",
+    "topkapi_palace",
+    "sirkeci_station",
+    "uskudar_ferry_sunset",
+    "goreme_viewpoint",
+    "love_valley",
+    "uchisar_castle",
+    "rose_red_valley",
+    "hadrians_gate",
+    "clock_tower_antalya",
+    "old_harbor_antalya",
+    "toy_museum_antalya",
+    "hidirlik_tower",
+    "karaalioglu_park",
+    "konyaalti_beach",
+    "perge",
+    "aspendos",
+    "side_apollo"
+  ],
+  "routeSegments": [
+    { "mode": "walk", "ids": ["galata_tower", "istiklal_avenue", "taksim_square"] },
+    { "mode": "drive", "ids": ["taksim_square", "dolmabahce_palace", "ortakoy_mosque"] },
+    { "mode": "ferry", "ids": ["ortakoy_mosque", "bosphorus_kuzguncuk", "maidens_tower"] },
+    { "mode": "drive", "ids": ["suleymaniye_mosque", "istanbul_university_gate", "grand_bazaar", "sultanahmet_obelisk", "blue_mosque", "hagia_sophia", "topkapi_palace", "sirkeci_station"] },
+    { "mode": "ferry", "ids": ["sirkeci_station", "uskudar_ferry_sunset"] },
+    { "mode": "flight", "ids": ["uskudar_ferry_sunset", "goreme_viewpoint"] },
+    { "mode": "walk", "ids": ["goreme_viewpoint", "love_valley", "uchisar_castle", "rose_red_valley"] },
+    { "mode": "flight", "ids": ["rose_red_valley", "hadrians_gate"] },
+    { "mode": "walk", "ids": ["hadrians_gate", "clock_tower_antalya", "old_harbor_antalya", "toy_museum_antalya", "hidirlik_tower", "karaalioglu_park", "konyaalti_beach"] },
+    { "mode": "drive", "ids": ["hadrians_gate", "perge", "aspendos", "side_apollo"] }
+  ],
+  "spotInsights": {
+    "dolmabahce_palace": {
+      "unique": "多尔玛巴赫切宫把奥斯曼权力想象转向欧洲宫廷审美，花园与海峡位置很适合拍照。",
+      "history": "19 世纪奥斯曼苏丹阿卜杜勒-迈吉德一世下令修建，1856 年完工，原行程备注其黄金和金箔用量极夸张。"
+    },
+    "hagia_sophia": {
+      "unique": "同一座建筑承载教堂、清真寺、博物馆再到清真寺的多重身份，是老城最强的历史叠层。",
+      "history": "拜占庭、奥斯曼和现代土耳其的政治文化变迁都能在索菲亚大教堂看到痕迹。"
+    },
+    "love_valley": {
+      "unique": "热气球、晨光和卡帕多奇亚岩柱同时出现，天气好时是整趟旅行的高光。",
+      "history": "卡帕多奇亚的火山凝灰岩被风化成峡谷与岩柱，后来叠加洞穴聚落和热气球旅行文化。"
+    },
+    "aspendos": {
+      "unique": "剧场保存度和声学效果都很突出，即使只是站在看台上，也能感到古罗马公共建筑的尺度。",
+      "history": "阿斯潘多斯剧场建于公元 2 世纪，是安塔利亚周边最有代表性的罗马遗迹之一。"
+    },
+    "side_apollo": {
+      "unique": "海边柱廊在日落时会变成剪影，适合作为安塔利亚古迹线的浪漫收尾。",
+      "history": "西代曾是古代潘菲利亚重要港口，阿波罗神庙遗迹保留了海岸城市的古典想象。"
+    }
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-02-14",
+      "title": "杭州萧山 → 成都双流 / 天府 → 伊斯坦布尔夜航",
+      "base": "成都转机夜航",
+      "lat": 30.5785,
+      "lng": 103.9471,
+      "sunLabel": "成都",
+      "sunrise": "成都 07:46",
+      "sunset": "成都 18:51",
+      "alerts": [
+        "杭州萧山 T4 → 成都双流 T1：10:45-13:55，3U8912",
+        "T1 到达层顺丰服务柜台或丰巢柜办理行李转运",
+        "成都天府 T1 → 伊斯坦布尔：01:00-06:10，3U3827"
+      ],
+      "transport": "杭州飞成都，成都停留后夜航伊斯坦布尔。",
+      "timeline": [
+        ["10:45-13:55", "杭州萧山 T4 → 成都双流 T1，3U8912"],
+        ["下午", "蚊子家休整 / 行李转运"],
+        ["01:00-06:10", "成都天府 T1 → 伊斯坦布尔，3U3827"]
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2026-02-15",
+      "title": "伊斯坦布尔新城区与海峡轮渡",
+      "base": "Nippon Hotel，日本酒店；无早餐，不可取消",
+      "lat": 41.0369,
+      "lng": 28.985,
+      "sunLabel": "伊斯坦布尔",
+      "sunrise": "伊斯坦布尔 07:59",
+      "sunset": "伊斯坦布尔 18:38",
+      "alerts": [
+        "机场大巴 Havist，车票可能涨到 450 里拉",
+        "酒店先寄存行李",
+        "公交 97T/66/70FE/54HT 可从 Elmadag 上车"
+      ],
+      "transport": "Havist 进城后寄存行李，公交、缆车、轮渡串联新城区与亚洲侧。",
+      "timeline": [
+        ["清晨", "抵达伊斯坦布尔，Havist 进城，酒店寄存行李"],
+        ["上午", "Galata Tower｜加拉达石塔", "galata_tower"],
+        ["上午", "Istiklal Avenue｜独立大街", "istiklal_avenue"],
+        ["中午", "Taksim Square｜塔克西姆广场", "taksim_square"],
+        ["下午", "Dolmabahce Palace｜多尔玛巴赫切宫", "dolmabahce_palace"],
+        ["下午", "Ortakoy Mosque｜奥塔科伊清真寺", "ortakoy_mosque"],
+        ["傍晚", "Ortakoy → Kuzguncuk 轮渡，博斯普鲁斯海峡观景", "bosphorus_kuzguncuk"],
+        ["傍晚", "Maiden's Tower｜少女塔", "maidens_tower"],
+        ["晚间", "Üsküdar → Kabataş 轮渡回新城区"]
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2026-02-16",
+      "title": "伊斯坦布尔老城区 / 年夜饭",
+      "base": "Nippon Hotel，日本酒店",
+      "lat": 41.0086,
+      "lng": 28.9802,
+      "sunLabel": "伊斯坦布尔",
+      "sunrise": "伊斯坦布尔 07:58",
+      "sunset": "伊斯坦布尔 18:39",
+      "alerts": [
+        "清真寺免费但需要脱鞋，女士准备头巾",
+        "大巴扎 08:30-19:00",
+        "Sirkeci Garı 博物馆周一关闭，按外观打卡"
+      ],
+      "transport": "公交 70FE 到 Eminonu，老城内以步行和 T1 有轨电车为主。",
+      "timeline": [
+        ["上午", "Suleymaniye Mosque｜苏莱曼尼耶清真寺", "suleymaniye_mosque"],
+        ["上午", "Istanbul University Gate｜伊斯坦布尔大学校门", "istanbul_university_gate"],
+        ["上午", "Grand Bazaar｜大巴扎", "grand_bazaar"],
+        ["中午", "午饭"],
+        ["下午", "Obelisk of Theodosius｜方尖碑", "sultanahmet_obelisk"],
+        ["下午", "Blue Mosque｜蓝色清真寺", "blue_mosque"],
+        ["下午", "Hagia Sophia｜索菲亚大教堂", "hagia_sophia"],
+        ["下午", "Topkapi Palace｜托普卡帕宫", "topkapi_palace"],
+        ["傍晚", "Sirkeci Station｜Sirkeci Garı", "sirkeci_station"],
+        ["17:45-18:30", "Eminönü → Üsküdar 日落轮渡", "uskudar_ferry_sunset"],
+        ["晚间", "年夜饭"]
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2026-02-17",
+      "title": "伊斯坦布尔 → 开塞利 → 格雷梅",
+      "base": "Premium Cappadocia House；无早餐，可取消",
+      "lat": 38.6427,
+      "lng": 34.8319,
+      "sunLabel": "格雷梅",
+      "sunrise": "格雷梅 07:30",
+      "sunset": "格雷梅 18:20",
+      "alerts": [
+        "坐大巴去机场约 1.5 小时，早点去大巴站",
+        "萨比哈哥克赛恩 → 开塞利：14:15-15:35，PC2736，15kg",
+        "开塞利 → 格雷梅拼车接机约 74.8 元，提前 2 天预定"
+      ],
+      "transport": "伊斯坦布尔市区大巴到 SAW，飞开塞利后拼车进格雷梅小镇。",
+      "timeline": [
+        ["上午", "市区 → 萨比哈哥克赛恩机场，预留约 1.5 小时"],
+        ["14:15-15:35", "萨比哈哥克赛恩 → 开塞利，PC2736"],
+        ["傍晚", "开塞利机场 → 格雷梅小镇酒店，拼车约 1.5 小时"],
+        ["晚饭", "梅花中餐厅"],
+        ["晚间", "Sunset/Sunrise/Balloons Highest View Point｜格雷梅小镇夜景", "goreme_viewpoint"]
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2026-02-18",
+      "title": "卡帕多奇亚追热气球 / Rose-Red Valley 徒步",
+      "base": "Premium Cappadocia House",
+      "lat": 38.662,
+      "lng": 34.819,
+      "sunLabel": "格雷梅",
+      "sunrise": "格雷梅 07:29",
+      "sunset": "格雷梅 18:21",
+      "alerts": [
+        "Love Garden 免费追热气球，日出前半小时抵达",
+        "若追到热气球，回酒店吃早饭休息；没追到就去城堡玩",
+        "格雷梅到乌奇萨尔小巴约 50 里拉现金"
+      ],
+      "transport": "格雷梅小镇步行追球，小巴可去乌奇萨尔，下午徒步看峡谷。",
+      "timeline": [
+        ["07:00", "Love Valley｜Love Garden 追热气球", "love_valley"],
+        ["早餐后", "回酒店休息"],
+        ["上午备选", "Uchisar Castle｜乌奇萨城堡", "uchisar_castle"],
+        ["中午", "午饭"],
+        ["下午", "Rose-Red Valley｜玫瑰红谷徒步", "rose_red_valley"],
+        ["日落", "Sunset View point in Göreme｜格雷梅观景台", "rose_red_valley"]
+      ]
+    },
+    {
+      "day": 6,
+      "date": "2026-02-19",
+      "title": "格雷梅弹性调整 → 开塞利 → 安塔利亚",
+      "base": "Delta Hotels Antalya Lara；无早餐，可取消",
+      "lat": 38.6427,
+      "lng": 34.8319,
+      "sunLabel": "格雷梅 / 安塔利亚",
+      "sunrise": "格雷梅 07:27",
+      "sunset": "安塔利亚 18:41",
+      "alerts": [
+        "根据前一天行程灵活调整，可在小镇 citywalk",
+        "格雷梅 → 开塞利机场小巴通常提前 3 小时上门接",
+        "开塞利 → 安塔利亚：16:10-20:00，15kg"
+      ],
+      "transport": "上午留给卡帕多奇亚弹性，下午小巴去开塞利机场，晚间抵达安塔利亚。",
+      "timeline": [
+        ["上午", "格雷梅小镇 citywalk / 补拍热气球"],
+        ["下午", "格雷梅 → 开塞利机场，小巴提前约 3 小时接"],
+        ["16:10-20:00", "开塞利 → 安塔利亚"],
+        ["晚间", "公交 800：Dış Hatlar Terminali 1 → İsmet Gökşen Cd-11，入住酒店"]
+      ]
+    },
+    {
+      "day": 7,
+      "date": "2026-02-20",
+      "title": "安塔利亚老城与地中海海岸",
+      "base": "Delta Hotels Antalya Lara",
+      "lat": 36.887,
+      "lng": 30.7084,
+      "sunLabel": "安塔利亚",
+      "sunrise": "安塔利亚 07:40",
+      "sunset": "安塔利亚 18:42",
+      "alerts": [
+        "公交 TC16：İsmet Gökşen Cd-11 → Antalya Lisesi",
+        "玩具博物馆免费，有厕所，9:00-18:00",
+        "海边风可能大，带防风层"
+      ],
+      "transport": "公交到老城，老城和海港以步行为主，傍晚视体力去 Konyaalti 海滩。",
+      "timeline": [
+        ["上午", "Hadrian's Gate｜哈德良门", "hadrians_gate"],
+        ["上午", "Antalya Clock Tower｜钟楼", "clock_tower_antalya"],
+        ["中午", "Antalya Old Harbor Viewpoint｜罗马港观景台", "old_harbor_antalya"],
+        ["下午", "Antalya Toy Museum｜安塔利亚玩具博物馆", "toy_museum_antalya"],
+        ["下午", "Hidirlik Tower｜希德尔勒克塔", "hidirlik_tower"],
+        ["下午", "Karaalioglu Park｜卡拉阿里奥卢公园", "karaalioglu_park"],
+        ["傍晚", "Konyaalti Beach｜Konyaalti 海滩", "konyaalti_beach"]
+      ]
+    },
+    {
+      "day": 8,
+      "date": "2026-02-21",
+      "title": "佩尔盖 / 阿斯潘多斯 / 西代阿波罗一日游",
+      "base": "Delta Hotels Antalya Lara",
+      "lat": 36.9381,
+      "lng": 31.1726,
+      "sunLabel": "安塔利亚",
+      "sunrise": "安塔利亚 07:37",
+      "sunset": "安塔利亚 18:41",
+      "alerts": [
+        "Klook 一日游：不含门票约 252 元/人，含门票约 543 元/人",
+        "佩尔盖门票约 11 欧等值里拉",
+        "阿斯潘多斯门票约 15 欧等值里拉；西代阿波罗免费，日落漂亮"
+      ],
+      "transport": "参加安塔利亚周边古迹一日游，车程连接佩尔盖、阿斯潘多斯和西代。",
+      "timeline": [
+        ["上午", "Perge Ancient City｜佩尔盖古城", "perge"],
+        ["中午", "Aspendos Theater｜阿斯潘多斯", "aspendos"],
+        ["日落", "Temple of Apollo, Side｜西代阿波罗神庙", "side_apollo"]
+      ]
+    },
+    {
+      "day": 9,
+      "date": "2026-02-22",
+      "title": "安塔利亚 → 伊斯坦布尔 → 成都",
+      "base": "返程夜航",
+      "lat": 36.8987,
+      "lng": 30.8005,
+      "sunLabel": "安塔利亚",
+      "sunrise": "安塔利亚 07:38",
+      "sunset": "安塔利亚 18:44",
+      "alerts": [
+        "安塔利亚 → 伊斯坦布尔：07:30-09:05，TK2433，15kg",
+        "伊斯坦布尔 → 成都天府 T1：15:30-05:20，3U3828"
+      ],
+      "transport": "早班机回伊斯坦布尔，下午转机回成都。",
+      "timeline": [
+        ["07:30-09:05", "安塔利亚 → 伊斯坦布尔，TK2433"],
+        ["15:30-05:20", "伊斯坦布尔 → 成都天府 T1，3U3828"]
+      ]
+    },
+    {
+      "day": 10,
+      "date": "2026-02-23",
+      "title": "成都休整 → 杭州",
+      "base": "返回杭州",
+      "lat": 30.5785,
+      "lng": 103.9471,
+      "sunLabel": "成都",
+      "sunrise": "成都 07:38",
+      "sunset": "成都 18:58",
+      "alerts": [
+        "蚊子家洗漱休整",
+        "成都天府 T2 → 杭州萧山 T4：19:35-21:50，3U6939"
+      ],
+      "transport": "成都白天休整，晚间飞回杭州。",
+      "timeline": [
+        ["上午", "蚊子家洗漱休整"],
+        ["19:35-21:50", "成都天府 T2 → 杭州萧山 T4，3U6939"]
+      ]
+    }
+  ],
+  "foods": [
+    {
+      "area": "伊斯坦布尔老城",
+      "type": "年夜饭",
+      "title": "老城日落轮渡后的年夜饭",
+      "text": "Day 3 是除夕，建议把年夜饭放在 Eminonu / Kabatas / Taksim 一带，轮渡日落结束后不用再跨太远区域。",
+      "budget": "按现场餐厅决定"
+    },
+    {
+      "area": "格雷梅",
+      "type": "中餐补给",
+      "title": "梅花中餐厅",
+      "text": "Day 4 抵达格雷梅后的晚饭点，飞行和拼车后吃熟悉口味更稳。",
+      "budget": "按点餐"
+    },
+    {
+      "area": "卡帕多奇亚",
+      "type": "追球早餐",
+      "title": "热气球后回酒店吃早饭",
+      "text": "Love Valley 需要日出前出门，追完球再回酒店吃早饭休息，避免上午直接硬接徒步。",
+      "budget": "酒店 / 小镇咖啡店"
+    },
+    {
+      "area": "安塔利亚老城",
+      "type": "海港午餐",
+      "title": "罗马港与 Kaleici 老城午餐",
+      "text": "Day 7 点位密集，午餐建议放在老城或海港附近，吃完再接玩具博物馆、公园和海滩。",
+      "budget": "约 TRY 现场定"
+    },
+    {
+      "area": "一日游路上",
+      "type": "车程补给",
+      "title": "佩尔盖 / 阿斯潘多斯 / 西代路上补水",
+      "text": "Day 8 户外遗址多，随身带水、能量棒和防风层，避免完全依赖团餐或路边店。",
+      "budget": "零食水自备"
+    }
+  ],
+  "prep": [
+    {
+      "title": "航班与接驳",
+      "items": [
+        "杭州萧山 T4 → 成都双流 T1：2026-02-14 10:45-13:55，3U8912。",
+        "成都天府 T1 → 伊斯坦布尔：2026-02-15 01:00-06:10，3U3827。",
+        "萨比哈哥克赛恩 → 开塞利：2026-02-17 14:15-15:35，PC2736，15kg。",
+        "开塞利 → 安塔利亚：2026-02-19 16:10-20:00，15kg。",
+        "安塔利亚 → 伊斯坦布尔：2026-02-22 07:30-09:05，TK2433，15kg。",
+        "伊斯坦布尔 → 成都天府 T1：2026-02-22 15:30-05:20，3U3828。",
+        "成都天府 T2 → 杭州萧山 T4：2026-02-23 19:35-21:50，3U6939。"
+      ]
+    },
+    {
+      "title": "酒店与交通确认",
+      "items": [
+        "Nippon Hotel / 日本酒店：Topcu Cd. No:6 Talimhane Taksim；858；无早餐，不可取消，同程订。",
+        "Premium Cappadocia House：无早餐，可取消，Booking 订；开塞利到格雷梅接机提前 2 天预定。",
+        "Delta Hotels Antalya Lara：无早餐，可取消，官网订。",
+        "伊斯坦布尔机场大巴 Havist 票价可能涨到 450 里拉，预留现金或可刷卡方式。",
+        "格雷梅到乌奇萨尔小巴需要现金，约 50 里拉。",
+        "格雷梅到开塞利机场小巴通常提前 3 小时上门接。"
+      ]
+    },
+    {
+      "title": "清真寺与古迹装备",
+      "items": [
+        "进清真寺需要脱鞋，带鞋套或鞋袋；女士准备头巾或能包住头发的帽子。",
+        "蓝色清真寺、苏莱曼尼耶清真寺以非礼拜时间为准。",
+        "托普卡帕宫、索菲亚大教堂票价较高，按当天体力和兴趣决定是否入内。",
+        "户外古迹和海边风大，防风层比厚重外套更实用。"
+      ]
+    },
+    {
+      "title": "证件与设备",
+      "items": [
+        "手机卡。",
+        "现金。",
+        "签证。",
+        "热水壶。",
+        "无人机。",
+        "Pocket 3。"
+      ]
+    }
+  ]
+}

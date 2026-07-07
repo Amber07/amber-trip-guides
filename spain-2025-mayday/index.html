@@ -1,0 +1,4041 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2025 五一西班牙葡萄牙行程攻略</title>
+  <meta name="description" content="杭州往返里斯本，串起辛特拉、里斯本、巴塞罗那、格拉纳达、塞维利亚、阿尔加维海岸的 10 日行程攻略。">
+  <style>
+    :root {
+      --bg: #f5f2ec;
+      --paper: #fffaf2;
+      --ink: #18211d;
+      --muted: #687069;
+      --line: #ded4c5;
+      --green: #275745;
+      --blue: #1e6a8c;
+      --orange: #bc6339;
+      --gold: #c29334;
+      --shadow: 0 14px 36px rgba(42, 34, 20, .12);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.58;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    button, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .hero {
+      position: relative;
+      min-height: 68vh;
+      display: grid;
+      align-items: end;
+      padding: 32px;
+      color: #fff;
+      overflow: hidden;
+      background: #0c1511;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(12, 21, 17, .12), rgba(12, 21, 17, .76));
+      pointer-events: none;
+    }
+
+    #heroMediaSlot {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .hero-media.is-video {
+      background: #0c1511;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: rgba(255,255,255,.82);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 920px;
+      margin: 0;
+      font-size: clamp(38px, 7vw, 88px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 820px;
+      margin: 18px 0 0;
+      color: rgba(255,255,255,.88);
+      font-size: clamp(17px, 2vw, 23px);
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .hero-stat {
+      min-width: 145px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 22px;
+    }
+
+    .hero-stat span {
+      color: rgba(255,255,255,.8);
+      font-size: 13px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 500;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 14px;
+      overflow-x: auto;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,250,242,.9);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav a {
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav a:hover {
+      background: #eadfce;
+      text-decoration: none;
+    }
+
+    .nav a::before {
+      content: attr(data-icon);
+      display: none;
+    }
+
+    section { padding: 54px 24px; }
+
+    .inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 820px;
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .notice {
+      margin: 18px 0 0;
+      padding: 14px 16px;
+      border: 1px solid #e0bf82;
+      border-radius: var(--radius);
+      background: #fff4d8;
+      color: #6a4b14;
+      font-weight: 700;
+    }
+
+    .map-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 380px;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .map-wrap {
+      position: relative;
+      min-height: 640px;
+    }
+
+    #map {
+      height: 100%;
+      min-height: 640px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    #map.map-fallback {
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      background: #e9dfd0;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .route-status {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      z-index: 460;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      max-width: calc(100% - 28px);
+      padding: 10px 12px;
+      border: 1px solid rgba(222, 212, 197, .9);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 242, .94);
+      color: var(--muted);
+      box-shadow: 0 10px 28px rgba(41, 54, 48, .16);
+      backdrop-filter: blur(14px);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .route-status.show {
+      display: flex;
+    }
+
+    .route-status.warning {
+      border-color: #e0bf82;
+      background: rgba(255, 244, 216, .96);
+      color: #6a4b14;
+    }
+
+    .route-status::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .route-status.warning::before {
+      background: var(--orange);
+    }
+
+    .spot-panel, .card, .food-card, .prep-card, .transport-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .spot-panel {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      position: relative;
+    }
+
+    .sheet-close {
+      display: none;
+    }
+
+    .panel-img-wrap {
+      position: relative;
+      height: 210px;
+      min-height: 0;
+      background: #d8d2c8;
+      overflow: hidden;
+    }
+
+    .panel-img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      min-height: 0;
+      background: #d8d2c8 center / cover;
+    }
+
+    .panel-video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      background: #111;
+    }
+
+    .panel-img,
+    .rating-image {
+      cursor: zoom-in;
+    }
+
+    .panel-img.has-video {
+      cursor: default;
+    }
+
+    .panel-img:focus-visible,
+    .rating-image:focus-visible {
+      outline: 3px solid rgba(30, 106, 140, .55);
+      outline-offset: -3px;
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      z-index: 4;
+      display: none;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255, 255, 255, .48);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .9);
+      color: var(--ink);
+      box-shadow: 0 8px 20px rgba(41, 54, 48, .18);
+      transform: translateY(-50%);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .carousel-button.prev {
+      left: 10px;
+    }
+
+    .carousel-button.next {
+      right: 10px;
+    }
+
+    .panel-img-wrap.has-multiple .carousel-button {
+      display: grid;
+    }
+
+    .carousel-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      z-index: 4;
+      display: none;
+      gap: 6px;
+      transform: translateX(-50%);
+    }
+
+    .panel-img-wrap.has-multiple .carousel-dots {
+      display: flex;
+    }
+
+    .carousel-dot {
+      width: 7px;
+      height: 7px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .62);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+      padding: 0;
+    }
+
+    .carousel-dot.active {
+      background: #fff;
+      transform: scale(1.18);
+    }
+
+    .panel-body {
+      padding: 16px;
+      overflow: auto;
+    }
+
+    .panel-body h3 {
+      margin: 0 0 7px;
+      font-size: 23px;
+      line-height: 1.14;
+    }
+
+    .panel-intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .tag.main {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+    }
+
+    .detail-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin: 12px 0 0;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 0;
+    }
+
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .action-link.primary {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+    }
+
+    .action-link:hover {
+      text-decoration: none;
+      filter: brightness(.98);
+    }
+
+    .mini-card {
+      min-width: 0;
+      padding: 11px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fffdf8;
+    }
+
+    .mini-card.context {
+      background: #f4f8f3;
+    }
+
+    .mini-card h4 {
+      margin: 0 0 5px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.48;
+    }
+
+    .route-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .day-list-wrap {
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .day-jump {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+      margin-top: 18px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 242, .92);
+      box-shadow: 0 10px 26px rgba(42, 34, 20, .08);
+      backdrop-filter: blur(12px);
+    }
+
+    .day-jump button {
+      display: grid;
+      place-items: center;
+      min-height: 42px;
+      padding: 5px 4px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      background: transparent;
+      color: var(--muted);
+      line-height: 1.1;
+    }
+
+    .day-jump button:hover,
+    .day-jump button.active {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .day-jump strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .day-jump span {
+      display: block;
+      margin-top: 2px;
+      font-size: 10px;
+      font-weight: 800;
+      opacity: .78;
+    }
+
+    .card {
+      padding: 18px;
+      box-shadow: none;
+    }
+
+    .day-card {
+      scroll-margin-top: 84px;
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .card-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .card p {
+      margin: 4px 0 0;
+      color: var(--muted);
+    }
+
+    .date-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border: 1px solid #d8e2d9;
+      border-radius: 999px;
+      background: #f2f7f0;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .day-toggle {
+      display: none;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline li {
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      gap: 10px;
+      padding: 10px;
+      border-radius: var(--radius);
+      background: #f8efe2;
+    }
+
+    .timeline strong {
+      color: var(--green);
+    }
+
+    .timeline button {
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: rgba(30, 106, 140, .35);
+      text-underline-offset: 3px;
+    }
+
+    .day-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .day-meta div {
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fffdf8;
+    }
+
+    .day-meta strong {
+      display: block;
+      color: var(--ink);
+    }
+
+    .alert-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 12px 0 0;
+    }
+
+    .alert-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 9px;
+      border: 1px solid #e0bf82;
+      border-radius: 999px;
+      background: #fff4d8;
+      color: #6a4b14;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .side-stack {
+      position: sticky;
+      top: 68px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .transport-card, .rating-card {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+
+    .rating-card {
+      max-height: calc(100vh - 96px);
+      overflow: auto;
+    }
+
+    .transport-card h3, .rating-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .rating-image {
+      width: 100%;
+      aspect-ratio: 16 / 8.6;
+      margin: 0 0 10px;
+      border-radius: var(--radius);
+      background: #d8d2c8 center / cover;
+    }
+
+    .rating-image.has-video {
+      position: relative;
+    }
+
+    .rating-image.has-video::after {
+      content: "播放视频";
+      position: absolute;
+      left: 12px;
+      bottom: 10px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(255, 250, 242, .92);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .rating-card h3 {
+      line-height: 1.22;
+    }
+
+    .rating-card p {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .rating-card .tag-row {
+      margin: 7px 0 8px;
+    }
+
+    .rating-card .tag {
+      min-height: 24px;
+      padding: 2px 7px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    select {
+      width: 100%;
+      min-height: 42px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .estimate {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .estimate div {
+      min-width: 0;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .estimate strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr) 30px;
+      gap: 8px;
+      align-items: center;
+      margin: 6px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .bar {
+      height: 8px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #e7ddce;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: var(--orange);
+    }
+
+    .panel-rating {
+      display: none;
+    }
+
+    .food-grid, .prep-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .food-card, .prep-card {
+      padding: 16px;
+      box-shadow: none;
+    }
+
+    .food-card h3, .prep-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .food-card p, .prep-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .prep-card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .marker-pin {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border: 2px solid #fff;
+      border-radius: 50% 50% 50% 4px;
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 7px 18px rgba(0,0,0,.25);
+      transform: rotate(-45deg);
+      font-weight: 900;
+    }
+
+    .marker-pin span {
+      transform: rotate(45deg);
+      font-size: 12px;
+    }
+
+    .marker-pin.hotel { background: var(--gold); }
+    .marker-pin.airport { background: var(--green); }
+
+    footer {
+      padding: 22px 24px 44px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .image-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(12, 21, 17, .88);
+      backdrop-filter: blur(12px);
+    }
+
+    .image-lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-image {
+      max-width: min(1120px, 100%);
+      max-height: min(82vh, 780px);
+      border-radius: var(--radius);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
+      object-fit: contain;
+      background: #111;
+      touch-action: pan-y;
+    }
+
+    .lightbox-video {
+      display: none;
+      max-width: min(1120px, 100%);
+      max-height: min(82vh, 780px);
+      border-radius: var(--radius);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
+      background: #111;
+      touch-action: pan-y;
+    }
+
+    .image-lightbox.show-video .lightbox-image {
+      display: none;
+    }
+
+    .image-lightbox.show-video .lightbox-video {
+      display: block;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      display: none;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255, 255, 255, .34);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .92);
+      color: var(--ink);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .24);
+      transform: translateY(-50%);
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .lightbox-nav.prev {
+      left: max(18px, env(safe-area-inset-left, 0px));
+    }
+
+    .lightbox-nav.next {
+      right: max(18px, env(safe-area-inset-right, 0px));
+    }
+
+    .image-lightbox.has-multiple .lightbox-nav {
+      display: grid;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: max(18px, env(safe-area-inset-top, 0px));
+      right: max(18px, env(safe-area-inset-right, 0px));
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 50%;
+      background: rgba(255, 250, 242, .94);
+      color: var(--ink);
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .lightbox-caption {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: max(18px, env(safe-area-inset-bottom, 0px));
+      color: rgba(255, 255, 255, .86);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .lightbox-dots {
+      position: absolute;
+      left: 50%;
+      bottom: max(46px, calc(env(safe-area-inset-bottom, 0px) + 46px));
+      z-index: 2;
+      display: none;
+      gap: 7px;
+      transform: translateX(-50%);
+    }
+
+    .image-lightbox.has-multiple .lightbox-dots {
+      display: flex;
+    }
+
+    .lightbox-dot {
+      width: 8px;
+      height: 8px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .54);
+      box-shadow: 0 1px 6px rgba(0, 0, 0, .38);
+      padding: 0;
+    }
+
+    .lightbox-dot.active {
+      background: #fff;
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 980px) {
+      .map-grid, .two-col { grid-template-columns: 1fr; }
+      .side-stack { position: static; }
+      .map-wrap, #map { min-height: 520px; }
+      .food-grid, .prep-grid { grid-template-columns: repeat(2, 1fr); }
+      .day-list-wrap {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .day-jump {
+        z-index: 20;
+        display: flex;
+        gap: 6px;
+        margin: 14px 0 0;
+        padding: 7px;
+        overflow-x: auto;
+      }
+
+      .day-jump button {
+        flex: 0 0 54px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      body {
+        padding-bottom: calc(82px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 26px 18px 28px;
+      }
+
+      .hero-inner {
+        margin-top: 28px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero-copy {
+        font-size: 17px;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .hero-stat {
+        min-width: 0;
+        padding: 9px 10px;
+      }
+
+      .hero-stat strong {
+        font-size: 17px;
+        line-height: 1.15;
+      }
+
+      .hero-stat span {
+        font-size: 11px;
+        line-height: 1.25;
+      }
+
+      .notice {
+        font-size: 14px;
+      }
+
+      .nav {
+        position: fixed;
+        inset: auto 10px calc(10px + env(safe-area-inset-bottom, 0px)) 10px;
+        z-index: 1200;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4px;
+        padding: 8px;
+        border: 1px solid rgba(41, 54, 48, .14);
+        border-radius: 18px;
+        background: rgba(255, 250, 242, .94);
+        box-shadow: 0 18px 44px rgba(41, 54, 48, .18);
+      }
+
+      .nav a {
+        display: grid;
+        place-items: center;
+        gap: 2px;
+        min-height: 52px;
+        padding: 4px 2px;
+        border-radius: 12px;
+        font-size: 12px;
+        line-height: 1.2;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .nav a::before {
+        display: block;
+        font-size: 17px;
+        line-height: 1;
+      }
+
+      section {
+        padding: 44px 16px;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .map-grid {
+        display: block;
+      }
+
+      .map-wrap {
+        height: 62vh;
+        min-height: 440px;
+      }
+
+      #map {
+        height: 100%;
+        min-height: 0;
+        border-radius: 12px;
+      }
+
+      .route-status {
+        bottom: 12px;
+        font-size: 12px;
+      }
+
+      .spot-panel {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1300;
+        max-height: min(78vh, 640px);
+        border-radius: 18px 18px 0 0;
+        transform: translateY(106%);
+        transition: transform .28s ease;
+        box-shadow: 0 -18px 48px rgba(41, 54, 48, .24);
+      }
+
+      .spot-panel.open {
+        transform: translateY(0);
+      }
+
+      .spot-panel::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        width: 44px;
+        height: 5px;
+        border-radius: 999px;
+        background: rgba(41, 54, 48, .22);
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+
+      .sheet-close {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        z-index: 3;
+        width: 34px;
+        height: 34px;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .92);
+        color: var(--ink);
+        font-size: 24px;
+        line-height: 1;
+        box-shadow: 0 8px 20px rgba(41, 54, 48, .16);
+      }
+
+      .panel-img {
+        min-height: 0;
+      }
+
+      .panel-img-wrap {
+        height: 170px;
+      }
+
+      .panel-body {
+        max-height: calc(78vh - 170px);
+        padding: 16px 16px calc(18px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .panel-body h3 {
+        font-size: 21px;
+      }
+
+      .panel-intro {
+        font-size: 14px;
+      }
+
+      .detail-list {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .mini-card {
+        padding: 10px;
+      }
+
+      .panel-rating {
+        display: block;
+        margin-top: 12px;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fffdf8;
+      }
+
+      .panel-rating h4 {
+        margin: 0 0 6px;
+        font-size: 16px;
+      }
+
+      .panel-rating p {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .route-list {
+        margin-top: 12px;
+      }
+
+      .day-jump {
+        top: 10px;
+        border-radius: 999px;
+      }
+
+      .day-card {
+        padding: 14px;
+        scroll-margin-top: 80px;
+      }
+
+      .card-head {
+        align-items: flex-start;
+        margin-bottom: 0;
+      }
+
+      .card h3 {
+        font-size: 19px;
+      }
+
+      .card-title-row {
+        gap: 6px;
+      }
+
+      .date-pill {
+        min-height: 24px;
+        padding: 2px 8px;
+        font-size: 11px;
+      }
+
+      .day-card:not(.expanded) .timeline,
+      .day-card:not(.expanded) .day-meta,
+      .day-card:not(.expanded) .alert-strip {
+        display: none;
+      }
+
+      .day-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        padding: 7px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fffdf8;
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .side-stack {
+        gap: 10px;
+      }
+
+      .transport-card,
+      .rating-card {
+        padding: 14px;
+      }
+
+      .estimate {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .estimate div {
+        padding: 9px;
+      }
+
+      .estimate strong {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .map-wrap {
+        height: 58vh;
+        min-height: 390px;
+      }
+      .food-grid, .prep-grid, .day-meta { grid-template-columns: 1fr; }
+      .timeline li { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .estimate {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div id="heroMediaSlot" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">Iberia · 2025.05.01-05.10</p>
+      <h1>西班牙葡萄牙 10 日行程</h1>
+      <p class="hero-copy">从里斯本落地，先用辛特拉和罗卡角打开海岸线，再飞往巴塞罗那看高迪与地中海；随后南下格拉纳达、塞维利亚，最后到波尔蒂芒看阿尔加维海岸，回里斯本返程。</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>10 日</strong><span>5/1-5/10 行程</span></div>
+        <div class="hero-stat"><strong>6 城</strong><span>里斯本/巴塞罗那/格拉纳达/塞维利亚/波尔蒂芒</span></div>
+        <div class="hero-stat"><strong>4 段</strong><span>飞机/火车/大巴/包车衔接</span></div>
+      </div>
+      <div class="notice">重要提醒：门票和酒店订单提前打印；阿尔罕布拉宫实名制门票需带护照；圣家堂 15:00、Nasrid 宫 18:30、塞维利亚王宫 10:30、大教堂 14:30 均为已确认入场时间。</div>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="页面导航">
+    <a href="#map-section" data-icon="图">路线地图</a>
+    <a href="#itinerary-section" data-icon="日">每日行程</a>
+    <a href="#food-section" data-icon="食">餐饮补给</a>
+    <a href="#prep-section" data-icon="备">提前准备</a>
+  </nav>
+
+  <main>
+    <section id="map-section">
+      <div class="inner">
+        <p class="kicker">Route Map</p>
+        <h2>里斯本进出 · 伊比利亚路线地图</h2>
+        <p class="lead">地图按实际行程顺序串起主要景点和住宿城市。跨城飞机、火车和大巴用虚线表示，城市内步行/打车/包车线路按当天区域拆开。</p>
+        <div class="map-grid">
+          <div class="map-wrap">
+            <div id="map" role="application" aria-label="塔斯马尼亚行程地图"></div>
+            <div class="route-status show" id="routeStatus" role="status">正在加载自驾路线</div>
+          </div>
+          <aside class="spot-panel" aria-live="polite">
+            <button class="sheet-close" type="button" aria-label="关闭景点详情" onclick="closeSpotSheet()">×</button>
+            <div class="panel-img-wrap" id="panelImageWrap">
+              <button class="carousel-button prev" type="button" aria-label="上一张图片" onclick="shiftSpotImage(-1)">‹</button>
+              <div class="panel-img" id="panelImage"></div>
+              <button class="carousel-button next" type="button" aria-label="下一张图片" onclick="shiftSpotImage(1)">›</button>
+              <div class="carousel-dots" id="panelImageDots" aria-label="景点图片分页"></div>
+            </div>
+            <div class="panel-body" id="panelBody"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="itinerary-section">
+      <div class="inner">
+        <p class="kicker">Daily Plan</p>
+        <h2>每日行程安排</h2>
+        <p class="lead">按日期、交通、门票时间和住宿整理。点击时间线里的景点名，可以联动地图和右侧详情面板。</p>
+        <div class="two-col">
+          <div class="day-list-wrap">
+            <nav class="day-jump" id="dayJump" aria-label="分天导览"></nav>
+            <div class="route-list" id="dayList"></div>
+          </div>
+          <aside class="side-stack">
+            <div class="transport-card">
+              <h3>点到点交通时间</h3>
+              <label>起点<select id="fromSelect"></select></label>
+              <label>终点<select id="toSelect"></select></label>
+              <div class="estimate" id="estimateBox"></div>
+            </div>
+            <div class="rating-card" id="ratingPanel"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="food-section">
+      <div class="inner">
+        <p class="kicker">Food</p>
+        <h2>沿线餐饮与补给</h2>
+        <p class="lead">结合记账 sheet 中已经发生或计划过的餐饮点，优先保留顺路、价格明确和有踩雷提醒的选择。</p>
+        <div class="food-grid" id="foodGrid"></div>
+      </div>
+    </section>
+
+    <section id="prep-section">
+      <div class="inner">
+        <p class="kicker">Before Departure</p>
+        <h2>需要提前确认的东西</h2>
+        <p class="lead">把实名门票、跨城交通、住宿订单和优惠申请集中到一处，临出发前逐项核对。</p>
+        <div class="prep-grid" id="prepGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="图片预览" onclick="closeImageLightbox(event)">
+    <button class="lightbox-close" type="button" aria-label="关闭图片预览" onclick="closeImageLightbox(event)">×</button>
+    <button class="lightbox-nav prev" type="button" aria-label="上一张图片" onclick="shiftLightboxImage(-1, event)">‹</button>
+    <img class="lightbox-image" id="lightboxImage" alt="">
+    <video class="lightbox-video" id="lightboxVideo" controls playsinline></video>
+    <button class="lightbox-nav next" type="button" aria-label="下一张图片" onclick="shiftLightboxImage(1, event)">›</button>
+    <div class="lightbox-dots" id="lightboxDots" aria-label="放大图片分页"></div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <footer>2025 五一西班牙葡萄牙行程攻略 · 图片来自旅途素材</footer>
+
+  <script>
+    const heroMedia = {
+      "src": "assets/alhambra_banner.jpg",
+      "poster": "",
+      "alt": "阿尔罕布拉宫与内华达山脉"
+};
+
+    const spots = [
+      {
+            "id": "pena_palace",
+            "name": "Park and National Palace of Pena",
+            "zh": "佩纳宫",
+            "type": "spot",
+            "day": 1,
+            "time": "5/1 上午",
+            "lat": 38.7876,
+            "lng": -9.3906,
+            "stay": "2-3 小时",
+            "image": "assets/行程_r005_c005_image3.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r005_c005_image3.png",
+                        "caption": "Park and National Palace of Pena｜佩纳宫"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "辛特拉",
+                  "彩色宫殿",
+                  "花园 trail"
+            ],
+            "intro": "辛特拉山上的浪漫主义宫殿，是这天的第一锚点。原行程备注不打算进宫殿内部，更适合把时间留给外观、露台和花园步道。",
+            "play": "现场买花园票即可；花园里有 25-60 分钟不等的 trail，原文特别推荐选一条轻徒步。",
+            "note": "宫殿内部按预约时间入场，临时性较差；如果只走花园和外观，不必把上午卡得太死。",
+            "ratings": {
+                  "nature": 7,
+                  "culture": 8,
+                  "weather": 6,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "quinta_regaleira",
+            "name": "Quinta da Regaleira",
+            "zh": "雷加莱拉庄园",
+            "type": "spot",
+            "day": 1,
+            "time": "5/1 中午",
+            "lat": 38.7964,
+            "lng": -9.3967,
+            "stay": "1.5-2 小时",
+            "image": "assets/行程_r006_c005_image4.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r006_c005_image4.png",
+                        "caption": "Quinta da Regaleira｜雷加莱拉庄园"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "神秘主义",
+                  "倒置塔",
+                  "辛特拉徒步"
+            ],
+            "intro": "庄园以炼金、共济会和神秘主义符号闻名，和常规欧洲宫殿的观看体验非常不同。",
+            "play": "从佩纳宫徒步过来约 40 分钟，原文评价这段山间 trail 难度低、趣味高，适合喜欢走路的人。",
+            "note": "门票原文记录 12 欧，购票链接为 https://regaleira.byblueticket.pt。",
+            "ratings": {
+                  "nature": 6,
+                  "culture": 9,
+                  "weather": 5,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "cabo_roca",
+            "name": "Cabo da Roca",
+            "zh": "罗卡角",
+            "type": "spot",
+            "day": 1,
+            "time": "5/1 15:00 前后",
+            "lat": 38.7804,
+            "lng": -9.4989,
+            "stay": "40-60 分钟",
+            "image": "assets/行程_r007_c005_image5.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r007_c005_image5.png",
+                        "caption": "Cabo da Roca｜罗卡角"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "欧陆最西端",
+                  "大西洋",
+                  "经纬度石碑"
+            ],
+            "intro": "葡萄牙本土和欧亚大陆的最西端之一，原文关键词就是“陆止于此，海始于斯”。",
+            "play": "和经纬度石碑合照、看大西洋悬崖；从雷加莱拉打 Bolt 约 20 分钟，原文记录约 13 欧。",
+            "note": "风大且无遮蔽，天气差时停留压短；拍完照即可转去 Azenhas do Mar。",
+            "ratings": {
+                  "nature": 9,
+                  "culture": 5,
+                  "weather": 8,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "azenhas_mar",
+            "name": "Azenhas do Mar",
+            "zh": "悬崖小镇",
+            "type": "spot",
+            "day": 1,
+            "time": "5/1 16:00 后",
+            "lat": 38.8402,
+            "lng": -9.4602,
+            "stay": "1 小时",
+            "image": "assets/行程_r008_c005_image6.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r008_c005_image6.png",
+                        "caption": "Azenhas do Mar｜悬崖小镇"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "海边村落",
+                  "悬崖视角",
+                  "顺路加点"
+            ],
+            "intro": "靠海悬崖上的白色小镇，是辛特拉-罗卡角之后的轻量加点。",
+            "play": "如果体力还在，从罗卡角打车过去看海边村落和日落前的崖壁光线。",
+            "note": "原行程写了“累了就不去了”，这是可放弃点，不应反过来拖垮 Day 1。",
+            "ratings": {
+                  "nature": 9,
+                  "culture": 5,
+                  "weather": 7,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "jeronimos_monastery",
+            "name": "Jerónimos Monastery",
+            "zh": "热罗尼莫斯修道院",
+            "type": "spot",
+            "day": 2,
+            "time": "5/2 上午",
+            "lat": 38.6979,
+            "lng": -9.2065,
+            "stay": "30-90 分钟",
+            "image": "assets/行程_r009_c005_image7.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r009_c005_image7.png",
+                        "caption": "Jerónimos Monastery｜热罗尼莫斯修道院"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "贝伦区",
+                  "修道院",
+                  "排队风险"
+            ],
+            "intro": "贝伦区的葡萄牙曼努埃尔式建筑代表，是里斯本 citywalk 的经典起点。",
+            "play": "携程可买票，原文记录 9:30-18:00；如果排队太长，可只看外观和教堂区域。",
+            "note": "原文提醒小红书常见说法是排队一小时、参观十五分钟，需按现场队伍决定是否入内。",
+            "ratings": {
+                  "nature": 3,
+                  "culture": 9,
+                  "weather": 3,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "discovery_monument",
+            "name": "Padrão dos Descobrimentos",
+            "zh": "发现者纪念碑",
+            "type": "spot",
+            "day": 2,
+            "time": "5/2 上午",
+            "lat": 38.6936,
+            "lng": -9.2057,
+            "stay": "20-40 分钟",
+            "image": "assets/行程_r010_c005_image8.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r010_c005_image8.png",
+                        "caption": "Padrão dos Descobrimentos｜发现者纪念碑"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "贝伦河岸",
+                  "外观免费",
+                  "航海时代"
+            ],
+            "intro": "纪念葡萄牙航海大发现时代的河岸地标，和热罗尼莫斯修道院、贝伦塔可作为同一区域组合。",
+            "play": "原文建议外面看看即可；登顶约 10 欧，时间紧时不作为刚性项目。",
+            "note": "晴天河边暴晒，和贝伦蛋挞、修道院排队时间一起灵活调整。",
+            "ratings": {
+                  "nature": 5,
+                  "culture": 7,
+                  "weather": 6,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "bica_funicular",
+            "name": "Ascensor da Bica",
+            "zh": "比卡升降机",
+            "type": "spot",
+            "day": 2,
+            "time": "5/2 下午",
+            "lat": 38.7104,
+            "lng": -9.1463,
+            "stay": "20-40 分钟",
+            "image": "assets/行程_r011_c005_image9.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r011_c005_image9.png",
+                        "caption": "Ascensor da Bica｜比卡升降机"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "黄色缆车",
+                  "街巷坡道",
+                  "拍照点"
+            ],
+            "intro": "里斯本经典黄色升降机之一，终点在 Bica - Largo Calhariz 一带。",
+            "play": "更适合作为城市步行中的拍照点，路过看车和街景即可。",
+            "note": "坡道窄、人多时等待拍照即可，不必为了乘坐排很久。",
+            "ratings": {
+                  "nature": 2,
+                  "culture": 7,
+                  "weather": 5,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "rua_augusta_arch",
+            "name": "Arco da Rua Augusta",
+            "zh": "奥古斯塔凯旋门",
+            "type": "spot",
+            "day": 2,
+            "time": "5/2 下午",
+            "lat": 38.708,
+            "lng": -9.1366,
+            "stay": "20-40 分钟",
+            "image": "assets/行程_r012_c005_image10.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r012_c005_image10.png",
+                        "caption": "Arco da Rua Augusta｜奥古斯塔凯旋门"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "商业广场",
+                  "城市中轴",
+                  "外观地标"
+            ],
+            "intro": "连接奥古斯塔街和商业广场的凯旋门，是从市中心走向河岸的醒目节点。",
+            "play": "适合作为 Baixa 区路线中段，外观、广场和河边一起看。",
+            "note": "如果要登顶，需要单独买票；原行程未把登顶列为必做。",
+            "ratings": {
+                  "nature": 3,
+                  "culture": 7,
+                  "weather": 4,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "lisbon_cathedral",
+            "name": "Lisbon Cathedral",
+            "zh": "里斯本大教堂",
+            "type": "spot",
+            "day": 2,
+            "time": "5/2 下午",
+            "lat": 38.7098,
+            "lng": -9.1334,
+            "stay": "20-40 分钟",
+            "image": "assets/行程_r013_c005_image11.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r013_c005_image11.png",
+                        "caption": "Lisbon Cathedral｜里斯本大教堂"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "阿尔法玛",
+                  "教堂",
+                  "电车街景"
+            ],
+            "intro": "里斯本最古老的主教座堂，位于阿尔法玛坡地和老城电车线路之间。",
+            "play": "从商业广场一带往阿尔法玛走时顺路看外观，和圣卢西亚观景台连成上坡路线。",
+            "note": "周边坡多，后半天体力不足时可减少观景台数量。",
+            "ratings": {
+                  "nature": 2,
+                  "culture": 8,
+                  "weather": 3,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "santa_luzia_viewpoint",
+            "name": "Miradouro de Santa Luzia",
+            "zh": "圣卢西亚观景台",
+            "type": "spot",
+            "day": 2,
+            "time": "5/2 傍晚",
+            "lat": 38.7116,
+            "lng": -9.1302,
+            "stay": "20-30 分钟",
+            "image": "assets/行程_r014_c005_image12.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r014_c005_image12.png",
+                        "caption": "Miradouro de Santa Luzia｜圣卢西亚观景台"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "阿尔法玛",
+                  "红顶屋",
+                  "观景台"
+            ],
+            "intro": "阿尔法玛一带最顺路的观景台之一，能看到红屋顶、海湾和老城坡地。",
+            "play": "作为里斯本大教堂之后的第一处观景台，体力好再继续往更高的恩宠/山上圣母走。",
+            "note": "观景台可多可少，别在赶飞机前把坡路走到太满。",
+            "ratings": {
+                  "nature": 7,
+                  "culture": 6,
+                  "weather": 6,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "senhora_monte_viewpoint",
+            "name": "Miradouro da Senhora do Monte",
+            "zh": "山上圣母观景台",
+            "type": "spot",
+            "day": 2,
+            "time": "5/2 傍晚",
+            "lat": 38.7193,
+            "lng": -9.1325,
+            "stay": "30 分钟",
+            "image": "assets/行程_r014_c005_image12.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r014_c005_image12.png",
+                        "caption": "Miradouro da Senhora do Monte｜山上圣母观景台"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "里斯本高点",
+                  "日落候选",
+                  "城市全景"
+            ],
+            "intro": "里斯本老城北侧较高的观景点，适合把城市天际线和城堡方向一起收进视野。",
+            "play": "如果前面步行顺利，把这里作为 Day 2 城市线的收尾；否则在 Santa Luzia 或 Portas do Sol 就可以结束。",
+            "note": "当晚 21:15 飞巴塞罗那，傍晚务必预留去机场和行李时间。",
+            "ratings": {
+                  "nature": 7,
+                  "culture": 6,
+                  "weather": 7,
+                  "stamina": 6
+            }
+      },
+      {
+            "id": "arc_triomf_barcelona",
+            "name": "Arc de Triomf",
+            "zh": "巴塞罗那凯旋门",
+            "type": "spot",
+            "day": 3,
+            "time": "5/3 上午",
+            "lat": 41.391,
+            "lng": 2.1806,
+            "stay": "20-40 分钟",
+            "image": "assets/行程_r017_c005_image14.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r017_c005_image14.png",
+                        "caption": "Arc de Triomf｜巴塞罗那凯旋门"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "城市地标",
+                  "步行起点",
+                  "红砖凯旋门"
+            ],
+            "intro": "巴塞罗那 1888 年世博会的入口地标，适合作为市中心 citywalk 的起点。",
+            "play": "从这里往老城、市场或格拉西亚大道方向接高迪建筑线。",
+            "note": "前一晚 00:10 才到巴塞罗那，Day 3 上午建议轻一点。",
+            "ratings": {
+                  "nature": 3,
+                  "culture": 7,
+                  "weather": 4,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "casa_batllo",
+            "name": "Casa Batlló",
+            "zh": "巴特罗之家",
+            "type": "spot",
+            "day": 3,
+            "time": "5/3 中午",
+            "lat": 41.3917,
+            "lng": 2.1649,
+            "stay": "40-90 分钟",
+            "image": "assets/行程_r018_c005_image15.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r018_c005_image15.png",
+                        "caption": "Casa Batlló｜巴特罗之家"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "高迪",
+                  "格拉西亚大道",
+                  "外观/室内"
+            ],
+            "intro": "高迪在格拉西亚大道上的代表作品，外立面像骨骼、龙鳞和彩色陶片的组合。",
+            "play": "原文记录营业 9:00-22:00；若未买内部票，外观也足够作为 citywalk 高光。",
+            "note": "和 Casa Milà 同在一条轴线上，别把两个室内参观都塞满，否则会压缩圣家堂时间。",
+            "ratings": {
+                  "nature": 2,
+                  "culture": 9,
+                  "weather": 3,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "casa_mila",
+            "name": "Casa Milà",
+            "zh": "米拉之家",
+            "type": "spot",
+            "day": 3,
+            "time": "5/3 下午",
+            "lat": 41.3954,
+            "lng": 2.1619,
+            "stay": "20-60 分钟",
+            "image": "assets/行程_r019_c005_image16.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r019_c005_image16.png",
+                        "caption": "Casa Milà｜米拉之家"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "高迪",
+                  "波浪外墙",
+                  "外观优先"
+            ],
+            "intro": "高迪晚期民居建筑，石头波浪立面和屋顶烟囱是主要看点。",
+            "play": "原文评价性价比较低、外观好看而已，因此更适合外观路过。",
+            "note": "把更完整的参观时间留给 15:00 的圣家堂。",
+            "ratings": {
+                  "nature": 2,
+                  "culture": 8,
+                  "weather": 3,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "sagrada_familia",
+            "name": "Basílica de la Sagrada Família",
+            "zh": "圣家堂",
+            "type": "spot",
+            "day": 3,
+            "time": "5/3 15:00",
+            "lat": 41.4036,
+            "lng": 2.1744,
+            "stay": "2-3 小时",
+            "image": "assets/行程_r020_c005_image17.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r020_c005_image17.png",
+                        "caption": "Basílica de la Sagrada Família｜圣家堂远景"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "高迪",
+                  "已买票",
+                  "下午光线"
+            ],
+            "intro": "巴塞罗那最重要的高迪建筑，也是全程最刚性的预约点之一。",
+            "play": "原文已买 15:00 入场门票；日落前 2-3 小时光线较好，适合把彩窗时间留足。",
+            "note": "营业时间原文记录 9:00-19:00，别被前面的外观建筑拖延。",
+            "ratings": {
+                  "nature": 2,
+                  "culture": 10,
+                  "weather": 3,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "santa_caterina_market",
+            "name": "Mercat de Santa Caterina",
+            "zh": "圣卡特琳娜市场",
+            "type": "food",
+            "day": 3,
+            "time": "5/3 晚餐前后",
+            "lat": 41.3869,
+            "lng": 2.1781,
+            "stay": "30-60 分钟",
+            "image": "assets/行程_r021_c005_image18.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r021_c005_image18.png",
+                        "caption": "Mercat de Santa Caterina｜圣卡特琳娜市场"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "市场",
+                  "补给",
+                  "老城"
+            ],
+            "intro": "老城里的彩色屋顶市场，适合把高迪建筑日收尾到轻松的吃喝补给。",
+            "play": "作为晚餐前后的机动点，看看摊位、买水果或小吃。",
+            "note": "市场营业时间受星期影响，太晚到可能只剩周边餐厅。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 6,
+                  "weather": 2,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "sitges",
+            "name": "Sitges",
+            "zh": "锡切斯",
+            "type": "spot",
+            "day": 4,
+            "time": "5/4 12:30-14:30",
+            "lat": 41.2368,
+            "lng": 1.8059,
+            "stay": "2 小时",
+            "image": "assets/行程_r022_c005_image19.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r022_c005_image19.png",
+                        "caption": "Sitges｜锡切斯"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "海边小镇",
+                  "包车日",
+                  "午餐/海边酒"
+            ],
+            "intro": "巴塞罗那以南的地中海海边小镇，是包车一日游的第一站。",
+            "play": "原计划酒店 12:00 出发，约 0.5 小时到；在镇上散步、看海、喝一杯。",
+            "note": "这天后面还有 Blanes 和 Tibidabo，锡切斯别超时。",
+            "ratings": {
+                  "nature": 7,
+                  "culture": 5,
+                  "weather": 7,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "marimurtra_garden",
+            "name": "Jardí Botànic Marimurtra",
+            "zh": "布拉内斯马里穆特拉植物园",
+            "type": "spot",
+            "day": 4,
+            "time": "5/4 16:30-18:30",
+            "lat": 41.6745,
+            "lng": 2.8003,
+            "stay": "2 小时",
+            "image": "assets/行程_r023_c005_image20.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r023_c005_image20.png",
+                        "caption": "Jardí Botànic Marimurtra｜布拉内斯植物园"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "海岸植物园",
+                  "悬崖花园",
+                  "包车日"
+            ],
+            "intro": "布拉内斯海岸边的植物园，重点是地中海海岸、岩壁和花园视角。",
+            "play": "原行程给 2 小时，适合慢慢走到海边观景平台。",
+            "note": "从 Sitges 到 Blanes 原文估 2 小时，实际路程长，包车日节奏要盯住。",
+            "ratings": {
+                  "nature": 9,
+                  "culture": 5,
+                  "weather": 8,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "tibidabo",
+            "name": "Tibidabo",
+            "zh": "提比达波",
+            "type": "spot",
+            "day": 4,
+            "time": "5/4 日落",
+            "lat": 41.4225,
+            "lng": 2.1192,
+            "stay": "1 小时",
+            "image": "assets/行程_r016_c005_image13.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r016_c005_image13.png",
+                        "caption": "Tibidabo｜提比达波"
+                  },
+                  {
+                        "src": "assets/行程_r024_c005_image13.png",
+                        "caption": "Tibidabo｜日落前山顶视角"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "山顶",
+                  "巴塞罗那日落",
+                  "20:51 日落"
+            ],
+            "intro": "巴塞罗那西北侧山顶，可俯瞰城市和海岸线，是包车日的日落收尾。",
+            "play": "原文安排 Blanes 到 Tibidabo 约 1.5 小时，日落停留 1 小时，20:51 左右看光线。",
+            "note": "如果前面延误，优先保证安全返程，Tibidabo 可以缩短。",
+            "ratings": {
+                  "nature": 8,
+                  "culture": 6,
+                  "weather": 8,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "casa_vicens",
+            "name": "Casa Vicens",
+            "zh": "文森特之家",
+            "type": "spot",
+            "day": 5,
+            "time": "5/5 上午",
+            "lat": 41.4035,
+            "lng": 2.1508,
+            "stay": "30-60 分钟",
+            "image": "assets/行程_r025_c005_image21.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r025_c005_image21.png",
+                        "caption": "Casa Vicens｜文森特之家"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "高迪早期",
+                  "外观",
+                  "购物日前半"
+            ],
+            "intro": "高迪早期住宅作品，色彩、瓷砖和东方主义元素都很明显。",
+            "play": "作为离开巴塞罗那前的轻量城市点，外观拍照即可，也可按体力决定是否入内。",
+            "note": "当天下午 16:25 火车去格拉纳达，购物和行李时间必须提前收口。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 8,
+                  "weather": 3,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "park_guell",
+            "name": "Park Güell",
+            "zh": "桂尔公园",
+            "type": "spot",
+            "day": 5,
+            "time": "5/5 中午前",
+            "lat": 41.4145,
+            "lng": 2.1527,
+            "stay": "1-2 小时",
+            "image": "assets/行程_r026_c005_image22.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r026_c005_image22.png",
+                        "caption": "Park Güell｜桂尔公园"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "高迪",
+                  "公园",
+                  "Gaudir Més"
+            ],
+            "intro": "高迪把建筑、陶片和地形整合在一起的公园，适合和文森特之家组成格拉西亚北侧半日线。",
+            "play": "原文提醒有免费羊毛，需要每个人提前申请 Gaudir Més。",
+            "note": "当天跨城火车很长，不要在公园逗留到影响取行李和去车站。",
+            "ratings": {
+                  "nature": 6,
+                  "culture": 9,
+                  "weather": 6,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "albaicin",
+            "name": "Albaicín",
+            "zh": "阿尔拜辛",
+            "type": "spot",
+            "day": 6,
+            "time": "5/6 白天",
+            "lat": 37.181,
+            "lng": -3.5924,
+            "stay": "2-3 小时",
+            "image": "assets/行程_r028_c005_image23.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r028_c005_image23.png",
+                        "caption": "Albaicín｜阿尔拜辛"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "白墙街巷",
+                  "摩尔风格",
+                  "观景台"
+            ],
+            "intro": "格拉纳达旧城区山坡街巷，白墙、石路和阿尔罕布拉远景是主要看点。",
+            "play": "白天先逛阿尔拜辛和圣尼古拉斯观景台，晚上再接阿尔罕布拉宫预约。",
+            "note": "坡路多、石板路多，穿好走的鞋。",
+            "ratings": {
+                  "nature": 5,
+                  "culture": 8,
+                  "weather": 6,
+                  "stamina": 7
+            }
+      },
+      {
+            "id": "alhambra",
+            "name": "Alhambra",
+            "zh": "阿尔罕布拉宫",
+            "type": "spot",
+            "day": 6,
+            "time": "5/6 18:30 Nasrid 宫",
+            "lat": 37.1761,
+            "lng": -3.5881,
+            "stay": "3-4 小时",
+            "image": "assets/alhambra_banner.jpg",
+            "images": [
+                  {
+                        "src": "assets/alhambra_banner.jpg",
+                        "caption": "Alhambra｜阿尔罕布拉宫与内华达山脉"
+                  }
+            ],
+            "imageSourceType": "local",
+            "photoSource": "用户提供图片",
+            "photoCredit": "用户提供图片",
+            "features": [
+                  "已买票",
+                  "Nasrid 宫",
+                  "实名制"
+            ],
+            "intro": "格拉纳达最重要的宫殿建筑群，纳斯瑞德宫、花园和城墙视角共同组成核心体验。",
+            "play": "官网实名制购票，原文已买 27 欧门票，18:30 进入 Nasrid 宫。",
+            "note": "务必带护照；官网地址为 https://tickets.alhambra-patronato.es/。",
+            "ratings": {
+                  "nature": 5,
+                  "culture": 10,
+                  "weather": 5,
+                  "stamina": 7
+            }
+      },
+      {
+            "id": "san_miguel_alto",
+            "name": "Mirador de San Miguel Alto",
+            "zh": "圣米格尔高地观景台",
+            "type": "spot",
+            "day": 6,
+            "time": "5/6 日落",
+            "lat": 37.1849,
+            "lng": -3.5845,
+            "stay": "30-60 分钟",
+            "image": "assets/行程_r030_c005_image25.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r030_c005_image25.png",
+                        "caption": "Mirador de San Miguel Alto｜圣米格尔高地观景台"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "格拉纳达高点",
+                  "阿尔罕布拉远景",
+                  "21:08 日落"
+            ],
+            "intro": "阿尔拜辛更高处的观景点，能把阿尔罕布拉宫和雪山方向一起纳入视野。",
+            "play": "如果阿尔罕布拉宫参观结束后体力允许，作为日落或夜景候选。",
+            "note": "上坡明显，晚上返程建议打车。",
+            "ratings": {
+                  "nature": 8,
+                  "culture": 6,
+                  "weather": 8,
+                  "stamina": 8
+            }
+      },
+      {
+            "id": "metropol_parasol",
+            "name": "Metropol Parasol",
+            "zh": "都市阳伞",
+            "type": "spot",
+            "day": 7,
+            "time": "5/7 下午",
+            "lat": 37.3932,
+            "lng": -5.9919,
+            "stay": "30-60 分钟",
+            "image": "assets/行程_r033_c015_image1.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r033_c015_image1.png",
+                        "caption": "塞维利亚 citywalk 路线截图"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "塞维利亚 citywalk",
+                  "路线节点",
+                  "现代地标"
+            ],
+            "intro": "塞维利亚老城里的现代木结构地标，原文 citywalk 路线从这里开始。",
+            "play": "作为从酒店出发后的老城步行起点，后续接弗拉门戈舞博物馆、桥、斗牛场和河岸。",
+            "note": "Day 7 13:00 才到塞维利亚，下午路线以轻松扫街为主。",
+            "ratings": {
+                  "nature": 2,
+                  "culture": 6,
+                  "weather": 4,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "torre_oro",
+            "name": "Torre del Oro",
+            "zh": "黄金塔",
+            "type": "spot",
+            "day": 7,
+            "time": "5/7 下午",
+            "lat": 37.3826,
+            "lng": -5.9965,
+            "stay": "20-40 分钟",
+            "image": "assets/行程_r032_c005_image26.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r032_c005_image26.png",
+                        "caption": "Torre del Oro｜黄金塔"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "河岸",
+                  "塞维利亚地标",
+                  "外观"
+            ],
+            "intro": "瓜达尔基维尔河边的防御塔，是塞维利亚河岸步行的经典节点。",
+            "play": "从斗牛场或伊莎贝尔二世桥一路走到河边，外观看塔和河景。",
+            "note": "日晒强时可把黄金塔作为路过点，不必入内。",
+            "ratings": {
+                  "nature": 4,
+                  "culture": 7,
+                  "weather": 6,
+                  "stamina": 3
+            }
+      },
+      {
+            "id": "seville_bullring",
+            "name": "Plaza de Toros de la Maestranza",
+            "zh": "塞维利亚斗牛广场",
+            "type": "spot",
+            "day": 7,
+            "time": "5/7 下午",
+            "lat": 37.3863,
+            "lng": -5.9988,
+            "stay": "30-60 分钟",
+            "image": "assets/行程_r033_c005_image27.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r033_c005_image27.png",
+                        "caption": "Plaza de Toros de la Maestranza｜塞维利亚斗牛广场"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "斗牛场",
+                  "可能免费",
+                  "河岸附近"
+            ],
+            "intro": "西班牙最著名的斗牛场之一，建筑本身也是塞维利亚老城重要地标。",
+            "play": "原文写可能 15 点后免费入场，可去碰运气；不成功就看外观。",
+            "note": "不用为免费入场等待过久，后面还有黄金塔和西班牙广场。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 8,
+                  "weather": 4,
+                  "stamina": 2
+            }
+      },
+      {
+            "id": "plaza_espana_seville",
+            "name": "Plaza de España",
+            "zh": "西班牙广场",
+            "type": "spot",
+            "day": 7,
+            "time": "5/7 日落",
+            "lat": 37.3772,
+            "lng": -5.9869,
+            "stay": "1-1.5 小时",
+            "image": "assets/行程_r034_c005_image28.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r034_c005_image28.png",
+                        "caption": "Plaza de España｜西班牙广场"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "塞维利亚日落",
+                  "广场",
+                  "21:09 日落"
+            ],
+            "intro": "塞维利亚最适合日落前后慢慢停留的广场之一，半圆形建筑、运河和瓷砖细节很有辨识度。",
+            "play": "原文明确“看日落绝美”，Day 7 下午路线可把这里作为收尾。",
+            "note": "从老城走过来有距离，累了可打车。",
+            "ratings": {
+                  "nature": 5,
+                  "culture": 9,
+                  "weather": 7,
+                  "stamina": 4
+            }
+      },
+      {
+            "id": "alcazar_seville",
+            "name": "Royal Alcázar of Seville",
+            "zh": "塞维利亚王宫",
+            "type": "spot",
+            "day": 8,
+            "time": "5/8 10:30",
+            "lat": 37.3839,
+            "lng": -5.9914,
+            "stay": "2-3 小时",
+            "image": "assets/行程_r035_c005_image29.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r035_c005_image29.png",
+                        "caption": "Royal Alcázar of Seville｜塞维利亚王宫"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "已买票",
+                  "穆德哈尔风格",
+                  "花园"
+            ],
+            "intro": "塞维利亚最重要的宫殿建筑，伊斯兰、哥特、文艺复兴和穆德哈尔元素混合。",
+            "play": "原文已安排 10:30 入场，上午主攻王宫和花园。",
+            "note": "中午前后花园日晒强，带水并留好 14:30 大教堂入场时间。",
+            "ratings": {
+                  "nature": 5,
+                  "culture": 10,
+                  "weather": 5,
+                  "stamina": 6
+            }
+      },
+      {
+            "id": "seville_cathedral",
+            "name": "Seville Cathedral",
+            "zh": "塞维利亚大教堂",
+            "type": "spot",
+            "day": 8,
+            "time": "5/8 14:30",
+            "lat": 37.3861,
+            "lng": -5.9926,
+            "stay": "1.5-2 小时",
+            "image": "assets/行程_r036_c005_image30.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r036_c005_image30.png",
+                        "caption": "Seville Cathedral｜塞维利亚大教堂"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "已买票",
+                  "主教座堂",
+                  "老城核心"
+            ],
+            "intro": "塞维利亚老城核心的大教堂，体量巨大，和王宫、希拉尔达塔共同构成城市中心。",
+            "play": "原文已安排 14:30 入场；王宫结束后在附近午餐，步行接大教堂最顺。",
+            "note": "18:30 要坐大巴去波尔蒂芒，参观后立刻收行李/去车站。",
+            "ratings": {
+                  "nature": 1,
+                  "culture": 10,
+                  "weather": 3,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "algar_seco",
+            "name": "Algar Seco",
+            "zh": "阿尔加塞科",
+            "type": "spot",
+            "day": 9,
+            "time": "5/9 上午",
+            "lat": 37.0918,
+            "lng": -8.4536,
+            "stay": "1-1.5 小时",
+            "image": "assets/行程_r038_c005_image31.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r038_c005_image31.png",
+                        "caption": "Algar Seco｜阿尔加塞科"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "阿尔加维",
+                  "海蚀地貌",
+                  "徒步"
+            ],
+            "intro": "阿尔加维海岸线的海蚀岩洞和崖壁步道区域，适合开启波尔蒂芒一日游。",
+            "play": "沿木栈道和岩洞视角慢慢走，天气好时海水颜色很漂亮。",
+            "note": "崖边注意风和脚下，别为了拍照靠得太边。",
+            "ratings": {
+                  "nature": 10,
+                  "culture": 3,
+                  "weather": 8,
+                  "stamina": 5
+            }
+      },
+      {
+            "id": "benagil_cave",
+            "name": "Benagil Cave",
+            "zh": "贝纳吉尔海蚀洞",
+            "type": "spot",
+            "day": 9,
+            "time": "5/9 中午",
+            "lat": 37.087,
+            "lng": -8.4242,
+            "stay": "1-2 小时",
+            "image": "assets/行程_r039_c005_image32.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r039_c005_image32.png",
+                        "caption": "Benagil Cave｜贝纳吉尔海蚀洞"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "海蚀洞",
+                  "船/皮划艇看天气",
+                  "阿尔加维经典"
+            ],
+            "intro": "阿尔加维最知名的海蚀洞之一，天窗、沙滩和海水组成很强的视觉记忆点。",
+            "play": "是否能进洞高度依赖海况和当天运营，可作为一日游核心期待，但要有替代方案。",
+            "note": "不要把进洞当成绝对确定项目；风浪大时以海岸徒步和观景为主。",
+            "ratings": {
+                  "nature": 10,
+                  "culture": 2,
+                  "weather": 10,
+                  "stamina": 6
+            }
+      },
+      {
+            "id": "marinha_beach",
+            "name": "Praia da Marinha",
+            "zh": "马里尼亚海滩",
+            "type": "spot",
+            "day": 9,
+            "time": "5/9 下午",
+            "lat": 37.0904,
+            "lng": -8.4125,
+            "stay": "1.5-2 小时",
+            "image": "assets/行程_r040_c005_image33.png",
+            "images": [
+                  {
+                        "src": "assets/行程_r040_c005_image33.png",
+                        "caption": "Praia da Marinha｜马里尼亚海滩"
+                  }
+            ],
+            "imageSourceType": "document",
+            "photoSource": "旅途素材",
+            "photoCredit": "用户提供",
+            "features": [
+                  "阿尔加维海滩",
+                  "崖壁",
+                  "hiking"
+            ],
+            "intro": "阿尔加维代表性海滩之一，崖壁、海蚀拱和海岸步道都很适合拍照。",
+            "play": "把这里作为波尔蒂芒一日游的下午段，走一小段 hiking 后回程。",
+            "note": "当天 17:00 大巴回里斯本，下午必须留足回 Portimão Terminal Rodoviário 的时间。",
+            "ratings": {
+                  "nature": 10,
+                  "culture": 2,
+                  "weather": 9,
+                  "stamina": 6
+            }
+      }
+];
+
+    const hotels = [
+      {
+            "id": "hotel_olissippo_oriente",
+            "name": "Olissippo Oriente",
+            "zh": "奥利斯普东方酒店",
+            "type": "hotel",
+            "day": 1,
+            "lat": 38.768,
+            "lng": -9.0967
+      },
+      {
+            "id": "hotel_renaissance_fira",
+            "name": "Renaissance Barcelona Fira Hotel",
+            "zh": "万丽巴塞罗那费拉酒店",
+            "type": "hotel",
+            "day": 2,
+            "lat": 41.358,
+            "lng": 2.1266
+      },
+      {
+            "id": "hotel_turia_granada",
+            "name": "Turia Granada",
+            "zh": "格拉纳达 Turia 酒店",
+            "type": "hotel",
+            "day": 5,
+            "lat": 37.1847,
+            "lng": -3.6092
+      },
+      {
+            "id": "hotel_nightinsevilla",
+            "name": "NightinSevilla",
+            "zh": "塞维利亚 NightinSevilla",
+            "type": "hotel",
+            "day": 7,
+            "lat": 37.3911,
+            "lng": -6.0004
+      },
+      {
+            "id": "hotel_next_inn",
+            "name": "Next Inn",
+            "zh": "波尔蒂芒 Next Inn",
+            "type": "hotel",
+            "day": 8,
+            "lat": 37.1394,
+            "lng": -8.5364
+      },
+      {
+            "id": "hotel_moov_lisboa_oriente",
+            "name": "Moov Hotel Lisboa Oriente",
+            "zh": "里斯本东方 Moov 酒店",
+            "type": "hotel",
+            "day": 9,
+            "lat": 38.7639,
+            "lng": -9.1037
+      }
+];
+
+    const route = [
+      "pena_palace",
+      "quinta_regaleira",
+      "cabo_roca",
+      "azenhas_mar",
+      "jeronimos_monastery",
+      "discovery_monument",
+      "bica_funicular",
+      "rua_augusta_arch",
+      "lisbon_cathedral",
+      "santa_luzia_viewpoint",
+      "senhora_monte_viewpoint",
+      "arc_triomf_barcelona",
+      "casa_batllo",
+      "casa_mila",
+      "sagrada_familia",
+      "santa_caterina_market",
+      "sitges",
+      "marimurtra_garden",
+      "tibidabo",
+      "casa_vicens",
+      "park_guell",
+      "albaicin",
+      "alhambra",
+      "san_miguel_alto",
+      "metropol_parasol",
+      "seville_bullring",
+      "torre_oro",
+      "plaza_espana_seville",
+      "alcazar_seville",
+      "seville_cathedral",
+      "algar_seco",
+      "benagil_cave",
+      "marinha_beach"
+];
+
+    const routeSegments = [
+      {
+            "mode": "drive",
+            "ids": [
+                  "pena_palace",
+                  "quinta_regaleira",
+                  "cabo_roca",
+                  "azenhas_mar"
+            ]
+      },
+      {
+            "mode": "walk",
+            "ids": [
+                  "jeronimos_monastery",
+                  "discovery_monument",
+                  "bica_funicular",
+                  "rua_augusta_arch",
+                  "lisbon_cathedral",
+                  "santa_luzia_viewpoint",
+                  "senhora_monte_viewpoint"
+            ]
+      },
+      {
+            "mode": "flight",
+            "ids": [
+                  "senhora_monte_viewpoint",
+                  "arc_triomf_barcelona"
+            ]
+      },
+      {
+            "mode": "walk",
+            "ids": [
+                  "arc_triomf_barcelona",
+                  "casa_batllo",
+                  "casa_mila",
+                  "sagrada_familia",
+                  "santa_caterina_market"
+            ]
+      },
+      {
+            "mode": "drive",
+            "ids": [
+                  "sitges",
+                  "marimurtra_garden",
+                  "tibidabo"
+            ]
+      },
+      {
+            "mode": "walk",
+            "ids": [
+                  "casa_vicens",
+                  "park_guell"
+            ]
+      },
+      {
+            "mode": "flight",
+            "ids": [
+                  "park_guell",
+                  "albaicin"
+            ]
+      },
+      {
+            "mode": "walk",
+            "ids": [
+                  "albaicin",
+                  "alhambra",
+                  "san_miguel_alto"
+            ]
+      },
+      {
+            "mode": "flight",
+            "ids": [
+                  "alhambra",
+                  "metropol_parasol"
+            ]
+      },
+      {
+            "mode": "walk",
+            "ids": [
+                  "metropol_parasol",
+                  "seville_bullring",
+                  "torre_oro",
+                  "plaza_espana_seville"
+            ]
+      },
+      {
+            "mode": "walk",
+            "ids": [
+                  "alcazar_seville",
+                  "seville_cathedral"
+            ]
+      },
+      {
+            "mode": "flight",
+            "ids": [
+                  "seville_cathedral",
+                  "algar_seco"
+            ]
+      },
+      {
+            "mode": "drive",
+            "ids": [
+                  "algar_seco",
+                  "benagil_cave",
+                  "marinha_beach"
+            ]
+      },
+      {
+            "mode": "flight",
+            "ids": [
+                  "marinha_beach",
+                  "jeronimos_monastery"
+            ]
+      }
+];
+
+    const spotInsights = {
+      "pena_palace": {
+            "unique": "颜色强烈的浪漫主义宫殿和辛特拉山林组合，是第一天最有“落地即旅行感”的画面。",
+            "history": "佩纳宫由 19 世纪葡萄牙王室扩建而成，融合摩尔、哥特、文艺复兴等复兴风格。"
+      },
+      "quinta_regaleira": {
+            "unique": "倒置塔、地下通道和符号系统让它不像传统宫殿，更像一场神秘主义寻宝。",
+            "history": "庄园在 20 世纪初由富商 Carvalho Monteiro 与建筑师 Luigi Manini 打造，处处可见炼金和骑士团意象。"
+      },
+      "cabo_roca": {
+            "unique": "欧陆尽头感很强，适合拍“陆止于此，海始于斯”的定位照。",
+            "history": "罗卡角长期被视作欧洲大陆西端象征，石碑上刻有葡萄牙诗人卡蒙斯的名句。"
+      },
+      "sagrada_familia": {
+            "unique": "下午光线穿过彩窗时，内部空间会从建筑参观变成一场色彩体验。",
+            "history": "圣家堂始建于 1882 年，高迪 1883 年接手后重塑设计，是巴塞罗那最具代表性的长期工程。"
+      },
+      "alhambra": {
+            "unique": "Nasrid 宫的纹样、庭院水景和远望阿尔拜辛的视角，是格拉纳达的核心体验。",
+            "history": "阿尔罕布拉宫是纳斯瑞德王朝时期的宫殿堡垒，也是伊斯兰艺术在伊比利亚半岛的代表。"
+      },
+      "plaza_espana_seville": {
+            "unique": "日落时广场、瓷砖、拱廊和水面会一起变暖，适合作为塞维利亚第一天收尾。",
+            "history": "西班牙广场为 1929 年伊比利亚-美洲博览会而建，半圆形建筑象征西班牙面向美洲。"
+      },
+      "benagil_cave": {
+            "unique": "海蚀洞顶部天窗让光线直接落到洞内沙滩，是阿尔加维海岸最标志性的画面。",
+            "history": "贝纳吉尔海蚀洞由石灰岩海岸长期受海浪侵蚀形成，能否接近高度依赖当天海况。"
+      }
+};
+
+    const days = [
+      {
+            "day": 1,
+            "date": "2025-05-01",
+            "title": "杭州 → 里斯本 → 辛特拉海岸",
+            "base": "Olissippo Oriente，Av. Dom João II 32",
+            "lat": 38.7876,
+            "lng": -9.3906,
+            "sunLabel": "辛特拉",
+            "sunrise": "辛特拉 06:38",
+            "sunset": "辛特拉 20:28",
+            "alerts": [
+                  "00:35-07:30 JD621 到里斯本",
+                  "预估出关 2 小时，约 10 点到酒店寄存行李",
+                  "佩纳宫原计划只买花园票"
+            ],
+            "transport": "杭州飞里斯本，落地后酒店寄存行李，再去辛特拉区一日游。",
+            "timeline": [
+                  [
+                        "00:35-07:30",
+                        "杭州 → 里斯本，JD621，约 13h55m"
+                  ],
+                  [
+                        "10:00",
+                        "到酒店寄存行李，住 Olissippo Oriente"
+                  ],
+                  [
+                        "上午",
+                        "Park and National Palace of Pena｜佩纳宫",
+                        "pena_palace"
+                  ],
+                  [
+                        "中午",
+                        "Quinta da Regaleira｜雷加莱拉庄园",
+                        "quinta_regaleira"
+                  ],
+                  [
+                        "15:00",
+                        "Cabo da Roca｜罗卡角",
+                        "cabo_roca"
+                  ],
+                  [
+                        "16:00 后",
+                        "Azenhas do Mar｜悬崖小镇",
+                        "azenhas_mar"
+                  ]
+            ]
+      },
+      {
+            "day": 2,
+            "date": "2025-05-02",
+            "title": "里斯本 citywalk → 巴塞罗那",
+            "base": "Renaissance Barcelona Fira Hotel，Plaça d'Europa 50-52",
+            "lat": 38.708,
+            "lng": -9.1366,
+            "sunLabel": "里斯本",
+            "sunrise": "里斯本 06:36",
+            "sunset": "里斯本 20:29",
+            "alerts": [
+                  "21:15-00:10 里斯本飞巴塞罗那",
+                  "托运行李 15kg，原文记录票价 303",
+                  "傍晚别把观景台走到太满"
+            ],
+            "transport": "白天走贝伦区和老城观景台，晚上飞巴塞罗那。",
+            "timeline": [
+                  [
+                        "上午",
+                        "Jerónimos Monastery｜热罗尼莫斯修道院",
+                        "jeronimos_monastery"
+                  ],
+                  [
+                        "上午",
+                        "Padrão dos Descobrimentos｜发现者纪念碑",
+                        "discovery_monument"
+                  ],
+                  [
+                        "下午",
+                        "Ascensor da Bica｜比卡升降机",
+                        "bica_funicular"
+                  ],
+                  [
+                        "下午",
+                        "Arco da Rua Augusta｜奥古斯塔凯旋门",
+                        "rua_augusta_arch"
+                  ],
+                  [
+                        "下午",
+                        "Lisbon Cathedral｜里斯本大教堂",
+                        "lisbon_cathedral"
+                  ],
+                  [
+                        "傍晚",
+                        "Miradouro de Santa Luzia｜圣卢西亚观景台",
+                        "santa_luzia_viewpoint"
+                  ],
+                  [
+                        "体力允许",
+                        "Miradouro da Senhora do Monte｜山上圣母观景台",
+                        "senhora_monte_viewpoint"
+                  ],
+                  [
+                        "21:15-00:10",
+                        "里斯本 → 巴塞罗那，飞行约 1h55m"
+                  ]
+            ]
+      },
+      {
+            "day": 3,
+            "date": "2025-05-03",
+            "title": "巴塞罗那高迪 citywalk",
+            "base": "Renaissance Barcelona Fira Hotel",
+            "lat": 41.4036,
+            "lng": 2.1744,
+            "sunLabel": "巴塞罗那",
+            "sunrise": "巴塞罗那 06:45",
+            "sunset": "巴塞罗那 20:52",
+            "alerts": [
+                  "圣家堂已买 15:00 入场门票",
+                  "前一晚落地很晚，上午不要排太满"
+            ],
+            "transport": "巴塞罗那市内步行和地铁为主，高迪建筑线从市中心一路接到圣家堂。",
+            "timeline": [
+                  [
+                        "上午",
+                        "Arc de Triomf｜巴塞罗那凯旋门",
+                        "arc_triomf_barcelona"
+                  ],
+                  [
+                        "中午",
+                        "Casa Batlló｜巴特罗之家",
+                        "casa_batllo"
+                  ],
+                  [
+                        "下午",
+                        "Casa Milà｜米拉之家",
+                        "casa_mila"
+                  ],
+                  [
+                        "15:00",
+                        "Basílica de la Sagrada Família｜圣家堂",
+                        "sagrada_familia"
+                  ],
+                  [
+                        "晚餐前后",
+                        "Mercat de Santa Caterina｜圣卡特琳娜市场",
+                        "santa_caterina_market"
+                  ]
+            ]
+      },
+      {
+            "day": 4,
+            "date": "2025-05-04",
+            "title": "巴塞罗那包车海岸一日游",
+            "base": "Renaissance Barcelona Fira Hotel",
+            "lat": 41.4225,
+            "lng": 2.1192,
+            "sunLabel": "Tibidabo",
+            "sunrise": "巴塞罗那 06:44",
+            "sunset": "Tibidabo 20:51",
+            "alerts": [
+                  "12:00 从酒店出发",
+                  "包车日路线长，Sitges 和 Blanes 都要控时"
+            ],
+            "transport": "酒店出发包车，Sitges → Blanes 植物园 → Tibidabo 日落 → 酒店。",
+            "timeline": [
+                  [
+                        "12:00",
+                        "酒店出发，约 0.5h 到 Sitges"
+                  ],
+                  [
+                        "12:30-14:30",
+                        "Sitges｜锡切斯",
+                        "sitges"
+                  ],
+                  [
+                        "14:30-16:30",
+                        "Sitges → Blanes，原文估约 2h"
+                  ],
+                  [
+                        "16:30-18:30",
+                        "Jardí Botànic Marimurtra｜布拉内斯马里穆特拉植物园",
+                        "marimurtra_garden"
+                  ],
+                  [
+                        "日落前",
+                        "Tibidabo｜提比达波",
+                        "tibidabo"
+                  ],
+                  [
+                        "晚间",
+                        "Tibidabo → 酒店，原文估约 1h"
+                  ]
+            ]
+      },
+      {
+            "day": 5,
+            "date": "2025-05-05",
+            "title": "巴塞罗那 citywalk + 购物 → 格拉纳达",
+            "base": "Turia Granada，Av. de la Constitución 21",
+            "lat": 41.4145,
+            "lng": 2.1527,
+            "sunLabel": "巴塞罗那/格拉纳达",
+            "sunrise": "巴塞罗那 06:43",
+            "sunset": "格拉纳达 21:07",
+            "alerts": [
+                  "16:25-23:28 火车到格拉纳达",
+                  "桂尔公园 Gaudir Més 需要提前每人申请",
+                  "火车票原文记录 223.56"
+            ],
+            "transport": "上午补高迪早期作品和购物，下午坐长途火车去格拉纳达。",
+            "timeline": [
+                  [
+                        "上午",
+                        "Casa Vicens｜文森特之家",
+                        "casa_vicens"
+                  ],
+                  [
+                        "中午前",
+                        "Park Güell｜桂尔公园",
+                        "park_guell"
+                  ],
+                  [
+                        "下午",
+                        "购物、取行李、前往车站"
+                  ],
+                  [
+                        "16:25-23:28",
+                        "巴塞罗那 → 格拉纳达，火车约 7h03m"
+                  ]
+            ]
+      },
+      {
+            "day": 6,
+            "date": "2025-05-06",
+            "title": "格拉纳达 citywalk + 阿尔罕布拉宫",
+            "base": "Turia Granada",
+            "lat": 37.1761,
+            "lng": -3.5881,
+            "sunLabel": "格拉纳达",
+            "sunrise": "格拉纳达 07:15",
+            "sunset": "格拉纳达 21:08",
+            "alerts": [
+                  "阿尔罕布拉宫实名制购票，带好护照",
+                  "Nasrid 宫 18:30 入场"
+            ],
+            "transport": "格拉纳达城内以步行和打车组合，白天阿尔拜辛，傍晚阿尔罕布拉宫。",
+            "timeline": [
+                  [
+                        "白天",
+                        "Albaicín｜阿尔拜辛",
+                        "albaicin"
+                  ],
+                  [
+                        "18:30",
+                        "Alhambra｜阿尔罕布拉宫",
+                        "alhambra"
+                  ],
+                  [
+                        "日落/夜景",
+                        "Mirador de San Miguel Alto｜圣米格尔高地观景台",
+                        "san_miguel_alto"
+                  ]
+            ]
+      },
+      {
+            "day": 7,
+            "date": "2025-05-07",
+            "title": "格拉纳达 → 塞维利亚 citywalk",
+            "base": "NightinSevilla，C. Bailén, Casco Antiguo",
+            "lat": 37.3863,
+            "lng": -5.9988,
+            "sunLabel": "塞维利亚",
+            "sunrise": "塞维利亚 07:22",
+            "sunset": "塞维利亚 21:09",
+            "alerts": [
+                  "10:00-13:00 ALSA 大巴到塞维利亚",
+                  "西班牙广场适合日落收尾"
+            ],
+            "transport": "上午大巴到塞维利亚，下午按老城和河岸轻 citywalk。",
+            "timeline": [
+                  [
+                        "10:00-13:00",
+                        "格拉纳达 → 塞维利亚，ALSA 大巴约 3h"
+                  ],
+                  [
+                        "下午",
+                        "Metropol Parasol｜都市阳伞",
+                        "metropol_parasol"
+                  ],
+                  [
+                        "下午",
+                        "Plaza de Toros de la Maestranza｜塞维利亚斗牛广场",
+                        "seville_bullring"
+                  ],
+                  [
+                        "下午",
+                        "Torre del Oro｜黄金塔",
+                        "torre_oro"
+                  ],
+                  [
+                        "日落",
+                        "Plaza de España｜西班牙广场",
+                        "plaza_espana_seville"
+                  ]
+            ]
+      },
+      {
+            "day": 8,
+            "date": "2025-05-08",
+            "title": "塞维利亚王宫与大教堂 → 波尔蒂芒",
+            "base": "Next Inn，Vicente Vaz Das Vacas 33, Portimão",
+            "lat": 37.3839,
+            "lng": -5.9914,
+            "sunLabel": "塞维利亚",
+            "sunrise": "塞维利亚 07:21",
+            "sunset": "塞维利亚 21:10",
+            "alerts": [
+                  "塞维利亚王宫 10:30 入场",
+                  "塞维利亚大教堂 14:30 入场",
+                  "18:30-21:45 ALSA 大巴去 Portimão"
+            ],
+            "transport": "上午王宫，下午大教堂，傍晚大巴去葡萄牙波尔蒂芒。",
+            "timeline": [
+                  [
+                        "10:30",
+                        "Royal Alcázar of Seville｜塞维利亚王宫",
+                        "alcazar_seville"
+                  ],
+                  [
+                        "14:30",
+                        "Seville Cathedral｜塞维利亚大教堂",
+                        "seville_cathedral"
+                  ],
+                  [
+                        "18:30-21:45",
+                        "塞维利亚 → Portimão Terminal Rodoviário，ALSA 大巴约 4h15m"
+                  ]
+            ]
+      },
+      {
+            "day": 9,
+            "date": "2025-05-09",
+            "title": "波尔蒂芒阿尔加维海岸一日游 → 里斯本",
+            "base": "Moov Hotel Lisboa Oriente，Avenida Infante Dom Henrique 341",
+            "lat": 37.0918,
+            "lng": -8.4536,
+            "sunLabel": "波尔蒂芒",
+            "sunrise": "波尔蒂芒 06:31",
+            "sunset": "波尔蒂芒 20:29",
+            "alerts": [
+                  "17:00-20:15 Rede Expressos 大巴回里斯本",
+                  "Benagil Cave 是否能进洞取决于海况"
+            ],
+            "transport": "白天走阿尔加维海岸线，傍晚大巴回里斯本东方站区域。",
+            "timeline": [
+                  [
+                        "上午",
+                        "Algar Seco｜阿尔加塞科",
+                        "algar_seco"
+                  ],
+                  [
+                        "中午",
+                        "Benagil Cave｜贝纳吉尔海蚀洞",
+                        "benagil_cave"
+                  ],
+                  [
+                        "下午",
+                        "Praia da Marinha｜马里尼亚海滩",
+                        "marinha_beach"
+                  ],
+                  [
+                        "17:00-20:15",
+                        "波尔蒂芒 → 里斯本，Rede Expressos 大巴约 3h20m"
+                  ]
+            ]
+      },
+      {
+            "day": 10,
+            "date": "2025-05-10",
+            "title": "里斯本 → 杭州",
+            "base": "返程航班",
+            "lat": 38.7639,
+            "lng": -9.1037,
+            "sunLabel": "里斯本",
+            "sunrise": "里斯本 06:29",
+            "sunset": "返程日",
+            "alerts": [
+                  "11:55-次日 07:30 JD622",
+                  "住在 Oriente 区域，适合早上直接去机场"
+            ],
+            "transport": "从里斯本东方区域前往机场，搭乘 JD622 回杭州。",
+            "timeline": [
+                  [
+                        "上午",
+                        "酒店整理行李，前往里斯本机场"
+                  ],
+                  [
+                        "11:55-07:30",
+                        "里斯本 → 杭州，JD622，约 12h35m"
+                  ]
+            ]
+      }
+];
+
+    const foods = [
+      {
+            "area": "辛特拉/罗卡角",
+            "type": "午餐",
+            "title": "罗卡角午餐或辛特拉轻食",
+            "text": "记账里有“罗卡角午餐”约 16.5 欧。Day 1 落地后体力不稳定，午餐应服务于路线，不要为了餐厅倒推行程。",
+            "budget": "约 EUR 16.5/人"
+      },
+      {
+            "area": "里斯本",
+            "type": "海鲜/蛋挞",
+            "title": "贝伦区与市中心补给",
+            "text": "记账里有里斯本海鲜午餐约 26.35 欧、蛋挞约 0.8 欧。贝伦上午如果排队久，就把午餐放在回市中心路上。",
+            "budget": "EUR 1-27/人"
+      },
+      {
+            "area": "巴塞罗那",
+            "type": "正餐",
+            "title": "凯旋门周边海鲜饭 + 市场补给",
+            "text": "记账记录凯旋门西班牙海鲜饭约 20.83 欧，也有 Santa Caterina 市场作为轻补给点。另有中餐选项“谭鸭血”约 24.98 欧。",
+            "budget": "EUR 20-25/人"
+      },
+      {
+            "area": "Sitges / Blanes",
+            "type": "包车日补给",
+            "title": "海边酒与 Blanes 午餐",
+            "text": "记账里 Sitges 海边酒约 8.8 欧、Blanes 午餐约 6.5 欧。包车日路程长，轻食和水比正式餐更重要。",
+            "budget": "EUR 6.5-9/人"
+      },
+      {
+            "area": "格拉纳达",
+            "type": "午餐/机动",
+            "title": "阿尔拜辛前后的午餐",
+            "text": "格拉纳达午餐约 19.92 欧，另有麦当劳约 2.08 欧记录。阿尔罕布拉宫 18:30 入场，下午不要吃得太赶。",
+            "budget": "EUR 2-20/人"
+      },
+      {
+            "area": "塞维利亚",
+            "type": "正餐/踩雷提醒",
+            "title": "明上川菜与海鲜饭取舍",
+            "text": "记账里“明上川菜”约 19.47 欧，也记录了“咸的要死的海鲜饭”约 17.67 欧。老城旅游餐厅要谨慎，累了吃中餐更稳。",
+            "budget": "EUR 13-20/人"
+      },
+      {
+            "area": "波尔蒂芒",
+            "type": "海岸日午餐",
+            "title": "阿尔加维最好吃的午餐",
+            "text": "记账里写“波尔蒂芒最好吃的午餐”约 14.5 欧。海岸一日游要卡 17:00 大巴，午餐宜简单但要吃饱。",
+            "budget": "约 EUR 14.5/人"
+      }
+];
+
+    const prep = [
+      {
+            "title": "打印和证件",
+            "items": [
+                  "门票、酒店订单提前打印好。",
+                  "阿尔罕布拉宫实名制购票，入场带护照。",
+                  "跨境大巴和火车订单建议离线保存。"
+            ]
+      },
+      {
+            "title": "已确认门票时间",
+            "items": [
+                  "圣家堂：2025-05-03 15:00 入场。",
+                  "阿尔罕布拉宫：2025-05-06 18:30 进入 Nasrid 宫。",
+                  "塞维利亚王宫：2025-05-08 10:30 入场。",
+                  "塞维利亚大教堂：2025-05-08 14:30 入场。"
+            ]
+      },
+      {
+            "title": "跨城交通",
+            "items": [
+                  "杭州 → 里斯本：JD621，2025-05-01 00:35-07:30。",
+                  "里斯本 → 巴塞罗那：2025-05-02 21:15-00:10，15kg 行李。",
+                  "巴塞罗那 → 格拉纳达：2025-05-05 16:25-23:28 火车。",
+                  "格拉纳达 → 塞维利亚：2025-05-07 10:00-13:00 ALSA 大巴。",
+                  "塞维利亚 → 波尔蒂芒：2025-05-08 18:30-21:45 ALSA 大巴。",
+                  "波尔蒂芒 → 里斯本：2025-05-09 17:00-20:15 Rede Expressos 大巴。",
+                  "里斯本 → 杭州：JD622，2025-05-10 11:55-次日 07:30。"
+            ]
+      },
+      {
+            "title": "优惠和机动项",
+            "items": [
+                  "佩纳宫如果只走花园，原文建议现场买花园票即可。",
+                  "桂尔公园免费入园需要每个人提前申请 Gaudir Més。",
+                  "圣家堂可提前找优惠券。",
+                  "Azenhas do Mar 是 Day 1 机动加点，累了可放弃。",
+                  "Benagil Cave 是否能进洞取决于海况，准备海岸徒步替代方案。"
+            ]
+      }
+];
+
+    const allPlaces = [...spots, ...hotels];
+    let map;
+    let selectedId = "pena_palace";
+    let selectedImageIndex = 0;
+    let touchStartX = 0;
+    let lightboxTouchStartX = 0;
+    const routeTracker = { pending: 0, failed: 0 };
+
+    function displayName(item) {
+      return item.zh ? `${item.name}｜${item.zh}` : item.name;
+    }
+
+    function googleMapsUrl(item) {
+      return `https://www.google.com/maps/dir/?api=1&destination=${item.lat},${item.lng}&travelmode=driving`;
+    }
+
+    function appleMapsUrl(item) {
+      return `https://maps.apple.com/?daddr=${item.lat},${item.lng}&q=${encodeURIComponent(displayName(item))}`;
+    }
+
+    function setRouteStatus(message, warning = false, visible = true) {
+      const status = document.getElementById("routeStatus");
+      if (!status) return;
+      status.textContent = message;
+      status.classList.toggle("warning", warning);
+      status.classList.toggle("show", visible);
+    }
+
+    function updateRouteStatus() {
+      if (routeTracker.pending > 0) {
+        setRouteStatus(`正在加载自驾路线，还剩 ${routeTracker.pending} 段`);
+        return;
+      }
+      if (routeTracker.failed > 0) {
+        setRouteStatus(`有 ${routeTracker.failed} 段自驾路线加载失败，已用直线示意`, true);
+        return;
+      }
+      setRouteStatus("自驾路线已加载");
+      window.setTimeout(() => setRouteStatus("", false, false), 1200);
+    }
+
+    function iconFor(item, label) {
+      const iconClass = item.type === "hotel" ? "hotel" : item.type === "airport" ? "airport" : "";
+      return L.divIcon({
+        className: "",
+        html: `<div class="marker-pin ${iconClass}"><span>${label}</span></div>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30],
+        popupAnchor: [0, -28]
+      });
+    }
+
+    function initMap() {
+      if (typeof L === "undefined") {
+        renderMapUnavailable();
+        return;
+      }
+      map = L.map("map", { scrollWheelZoom: true });
+      const topo = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", {
+        maxZoom: 18,
+        attribution: "Tiles &copy; Esri"
+      });
+      const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: "&copy; OpenStreetMap contributors"
+      });
+      topo.addTo(map);
+      L.control.layers({ "地形地图": topo, "街道地图": osm }, null, { position: "topleft" }).addTo(map);
+
+      drawRoute();
+
+      spots.forEach((spot, index) => {
+        const marker = L.marker([spot.lat, spot.lng], { icon: iconFor(spot, index + 1) }).addTo(map);
+        marker.bindPopup(`<strong>${displayName(spot)}</strong><br>${spot.features.join(" · ")}`);
+        marker.on("click", () => selectSpot(spot.id));
+      });
+
+      hotels.forEach((hotel) => {
+        const marker = L.marker([hotel.lat, hotel.lng], { icon: iconFor(hotel, "住") }).addTo(map);
+        marker.bindPopup(`<strong>${displayName(hotel)}</strong><br>Day ${hotel.day} 住宿区域`);
+      });
+
+      fitMapToAllPlaces();
+      requestAnimationFrame(() => {
+        map.invalidateSize();
+        fitMapToAllPlaces();
+      });
+      setTimeout(() => {
+        map.invalidateSize();
+        fitMapToAllPlaces();
+      }, 350);
+    }
+
+    function renderMapUnavailable() {
+      const mapEl = document.getElementById("map");
+      if (mapEl) {
+        mapEl.classList.add("map-fallback");
+        mapEl.textContent = "地图资源暂时没有加载成功；下方每日行程、导航入口和准备清单仍可正常使用。";
+      }
+      setRouteStatus("地图资源未加载，刷新或联网后可恢复交互地图", true);
+    }
+
+    function loadLeaflet() {
+      if (window.L) return Promise.resolve();
+      setRouteStatus("正在加载地图资源");
+      if (!document.querySelector('link[data-leaflet-css="true"]')) {
+        const css = document.createElement("link");
+        css.rel = "stylesheet";
+        css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+        css.dataset.leafletCss = "true";
+        document.head.appendChild(css);
+      }
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        const timer = window.setTimeout(() => {
+          script.remove();
+          reject(new Error("leaflet load timeout"));
+        }, 8000);
+        script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+        script.onload = () => {
+          window.clearTimeout(timer);
+          resolve();
+        };
+        script.onerror = () => {
+          window.clearTimeout(timer);
+          reject(new Error("leaflet load failed"));
+        };
+        document.head.appendChild(script);
+      });
+    }
+
+    function fitMapToAllPlaces() {
+      const bounds = L.latLngBounds(allPlaces.map((place) => [place.lat, place.lng]));
+      const wide = window.matchMedia("(min-width: 981px)").matches;
+      const mobile = isMobileView();
+      map.fitBounds(bounds, {
+        paddingTopLeft: wide ? [56, 56] : [30, 34],
+        paddingBottomRight: wide ? [72, 56] : mobile ? [30, 118] : [30, 44],
+        maxZoom: 7
+      });
+    }
+
+    function isMobileView() {
+      return window.matchMedia("(max-width: 760px)").matches;
+    }
+
+    function openSpotSheet() {
+      document.querySelector(".spot-panel")?.classList.add("open");
+    }
+
+    function closeSpotSheet() {
+      document.querySelector(".spot-panel")?.classList.remove("open");
+    }
+
+    window.closeSpotSheet = closeSpotSheet;
+
+    function openImageLightbox(src, caption = "") {
+      if (!src) return;
+      const images = getSpotImages(currentSpot());
+      const index = images.findIndex((item) => item.src === src);
+      if (index >= 0) selectedImageIndex = index;
+      const lightbox = document.getElementById("imageLightbox");
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+      renderLightboxImage(caption);
+    }
+
+    function closeImageLightbox(event) {
+      if (event && event.target.closest(".lightbox-image, .lightbox-video, .lightbox-nav, .lightbox-dots")) return;
+      const lightbox = document.getElementById("imageLightbox");
+      const image = document.getElementById("lightboxImage");
+      const video = document.getElementById("lightboxVideo");
+      lightbox.classList.remove("open", "has-multiple", "show-video");
+      image.removeAttribute("src");
+      if (video) {
+        video.pause();
+        video.removeAttribute("src");
+        video.load();
+      }
+      document.body.style.overflow = "";
+    }
+
+    window.openImageLightbox = openImageLightbox;
+    window.closeImageLightbox = closeImageLightbox;
+
+    function getSpotImages(spot) {
+      const raw = Array.isArray(spot.images) && spot.images.length ? spot.images : [spot.image];
+      return raw.map((item) => typeof item === "string" ? { src: item } : item).filter((item) => item?.src);
+    }
+
+    function isVideoMedia(src = "") {
+      return /\.(mp4|webm|mov|m4v)(\?.*)?$/i.test(src);
+    }
+
+    function renderHeroMedia() {
+      const slot = document.getElementById("heroMediaSlot");
+      if (!slot || !heroMedia.src) return;
+      if (isVideoMedia(heroMedia.src)) {
+        slot.innerHTML = `<video class="hero-media is-video" autoplay muted loop playsinline preload="metadata" poster="${heroMedia.poster || ""}"><source src="${heroMedia.src}"></video>`;
+        return;
+      }
+      slot.innerHTML = `<img class="hero-media" src="${heroMedia.src}" alt="${heroMedia.alt || ""}">`;
+    }
+
+    function isVideoItem(item) {
+      return item?.type === "video" || isVideoMedia(item?.src);
+    }
+
+    function mediaCaption(item, spot, fallbackCaption = "") {
+      return item?.caption || fallbackCaption || displayName(spot);
+    }
+
+    function coverImageFor(spot, item) {
+      if (!isVideoItem(item)) return item?.src || spot.image;
+      return item?.poster || getSpotImages(spot).find((media) => !isVideoItem(media))?.src || spot.image;
+    }
+
+    function currentSpot() {
+      return spots.find((item) => item.id === selectedId) || spots[0];
+    }
+
+    function renderLightboxImage(fallbackCaption = "") {
+      const lightbox = document.getElementById("imageLightbox");
+      const imageEl = document.getElementById("lightboxImage");
+      const videoEl = document.getElementById("lightboxVideo");
+      const captionEl = document.getElementById("lightboxCaption");
+      const dots = document.getElementById("lightboxDots");
+      const spot = currentSpot();
+      const images = getSpotImages(spot);
+      const image = images[selectedImageIndex] || images[0];
+      if (!image || !lightbox || !imageEl || !videoEl || !captionEl || !dots) return;
+      selectedImageIndex = Math.max(0, Math.min(selectedImageIndex, images.length - 1));
+      const caption = mediaCaption(image, spot, fallbackCaption);
+      const videoMode = isVideoItem(image);
+      lightbox.classList.toggle("has-multiple", images.length > 1);
+      lightbox.classList.toggle("show-video", videoMode);
+      if (videoMode) {
+        imageEl.removeAttribute("src");
+        imageEl.alt = "";
+        videoEl.src = image.src;
+        videoEl.controls = true;
+        videoEl.playsInline = true;
+        videoEl.load();
+      } else {
+        videoEl.pause();
+        videoEl.removeAttribute("src");
+        videoEl.load();
+        imageEl.src = image.src;
+        imageEl.alt = caption || "景点图片";
+      }
+      captionEl.textContent = caption;
+      const touchTarget = videoMode ? videoEl : imageEl;
+      touchTarget.ontouchstart = (event) => {
+        lightboxTouchStartX = event.touches[0].clientX;
+      };
+      touchTarget.ontouchend = (event) => {
+        const delta = event.changedTouches[0].clientX - lightboxTouchStartX;
+        if (Math.abs(delta) > 42) shiftLightboxImage(delta < 0 ? 1 : -1, event);
+      };
+      dots.innerHTML = images.map((_, index) => `
+        <button class="lightbox-dot${index === selectedImageIndex ? " active" : ""}" type="button" aria-label="查看第 ${index + 1} 个放大媒体" onclick="setLightboxImage(${index}, event)"></button>
+      `).join("");
+    }
+
+    function renderSpotImageCarousel() {
+      const spot = currentSpot();
+      const images = getSpotImages(spot);
+      const image = images[selectedImageIndex] || images[0];
+      const wrap = document.getElementById("panelImageWrap");
+      const panelImage = document.getElementById("panelImage");
+      const dots = document.getElementById("panelImageDots");
+      if (!image) return;
+      selectedImageIndex = Math.max(0, Math.min(selectedImageIndex, images.length - 1));
+      const caption = mediaCaption(image, spot);
+      const videoMode = isVideoItem(image);
+      wrap.classList.toggle("has-multiple", images.length > 1);
+      panelImage.classList.toggle("has-video", videoMode);
+      panelImage.style.backgroundImage = videoMode ? "" : `url("${image.src}")`;
+      panelImage.innerHTML = videoMode
+        ? `<video class="panel-video" src="${image.src}" muted autoplay loop playsinline controls preload="metadata" aria-label="${caption}"></video>`
+        : "";
+      panelImage.setAttribute("role", "button");
+      panelImage.setAttribute("tabindex", "0");
+      panelImage.setAttribute("aria-label", videoMode ? `播放${displayName(spot)}视频` : `放大查看${displayName(spot)}图片`);
+      panelImage.onclick = (event) => {
+        if (videoMode && event.target.closest("video")) return;
+        openImageLightbox(image.src, caption);
+      };
+      panelImage.onkeydown = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openImageLightbox(image.src, caption);
+        }
+        if (event.key === "ArrowLeft") shiftSpotImage(-1);
+        if (event.key === "ArrowRight") shiftSpotImage(1);
+      };
+      panelImage.ontouchstart = (event) => {
+        touchStartX = event.touches[0].clientX;
+      };
+      panelImage.ontouchend = (event) => {
+        const delta = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(delta) > 42) shiftSpotImage(delta < 0 ? 1 : -1);
+      };
+      dots.innerHTML = images.map((_, index) => `
+        <button class="carousel-dot${index === selectedImageIndex ? " active" : ""}" type="button" aria-label="查看第 ${index + 1} 个媒体" onclick="setSpotImage(${index})"></button>
+      `).join("");
+    }
+
+    function setSpotImage(index, event) {
+      if (event) event.stopPropagation();
+      selectedImageIndex = index;
+      renderSpotImageCarousel();
+      renderRating();
+      if (document.getElementById("imageLightbox")?.classList.contains("open")) renderLightboxImage();
+    }
+
+    function shiftSpotImage(delta, event) {
+      if (event) event.stopPropagation();
+      const images = getSpotImages(currentSpot());
+      if (images.length <= 1) return;
+      selectedImageIndex = (selectedImageIndex + delta + images.length) % images.length;
+      renderSpotImageCarousel();
+      renderRating();
+      if (document.getElementById("imageLightbox")?.classList.contains("open")) renderLightboxImage();
+    }
+
+    function setLightboxImage(index, event) {
+      setSpotImage(index, event);
+    }
+
+    function shiftLightboxImage(delta, event) {
+      shiftSpotImage(delta, event);
+    }
+
+    window.setSpotImage = setSpotImage;
+    window.shiftSpotImage = shiftSpotImage;
+    window.setLightboxImage = setLightboxImage;
+    window.shiftLightboxImage = shiftLightboxImage;
+
+    async function drawRoute() {
+      routeTracker.pending = routeSegments.filter((segment) => segment.mode === "drive").length;
+      routeTracker.failed = 0;
+      updateRouteStatus();
+      const routeTasks = routeSegments.map(async (segment) => {
+        const points = segment.ids.map((id) => spots.find((spot) => spot.id === id)).filter(Boolean);
+        if (segment.mode === "drive") {
+          try {
+            const roadPath = await fetchRoadRoute(points);
+            drawPath(roadPath, false, "drive");
+          } catch (error) {
+            routeTracker.failed += 1;
+            drawLine(points, true, "fallback");
+          } finally {
+            routeTracker.pending = Math.max(0, routeTracker.pending - 1);
+            updateRouteStatus();
+          }
+        } else {
+          drawLine(points, true, segment.mode);
+        }
+      });
+      await Promise.all(routeTasks);
+    }
+
+    async function fetchRoadRoute(points) {
+      const coords = points.map((point) => `${point.lng},${point.lat}`).join(";");
+      const url = `https://router.project-osrm.org/route/v1/driving/${coords}?overview=full&geometries=geojson`;
+      const controller = new AbortController();
+      const timer = window.setTimeout(() => controller.abort(), 6500);
+      let response;
+      try {
+        response = await fetch(url, { signal: controller.signal });
+      } finally {
+        window.clearTimeout(timer);
+      }
+      if (!response.ok) throw new Error("route request failed");
+      const payload = await response.json();
+      const coordinates = payload.routes?.[0]?.geometry?.coordinates;
+      if (!coordinates?.length) throw new Error("route geometry missing");
+      return coordinates.map(([lng, lat]) => [lat, lng]);
+    }
+
+    function drawLine(points, dashed, mode) {
+      const path = points.filter(Boolean).map((point) => [point.lat, point.lng]);
+      if (path.length < 2) return;
+      drawPath(path, dashed, mode);
+    }
+
+    function drawPath(path, dashed, mode) {
+      const color = mode === "ferry" ? "#1e6a8c" : mode === "fallback" ? "#6b7280" : "#bc6339";
+      L.polyline(path, { color: "#fff", weight: dashed ? 7 : 8, opacity: .9 }).addTo(map);
+      L.polyline(path, {
+        color,
+        weight: dashed ? 3 : 4,
+        opacity: .88,
+        dashArray: dashed ? "7 8" : null
+      }).addTo(map);
+    }
+
+    function ratingModel(spot) {
+      const labels = { nature: "自然", culture: "人文", weather: "天气", stamina: "体力" };
+      const score = Math.round((spot.ratings.nature + spot.ratings.culture + (10 - spot.ratings.weather * .35) + (10 - spot.ratings.stamina * .35)) / 4 * 10) / 10;
+      return { labels, score };
+    }
+
+    function renderRatingBars(spot) {
+      const { labels } = ratingModel(spot);
+      return Object.entries(spot.ratings).map(([key, value]) => `
+        <div class="bar-row">
+          <span>${labels[key]}</span>
+          <div class="bar"><span style="width:${value * 10}%"></span></div>
+          <strong>${value}</strong>
+        </div>
+      `).join("");
+    }
+
+    function renderPanelRating(spot) {
+      const { score } = ratingModel(spot);
+      return `
+        <div class="panel-rating">
+          <h4>综合评分：${score} / 10</h4>
+          <p>自然、人文、天气、体力四个维度的即时参考。</p>
+          ${renderRatingBars(spot)}
+        </div>
+      `;
+    }
+
+    function renderSpotInsights(spot) {
+      const insight = spotInsights[spot.id];
+      if (!insight) return "";
+      return `
+        <div class="mini-card context"><h4>景观特色</h4><p>${insight.unique}</p></div>
+        <div class="mini-card context"><h4>背景 / 历史</h4><p>${insight.history}</p></div>
+      `;
+    }
+
+    function selectSpot(id, openSheet = true) {
+      const spot = spots.find((item) => item.id === id) || spots[0];
+      selectedId = spot.id;
+      selectedImageIndex = 0;
+      renderSpotImageCarousel();
+      document.getElementById("panelBody").innerHTML = `
+        <div class="tag-row">
+        <span class="tag main">Day ${spot.day}</span>
+        <span class="tag">${spot.time}</span>
+        <span class="tag">建议 ${spot.stay}</span>
+        </div>
+        <h3>${displayName(spot)}</h3>
+        <p class="panel-intro">${spot.intro}</p>
+        <div class="tag-row">${spot.features.map((item) => `<span class="tag">${item}</span>`).join("")}</div>
+        <div class="action-row">
+          <a class="action-link primary" href="${googleMapsUrl(spot)}" target="_blank" rel="noopener">Google 导航</a>
+          <a class="action-link" href="${appleMapsUrl(spot)}" target="_blank" rel="noopener">Apple 地图</a>
+        </div>
+        ${renderPanelRating(spot)}
+        <div class="detail-list">
+          ${renderSpotInsights(spot)}
+          <div class="mini-card"><h4>怎么玩</h4><p>${spot.play}</p></div>
+          <div class="mini-card"><h4>注意事项</h4><p>${spot.note}</p></div>
+        </div>
+      `;
+      renderRating();
+      if (isMobileView() && openSheet) openSpotSheet();
+      if (map && openSheet) map.panTo([spot.lat, spot.lng], { animate: true, duration: .6 });
+    }
+
+    window.selectSpot = selectSpot;
+
+    function renderDays() {
+      document.getElementById("dayList").innerHTML = days.map((day) => `
+        <article class="card day-card${day.day === 1 ? " expanded" : ""}" id="day-${day.day}">
+          <div class="card-head">
+            <div>
+              <div class="card-title-row">
+                <h3>Day ${day.day} · ${day.title}</h3>
+                <span class="date-pill">${day.date.slice(5)}</span>
+              </div>
+              <p>${day.transport}</p>
+            </div>
+            <button class="day-toggle" type="button" onclick="toggleDay(this)">${day.day === 1 ? "收起" : "展开"}</button>
+          </div>
+          <ul class="timeline">
+            ${day.timeline.map((item) => renderTimelineItem(item)).join("")}
+          </ul>
+          ${renderDayAlerts(day)}
+          <div class="day-meta">
+            <div><span>住宿</span><strong>${day.base}</strong></div>
+            <div><span>日出</span><strong>${day.sunrise}</strong></div>
+            <div><span>日落</span><strong>${day.sunset}</strong></div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderDayJump() {
+      const jump = document.getElementById("dayJump");
+      if (!jump) return;
+      jump.innerHTML = days.map((day) => `
+        <button type="button" data-day="${day.day}" onclick="jumpToDay(${day.day})" aria-label="跳转到 Day ${day.day}">
+          <strong>D${day.day}</strong>
+          <span>${day.date.slice(5)}</span>
+        </button>
+      `).join("");
+      setActiveDayJump(days.find((day) => day.day === 1)?.day ?? days[0]?.day);
+    }
+
+    function setActiveDayJump(dayNumber) {
+      document.querySelectorAll("#dayJump button").forEach((button) => {
+        button.classList.toggle("active", Number(button.dataset.day) === dayNumber);
+      });
+    }
+
+    function jumpToDay(dayNumber) {
+      const card = document.getElementById(`day-${dayNumber}`);
+      if (!card) return;
+      card.classList.add("expanded");
+      const toggle = card.querySelector(".day-toggle");
+      if (toggle) toggle.textContent = "收起";
+      setActiveDayJump(dayNumber);
+      card.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    window.jumpToDay = jumpToDay;
+
+    function toggleDay(button) {
+      const card = button.closest(".day-card");
+      if (!card) return;
+      card.classList.toggle("expanded");
+      button.textContent = card.classList.contains("expanded") ? "收起" : "展开";
+    }
+
+    window.toggleDay = toggleDay;
+
+    function renderDayAlerts(day) {
+      if (!day.alerts?.length) return "";
+      return `<div class="alert-strip">${day.alerts.map((alert) => `<span class="alert-chip">${alert}</span>`).join("")}</div>`;
+    }
+
+    function renderTimelineItem(item) {
+      const placeId = item[2];
+      const text = placeId
+        ? `<button type="button" onclick="selectSpot('${placeId}')">${item[1]}</button>`
+        : `<span>${item[1]}</span>`;
+      return `<li><strong>${item[0]}</strong>${text}</li>`;
+    }
+
+    function renderFood() {
+      document.getElementById("foodGrid").innerHTML = foods.map((food) => `
+        <article class="food-card">
+          <span class="tag">${food.area}</span>
+          <h3>${food.title}</h3>
+          <p>${food.text}</p>
+          <div class="tag-row"><span class="tag">${food.type}</span><span class="tag">${food.budget}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderPrep() {
+      document.getElementById("prepGrid").innerHTML = prep.map((group) => `
+        <article class="prep-card">
+          <h3>${group.title}</h3>
+          <ul>${group.items.map((item) => `<li>${item}</li>`).join("")}</ul>
+        </article>
+      `).join("");
+    }
+
+    function populateTransport() {
+      const options = allPlaces.map((place) => `<option value="${place.id}">${displayName(place)}</option>`).join("");
+      document.getElementById("fromSelect").innerHTML = options;
+      document.getElementById("toSelect").innerHTML = options;
+      document.getElementById("fromSelect").value = "pena_palace";
+      document.getElementById("toSelect").value = "quinta_regaleira";
+      document.getElementById("fromSelect").addEventListener("change", renderEstimate);
+      document.getElementById("toSelect").addEventListener("change", renderEstimate);
+      renderEstimate();
+    }
+
+    function renderEstimate() {
+      const from = allPlaces.find((place) => place.id === document.getElementById("fromSelect").value);
+      const to = allPlaces.find((place) => place.id === document.getElementById("toSelect").value);
+      const km = haversine(from, to) * 1.22;
+      const walkHours = km / 4.6;
+      const modes = [
+        ["自驾", km / 62, "山区和海岸路会更慢"],
+        ["公共交通", km / 35 + 0.5, "塔州班次少，需当天查"],
+        ["步行", walkHours, "30 分钟内才展示"]
+      ].filter(([label, hours]) => label !== "步行" || hours <= 0.5);
+      document.getElementById("estimateBox").innerHTML = modes.map(([label, hours, note]) => `
+        <div><span>${label}</span><strong>${formatDuration(hours)}</strong><small>${note}</small></div>
+      `).join("");
+    }
+
+    function renderRating() {
+      const spot = spots.find((item) => item.id === selectedId) || spots[0];
+      const image = getSpotImages(spot)[selectedImageIndex] || getSpotImages(spot)[0] || { src: spot.image };
+      const videoMode = isVideoItem(image);
+      const coverImage = coverImageFor(spot, image);
+      const caption = mediaCaption(image, spot);
+      const { score } = ratingModel(spot);
+      const ratingPanel = document.getElementById("ratingPanel");
+      ratingPanel.innerHTML = `
+        <div class="rating-image${videoMode ? " has-video" : ""}" role="button" tabindex="0" aria-label="${videoMode ? `播放${displayName(spot)}视频` : `放大查看${displayName(spot)}图片`}" style="background-image:url('${coverImage}')"></div>
+        <h3>${displayName(spot)}</h3>
+        <p>${spot.intro}</p>
+        <div class="tag-row">${spot.features.slice(0, 3).map((item) => `<span class="tag">${item}</span>`).join("")}</div>
+        <p>综合评分：${score} / 10</p>
+        ${renderRatingBars(spot)}
+      `;
+      const ratingImage = ratingPanel.querySelector(".rating-image");
+      ratingImage.onclick = () => openImageLightbox(image.src, caption);
+      ratingImage.onkeydown = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openImageLightbox(image.src, caption);
+        }
+      };
+    }
+
+    function haversine(a, b) {
+      const radius = 6371;
+      const dLat = toRad(b.lat - a.lat);
+      const dLng = toRad(b.lng - a.lng);
+      const lat1 = toRad(a.lat);
+      const lat2 = toRad(b.lat);
+      const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
+      return 2 * radius * Math.asin(Math.sqrt(h));
+    }
+
+    function toRad(value) {
+      return value * Math.PI / 180;
+    }
+
+    function formatDuration(hours) {
+      const mins = Math.max(3, Math.round(hours * 60));
+      const h = Math.floor(mins / 60);
+      const m = mins % 60;
+      return h ? `${h}h ${m}m` : `${m}m`;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderHeroMedia();
+      renderDays();
+      renderDayJump();
+      renderFood();
+      renderPrep();
+      populateTransport();
+      selectSpot(selectedId, false);
+      loadLeaflet().then(initMap).catch(renderMapUnavailable);
+      document.querySelectorAll(".nav a").forEach((link) => {
+        link.addEventListener("click", closeSpotSheet);
+      });
+      window.addEventListener("resize", () => {
+        closeSpotSheet();
+        if (!map) return;
+        window.clearTimeout(window.__mapResizeTimer);
+        window.__mapResizeTimer = window.setTimeout(() => {
+          map.invalidateSize();
+          fitMapToAllPlaces();
+        }, 180);
+      });
+      document.addEventListener("keydown", (event) => {
+        const lightboxOpen = document.getElementById("imageLightbox")?.classList.contains("open");
+        if (event.key === "Escape") closeImageLightbox();
+        if (!lightboxOpen) return;
+        if (event.key === "ArrowLeft") shiftLightboxImage(-1, event);
+        if (event.key === "ArrowRight") shiftLightboxImage(1, event);
+      });
+    });
+  </script>
+</body>
+</html>
