@@ -840,6 +840,126 @@
       gap: 14px;
     }
 
+    .stay-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .stay-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fffdf8;
+      box-shadow: none;
+    }
+
+    .stay-card.recommended {
+      border-color: #8eb29e;
+      background: #f5faf6;
+      box-shadow: inset 4px 0 0 var(--green);
+    }
+
+    .stay-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .stay-rank {
+      margin: 0 0 5px;
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .stay-card h3 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .stay-score {
+      flex: 0 0 auto;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: #e8f1eb;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .stay-price {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: baseline;
+    }
+
+    .stay-price strong {
+      color: var(--green);
+      font-size: 26px;
+    }
+
+    .stay-price span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .stay-details {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin: 0;
+    }
+
+    .stay-details div {
+      padding: 9px 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.7);
+    }
+
+    .stay-details dt {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .stay-details dd {
+      margin: 3px 0 0;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .stay-note {
+      margin: 0;
+      padding: 10px 12px;
+      border-radius: var(--radius);
+      background: #f2ece2;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .stay-note.warning {
+      background: #fff0e0;
+      color: #7a451f;
+    }
+
+    .stay-card .action-link {
+      width: fit-content;
+      margin-top: auto;
+    }
+
     .food-card, .prep-card {
       padding: 16px;
       box-shadow: none;
@@ -1333,7 +1453,8 @@
         height: 58vh;
         min-height: 390px;
       }
-      .food-grid, .prep-grid, .day-meta { grid-template-columns: 1fr; }
+      .food-grid, .prep-grid, .stay-grid, .day-meta { grid-template-columns: 1fr; }
+      .stay-details { grid-template-columns: 1fr; }
       .timeline li { grid-template-columns: 1fr; }
     }
 
@@ -1372,6 +1493,7 @@
   <nav class="nav" aria-label="页面导航">
     <a href="#map-section" data-icon="图">路线地图</a>
     <a href="#itinerary-section" data-icon="日">每日行程</a>
+    <a href="#stay-section" data-icon="住">住宿备选</a>
     <a href="#food-section" data-icon="食">餐饮补给</a>
     <a href="#prep-section" data-icon="备">提前准备</a>
   </nav>
@@ -1420,6 +1542,111 @@
             </div>
             <div class="rating-card" id="ratingPanel"></div>
           </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="stay-section">
+      <div class="inner">
+        <p class="kicker">Launceston Stay</p>
+        <h2>朗塞斯顿住宿备选</h2>
+        <p class="lead">10 月 1 日入住、10 月 2 日离店，3 位成人 1 间房。以下按本次行程匹配度排序：晚到可行性 35%、床型 25%、停车 15%、价格 15%、早餐与洗衣 10%；Booking 住客评分单独列出。</p>
+        <div class="notice">航班 22:05 抵达朗塞斯顿，正常取行李和开车后约 22:30-23:00 到酒店。凡前台在 22:00 关闭的住宿，都必须在预订前书面确认晚到安排。价格为 2026-07-11 登录 Booking 后看到的含税总价，后续可能变化。</div>
+        <div class="stay-grid" style="margin-top:16px">
+          <article class="stay-card recommended">
+            <div class="stay-head">
+              <div><p class="stay-rank">#1 · 首选 / 性价比最佳</p><h3>Commodore Regent Launceston</h3></div>
+              <span class="stay-score">匹配度 9.0 · Booking 8.1</span>
+            </div>
+            <div class="stay-price"><strong>¥890</strong><span>3 人总价 · 人均约 ¥297 · 含税费</span></div>
+            <div class="tag-row"><span class="tag main">3 张床最稳</span><span class="tag">免费停车</span><span class="tag">可免费取消</span></div>
+            <dl class="stay-details">
+              <div><dt>房型 / 床型</dt><dd>标准家庭间；2 张单人床 + 1 张大号双人床</dd></div>
+              <div><dt>取消 / 付款</dt><dd>9 月 29 日前免费取消；9 月 27 日前零付款</dd></div>
+              <div><dt>早餐 / 洗衣</dt><dd>不含早餐；收费洗衣服务</dd></div>
+              <div><dt>停车</dt><dd>每个房源含 1 个免费私人车位，不可预订</dd></div>
+              <div><dt>入住</dt><dd>14:30-22:00；预先联系可延迟至 23:00</dd></div>
+              <div><dt>离店</dt><dd>10:00 前</dd></div>
+            </dl>
+            <p class="stay-note warning">最符合床型、停车和预算要求，但必须提前联系酒店确认 22:30 后入住；延迟入住最晚仅到 23:00，航班延误时有风险。</p>
+            <a class="action-link primary" href="https://www.booking.cn/hotel/au/commodore-regent.zh-cn.html?checkin=2026-10-01&amp;checkout=2026-10-02&amp;group_adults=3&amp;group_children=0&amp;no_rooms=1" target="_blank" rel="noopener">前往 Booking 预订</a>
+          </article>
+
+          <article class="stay-card">
+            <div class="stay-head">
+              <div><p class="stay-rank">#2 · 床型与价格平衡</p><h3>Areca Launceston</h3></div>
+              <span class="stay-score">匹配度 8.3 · Booking 8.8</span>
+            </div>
+            <div class="stay-price"><strong>¥1,022</strong><span>3 人总价 · 人均约 ¥341 · 含税费</span></div>
+            <div class="tag-row"><span class="tag main">大号床 + 单人床</span><span class="tag">免费停车</span><span class="tag">河谷景观</span></div>
+            <dl class="stay-details">
+              <div><dt>房型 / 床型</dt><dd>双人间或双床间；1 张单人床 + 1 张大号双人床</dd></div>
+              <div><dt>取消 / 付款</dt><dd>9 月 29 日前免费取消；9 月 27 日前零付款</dd></div>
+              <div><dt>早餐 / 洗衣</dt><dd>不含早餐；页面未列洗衣服务</dd></div>
+              <div><dt>停车</dt><dd>免费私人停车，无需预订</dd></div>
+              <div><dt>入住</dt><dd>14:00 后；需提前告知预计抵达时间</dd></div>
+              <div><dt>离店</dt><dd>10:00 前</dd></div>
+            </dl>
+            <p class="stay-note">床型和价格较合适；酒店位于坡上，晚到自驾影响不大。预订前请提前联系酒店确认深夜入住安排。</p>
+            <a class="action-link primary" href="https://www.booking.cn/hotel/au/areca-boutique.zh-cn.html?checkin=2026-10-01&amp;checkout=2026-10-02&amp;group_adults=3&amp;group_children=0&amp;no_rooms=1" target="_blank" rel="noopener">前往 Booking 预订</a>
+          </article>
+
+          <article class="stay-card">
+            <div class="stay-head">
+              <div><p class="stay-rank">#3 · 晚到最稳</p><h3>Hotel Grand Chancellor Launceston</h3></div>
+              <span class="stay-score">匹配度 7.6 · Booking 8.3</span>
+            </div>
+            <div class="stay-price"><strong>¥1,013</strong><span>Genius 价，原价 ¥1,125 · 人均约 ¥338</span></div>
+            <div class="tag-row"><span class="tag main">入住至 00:00</span><span class="tag">Genius -10%</span><span class="tag">到店付款</span></div>
+            <dl class="stay-details">
+              <div><dt>房型 / 床型</dt><dd>豪华双床间；2 张双人床</dd></div>
+              <div><dt>取消 / 付款</dt><dd>9 月 29 日前免费取消；无需预付，到店付款</dd></div>
+              <div><dt>早餐</dt><dd>¥1,013 不含，可另付 ¥141；含早会员价 ¥1,394</dd></div>
+              <div><dt>停车 / 洗衣</dt><dd>住宿内公共停车 AUD 10/天；收费洗衣服务</dd></div>
+              <div><dt>入住</dt><dd>14:00-00:00</dd></div>
+              <div><dt>离店</dt><dd>10:00 前</dd></div>
+            </dl>
+            <p class="stay-note">前台开放至午夜，最适合晚班机；主要取舍是停车需要另付 AUD 10/天。</p>
+            <a class="action-link primary" href="https://www.booking.cn/hotel/au/grand-chancellor-launceston.zh-cn.html?checkin=2026-10-01&amp;checkout=2026-10-02&amp;group_adults=3&amp;group_children=0&amp;no_rooms=1" target="_blank" rel="noopener">前往 Booking 预订</a>
+          </article>
+
+          <article class="stay-card">
+            <div class="stay-head">
+              <div><p class="stay-rank">#4 · 评分最高但床型需确认</p><h3>Hideaway on George</h3></div>
+              <span class="stay-score">匹配度 7.5 · Booking 8.9</span>
+            </div>
+            <div class="stay-price"><strong>¥1,151</strong><span>3 人总价 · 人均约 ¥384 · 含税费</span></div>
+            <div class="tag-row"><span class="tag main">住客评分最高</span><span class="tag">免费停车</span><span class="tag">40㎡</span></div>
+            <dl class="stay-details">
+              <div><dt>房型 / 床型</dt><dd>豪华套房；1 张超大号双人床或 2 张单人床，视供应情况</dd></div>
+              <div><dt>取消 / 付款</dt><dd>9 月 29 日前免费取消；9 月 27 日前零付款</dd></div>
+              <div><dt>早餐 / 洗衣</dt><dd>当前房价未标含早；页面未列洗衣服务</dd></div>
+              <div><dt>停车</dt><dd>免费私人停车，无需预订</dd></div>
+              <div><dt>入住</dt><dd>14:00 后；需提前告知预计抵达时间</dd></div>
+              <div><dt>离店</dt><dd>10:00 前</dd></div>
+            </dl>
+            <p class="stay-note warning">需书面确认“超大床 + 第三人折叠床/沙发床”；同时请提前联系酒店确认深夜入住安排。如果只能分到 2 张单人床，则不适合 3 人。</p>
+            <a class="action-link primary" href="https://www.booking.cn/hotel/au/fiona-s-bed-and-breakfast.zh-cn.html?checkin=2026-10-01&amp;checkout=2026-10-02&amp;group_adults=3&amp;group_children=0&amp;no_rooms=1" target="_blank" rel="noopener">前往 Booking 预订</a>
+          </article>
+
+          <article class="stay-card">
+            <div class="stay-head">
+              <div><p class="stay-rank">#5 · 含早但不适合当晚抵达</p><h3>Balmoral On York</h3></div>
+              <span class="stay-score">匹配度 5.8 · Booking 8.2</span>
+            </div>
+            <div class="stay-price"><strong>¥1,151</strong><span>Genius 价，原价 ¥1,354 · 人均约 ¥384</span></div>
+            <div class="tag-row"><span class="tag main">含早餐</span><span class="tag">Genius -15%</span><span class="tag">免费停车</span></div>
+            <dl class="stay-details">
+              <div><dt>房型 / 床型</dt><dd>高级双床间；1 张单人床 + 1 张双人床</dd></div>
+              <div><dt>取消 / 付款</dt><dd>9 月 29 日前免费取消；9 月 27 日前零付款</dd></div>
+              <div><dt>早餐 / 洗衣</dt><dd>包含早餐；收费洗衣服务</dd></div>
+              <div><dt>停车</dt><dd>免费公共停车，无需预订</dd></div>
+              <div><dt>入住</dt><dd>14:00-22:00</dd></div>
+              <div><dt>离店</dt><dd>06:30-10:00</dd></div>
+            </dl>
+            <p class="stay-note warning">常规入住至 22:00，早于航班落地。预订前请提前联系酒店，确认能否安排深夜自助入住。</p>
+            <a class="action-link primary" href="https://www.booking.cn/hotel/au/balmoral-on-york.zh-cn.html?checkin=2026-10-01&amp;checkout=2026-10-02&amp;group_adults=3&amp;group_children=0&amp;no_rooms=1" target="_blank" rel="noopener">前往 Booking 预订</a>
+          </article>
         </div>
       </div>
     </section>
@@ -2025,7 +2252,7 @@
         day: 0,
         date: "2026-10-01",
         title: "抵达 Launceston",
-        base: "Launceston 市区或机场附近",
+        base: "Launceston 市区（住宿备选见下方）",
         lat: -41.4332,
         lng: 147.1441,
         sunrise: "Launceston 05:47",
@@ -2184,7 +2411,7 @@
 
     const prep = [
       { title: "重点预订", items: ["Maria Island Ferry：Triabunna 往返，优先早船去、下午较晚船回", "Bicheno Penguin Tour：提前订晚间团", "Cape Raoul Cruises：建议订 10:45-12:15 班次", "Port Arthur Historic Site 门票或 cruise + site entry 套票", "Tasmania Parks Pass：覆盖 Freycinet、Maria Island、Tasman National Park"] },
-      { title: "住宿与租车", items: ["10/1 Launceston 市区或机场附近", "10/2-10/3 Bicheno", "10/4 Triabunna / Orford", "10/5-10/6 Hobart CBD / Waterfront / Salamanca", "租车确认 Launceston 取、Hobart 还，异地还车费、保险、第二驾驶人"] },
+      { title: "住宿与租车", items: ["10/1 Launceston：优先 Commodore Regent 或 Areca；两家都需提前确认深夜入住", "10/2-10/3 Bicheno", "10/4 Triabunna / Orford", "10/5-10/6 Hobart CBD / Waterfront / Salamanca", "租车确认 Launceston 取、Hobart 还，异地还车费、保险、第二驾驶人"] },
       { title: "出发前确认", items: ["Maria Island ferry 班次和天气", "Painted Cliffs 潮汐时间", "Bicheno Penguin Tour 集合时间", "Cape Raoul Cruises 是否受风浪影响", "Tasman Peninsula 地貌点是否临时关闭", "Mount Wellington 道路和山顶天气"] },
       { title: "证件与行程", items: ["护照、澳洲签证", "驾照原件、驾照翻译件或国际驾照认证件", "机票离线保存：10/7 霍巴特 D → 悉尼 T2，20:25-22:15", "租车订单、住宿订单、ferry/门票订单离线保存", "Google Maps 离线地图：Launceston、East Coast、Freycinet、Triabunna、Maria Island、Hobart、Tasman Peninsula"] },
       { title: "衣物装备", items: ["防风外套、薄羽绒或抓绒中层", "舒适防滑步行鞋", "雨具或轻量雨衣", "帽子、墨镜、防晒霜", "补水瓶和上岛垃圾袋"] },
