@@ -4,7 +4,9 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import json
+import mimetypes
 import re
 from html import escape
 from pathlib import Path
@@ -31,7 +33,7 @@ def replace_const(text: str, name: str, value: Any) -> str:
     pattern = re.compile(rf"    const {re.escape(name)} = .*?;\n", re.S)
     if not pattern.search(text):
         raise ValueError(f"找不到 const {name}")
-    return pattern.sub(f"    const {name} = {js(value)};\n", text, count=1)
+    return pattern.sub(lambda _: f"    const {name} = {js(value)};\n", text, count=1)
 
 
 def replace_text_tag(text: str, selector: str, value: str) -> str:
@@ -52,6 +54,27 @@ def video_type(src: str) -> str:
     if suffix == ".m4v":
         return "video/x-m4v"
     return "video/mp4"
+
+
+def image_data_uri(src: str, base_dir: Path) -> str:
+    if not src or src.startswith(("data:", "http://", "https://")):
+        return src
+    path = (base_dir / src).resolve()
+    if not path.exists() or not path.is_file():
+        return src
+    mime = mimetypes.guess_type(path.name)[0] or "image/jpeg"
+    return f"data:{mime};base64,{base64.b64encode(path.read_bytes()).decode('ascii')}"
+
+
+def prepare_stay_sections(data: dict[str, Any], data_dir: Path, embed_images: bool) -> list[dict[str, Any]]:
+    sections = json.loads(json.dumps(data.get("staySections", []), ensure_ascii=False))
+    if not embed_images:
+        return sections
+    for section in sections:
+        for card in section.get("cards", []):
+            if card.get("image"):
+                card["image"] = image_data_uri(str(card["image"]), data_dir)
+    return sections
 
 
 def hero_media_html(src: str) -> str:
@@ -99,6 +122,9 @@ def patch_page_copy(html: str, data: dict[str, Any]) -> str:
         '<p class="kicker">Daily Plan</p>': f'<p class="kicker">{escape(page.get("itineraryKicker", "Daily Plan"))}</p>',
         "<h2>每日行程安排</h2>": f'<h2>{escape(page.get("itineraryTitle", "每日行程安排"))}</h2>',
         '<p class="lead">每天按时间线整理主要景点、住宿、交通和日出日落信息。点击景点名即可联动查看地图位置、景点详情和多维评分。</p>': f'<p class="lead">{escape(page.get("itineraryLead", ""))}</p>',
+        '<p class="kicker">Stay Shortlist</p>': f'<p class="kicker">{escape(page.get("stayKicker", "Stay Shortlist"))}</p>',
+        "<h2>沿线住宿备选</h2>": f'<h2>{escape(page.get("stayTitle", "沿线住宿备选"))}</h2>',
+        '<p class="lead">按住宿城市或过夜区域整理候选房源，统一列出房型、取消、早餐洗衣、停车、入住离店和交通接驳信息。</p>': f'<p class="lead">{escape(page.get("stayLead", ""))}</p>',
         '<p class="kicker">Food</p>': f'<p class="kicker">{escape(page.get("foodKicker", "Food"))}</p>',
         "<h2>沿线餐饮与补给</h2>": f'<h2>{escape(page.get("foodTitle", "沿线餐饮与补给"))}</h2>',
         '<p class="lead">按当天路线整理适合吃饭和补给的区域，优先保证顺路、轻松和不耽误后续行程。</p>': f'<p class="lead">{escape(page.get("foodLead", ""))}</p>',
@@ -153,13 +179,18 @@ def patch_defaults(html: str, data: dict[str, Any]) -> str:
     return html
 
 
-def render(data_path: Path, output_path: Path, template_path: Path) -> None:
+def render(data_path: Path, output_path: Path, template_path: Path, embed_stay_images: bool = False) -> None:
     data = json.loads(data_path.read_text(encoding="utf-8"))
     validate(data)
+    data["staySections"] = prepare_stay_sections(
+        data,
+        data_path.parent,
+        bool(embed_stay_images or data.get("page", {}).get("embedStayImages")),
+    )
     html = template_path.read_text(encoding="utf-8")
     html = patch_page_copy(html, data)
-    for name in ["spots", "hotels", "route", "routeSegments", "spotInsights", "days", "foods", "prep"]:
-        html = replace_const(html, name, data[name])
+    for name in ["spots", "hotels", "route", "routeSegments", "spotInsights", "days", "foods", "staySections", "prep"]:
+        html = replace_const(html, name, data.get(name, [] if name == "staySections" else data[name]))
     html = patch_defaults(html, data)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(html, encoding="utf-8")
@@ -170,8 +201,9 @@ def main() -> int:
     parser.add_argument("data", help="trip-data.json")
     parser.add_argument("--output", "-o", required=True, help="输出 HTML 路径")
     parser.add_argument("--template", default=str(DEFAULT_TEMPLATE), help="HTML 模板路径")
+    parser.add_argument("--embed-stay-images", action="store_true", help="把住宿卡片图片内嵌为 data URI，适合上传到语雀等单文件环境")
     args = parser.parse_args()
-    render(Path(args.data), Path(args.output), Path(args.template))
+    render(Path(args.data), Path(args.output), Path(args.template), embed_stay_images=args.embed_stay_images)
     print(Path(args.output).resolve())
     return 0
 

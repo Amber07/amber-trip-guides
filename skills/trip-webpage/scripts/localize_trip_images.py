@@ -100,6 +100,26 @@ def localize_spot_images(spot: dict, assets_dir: Path, failures: list[str], cach
                     failures.append(f"{label} poster: {poster} 下载失败：{exc}")
 
 
+def localize_stay_images(data: dict, assets_dir: Path, failures: list[str], cache: dict[str, str]) -> None:
+    for section in data.get("staySections", []):
+        if not isinstance(section, dict):
+            continue
+        section_id = section.get("id") or section.get("title") or "stay"
+        for index, card in enumerate(section.get("cards", []), start=1):
+            if not isinstance(card, dict):
+                continue
+            url = card.get("image")
+            if not isinstance(url, str) or not url.startswith(("http://", "https://")):
+                continue
+            name = f"{section_id}_{card.get('name') or index}"
+            try:
+                card["image"] = download_cached(url, name, assets_dir, cache)
+                card.setdefault("imageSource", url)
+                card.setdefault("imageCaption", "图片：网络，已本地保存")
+            except (OSError, URLError, TimeoutError) as exc:
+                failures.append(f"{name}: {url} 下载失败：{exc}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Download remote trip images into local assets.")
     parser.add_argument("data", help="trip-data.json")
@@ -130,6 +150,7 @@ def main() -> int:
         if isinstance(spot, dict):
             localize_value(spot, "image", spot.get("id") or spot.get("name") or "spot", assets_dir, failures, cache)
             localize_spot_images(spot, assets_dir, failures, cache)
+    localize_stay_images(data, assets_dir, failures, cache)
 
     output_path = Path(args.output) if args.output else data_path
     output_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")

@@ -25,6 +25,10 @@ Create one UTF-8 JSON file with this shape:
     "foodKicker": "Food",
     "foodTitle": "沿线餐饮与补给",
     "foodLead": "餐饮补给说明",
+    "stayKicker": "Stay Shortlist",
+    "stayTitle": "沿线住宿备选",
+    "stayLead": "住宿备选说明",
+    "embedStayImages": false,
     "prepKicker": "Before Departure",
     "prepTitle": "需要提前预定和准备的东西",
     "prepLead": "准备清单说明",
@@ -125,6 +129,53 @@ Create one UTF-8 JSON file with this shape:
       "budget": "AUD 20-45"
     }
   ],
+  "staySections": [
+    {
+      "id": "sydney-stay",
+      "label": "SYD",
+      "dateLabel": "10·07—08",
+      "title": "悉尼 / Mascot",
+      "lead": "10 月 7 日入住、10 月 8 日离店，重点看晚到入住、机场接送、次日行李寄存与去 T1 的便利度。",
+      "notices": [
+        {
+          "title": "公共交通备注",
+          "text": "Mascot 附近住宿可坐 420 公交往返悉尼机场，作为机场班车以外的兜底方案；出发前再确认实时班次和候车点。"
+        }
+      ],
+      "cards": [
+        {
+          "rank": "#1 · 机场班车优先",
+          "name": "Silkari Urban CKS Sydney Airport Hotel",
+          "score": "Booking 7.4 · 4,253 条点评",
+          "price": "¥818",
+          "priceNote": "当前含税总价 · 2 位成人 / 1 间房",
+          "tags": [
+            { "text": "机场班车收费", "style": "main" },
+            "含早餐",
+            "免费取消"
+          ],
+          "details": [
+            { "label": "房型 / 床型", "value": "15㎡标准特大号床间；1 张超大号双人床，独立浴室" },
+            { "label": "取消 / 付款", "value": "10 月 6 日前免费取消；到店前向住宿付款" },
+            { "label": "早餐 / 洗衣", "value": "含早餐；住宿内有洗衣设施" },
+            { "label": "停车", "value": "私人停车场；AUD 20 / 天" },
+            { "label": "入住 / 离店", "value": "14:00 后入住；10:00 前离店" },
+            { "label": "机场班车", "value": "接机服务：AUD 13 / 人，约每 40 分钟。\n送机服务：AUD 13 / 人，04:50 起约每 40 分钟。" }
+          ],
+          "note": "晚到时提前确认接机末班；若延误，直接改用出租车 / 网约车。",
+          "warning": true,
+          "recommended": true,
+          "selected": false,
+          "image": "assets/stay-sydney-silkari.jpg",
+          "imageAlt": "Silkari Urban CKS Sydney Airport Hotel 房源首图",
+          "imageCaption": "图片：Booking",
+          "imageSource": "https://cf.bstatic.com/...",
+          "url": "https://www.booking.com/...",
+          "actionLabel": "前往 Booking 查看"
+        }
+      ]
+    }
+  ],
   "prep": [
     {
       "title": "重点预订",
@@ -135,6 +186,8 @@ Create one UTF-8 JSON file with this shape:
 ```
 
 Required top-level keys: `page`, `heroStats`, `spots`, `hotels`, `route`, `routeSegments`, `spotInsights`, `days`, `foods`, `prep`.
+
+Optional top-level key: `staySections`. When omitted or empty, the renderer removes the 住宿备选 section and its nav item.
 
 Validation expectations:
 
@@ -154,3 +207,12 @@ Validation expectations:
 - `spot.image` should point to a local `assets/...` image by final render and remains the primary/fallback cover image. During drafting it may temporarily be an extracted document image path or a remote URL, but run `localize_trip_images.py` before publishing.
 - `spot.images` is optional and enables the detail-panel media carousel. Use it when a spot has multiple useful images or videos; strings are accepted for images, and object entries may include `src`, `type`, `poster`, `caption`, `photoSource`, and `photoCredit`. Set `type: "video"` for video entries, or use `.mp4`, `.webm`, or `.mov` paths for automatic detection. Put a still image first when possible and keep `spot.image` equal to the first cover image for compatibility.
 - Use `imageSourceType: "document"` when the image came from the provided itinerary document. Use `"web"` or `"wikipedia"` when it was found online and downloaded locally.
+- `staySections[]` renders the dedicated lodging shortlist section. Use one section per lodging city/area and one card per candidate property.
+- Keep accommodation card `details` labels consistent when possible: `房型 / 床型`, `取消 / 付款`, `早餐 / 洗衣`, `停车`, `入住 / 离店`, `机场班车`.
+- For airport shuttle summaries, use the format `无班车。` or split pickup/dropoff inside the `机场班车` detail value: `接机服务：价格 + 时间` and `送机服务：价格 + 时间`; prices should include the currency such as `AUD`.
+- Put public-transport fallbacks such as airport buses in `staySections[].notices`, not inside each room card unless only one property is affected.
+- `staySections[].cards[].tags` accepts strings or objects like `{ "text": "当前已选", "style": "confirmed" }`; supported styles are `main` and `confirmed`.
+- `staySections[].cards[].image` may point to a local `assets/...` image. Set `page.embedStayImages: true` or run `render_trip_webpage.py --embed-stay-images` when the final HTML must carry accommodation images as data URIs for single-file upload environments.
+- For an already-rendered HTML page that will be uploaded to Yuque as a single file, run `scripts/embed_stay_images_in_html.py <trip-folder>/index.html` so lodging images are embedded directly in `staySections[].cards[].image`; do not leave them as `assets/stay-*` paths.
+- To get lodging images, use user-provided local images first. Otherwise, when a Booking/Airbnb/hotel detail page or wishlist is available, open the property page, take the visible lead/gallery photo for that exact property, save it into the trip folder’s `assets/` directory with a descriptive `stay-...` filename, and set `image`, `imageAlt`, `imageCaption`, and optional `imageSource`.
+- Avoid generic destination photos for lodging cards; the image should represent the actual property or room listing.

@@ -838,10 +838,264 @@
       display: none;
     }
 
-    .food-grid, .prep-grid {
+    .food-grid, .prep-grid, .stay-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
+    }
+
+    .stay-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stay-layout {
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr);
+      gap: 20px;
+      align-items: start;
+      margin-top: 18px;
+    }
+
+    .stay-jump {
+      position: sticky;
+      top: 82px;
+      z-index: 20;
+      display: grid;
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 242, .92);
+      box-shadow: 0 10px 26px rgba(42, 34, 20, .08);
+      backdrop-filter: blur(12px);
+    }
+
+    .stay-jump a {
+      display: grid;
+      place-items: center;
+      min-height: 48px;
+      padding: 5px 4px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: var(--muted);
+      line-height: 1.1;
+      text-decoration: none;
+    }
+
+    .stay-jump a:hover,
+    .stay-jump a.active {
+      border-color: transparent;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .stay-jump strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .stay-jump span {
+      display: block;
+      margin-top: 3px;
+      font-size: 10px;
+      font-weight: 800;
+      opacity: .8;
+    }
+
+    .stay-city {
+      margin-top: 34px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 88px;
+    }
+
+    .stay-city:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .stay-city-title {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3vw, 34px);
+    }
+
+    .stay-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fffdf8;
+      box-shadow: none;
+    }
+
+    .stay-card.recommended {
+      border-color: #8eb29e;
+      background: #f5faf6;
+      box-shadow: inset 4px 0 0 var(--green);
+    }
+
+    .stay-card.selected {
+      border: 2px solid var(--blue);
+      background: linear-gradient(135deg, #dceef7 0%, #f2f9fc 58%, #e8f4f9 100%);
+      box-shadow: inset 5px 0 0 var(--blue), 0 14px 30px rgba(30, 106, 140, .18);
+    }
+
+    .stay-card.selected .stay-rank {
+      color: var(--blue);
+    }
+
+    .stay-card.selected .stay-score {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .stay-card.selected .stay-details div {
+      border-color: #c6dce7;
+      background: rgba(255, 255, 255, .82);
+    }
+
+    .stay-card.selected .stay-note:not(.warning) {
+      background: #d4e8f1;
+      color: #315d70;
+    }
+
+    .tag.confirmed {
+      border-color: transparent;
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .stay-cover {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(41, 54, 48, .12);
+      border-radius: calc(var(--radius) - 1px);
+      background: #e8e1d6;
+    }
+
+    .stay-cover img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .stay-cover figcaption {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: rgba(24, 33, 29, .72);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.3;
+      backdrop-filter: blur(6px);
+    }
+
+    .stay-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .stay-rank {
+      margin: 0 0 5px;
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .stay-card h3 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .stay-score {
+      flex: 0 0 auto;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: #e8f1eb;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .stay-price {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: baseline;
+    }
+
+    .stay-price strong {
+      color: var(--green);
+      font-size: 26px;
+    }
+
+    .stay-price span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .stay-details {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin: 0;
+    }
+
+    .stay-details div {
+      padding: 9px 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.7);
+    }
+
+    .stay-details dt {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .stay-details dd {
+      margin: 3px 0 0;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .stay-note {
+      margin: 0;
+      padding: 10px 12px;
+      border-radius: var(--radius);
+      background: #f2ece2;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .stay-note.warning {
+      background: #fff0e0;
+      color: #7a451f;
+    }
+
+    .stay-card .action-link {
+      width: fit-content;
+      margin-top: auto;
     }
 
     .food-card, .prep-card {
@@ -1028,13 +1282,18 @@
       .map-grid, .two-col { grid-template-columns: 1fr; }
       .side-stack { position: static; }
       .map-wrap, #map { min-height: 520px; }
-      .food-grid, .prep-grid { grid-template-columns: repeat(2, 1fr); }
+      .food-grid, .prep-grid, .stay-grid { grid-template-columns: repeat(2, 1fr); }
+      .stay-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
       .day-list-wrap {
         grid-template-columns: 1fr;
         gap: 0;
       }
 
-      .day-jump {
+      .day-jump,
+      .stay-jump {
         z-index: 20;
         display: flex;
         gap: 6px;
@@ -1045,6 +1304,10 @@
 
       .day-jump button {
         flex: 0 0 54px;
+      }
+
+      .stay-jump a {
+        flex: 1 0 92px;
       }
     }
 
@@ -1101,13 +1364,17 @@
         inset: auto 10px calc(10px + env(safe-area-inset-bottom, 0px)) 10px;
         z-index: 1200;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         gap: 4px;
         padding: 8px;
         border: 1px solid rgba(41, 54, 48, .14);
         border-radius: 18px;
         background: rgba(255, 250, 242, .94);
         box-shadow: 0 18px 44px rgba(41, 54, 48, .18);
+      }
+
+      .nav.compact {
+        grid-template-columns: repeat(4, 1fr);
       }
 
       .nav a {
@@ -1341,7 +1608,8 @@
         height: 58vh;
         min-height: 390px;
       }
-      .food-grid, .prep-grid, .day-meta { grid-template-columns: 1fr; }
+      .food-grid, .prep-grid, .stay-grid, .day-meta { grid-template-columns: 1fr; }
+      .stay-details { grid-template-columns: 1fr; }
       .timeline li { grid-template-columns: 1fr; }
     }
 
@@ -1380,6 +1648,7 @@
   <nav class="nav" aria-label="页面导航">
     <a href="#map-section" data-icon="图">路线地图</a>
     <a href="#itinerary-section" data-icon="日">每日行程</a>
+    <a href="#stay-section" data-icon="住">住宿备选</a>
     <a href="#food-section" data-icon="食">餐饮补给</a>
     <a href="#prep-section" data-icon="备">提前准备</a>
   </nav>
@@ -1428,6 +1697,18 @@
             </div>
             <div class="rating-card" id="ratingPanel"></div>
           </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="stay-section">
+      <div class="inner">
+        <p class="kicker">Stay Shortlist</p>
+        <h2>沿线住宿备选</h2>
+        <p class="lead">按住宿城市或过夜区域整理候选房源，统一列出房型、取消、早餐洗衣、停车、入住离店和交通接驳信息。</p>
+        <div class="stay-layout">
+          <nav class="stay-jump" id="stayJump" aria-label="住宿城市快捷定位"></nav>
+          <div class="stay-cities" id="stayCities"></div>
         </div>
       </div>
     </section>
@@ -2190,6 +2471,42 @@
       { area: "Hobart Waterfront", type: "城市收尾", title: "Day 6 Waterfront 午餐", text: "离开日前 11:30-13:00 在 Hobart Waterfront 午餐；晚间航班为霍巴特 D → 悉尼 T2，20:25-22:15。", budget: "AUD 25-70" }
     ];
 
+    const staySections = [
+      {
+        id: "bicheno-stay",
+        label: "BIC",
+        dateLabel: "10·02—04",
+        title: "比舍诺",
+        lead: "10 月 2 日入住、10 月 4 日离店，按入住时间、床型、停车、取消政策、价格与洗衣设施综合排序。",
+        notices: [
+          { title: "住宿备注", text: "晚到或自助入住安排需要在预订前向住宿方确认。" }
+        ],
+        cards: [
+          {
+            rank: "#1 · 示例首选",
+            name: "Bicheno Stay Example",
+            score: "匹配度 9.0 · Booking 8.7",
+            price: "¥2,136",
+            priceNote: "2 晚含税总价 · 人均每晚约 ¥356",
+            tags: [{ text: "当前已选", style: "confirmed" }, { text: "整套度假屋", style: "main" }, "免费停车", "入住至 22:00"],
+            details: [
+              { label: "房型 / 床型", value: "105㎡度假屋；1 张双人床 + 2 张单人床 + 1 张沙发床" },
+              { label: "取消 / 付款", value: "免费取消；到店付款" },
+              { label: "早餐 / 洗衣", value: "不含早餐；页面未明确列出洗衣机" },
+              { label: "停车", value: "免费停车" },
+              { label: "入住 / 离店", value: "14:00-22:00；10:00 前离店" },
+              { label: "机场班车", value: "无班车。" }
+            ],
+            note: "这里展示住宿卡片的统一字段格式；实际页面会由 trip-data.json 注入。",
+            selected: true,
+            recommended: true,
+            actionLabel: "查看住宿",
+            url: "#"
+          }
+        ]
+      }
+    ];
+
     const prep = [
       { title: "重点预订", items: ["Maria Island Ferry：Triabunna 往返，优先早船去、下午较晚船回", "Bicheno Penguin Tour：提前订晚间团", "Cape Raoul Cruises：建议订 10:45-12:15 班次", "Port Arthur Historic Site 门票或 cruise + site entry 套票", "Tasmania Parks Pass：覆盖 Freycinet、Maria Island、Tasman National Park"] },
       { title: "住宿与租车", items: ["10/1 Launceston 市区或机场附近", "10/2-10/3 Bicheno", "10/4 Triabunna / Orford", "10/5-10/6 Hobart CBD / Waterfront / Salamanca", "租车确认 Launceston 取、Hobart 还，异地还车费、保险、第二驾驶人"] },
@@ -2209,6 +2526,20 @@
 
     function displayName(item) {
       return item.zh ? `${item.name}｜${item.zh}` : item.name;
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      }[char]));
+    }
+
+    function textToHtml(value) {
+      return escapeHtml(value).replace(/\n/g, "<br>");
     }
 
     function googleMapsUrl(item) {
@@ -2710,6 +3041,121 @@
       });
     }
 
+    function renderStaySections() {
+      const staySection = document.getElementById("stay-section");
+      const stayNav = document.querySelector('.nav a[href="#stay-section"]');
+      const nav = document.querySelector(".nav");
+      if (!Array.isArray(staySections) || !staySections.length) {
+        staySection?.remove();
+        stayNav?.remove();
+        nav?.classList.add("compact");
+        return;
+      }
+
+      document.getElementById("stayJump").innerHTML = staySections.map((section, index) => `
+        <a class="${index === 0 ? "active" : ""}" href="#${escapeHtml(section.id)}" data-stay="${escapeHtml(section.id)}" aria-label="跳转到${escapeHtml(section.title)}住宿">
+          <strong>${escapeHtml(section.label || section.title?.slice(0, 3) || "住")}</strong>
+          <span>${escapeHtml(section.dateLabel || "")}</span>
+        </a>
+      `).join("");
+
+      document.getElementById("stayCities").innerHTML = staySections.map((section) => `
+        <div class="stay-city" id="${escapeHtml(section.id)}">
+          <h3 class="stay-city-title">${escapeHtml(section.title)}</h3>
+          ${section.lead ? `<p class="lead">${textToHtml(section.lead)}</p>` : ""}
+          ${(section.notices || []).map(renderStayNotice).join("")}
+          <div class="stay-grid" style="margin-top:16px">
+            ${(section.cards || []).map(renderStayCard).join("")}
+          </div>
+        </div>
+      `).join("");
+
+      initStayJump();
+    }
+
+    function renderStayNotice(notice) {
+      if (typeof notice === "string") return `<div class="notice">${textToHtml(notice)}</div>`;
+      const title = notice.title ? `<strong>${escapeHtml(notice.title)}：</strong>` : "";
+      return `<div class="notice">${title}${textToHtml(notice.text || "")}</div>`;
+    }
+
+    function renderStayTag(tag) {
+      const data = typeof tag === "string" ? { text: tag } : tag;
+      const style = data.style ? ` ${escapeHtml(data.style)}` : "";
+      return `<span class="tag${style}">${escapeHtml(data.text || "")}</span>`;
+    }
+
+    function renderStayCard(card) {
+      const classes = ["stay-card"];
+      if (card.recommended) classes.push("recommended");
+      if (card.selected) classes.push("selected");
+      const image = card.image ? `
+        <figure class="stay-cover">
+          <img src="${escapeHtml(card.image)}" alt="${escapeHtml(card.imageAlt || `${card.name}房源图片`)}" loading="lazy">
+          ${card.imageCaption ? `<figcaption>${escapeHtml(card.imageCaption)}</figcaption>` : ""}
+        </figure>` : "";
+      const score = card.score ? `<span class="stay-score">${escapeHtml(card.score)}</span>` : "";
+      const price = card.price ? `<div class="stay-price"><strong>${escapeHtml(card.price)}</strong><span>${escapeHtml(card.priceNote || "")}</span></div>` : "";
+      const tags = (card.tags || []).length ? `<div class="tag-row">${card.tags.map(renderStayTag).join("")}</div>` : "";
+      const details = (card.details || []).length ? `
+        <dl class="stay-details">
+          ${card.details.map((detail) => `<div><dt>${escapeHtml(detail.label)}</dt><dd>${textToHtml(detail.value)}</dd></div>`).join("")}
+        </dl>` : "";
+      const note = card.note ? `<p class="stay-note${card.warning ? " warning" : ""}">${textToHtml(card.note)}</p>` : "";
+      const action = card.url ? `<a class="action-link primary" href="${escapeHtml(card.url)}" target="_blank" rel="noopener">${escapeHtml(card.actionLabel || "查看住宿")}</a>` : "";
+      return `
+        <article class="${classes.join(" ")}">
+          ${image}
+          <div class="stay-head">
+            <div><p class="stay-rank">${escapeHtml(card.rank || "")}</p><h3>${escapeHtml(card.name)}</h3></div>
+            ${score}
+          </div>
+          ${price}
+          ${tags}
+          ${details}
+          ${note}
+          ${action}
+        </article>
+      `;
+    }
+
+    function setActiveStayJump(stayId) {
+      document.querySelectorAll("#stayJump a").forEach((link) => {
+        const active = link.dataset.stay === stayId;
+        link.classList.toggle("active", active);
+        if (active) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+    }
+
+    function initStayJump() {
+      const links = [...document.querySelectorAll("#stayJump a")];
+      const sections = links
+        .map((link) => document.getElementById(link.dataset.stay))
+        .filter(Boolean);
+      if (!links.length || !sections.length) return;
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => setActiveStayJump(link.dataset.stay));
+      });
+
+      let ticking = false;
+      const syncActiveStay = () => {
+        const activeSection = [...sections].reverse().find((section) => section.getBoundingClientRect().top <= 150) || sections[0];
+        setActiveStayJump(activeSection.id);
+        ticking = false;
+      };
+      const requestStaySync = () => {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(syncActiveStay);
+      };
+
+      window.addEventListener("scroll", requestStaySync, { passive: true });
+      window.addEventListener("resize", requestStaySync);
+      syncActiveStay();
+    }
+
     function jumpToDay(dayNumber) {
       const card = document.getElementById(`day-${dayNumber}`);
       if (!card) return;
@@ -2841,6 +3287,7 @@
       renderHeroMedia();
       renderDays();
       renderDayJump();
+      renderStaySections();
       renderFood();
       renderPrep();
       populateTransport();

@@ -67,6 +67,12 @@ FEATURES = {
         "function renderDayJump",
         "jumpToDay",
     ],
+    "stay_shortlist": [
+        "stay-section",
+        "stay-card",
+        "stayJump",
+        "initStayJump",
+    ],
 }
 
 
