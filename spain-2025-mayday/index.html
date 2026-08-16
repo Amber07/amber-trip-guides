@@ -3836,6 +3836,11 @@
 
     window.selectSpot = selectSpot;
 
+    function formatDayDate(date) {
+      const weekday = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"][new Date(`${date}T00:00:00Z`).getUTCDay()];
+      return `${date.slice(5)} · ${weekday}`;
+    }
+
     function renderDays() {
       document.getElementById("dayList").innerHTML = days.map((day) => `
         <article class="card day-card${day.day === 1 ? " expanded" : ""}" id="day-${day.day}">
@@ -3843,7 +3848,7 @@
             <div>
               <div class="card-title-row">
                 <h3>Day ${day.day} · ${day.title}</h3>
-                <span class="date-pill">${day.date.slice(5)}</span>
+                <span class="date-pill">${formatDayDate(day.date)}</span>
               </div>
               <p>${day.transport}</p>
             </div>
@@ -3868,7 +3873,7 @@
       jump.innerHTML = days.map((day) => `
         <button type="button" data-day="${day.day}" onclick="jumpToDay(${day.day})" aria-label="跳转到 Day ${day.day}">
           <strong>D${day.day}</strong>
-          <span>${day.date.slice(5)}</span>
+          <span>${formatDayDate(day.date)}</span>
         </button>
       `).join("");
       setActiveDayJump(days.find((day) => day.day === 1)?.day ?? days[0]?.day);
