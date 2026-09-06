@@ -2640,40 +2640,21 @@
         ratings: { nature: 8, culture: 3, weather: 6, stamina: 1 }
       },
       {
-        id: "wellington",
-        name: "kunanyi / Mount Wellington",
-        zh: "库南伊 / 惠灵顿山",
-        type: "spot",
-        day: 7,
-        time: "10/7 06:30-07:30",
-        lat: -42.8954,
-        lng: 147.2365,
-        stay: "1 小时",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Hobart_from_Mount_Wellington_Panorama_1.jpg/1920px-Hobart_from_Mount_Wellington_Panorama_1.jpg",
-        photoSource: "https://commons.wikimedia.org/wiki/File:Hobart_from_Mount_Wellington_Panorama_1.jpg",
-        photoCredit: "JJ Harrison · CC BY-SA 3.0",
-        features: ["日出可选", "山顶观景", "风大低温"],
-        intro: "Hobart 离开日的山景收尾，可选清晨看日出。",
-        play: "05:45 从 Hobart 市区出发，06:30-07:30 山顶观景；云雾大则改 Battery Point / Waterfront。",
-        note: "山顶风大温度低，带外套；离境日以航班缓冲为优先。",
-        ratings: { nature: 9, culture: 4, weather: 9, stamina: 2 }
-      },
-      {
         id: "salamanca",
         name: "Salamanca Place / Battery Point",
         zh: "萨拉曼卡广场 / 炮台岬",
         type: "spot",
         day: 7,
-        time: "10/7 09:00-11:00",
+        time: "10/7 10:00-10:30",
         lat: -42.8863,
         lng: 147.3316,
-        stay: "2 小时",
+        stay: "30 分钟",
         image: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Restaurants_at_Salamanca_Place.jpg",
         photoSource: "https://commons.wikimedia.org/wiki/File:Restaurants_at_Salamanca_Place.jpg",
         photoCredit: "Lautreca11 · CC0",
-        features: ["历史街区", "Waterfront", "午餐区域"],
-        intro: "Hobart 城市收尾主线，上午走 Salamanca Place、Battery Point，再去 Waterfront 午餐。",
-        play: "09:00-11:00 城市漫步，11:30-13:00 Hobart Waterfront 午餐。",
+        features: ["历史街区", "城市漫步", "购物前短停"],
+        intro: "退房后先到 Salamanca Place 与 Battery Point 短途漫步，再进入 Hobart 市中心购物。",
+        play: "10:00-10:30 走 Salamanca Place / Battery Point；10:30 后前往市中心购物。",
         note: "当天航班为霍巴特 D → 悉尼 T2，20:25-22:15；18:30-18:45 到机场更稳。",
         ratings: { nature: 5, culture: 8, weather: 5, stamina: 3 }
       },
@@ -2683,16 +2664,16 @@
         zh: "皇家塔斯马尼亚植物园",
         type: "spot",
         day: 7,
-        time: "10/7 13:30-15:00",
+        time: "10/7 14:00-17:00",
         lat: -42.8663,
         lng: 147.3305,
-        stay: "1.5 小时",
+        stay: "3 小时",
         image: "assets/royal_tasmanian_botanical_gardens.png",
         photoSource: "assets/royal_tasmanian_botanical_gardens.png",
         photoCredit: "用户提供图片",
-        features: ["植物园", "可选", "咖啡休息"],
-        intro: "离开日前的低风险下午选项，也可换成市区咖啡休息。",
-        play: "13:30-15:00 参观或休息，15:00-17:00 留机动时间。",
+        features: ["植物园", "下午主线", "咖啡休息"],
+        intro: "离开日午餐后的下午主线，慢慢游览植物园，并按体力安排咖啡休息。",
+        play: "14:00-17:00 游览 Royal Tasmanian Botanical Gardens。",
         note: "MONA 周三通常不开放；若临近出发官网显示特别开放，可再作为机动备选。",
         ratings: { nature: 7, culture: 5, weather: 5, stamina: 2 }
       },
@@ -2752,7 +2733,7 @@
       "launceston_airport", "binalong", "bayoffires", "bicheno_blowhole",
       "freycinet_visitor_centre", "wineglass", "cape_tourville", "honeymoon", "penguin", "friendly", "devils_corner",
       "swansea", "triabunna", "maria", "painted", "wombat", "darlington", "fossil", "maria", "triabunna", "caperaoul", "portarthur", "remarkable",
-      "tasmanarch", "wellington", "salamanca", "botanical", "hobart_airport"
+      "tasmanarch", "salamanca", "botanical", "hobart_airport"
     ];
 
     const routeSegments = [
@@ -2762,7 +2743,7 @@
       { mode: "walk", ids: ["maria", "painted", "wombat", "darlington", "fossil", "maria"] },
       { mode: "drive", ids: ["triabunna", "salamanca"] },
       { mode: "drive", ids: ["salamanca", "caperaoul", "portarthur", "remarkable", "tasmanarch", "salamanca"] },
-      { mode: "drive", ids: ["salamanca", "wellington", "salamanca", "botanical", "hobart_airport"] }
+      { mode: "drive", ids: ["salamanca", "botanical", "hobart_airport"] }
     ];
 
     const spotInsights = {
@@ -2853,10 +2834,6 @@
       tasmanarch: {
         unique: "Tasman Arch 和 Devil's Kitchen 是回程路上性价比很高的短停，几分钟就能看到海蚀拱门和深切峡口。",
         history: "这些地貌原本多与海洞坍塌、拱门残留有关，是塔斯曼半岛海岸侵蚀过程的直观展示。"
-      },
-      wellington: {
-        unique: "kunanyi / Mount Wellington 的特别之处是离 Hobart 很近，却能迅速上到俯瞰城市、海湾和岛屿的高山视角。",
-        history: "kunanyi 是原住民地名，山体也是 Hobart 的精神地标；天气变化快，云雾、强风和低温都很常见。"
       },
       salamanca: {
         unique: "这里把 Hobart 的海港、砂岩仓库、咖啡馆和 Battery Point 老街区串在一起，适合用步行结束行程。",
@@ -3010,7 +2987,7 @@
       {
         day: 7,
         date: "2026-10-07",
-        title: "Hobart 周边 → 霍巴特 D 飞悉尼 T2",
+        title: "Hobart 市区 → 霍巴特 D 飞悉尼 T2",
         base: "悉尼机场 / Mascot 候选住宿",
         lat: -42.8361,
         lng: 147.5103,
@@ -3019,12 +2996,11 @@
         alerts: ["霍巴特 D → 悉尼 T2", "航班 20:25-22:15", "还车前加油", "悉尼酒店班车收费"],
         transport: "20:25 从霍巴特 D 起飞，22:15 抵达悉尼 T2；若选择 Silkari，可预订后请求收费机场班车。晚到若赶不上班车末班，直接改出租车 / 网约车。",
         timeline: [
-          ["05:45", "可从 Hobart 市区出发去 Mount Wellington 看日出"],
-          ["06:30-07:30", "kunanyi / Mount Wellington｜惠灵顿山", "wellington"],
-          ["09:00-11:00", "Salamanca Place / Battery Point｜萨拉曼卡与炮台岬", "salamanca"],
-          ["11:30-13:00", "Hobart Waterfront 午餐"],
-          ["13:30-15:00", "Royal Tasmanian Botanical Gardens｜皇家塔斯马尼亚植物园", "botanical"],
-          ["15:00-17:00", "机动时间：伴手礼、加油、整理行李"],
+          ["10:00", "退房"],
+          ["10:00-10:30", "Salamanca Place / Battery Point｜萨拉曼卡广场 / 炮台岬", "salamanca"],
+          ["10:30-12:30", "购物｜The Cat & Fiddle Arcade、Paddy Pallin、Find Your Feet"],
+          ["12:30-14:00", "午餐"],
+          ["14:00-17:00", "Royal Tasmanian Botanical Gardens｜皇家塔斯马尼亚植物园", "botanical"],
           ["17:30", "出发去 Hobart Airport"],
           ["18:30-18:45", "Hobart Airport｜还车", "hobart_airport"],
           ["20:25-22:15", "航班｜霍巴特 D → 悉尼 T2"],
@@ -3091,7 +3067,7 @@
     const prep = [
       { title: "重点预订", items: ["Maria Island Ferry：Triabunna 往返，优先早船去、下午较晚船回", "Bicheno Penguin Tour：提前订晚间团", "Cape Raoul Cruises：建议订 10:45-12:15 班次", "Port Arthur Historic Site 门票或 cruise + site entry 套票", "Tasmania Parks Pass：覆盖 Freycinet、Maria Island、Tasman National Park"] },
       { title: "住宿与租车", items: ["10/1 Launceston：已预订 Areca Launceston 和 Commodore Regent Launceston；9/26 前二选一保留；提前确认约 22:30-23:00 深夜入住", "10/2-10/3 Bicheno：已同时保留 Wildflower Sands 与 Seachange Villa，后续二选一并退掉另一家", "10/4-10/6 Triabunna：已预订 Airbnb Franklin Cottage（39 Franklin St），连住 2 晚", "10/6 Hobart：已预订 Battery Point Manor 和 Bay Hotel Apartments；10/2 前二选一保留；提前确认约 18:45 抵达时的晚到入住或钥匙领取方式", "10/7 Sydney：已预订 Sunny Rooms Mascot（去哪儿 ¥720，10/6 前免费取消）和悉尼机场宜必思酒店，后续二选一；重点比较晚到入住和返机场交通", "租车确认 Launceston 取、Hobart 还，异地还车费、保险、第二驾驶人"] },
-      { title: "出发前确认", items: ["Maria Island ferry 班次和天气", "Painted Cliffs 潮汐时间", "Bicheno Penguin Tour 集合时间", "Cape Raoul Cruises 是否受风浪影响", "Tasman Peninsula 地貌点是否临时关闭", "Mount Wellington 道路和山顶天气"] },
+      { title: "出发前确认", items: ["Maria Island ferry 班次和天气", "Painted Cliffs 潮汐时间", "Bicheno Penguin Tour 集合时间", "Cape Raoul Cruises 是否受风浪影响", "Tasman Peninsula 地貌点是否临时关闭"] },
       { title: "证件与行程", items: ["护照、澳洲签证", "驾照原件、驾照翻译件或国际驾照认证件", "机票离线保存：10/7 霍巴特 D → 悉尼 T2，20:25-22:15", "租车订单、住宿订单、ferry/门票订单离线保存", "Google Maps 离线地图：Launceston、East Coast、Freycinet、Triabunna、Maria Island、Hobart、Tasman Peninsula"] },
       { title: "衣物装备", items: ["防风外套、薄羽绒或抓绒中层", "舒适防滑步行鞋", "雨具或轻量雨衣", "帽子、墨镜、防晒霜", "补水瓶和上岛垃圾袋"] },
       { title: "安全提醒", items: ["10/4 起进入夏令时，以当地手机时间为准", "塔州黄昏后野生动物多，尽量避开摸黑长途开车", "Maria Island 与野生动物保持距离，不触摸、不投喂", "Cape Hauy 往返耗时较长，更适合留给下次单独安排", "MONA 周三通常不开放，可在官网显示特别开放时作为机动备选"] }
